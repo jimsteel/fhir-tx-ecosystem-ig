@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+  <id value="hl7.fhir.uv.tx-ecosystem"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="director"/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/tx-ecosystem/ImplementationGuide/hl7.fhir.uv.tx-ecosystem"/>
+  <version value="1.6.6"/>
+  <name value="FHIRTerminologyEcosystemIG"/>
+  <title value="FHIR Terminology Ecosystem IG"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <publisher value="HL7 FHIR Product Director"/>
+  <contact>
+    <telecom>
+      <!-- Or whatever URL and/or email address(es) are appropriate -->
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/fiwg"/>
+    </telecom>
+  </contact>
+  <description value="This IG defines the extensions that the tools use internally. Some of these extensions are content that are being evaluated for elevation into the main spec, and others are tooling concerns"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.uv.tx-ecosystem"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="5.0.0"/>
+  <dependsOn>
+    <uri value="http://hl7.org/fhir/uv/application-feature/ImplementationGuide/hl7.fhir.uv.application-feature"/>
+    <packageId value="hl7.fhir.uv.application-feature"/>
+    <version value="current"/>
+  </dependsOn>
+
+  <definition>
+    <page>
+      <name value="index.html"/>
+      <title value="Home Page"/>
+      <generation value="markdown"/>
+      <page>
+        <name value="ecosystem.html"/>
+        <title value="Ecosystem Definition"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <name value="requirements.html"/>
+        <title value="Requirements for Servers"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <name value="languages.html"/>
+        <title value="How Language works"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <name value="testcases.html"/>
+        <title value="Test Case Registry"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <name value="history.html"/>
+        <title value="Version History"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <!-- copyright year is a mandatory parameter -->
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="copyrightyear"/>
+      </code>    
+      <value value="2022+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="releaselabel"/>
+      </code>    
+      <value value="Release 0.2.0"/>
+    </parameter>   
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="auto-oid-root"/>
+      </code>    
+      <value value="2.16.840.1.113883.4.642.40.49"/>
+    </parameter>     
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-test"/>
+      </code>    
+      <value value="/tests"/>
+    </parameter>    
+  </definition> 
+</ImplementationGuide>

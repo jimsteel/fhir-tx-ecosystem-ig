@@ -1,0 +1,12 @@
+{
+  "resourceType" : "FeatureDefinition",
+  "id" : "TestCaseVersion",
+  "context" : [
+    "http://hl7.org/fhir/StructureDefinition/CapabilityStatement#CapabilityStatement"
+  ],
+  "url" : "http://hl7.org/fhir/uv/tx-ecosystem/FeatureDefinition/TestCaseVersion",
+  "name" : "TestCaseVersion",
+  "description" : "This feature is used to report the version of the test cases that the application passes. Note that applications are allowed to change this after release if they pass subsequent versions, but are not required to. The value is a code which is the most recent version of the test cases that the version passes supported",
+  "status" : "active",
+  "valueType" : "code"
+}
