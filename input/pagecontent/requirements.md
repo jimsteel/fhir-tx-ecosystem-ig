@@ -1,82 +1,144 @@
 
-These tests are a particular implementation of the requirements for a terminology 
-server that can be used by the validator and IG publisher. 
+# Requirements
 
-# Test cases 
+This document describes the requirements for all servers that are part of the [HL7 terminology ecosystem](ecosystem.html).
+Note that systems do not need to conform to these requirements to be described as 'FHIR Terminology servers',
+but they do not need to conform to these requirements to be part of the ecosystem.
 
-The tests assume that the server can accept code systems on the fly.
-If servers do not accept code systems on the fly, server authors will have to 
-adapt these tests by rewriting them for their own actual support code systems. 
-Either way, servers that do SHOULD pass all the tests, but the FHIR product director 
-will review the test outcomes in order to approve a server. 
+All systems need to conform to the following requirements:
 
-All systems, need to conform to the following requirements:
-
-# Metadata
+## Metadata
 
 * the server SHALL return a CapabilityStatement from {root}/metadata
 * This SHALL be returned without authentication (note: it may include more information when returned to an authenticated client)
 * It SHALL populate the CapabilityStatement.fhirVersion and CapabilityStatement.rest[mode = server].security.service properties
 * It SHALL include a CapabilityStatement.instantiates value of http://hl7.org/fhir/CapabilityStatement/terminology-server
 * The server SHALL return a TerminologyCapabilities statement from {root}/metadata?mode=terminology
-* The TerminologyCapabilities SHALL list all the code systems that the server supports in TerminologyCapabilities.codeSystem.uri, and all the versions in TerminologyCapabilities.codeSystem.version.code. Code systems SHALL be listed here whether or not they are available through code system search 
 
-# Reading Code Systems and Value Sets
+## Supporting CodeSystems 
 
-* The server SHOULD make all the code systems and value sets it supports available through the /CodeSystem and /ValueSet endpoints.
-* CodeSystems MAY have content = not-present; the tools will not consider this when choosing whether to try using the code system (uses TerminologyCapabilities.codeSystem.uri)
-* Note that server does not *have to* make all the code systems it supports available in this fashion
-* the server SHOULD ensure that all code systems and value sets conform to the Shareable* Profiles
-* The server need not support history or track or report version tags on the resources (Resource.meta.version)
+A '<code>supported</code>' CodeSystem is any code system that the server supports correctly for calls to $expand, $validate-code, and $lookup.
+A '<code>pre-defined</code>' CodeSystem is any value set that the server makes available through the /CodeSystem endpoint.
+
+There's two kinds of servers that are made avialable to the ecosystem: general purpose terminology servers that support 
+arbitrary CodeSystem resources, and servers that are code system specific - they only support one code system (or a select
+short list of CodeSystems). 
+
+Servers are encouraged to make all the code systems that they support available on the /CodeSystem endpoint (search/read) but 
+they do not have to, and code systems such as SNOMED CT and LOINC often are not. But they must be listed in the 
+TerminologyCapabilities statement - that's how the ecosystem knows which code systems are server supports.
+
+* The TerminologyCapabilities SHALL list all the predefined code systems that the server supports in TerminologyCapabilities.codeSystem.uri, and all the versions in TerminologyCapabilities.codeSystem.version.code. Code systems SHALL be listed here whether or not they are available through code system search 
+* The server SHOULD make all the code systems it supports available through the /CodeSystem endpoint for search and read operations
+* The server SHALL support the ```url``` and ```version``` search parameters
+
+Note that it's the bigger code systems such as SNOMED CT and LOINC that might not be available through /CodeSystem. Also note that the 
+terminology ecosystem does not make use of any search paramters
+
+* A server does not *have to* make all the code systems it supports available at /CodeSystem
+* CodeSystems available at /CodeSystem MAY have content = not-present; the tools will not consider this when choosing whether to try using the code system (uses TerminologyCapabilities.codeSystem.uri)
+
+Servers are encouraged to ensure that all code systems conform to the ShareableCodeSystem Profile found in the [CRMI specification](https://build.fhir.org/ig/HL7/crmi-ig/), but this is not a technical requirement for being part of the ecosystem.
+
 * Servers SHOULD generally allow multiple resources for the same canonical URL with different Resource.version, but this is subject to business rules on the server 
-* The server does not need to support PUT/POST for any resources, but it can choose to do so 
-  * if it allows PUT/POST, it SHOULD only do so for authenticated clients. However it does, it SHALL ensure that it only sends correct results for the code systems for which it is registered as 'authoritative' (see https://github.com/FHIR/ig-registry/blob/master/tx-registry-doco.md)
+* Servers do not need to support update/create, and the ecosystem never makes use of these interactions.
 
-# Accessing code systems and value sets 
+It's up to the server how to manage what content they support and implement. Servers can choose to support update/create if they want, though it SHOULD only do so for authenticated clients. 
 
-All code systems and value sets SHALL have a web representation that is appropriate for a human to look at.  The content on that page MAY be static or active; it is at the discretion of the server to decide what's on the page, but it SHOULD be more than just the json/xml for the resource (and it isn't limited to information in the resource either e.g. the server MAY choose to make additional process/provenance/context information available)
+* Servers SHALL ensure that they only send correct results for the code systems for which it is registered as 'authoritative' (e.g. not allow not appropriately authorised users to change the results by posting resources)
+
+* All predefined code systems SHALL have a web representation that is appropriate for a human to look at (see below)
+
+### Passing CodeSystem resources in requests 
+
+Terminology servers can choose to accept CodeSystems in the [tx-resource parameter](https://jira.hl7.org/browse/FHIR-33944). 
+General purpose servers SHALL do this (and are required to do this to pass the general tests).
+
+* Servers SHALL indicate their support or not for passing CodeSystem resources in the tx-resource parameter  using [tbd]
+
+Terminology servers SHOULD support passing CodeSystem supplements, particularly language packs. Servers that don't support 
+language packs should only choose not to support language packs when there is governance over the use of language translations,
+and only by negotiation with the terminology ecosystem managers. 
+
+* Servers SHALL indicate their support or not for passing CodeSystem supplements in the tx-resource parameter  using [tbd]
+
+### Code system Functionality
+
+Servers are required to support code system supplements. Specifically, this means:
+
+* Servers SHALL not ignore supplements, though they MAY choose to return errors rather than process them correctly
+
+Servers are required to support the following properties in the CodeSystem resource:
+
+* CodeSystem.caseSensitive SHALL be supported: validation SHALL correctly check case. In the case of non-case sensitive code systems, expansions SHOULD just contain the code as defined (in the code system or the value set enumeration), and not all the case variants that could be generated.
+
+* CodeSystem.valueSet - tbd what this means
+
+* CodeSystem.hierarchyMeaning. If the code system defines a heirarchy, both $expand and $validate SHALL correctly handle the hierarchy when interpreting filters and validating codes 
+
+* CodeSystem.compositional. A server SHALL not accept compositional grammars for codes unless the CodeSystem is marked as Compositional. Servers that do not know the grammar for a CodeSystem that is marked as compositional SHALL note this in validation errors for the CodeSystem
+
+* CodeSystem.versionNeeded - if a CodeSystem says that version is needed, the $validate-code operation SHALL check that version is populated, and return an error if it's not
+
+* CodeSystem.content - Servers SHALL not process $expand or $validate-code requests on CodeSystems that have content = not-present or example. Servers SHALL reflect content=fragment in an error message if the code is not valid against a fragment. 
+
+* CodeSystem.supplements- Servers SHALL not mistake supplements and code systems for each other.
+
+## Supporting Value Sets 
+
+A '<code>supported</code>' value set is any value set that can be used in $expand or $validate-code operations, including value sets imported into other value sets, and including implicit value sets. A '<code>pre-defined</code>' value set is any value set that the server makes available through the /ValueSet endpoint.
+
+All servers are required to fully support value sets as defined in this document (per below). 
+
+* The server SHALL make all the predefined value sets it supports available through the /Value endpoints for search and read operations
+* The server SHALL support the ```url``` and ```version``` search parameters
+* The server SHALL support the _summary search parameter
+
+Servers are encouraged to ensure that all value sets conform to the ShareableValueSet Profile found in the [CRMI specification](https://build.fhir.org/ig/HL7/crmi-ig/), but this is not a technical requirement for being part of the ecosystem.
+
+* Servers SHOULD generally allow multiple resources for the same canonical URL with different Resource.version, but this is subject to business rules on the server 
+* Servers do not need to support update/create, and the ecosystem never makes use of these interactions.
+
+It's up to the server how to manage what content they support and implement. Servers can choose to support update/create if they want, though it SHOULD only do so for authenticated clients. 
+
+* All predefined value sets SHALL have a web representation that is appropriate for a human to look at (see below)
+
+### Passing ValueSet resources in requests 
+
+* Servers SHALL accept ValueSets passed in the [tx-resource parameter](https://jira.hl7.org/browse/FHIR-33944) to both $expand and $validate-code operations.
+* Servers SHALL use these value sets when resolving imports in other ValueSet resources
+* Servers SHALL indicate their support for passing ValueSets resources in the tx-resource parameter in TerminologyCapabilities.expansion.parameter
+
+### ValueSet functionality 
+
+* Servers SHALL support ValueSet.compose 
+* Servers SHALL support ValueSet.compose.include and ValueSet.compose.exclude 
+* Servers SHALL support imported value sets (for both include and exclude)
+* Servers SHALL support extensionally defined value sets (by enumerating codes in ValueSet.compose.in|exclude.concept)
+* Servers SHALL support intensionally defined value sets (using filters)
+* Servers SHALL support all the filters defined in the base specification for all code systems
+* Servers SHALL return an error if a valueSet uses a filter they do not understand 
+* Servers SHALL only return an existing expansion if it is the correct expansion for the definition of the value set
+
+The ecosystem makes no rules - at this time - about the handling of value sets that have an expansion with no definition.
+
+## Human Representation 
+
+* All pre-defined code systems and value sets SHALL have a web representation (as above) 
+
+The content on that page MAY be static or active; it is at the discretion of the server to decide what's on the page, but it SHOULD be more than just the json/xml for the resource (and it isn't limited to information in the resource either e.g. the server MAY choose to make additional process/provenance/context information available)
 
 The server MAY choose to make this content available at the end-point for the relevant resource. e.g. aa request for {root}/CodeSystem/123 with an ```Accept``` header of 'application/fhir+json' returns the resource, and the same URL with an ```Accept``` header of 'text/html' returns a web page suitable for human consumption. Servers are not required to do this; they MAY choose to make the content available elsewhere.
 
 If the server chooses to make them available elsewhere, it SHALL populate the extension ```http://hl7.org/fhir/tools/StructureDefinition/web-source``` in any resources it makes available with a valueUrl where the web view can be found. This SHALL be populated when the CodeSystem and ValueSet are read, and also in any $expand of the value set (just for the root valueset in this case).
 
-# Code system support
-
-* Servers do not need to support any code systems but the ones that they are provisioned to serve internally (including in the txResources parameter - see below)
-* Servers SHALL support code system supplements. Servers SHALL not ignore supplements, though they MAY choose to return errors rather than process them correctly
-* Servers SHALL support the following properties:
-  * CodeSystem.caseSensitive 
-  * CodeSystem.valueSet 
-  * CodeSystem.hierarchyMeaning 
-  * CodeSystem.compositional 
-  * CodeSystem.versionNeeded
-  * CodeSystem.content
-  * CodeSystem.supplements
-* Note that servers can choose to not support all the implied features in that list, but if it does not, it SHALL correctly indicate that it has not by returning appropriate errors or warnings when the features are relevant
-* 
-   
-
-
-
-
-... 	Σ	0..1	boolean	If code comparison is case sensitive
-... 	Σ	0..1	canonical(ValueSet)	Canonical reference to the value set with entire code system
-... 	ΣC	0..1	code	grouped-by | is-a | part-of | classified-with
-Binding: Code System Hierarchy Meaning (Required)
-... 	Σ	0..1	boolean	If code system defines a compositional grammar
-... versionNeeded	Σ	0..1	boolean	If definitions are not stable
-... content	ΣC	1..1	code	not-present | example | fragment | complete | supplement
-Binding: Code System Content Mode (Required)
-... supplements	ΣCTU	0..1	canonical(CodeSystem)	Canonical URL of Code System this adds designations and properties to
-
 
 # Common Parameters ($expand and $validate-code)
 
-* The server SHALL support the [tx-resource](https://jira.hl7.org/browse/FHIR-33944) parameter for passing related 
-  value sets, concept maps, naming systems, code system supplements and code systems
+* The server SHALL support the [tx-resource](https://jira.hl7.org/browse/FHIR-33944) parameter for passing related value sets, concept maps, naming systems, code system supplements and code systems (noting the caveats above)
 * All servers SHALL 'support' all four kinds of resources being passed in the ```tx-resource``` parameter:
   * All servers SHALL support value sets fully
-  * All servers SHALL support concept maps fully
+  * All servers SHALL support concept maps fully (?)
   * All servers SHALL support code system supplements to at least recognising them (see below)
   * All servers SHALL support code systems to at least recognising them
 
