@@ -1,10 +1,51 @@
-# How Languages work 
+## Multi-Language Support 
 
-The tests assume that the client might want to do one of three things:
+This page documents the expectations for servers in the terminology ecosystem around language support. 
+Servers in the ecosystem must support the minimum features in this page around validation, whether or
+not the affected code system has more than one language supported or not. 
 
-* just accept whatever language the server is going to return, based on the server default and the code system definitions
-* specify the return language desired, and whether or not to fall back to other langages if the desired language isn't available
-* specify the return language and in addition, request designations from additional languages (all, or specified languages)
+Servers are also generally required to support CodeSystem supplements for language packs, though this
+may be waived for some code systems with their own alternative translation support and governance on 
+discussion with HL7.
+
+### Client Language Specification
+
+Clients might want to do one of three things:
+
+* just accept whatever language the server is going to return, based on the server default and the underlying code system definitions
+* specify the return language desired, and whether or not to fall back to other languages if the desired language isn't available
+* specify the return language and in addition, request designations from additional languages (all available, or specified languages)
+
+Clients can specify the return displayLanguage in one of four places:
+
+* Using a displayLanguage parameter in the request
+* Using a displayLanguage parameter in the value set using the 
+http://hl7.org/fhir/tools/StructureDefinion/valueset-expansion-param extension
+* Using the http Accept-Language header 
+* ValueSet.language
+
+The first three may contain multiple languages with weights per the Accept-Language specification; which to use is a matter 
+of operational control on the client. ValueSet Language is a single language code as described in BCP-47. 
+
+* Servers SHALL support all four approaches 
+
+From a server point of view, the order of priority for the displayLanguage parameter is 
+`request parameter` > `valueset-extension` > `HTTP Header` > `ValueSet.language`
+
+## Value Set Language Control
+
+Value sets may them selves make rules about the language behavior using a combination of:
+
+* Specifying a language in ValueSet.language
+* Providing language specific displays and designations on ValueSet.compose.include.concept 
+* Specifying a specific displayLanguage paramaeter in a [[[http://hl7.org/fhir/tools/StructureDefinition/valueset-expansion-parameter]]] extension
+
+## Server Behavior
+
+The correct responses depends on the interplay between these various parameters, and are 
+effectively specified by the test cases.
+
+### Test Cases
 
 the tests here test out these combinations. To test this, we define four code systems, all basically related
 to each other:
@@ -26,17 +67,6 @@ The first four tests simply echo the four code systems back with no language rul
 * **language-echo-en-multi-none**: Just return codes from an english based code system that also has other designations (which are also requested)
 
 ## Specify the language that already exists
-
-You can specify the language of the displays to return in four different ways: 
-* Using a displayLanguage parameter in the request
-* Using a displayLanguage parameter in the value set using the 
-http://hl7.org/fhir/tools/StructureDefinion/valueset-expansion-param extension
-* Using the http Accept-Language header 
-* ValueSet.language
-
-The first three may contain multiple languages with weights per the Accept-Language specification; which to use is a matter 
-of operational control on the client. ValueSet Language is a single language code as described in BCP-47. These tests require 
-that a server support all four approaches. The sequence of pre-eminance is as in the list given above.
 
 Each of the tests below comes as a set of variants, depending on how the language is specified:
 * -param: using the displayLanguage parameter
