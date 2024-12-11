@@ -4,7 +4,7 @@ This documents the L& terminology ecosystem - policies and test cases.
 
 ## FHIR Foundation Project Statement
 
-* Maintainers: Grahame Grieve (as FHIR Product Director) + Reuben Daniels
+* Maintainers: Grahame Grieve (as FHIR Product Director) + Reuben Daniels (as Deputy FHIR Product Director)
 * Issues / Discussion: Create Issues here on GitHub. Discussion about (potential) issues, see [Zulip](https://chat.fhir.org/#narrow/channel/437028-Terminology-Service-Test-Cases). 
 * License: [CCO - Creative Commons Public Domain](https://github.com/FHIR/fhir-tools-ig/blob/master/LICENSE.txt)
 * Contribution Policy: Contributions to this IG are made under [the HL7 GOM](https://www.hl7.org/permalink/?GOM). This IG uses the standard HL7 ci-build for IGs, checking the generated QA. 
