@@ -87,7 +87,7 @@
         <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
         <code value="auto-oid-root"/>
       </code>    
-      <value value="2.16.840.1.113883.4.642.40.49"/>
+      <value value="2.16.840.1.113883.4.642.40.50"/>
     </parameter>     
     <parameter>
       <code>
