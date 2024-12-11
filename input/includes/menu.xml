@@ -1,4 +1,8 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
+  <li><a href="requirements.html">Requirements</a></li>
+  <li><a href="languages.html">Language Support</a></li>
+  <li><a href="ecosystem.html">Ecosystem</a></li>
+  <li><a href="testcases.html">Test Cases</a></li>
   <li><a href="artifacts.html">Artifact Index</a></li>
 </ul>      

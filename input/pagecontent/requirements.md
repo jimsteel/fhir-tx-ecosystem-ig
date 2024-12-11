@@ -157,7 +157,7 @@ If the server chooses to make them available elsewhere, it SHALL populate the ex
 * The server SHALL support system-version, check-system-version, and force-system-version
 * The server SHALL echo all parameters (including assumed values) in the expansion parameters
 * The server SHALL report with all versions of code systems used (in 'used-*')
-* The server SHALL Support language correctly (both displayLanguage parameter and Accept-Language header, as specified on [[languages.md]])
+* The server SHALL Support language correctly (both displayLanguage parameter and Accept-Language header, as specified in [[languages.html]])
 * The server SHALL support the excludeNested, includeDesignations, activeOnly, includeDefinition, property, designation parameters
 
 ### $validate-code parameters
