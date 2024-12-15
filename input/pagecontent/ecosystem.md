@@ -1,5 +1,3 @@
-## Terminology Server Registry Documentation
-
 This page documents the HL7 terminology ecosystem framework, where a set of servers
 that serve different code systems on behalf of different code system authorities, and
 there is a central coordinating server that routes terminology operations to the 
