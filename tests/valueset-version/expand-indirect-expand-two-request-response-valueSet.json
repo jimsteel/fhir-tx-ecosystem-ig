@@ -35,6 +35,7 @@
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/vs-version|0.1.0"
     },
     {
+      "$optional$" : true,
       "name" : "version",
       "valueUri" : "http://hl7.org/fhir/test/ValueSet/vs-version|2.0.0"
     }],

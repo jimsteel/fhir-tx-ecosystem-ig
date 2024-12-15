@@ -1884,7 +1884,7 @@
         "operation" : "expand",
         "http-code" : "4xx",
         "request" : "valueset-version/expand-indirect-expand-zero-pinned-wrong-request-parameters.json",
-        "response" : "valueset-version/expand-indirect-expand-zero-pinned-wrong-request-response-outcome.json"
+        "response" : "valueset-version/expand-indirect-expand-zero-pinned-wrong-response-outcome.json"
       },
       {
         "name" : "indirect-validation-one",

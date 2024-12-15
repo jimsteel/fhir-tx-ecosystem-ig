@@ -2,6 +2,9 @@
   "title" : "Terminology Tests History",
   "description" : "This page details the changes made to the terminology tests over time based on the github releases. Note that the github repository that contains these tests contains many other test cases for other kind of functionality. This history file only contains entries for github releases that include changes to the terminology tests.",
   "versions" : [{
+    "version" : "1.7.0",
+    "markdown" : "Move master tests to tx-ecosystem-ig instead of general test cases"
+  },{
     "version" : "1.6.6",
     "markdown" : "* Fix references to wrong value set in supplement tests"
   },{    
