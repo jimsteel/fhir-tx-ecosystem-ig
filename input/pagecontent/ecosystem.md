@@ -1,55 +1,92 @@
-# Terminology Server Registry Documentation
+## Terminology Server Registry Documentation
 
-## Introduction 
+This page documents the HL7 terminology ecosystem framework, where a set of servers
+that serve different code systems on behalf of different code system authorities, and
+there is a central coordinating server that routes terminology operations to the 
+correct server. 
 
-This documents the registry-of-registries for terminology servers eco-system.
+A terminology server ecosystem is defined by two URLs:
+* the URL of the master registry that registers the servers in the ecosystem
+* the URL of the coordination server that handles value set and code system resolution for the ecosystem 
 
-## The master registration file 
+There must be at least one coordination server for the ecosystem, though may be more than one. 
 
-The master registration file has content like this:
+HL7 manages one ecosystem:
+
+* Master registration file: https://fhir.github.io/ig-registry/tx-servers.json
+* Primary coordination server: http://tx.fhir.org/tx-reg.
+
+HL7 requires that all servers registered with the HL7 ecosystem have passed the tests described 
+in this document as a representation of the requirements documented in this IG. 
+
+Other ecosystems may be defined by other organizations by creating their own pair of registration file 
+and server. Individual servers might participate in multiple different ecosystems.
+
+Note that other ecosystems may not make the same requirement about passing these tests; users of the ecosystem 
+will have to consult the documentation to determine the applicable registration policy.
+
+### Registering the Servers 
+
+Registration is a two level process:
+* The master registration file lists one or more server registries
+* The server registries list one or more servers
+
+The files may be static json files (as the HL7 ecosystem practices), or 
+they may be dynamically generated in whatever fashion the manager of the 
+file sees fit. 
+
+#### The master registration file 
+
+The master registration file has the following content:
 
 ```js
 {
   "formatVersion" : "1", // fixed value. Mandatory
   "description" : "some description of this registry set", // purpose etc. Optional
-  "documentation" : "See https://github.com/FHIR/ig-registry/blob/master/tx-registry-doco.json", // recommended reference to this page. Optional
-  "registries" : [{ // list of the registries
-    "code" : "code",  // code never changes - it is a persistent identifer. alphanumerics only, no spaces. Mandatory
-    "name" : "Name",  // human readable name. can change, can contain any characters (including html type control chars). Mandatory
+  "documentation" : "See https://build.fhir.org/ig/HL7/fhir-tx-ecosystem-ig/ecosystem.html", // recommended reference to this page. Optional
+  "registries" : [{ // list of the registries. Must be present, but may be empty
+    "code" : "code",  // code that identifies the registry. A persistent identifier. alphanumerics only, no spaces. Mandatory
+    "name" : "Name",  // human readable name. Can change, can contain any characters (including html type control chars). Mandatory
     "authority" : "Organization name", // name of publishing org. Optional
-    "url" : "https://somwhere/path" // actual location of registry. May be dynamically generated. Mandatory
+    "url" : "https://somwhere/path" // actual location of registry. Mandatory
   }]
 }
 ```
 
 Notes:
 
-* The formatVersion number is 1. This might be changed in the future if breaking changes are made to the format. 
+* The formatVersion number is 1. This might be changed in the future if breaking changes are made to the format
 * Each of the entries in the list of registries points to a json document as documented in the next section
+* The code for the registry should be stable, since it may be used to identify the set of servers in the Coordination API (see below)
 
-There is a single master registration file at https://github.com/FHIR/ig-registry/blob/master/tx-servers.json
-which is the official list of public servers for the FHIR tooling eco-system. Other master registation files 
-may exist elsewhere.
+#### The server registries
 
-## The server registries
+This file contains a list of terminology servers.
 
 ```js
 {
   "formatVersion" : "1",// fixed value. Mandatory
   "description" : "something", // purpose etc. Optional
   "servers" : [{ // list of actual servers
-    "code" : "code",  // code never changes - it is a persistent identifer. alphanumerics only, no spaces. Mandatory
+    "code" : "code",  // code that identifies the server. Persistent identifier. alphanumerics only, no spaces. Mandatory
     "name" : "Name",  // human readable name. can change, can contain any characters (including html type control chars). Mandatory
     "access_info" : "documentation", // human readable markdown explaining how to get access to the server. Optional
     "url" : "http://server/page", // human landing page for the server. optional
     "usage" : [ // if present, a list of string usage tags for the intended use of the server. Missing means any use is appropriate. See below for uses (optional) ],
-    "authoritative" : [ // a list of terminologies (or terminologies and specific versions) as FHIR canonical URI values that the server claims to be authoritative for (see below). Optional
-      "http://domain/*", // simple mask, * is a wildcard which may be used as part of the terminology uri and/or the terminology version 
+    "authoritative" : [ 
+      // a list of CodeSystems the server claims to be authoritative for (see below). Optional
+      "http://domain/*", // simple mask, * is a wildcard  
+      "http://domain/*|1.0.0", // (may include version masks)
+      "http://domain/*|1.*" 
+    ],
+    "authoritative-valuesets" : [ 
+      // a list of ValueSets the server claims to be authoritative for (see below). Optional
+      "http://domain/*", // simple mask, * is a wildcard
       "http://domain/*|1.0.0",
       "http://domain/*|1.*" 
     ],
     "fhirVersions" : [{ // list of actual endpoint by FHIR version
-      "version" : "R4", // can be RX or M.n.p semver 
+      "version" : "R4", // can be R(X)
       "url" : "http://server/endpoint" // actual FHIR endpoint of the server for that version
     }]
   }]
@@ -58,87 +95,75 @@ may exist elsewhere.
 
 Notes:
 
-* The formatVersion number is 1. This might be changed in the future if breaking changes are made to the format.
-* Servers may and often do support a terminology without claiming to be authoritative for it. Being authoritative is a human decision, so is made in the registry. See below for notes about resolving a code system
+* The formatVersion number is 1. This might be changed in the future if breaking or significant changes are made to the format
+* The code for the server should be stable, since it may be used to identify the server in the Coordination API (see below)
 * Most servers will only have one endpoint, that is, they will only support one FHIR version, but some support more than one
-* if the different endpoints have different authoritative lists, that's really different servers
-* Servers endpoints must support FHIR R3 or later.
-* All endpoints shall support the FHIR capabilities interaction with mode=terminology without requiring authentication (see below).
+* if the different versions have different authoritative lists, that's really different servers
+* Server endpoints must support FHIR R3 or later. Valid values for version: R3, R4, R4B, R5, R6
 
-## The monitoring server
+#### Conformance Requirements 
 
-One you have the master registration file, and the other registries are in place, 
-then you point a monitoring server at the master registration file. The monitoring
-server scans the servers referenced from the master registration file, and maintains
-a live list of the servers, their configuration, and what code systems each endpoint 
-supports. Then clients that are interested in using one of the servers can interrogate
-the monitoring server to see what servers exist, and where a given code system might
-be resolved from.
+All endpoints listed in the server registration file shall return CapabilityStatement and TerminologyCapabilities
+resources that conform to the requirements describes in this IG
 
-http://tx.fhir.org maintains monitoring server at tx.fhir.org/tx-reg that is
-based on https://github.com/FHIR/ig-registry/blob/master/tx-servers.json.
+The HL7 ecosystem requires that all servers fully conform to the requirements laid out in
+this implementation, and that servers pass the set of tests described here in, or an acceptable 
+alternative set of tests as agreed with the FHIR Product Director (for servers that only support 
+specific code systems).
 
-### Responding to the monitoring service API
+Servers may require authentication that restricts their use to an approved subset of users.
 
-The monitoring server will hit the nominated endpoint at ```/metadata``` and ```/metadata?mode=terminology```.
-The endpoints must not require authentication, though the server may otherwise require
-authentication, and may return more complete statements if a user is authenticated.
+#### Authoritative Servers 
 
-The following features of the responses are used:
-* CapabilityStatement.fhirVersion
-* CapabilityStatement.rest[mode=server].security.service 
-* TerminologyCapabilities.codeSystem.uri
-* TerminologyCapabilities.codeSystem.version.code
+Servers may be declared to be authoritative for a set of CodeSystems and/or ValueSets in the registration file. 
+This is a declaration that the server manager believes that the server is the appropriate server in this 
+ecosystem to choose for that set of CodeSystems and ValueSets when they are used. 
 
-Servers should report all the code systems and versions that they support. 
+In general, users will expect that the authoritative servers have the latest versions of the content,
+and that older versions still in use are also maintained. The authoritative claim is only in regard 
+to the ecosystem, not an absolute claim that the server is the only authoritative server in all 
+contexts.
 
-#### R3
+Note that servers often support multiple code systems for which they are not regard as authoritative e.g. tx.fhir.org
+has a copy of the Australian edition of SNOMED CT, but the HL7 Australia official server is the authoritative server
+for the Australian edition. Servers are not restricted to only serving the content for which they are authoritative.
 
-For R3, the return from ```/metadata?mode=terminology``` is a Parameters resource 
-with a series of system parameters (of value uri) with sub-parts for the versions (of type code).
+The authoritative flag is used to help resolve which server to use - see below.
 
-```json
-{
-  "resourceType": "Parameters",
-  "parameter": [
-    {
-      "name": "system",
-      "valueUri": "http://example.com/fhir/CodeSystem/example-code-system-1"
-        "parameter": [
-            {
-              "name": "version",
-              "valueCode": "1.0.0"
-            }
-        ]
-    },
-    {
-      "name": "system",
-      "valueUri": "http://example.com/fhir/CodeSystem/example-code-system-2"
-        "parameter": [
-            {
-              "name": "version",
-              "valueCode": "20230930"
-            }
-        ]
-    }
-  ]
-}
-```
+### The Coordination server
 
-## The monitoring server API
+The Coordination server keeps a current set of information on the servers in its
+ecosystem, and users of the ecosystem ask the Coordination which server should be
+used for a particular operation. 
+
+#### Scanning the Ecosystem
+
+The Coordination server scans the servers referenced from the master registration 
+file, and maintains a live list of the servers, their configuration, and what 
+CodeSystems and ValueSet each endpoint supports and is authoritative for.
+
+The Coordination server will use the ```/metadata``` and ```/metadata?mode=terminology```
+operations, and also iterate the full set of ValueSets on the server using ```/ValueSet?_summary=true```.
+Note that the coordination server does not search the CodeSystems; instead, the list of 
+supported CodeSystems comes from the TerminologyCapabilities resource.
+
+If the server requires authentication for these operations, the Coordination server
+must be given access to these operations. 
+
+#### The Coordination server API
 
 The monitoring server provides a public API that has two sub-functions: 
 
 * Discovery: list known servers 
 * Resolution: recommend which server to use for a code system
 
-For tx.fhir.org, the ```root``` of this API is at http://tx.fhir.org/tx-reg/
+For the HL7 ecosystem, the ```root``` of this API is at http://tx.fhir.org/tx-reg/
 
-### Discovery 
+#### Discovery 
 
 ```GET {root}```
 
-Optional parameters:
+These parameters SHALL be supported by all servers:
 
 * registry: return only those endpoints that come from a nominated registry (by the code in the master registration file)
 * server: return only those endpoints that have the code given
@@ -151,7 +176,7 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
 ```js
 {
   "last-update": "2023-07-24T04:12:07.710Z", // last time the registries were scanned
-  "master-url": "https://raw.githubusercontent.com/FHIR/ig-registry/master/tx-servers.json", // master registry that was scanned
+  "master-url": "https://fhir.github.io/ig-registry/tx-servers.json", // master registry that was scanned
   "results": [{ // list of discovered endpoints
     "server-name": "human readable name",
     "server-code": "human readable name",
@@ -163,8 +188,10 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
     "error": "string", // details of error last time server was scanned, or null
     "last-success": int, // number of milliseconds since the server was last seen up
     "systems": int, // number of code systems found on the server
-    "authoritative": [], // list of authoritative code systems as canonical values (url|version)
-    "candidate": [], // list of candidate code systems as canonical values (url|version)
+    "authoritative": [], // list of authoritative CodeSystems as canonical values (url|version)
+    "authoritative-valuesets": [], // list of authoritative ValueSets as canonical values (url|version)
+    "candidate": [], // list of candidate CodeSystems as canonical values (url|version)
+    "candidate-valuesets": [], // list of candidate ValueSets as canonical values (url|version)
     "open": true // if the server supports non-authenticated use 
     "password" | "token" | "oauth" | "smart | "cert": true 
        // if the server supports authentication by one or more of those methods
@@ -174,18 +201,18 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
 
 Notes:
 
-* server-X and registry-X properties are provided tor human trouble-shooting; they are not operational
+* server-X and registry-X properties are provided tor human trouble-shooting; they are not used anywhere
 
-### Resolution
+#### Resolution
 
-A client can also ask which server to use for a particular code system. 
+A client can also ask which server to use for a particular CodeSystem. 
 
 ```GET {root}/resolve?fhirVersion={ver}&url={url}```
 
-Mandatory parameters:
+These parameters SHALL be supported by all servers:
 
-* fhirVersion: return only those endpoints that are based on the given FHIR version (RX or M.n.p)
-* url: return only those endpoints that support a particular code system (by canonical, so url or url|version)
+* fhirVersion (**required**): return only those endpoints that are based on the given FHIR version (RX or M.n.p)
+* url (**required**): return only those endpoints that support a particular code system (by canonical, so url or url|version)
 * authoritativeOnly: return only those endpoints that are authoritative (true or false; default is false)
 * usage - see below
   
@@ -212,7 +239,7 @@ Notes:
 * the resolve operation may return more that one server that is labelled as authoritative if the eco-system is defined that way. Resolving this is up to the client
 * the resolve operation may return more than one candidate server if more than one server hosts the terminology. Resolving this is up to the client
 * A server listed as authoritative won't also be listed as a candidate
-* Servers are not listed as authoritative unless they actually host the code system in the request 
+* Servers are not listed as authoritative unless they actually host the CodeSystem(+version) in the request 
 
 
 ### Usages
@@ -228,5 +255,4 @@ The open source hapi core java tools that support the ecosystem populate usage w
 * ```validation``` - the tool is validating the content of a resource (this may be in production or from the command line, or validator.fhir.org)
 * ```code-generation``` - the tool is generating some kind of code
 
-The primary purpose of the usage flag is so that an administrator can deny access to the validator. This *might* be appropriate if the ecosystem is not a production grade system (e.g. tx.fhir.org) but there is concern that some users won't restrict themselves from using it operationally (which is not supported by tx.fhir.org for budget reasons)
-
+The primary purpose of the usage flag is so that an administrator can deny access to server for purposes of validation. This *might* be appropriate if the ecosystem is not a production grade system (e.g. tx.fhir.org) but there is concern that some users won't restrict themselves from using it operationally (which is not supported by tx.fhir.org) for budget reasons.

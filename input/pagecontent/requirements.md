@@ -10,7 +10,6 @@ All systems need to conform to the following requirements:
 ## Metadata
 
 * the server SHALL return a CapabilityStatement from {root}/metadata
-* This SHALL be returned without authentication (note: it may include more information when returned to an authenticated client)
 * It SHALL populate the CapabilityStatement.fhirVersion and CapabilityStatement.rest[mode = server].security.service properties
 * It SHALL include a CapabilityStatement.instantiates value of http://hl7.org/fhir/CapabilityStatement/terminology-server
 * The server SHALL return a TerminologyCapabilities statement from {root}/metadata?mode=terminology
