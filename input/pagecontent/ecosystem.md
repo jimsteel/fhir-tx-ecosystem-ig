@@ -11,8 +11,8 @@ There must be at least one coordination server for the ecosystem, though may be 
 
 HL7 manages one ecosystem:
 
-* Master registration file: https://fhir.github.io/ig-registry/tx-servers.json
-* Primary coordination server: http://tx.fhir.org/tx-reg.
+* Master registration file: [https://fhir.github.io/ig-registry/tx-servers.json]
+* Primary coordination server: [http://tx.fhir.org/tx-reg]
 
 HL7 requires that all servers registered with the HL7 ecosystem have passed the tests described 
 in this document as a representation of the requirements documented in this IG. 
@@ -131,14 +131,15 @@ The authoritative flag is used to help resolve which server to use - see below.
 ### The Coordination server
 
 The Coordination server keeps a current set of information on the servers in its
-ecosystem, and users of the ecosystem ask the Coordination which server should be
+ecosystem, and users of the ecosystem ask the Coordination server which terminology server should be
 used for a particular operation. 
 
 #### Scanning the Ecosystem
 
 The Coordination server scans the servers referenced from the master registration 
-file, and maintains a live list of the servers, their configuration, and what 
-CodeSystems and ValueSet each endpoint supports and is authoritative for.
+file on a regular basis, and maintains a live list of the servers, their configuration, and what 
+CodeSystems and ValueSet each endpoint supports and is authoritative for. The frequency of scanning 
+is a matter for the ecosystem and server administrators, but is generally every few minutes.
 
 The Coordination server will use the ```/metadata``` and ```/metadata?mode=terminology```
 operations, and also iterate the full set of ValueSets on the server using ```/ValueSet?_summary=true```.
@@ -155,7 +156,7 @@ The monitoring server provides a public API that has two sub-functions:
 * Discovery: list known servers 
 * Resolution: recommend which server to use for a code system
 
-For the HL7 ecosystem, the ```root``` of this API is at http://tx.fhir.org/tx-reg/
+For the HL7 ecosystem, the ```root``` of this API is at [http://tx.fhir.org/tx-reg/]
 
 #### Discovery 
 
