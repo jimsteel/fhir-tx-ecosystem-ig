@@ -256,3 +256,26 @@ The open source hapi core java tools that support the ecosystem populate usage w
 * ```code-generation``` - the tool is generating some kind of code
 
 The primary purpose of the usage flag is so that an administrator can deny access to server for purposes of validation. This *might* be appropriate if the ecosystem is not a production grade system (e.g. tx.fhir.org) but there is concern that some users won't restrict themselves from using it operationally (which is not supported by tx.fhir.org) for budget reasons.
+
+### SNOMED CT Implicit ValueSets 
+
+There's a limitation of use associated with the ecosystem, which is a little tricky to explain. 
+
+The page [Using SNOMED CT with HL7 Standards](https://terminology.hl7.org/SNOMEDCT.html) defines a series of implicit SNOMED CT value set URLs. This implicit value sets are very useful since profiles / valuesets etc can just refer to them directly without having to ensure that they are created, and they are supported by all the terminology servers in the ecosystem. However there's a limitation of their use, associated with the need to decide which SNOMED CT server is the correct one to use for any particular request. 
+
+The implicit value set URL has two parts:
+
+* **base**: the SNOMED CT edition / version on which the value set is based e.g. `http://snomed.info/sct/20611000087101` is any Canadian version
+* **specifier**: the details of the value set e.g. `?fhir_vs=refset/22071000087104`
+
+Given the way that the value sets are defined, they are only valid against a given edition and version, and can only be evaluated (and even instantiated) against that known version. One way to manage this is bind the value set to a specific version in the definition itself:  e.g. `http://snomed.info/sct/20611000087101/version/20240731?fhir_vs=refset/22071000087104` identifies a specific version. 
+
+But it's often more useful to allow late binding of the valueset to a specific version. E.g. `http://snomed.info/sct/20611000087101?fhir_vs=refset/22071000087104` in whatever is the applicable SNOMED CT version, where that might be specific using a `system-version` parameter in the expansion parameters, or the server might  just use the latest version of the Canadian edition that it has. 
+
+In the same way, `http://snomed.info/sct?fhir_vs=refset/22071000087104` means 'whatever version of whatever edition', as decided by the infrastructure when the reference is used. (this example neatly shows the risk of this approach, because 22071000087104 is a Canadian specific reference set).
+
+Unfortunately, the ecosystem infrastructure doesn't know how to route `http://snomed.info/sct?fhir_vs=refset/22071000087104` to the correct server - at the point the decision is made, the actual SNOMED CT edition isn't known, and can't be known, and the correct server can't be picked. Any evaluation of this value set will be done by tx.fhir.org, not one of the designated SNOMED CT servers (in this case, the Canadian server would be desired).
+
+Hence, in the terminology ecosystem, all SNOMED CT implicit value sets must include the edition if they're not based on the international edition, and if evaluation by the correct server is desired. 
+
+Note: this might change in the future e.g. if there's only one SNOMED CT server for all editions, but there's no plan for that at this time. 
