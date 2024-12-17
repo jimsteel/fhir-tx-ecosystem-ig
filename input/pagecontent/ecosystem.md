@@ -37,7 +37,7 @@ file sees fit.
 
 The master registration file has the following content:
 
-```js
+```json5
 {
   "formatVersion" : "1", // fixed value. Mandatory
   "description" : "some description of this registry set", // purpose etc. Optional
@@ -61,7 +61,7 @@ Notes:
 
 This file contains a list of terminology servers.
 
-```js
+```json5
 {
   "formatVersion" : "1",// fixed value. Mandatory
   "description" : "something", // purpose etc. Optional
@@ -171,7 +171,7 @@ These parameters SHALL be supported by all servers:
 
 When the ```Accept``` header is ```application/json```, the return value is a JSON object:
 
-```js
+```json5
 {
   "last-update": "2023-07-24T04:12:07.710Z", // last time the registries were scanned
   "master-url": "https://fhir.github.io/ig-registry/tx-servers.json", // master registry that was scanned
@@ -203,20 +203,22 @@ Notes:
 
 #### Resolution
 
-A client can also ask which server to use for a particular CodeSystem. 
+A client can also ask which server to use for a particular CodeSystem or ValueSet. 
 
 ```GET {root}/resolve?fhirVersion={ver}&url={url}```
 
 These parameters SHALL be supported by all servers:
 
-* fhirVersion (**required**): return only those endpoints that are based on the given FHIR version (RX or M.n.p)
-* url (**required**): return only those endpoints that support a particular code system (by canonical, so url or url|version)
-* authoritativeOnly: return only those endpoints that are authoritative (true or false; default is false)
-* usage - see below
+* `fhirVersion` (**required**): return only those endpoints that are based on the given FHIR version (RX or M.n.p)
+* `url`: return only those endpoints that support a particular code system (by canonical, so url or url/version)
+* `valueSet`: return only those endpoints that know a particular ValueSet (by canonical, so url or url/version)
+* one of `url` or `valueSet` must be present
+* `authoritativeOnly`: return only those endpoints that are authoritative (true or false; default is false)
+* `usage` - see below
   
 When the ```Accept``` header is ```application/json```, the return value is a JSON object:
 
-```js
+```json5
 {
   "formatVersion" : version,
   "registry-url" : url,
