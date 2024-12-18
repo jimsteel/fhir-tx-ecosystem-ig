@@ -279,4 +279,6 @@ Unfortunately, the ecosystem infrastructure doesn't know how to route `http://sn
 
 Hence, in the terminology ecosystem, all SNOMED CT implicit value sets must include the edition if they're not based on the international edition, and if evaluation by the correct server is desired. 
 
-Note: this might change in the future e.g. if there's only one SNOMED CT server for all editions, but there's no plan for that at this time. 
+This restriction applies to value set references in StructureDefinitions, Questionanires, ValueSets,and other resources used in IGs, packages etc. It does not apply to value sets used by import on one of the servers - the ecosystem does not resolve such a value set, and it's up to the server to do so.
+
+Note: this restriction might change in the future e.g. if there's only one SNOMED CT server for all editions, but there's no plan for that at this time. 
