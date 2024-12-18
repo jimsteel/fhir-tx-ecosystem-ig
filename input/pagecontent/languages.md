@@ -20,7 +20,7 @@ Clients can specify the return displayLanguage in one of four places:
 
 * Using a displayLanguage parameter in the request
 * Using a displayLanguage parameter in the value set using the 
-http://hl7.org/fhir/tools/StructureDefinion/valueset-expansion-param extension
+[[[http://hl7.org/fhir/tools/StructureDefinion/valueset-expansion-parameter]]] extension
 * Using the http Accept-Language header 
 * ValueSet.language
 
@@ -38,7 +38,7 @@ Value sets may them selves make rules about the language behavior using a combin
 
 * Specifying a language in ValueSet.language
 * Providing language specific displays and designations on ValueSet.compose.include.concept 
-* Specifying a specific displayLanguage paramaeter in a [[[http://hl7.org/fhir/tools/StructureDefinition/valueset-expansion-parameter]]] extension
+* Specifying a specific displayLanguage parameter in a [[[http://hl7.org/fhir/tools/StructureDefinition/valueset-expansion-parameter]]] extension
 
 ## Server Behavior
 
@@ -109,7 +109,7 @@ full set available. We could filter them on the client side, but it might be qui
 ## Validation
 
 The validation use cases around language include tests for language 
-specified as an http header, as a value set parameter, a value set language, 
-and for various combinations of laguage weights.
+specified as an HTTP header, as a value set parameter, a value set language, 
+and for various combinations of language weights.
 
 Note that by default, the wildcard is understood to not be present.

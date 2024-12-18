@@ -11,8 +11,8 @@ There must be at least one coordination server for the ecosystem, though may be 
 
 HL7 manages one ecosystem:
 
-* Master registration file: [https://fhir.github.io/ig-registry/tx-servers.json]
-* Primary coordination server: [http://tx.fhir.org/tx-reg]
+* Master registration file: <https://fhir.github.io/ig-registry/tx-servers.json>
+* Primary coordination server: <http://tx.fhir.org/tx-reg>
 
 HL7 requires that all servers registered with the HL7 ecosystem have passed the tests described 
 in this document as a representation of the requirements documented in this IG. 
@@ -43,7 +43,7 @@ The master registration file has the following content:
   "description" : "some description of this registry set", // purpose etc. Optional
   "documentation" : "See https://build.fhir.org/ig/HL7/fhir-tx-ecosystem-ig/ecosystem.html", // recommended reference to this page. Optional
   "registries" : [{ // list of the registries. Must be present, but may be empty
-    "code" : "code",  // code that identifies the registry. A persistent identifier. alphanumerics only, no spaces. Mandatory
+    "code" : "code",  // code that identifies the registry. A persistent identifier. Alphanumerics only, no spaces. Mandatory
     "name" : "Name",  // human readable name. Can change, can contain any characters (including html type control chars). Mandatory
     "authority" : "Organization name", // name of publishing org. Optional
     "url" : "https://somwhere/path" // actual location of registry. Mandatory
@@ -66,11 +66,12 @@ This file contains a list of terminology servers.
   "formatVersion" : "1",// fixed value. Mandatory
   "description" : "something", // purpose etc. Optional
   "servers" : [{ // list of actual servers
-    "code" : "code",  // code that identifies the server. Persistent identifier. alphanumerics only, no spaces. Mandatory
-    "name" : "Name",  // human readable name. can change, can contain any characters (including html type control chars). Mandatory
+    "code" : "code",  // code that identifies the server. Persistent identifier. Alphanumerics only, no spaces. Mandatory
+    "name" : "Name",  // human readable name. Can change; can contain any characters (including html type control chars). Mandatory
     "access_info" : "documentation", // human readable markdown explaining how to get access to the server. Optional
-    "url" : "http://server/page", // human landing page for the server. optional
-    "usage" : [ // if present, a list of string usage tags for the intended use of the server. Missing means any use is appropriate. See below for uses (optional) ],
+    "url" : "http://server/page", // human landing page for the server. Optional
+    "usage" : [ // if present, a list of string usage tags for the intended use of the server. Missing means any use is appropriate. See below for uses. Optional
+    ],
     "authoritative" : [ 
       // a list of CodeSystems the server claims to be authoritative for (see below). Optional
       "http://domain/*", // simple mask, * is a wildcard  
@@ -96,13 +97,13 @@ Notes:
 * The formatVersion number is 1. This might be changed in the future if breaking or significant changes are made to the format
 * The code for the server should be stable, since it may be used to identify the server in the Coordination API (see below)
 * Most servers will only have one endpoint, that is, they will only support one FHIR version, but some support more than one
-* if the different versions have different authoritative lists, that's really different servers
+* If the different versions have different authoritative lists, that's really different servers
 * Server endpoints must support FHIR R3 or later. Valid values for version: R3, R4, R4B, R5, R6
 
 #### Conformance Requirements 
 
 All endpoints listed in the server registration file shall return CapabilityStatement and TerminologyCapabilities
-resources that conform to the requirements describes in this IG
+resources that conform to the requirements described in this IG
 
 The HL7 ecosystem requires that all servers fully conform to the requirements laid out in
 this implementation, and that servers pass the set of tests described here in, or an acceptable 
@@ -130,7 +131,7 @@ The authoritative flag is used to help resolve which server to use - see below.
 
 ### The Coordination server
 
-The Coordination server keeps a current set of information on the servers in its
+The Coordination server keeps a current set of information about the servers in its
 ecosystem, and users of the ecosystem ask the Coordination server which terminology server should be
 used for a particular operation. 
 
@@ -156,7 +157,7 @@ The monitoring server provides a public API that has two sub-functions:
 * Discovery: list known servers 
 * Resolution: recommend which server to use for a code system
 
-For the HL7 ecosystem, the ```root``` of this API is at [http://tx.fhir.org/tx-reg/]
+For the HL7 ecosystem, the ```root``` of this API is at [http://tx.fhir.org/tx-reg/](http://tx.fhir.org/tx-reg/)
 
 #### Discovery 
 
@@ -164,11 +165,11 @@ For the HL7 ecosystem, the ```root``` of this API is at [http://tx.fhir.org/tx-r
 
 These parameters SHALL be supported by all servers:
 
-* registry: return only those endpoints that come from a nominated registry (by the code in the master registration file)
-* server: return only those endpoints that have the code given
-* fhirVersion: return only those endpoints that are based on the given FHIR version (RX or M.n.p)
-* url: return only those endpoints that support a particular code system (by canonical, so url or url|version).
-* authoritativeOnly: return only code systems which the endpoints are authoritative for (true or false; default is false)
+* `registry`: return only those endpoints that come from a nominated registry (by the code in the master registration file)
+* `server`: return only those endpoints that have the code given
+* `fhirVersion`: return only those endpoints that are based on the given FHIR version (RX or M.n.p)
+* `url`: return only those endpoints that support a particular code system (by canonical, so url or url|version).
+* `authoritativeOnly`: return only code systems which the endpoints are authoritative for (true or false; default is false)
 
 When the ```Accept``` header is ```application/json```, the return value is a JSON object:
 
@@ -192,7 +193,7 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
     "candidate": [], // list of candidate CodeSystems as canonical values (url|version)
     "candidate-valuesets": [], // list of candidate ValueSets as canonical values (url|version)
     "open": true // if the server supports non-authenticated use 
-    "password" | "token" | "oauth" | "smart | "cert": true 
+    "password" | "token" | "oauth" | "smart" | "cert": true 
        // if the server supports authentication by one or more of those methods
   }]
 }
@@ -200,7 +201,7 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
 
 Notes:
 
-* server-X and registry-X properties are provided tor human trouble-shooting; they are not used anywhere
+* server-*X* and registry-*X* properties are provided for human trouble-shooting; they are not used anywhere
 
 #### Resolution
 
@@ -213,7 +214,7 @@ These parameters SHALL be supported by all servers:
 * `fhirVersion` (**required**): return only those endpoints that are based on the given FHIR version (RX or M.n.p)
 * `url`: return only those endpoints that support a particular code system (by canonical, so url or url/version)
 * `valueSet`: return only those endpoints that know a particular ValueSet (by canonical, so url or url/version)
-* one of `url` or `valueSet` must be present
+* One of `url` or `valueSet` must be present
 * `authoritativeOnly`: return only those endpoints that are authoritative (true or false; default is false)
 * `usage` - see below
   
@@ -227,7 +228,7 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
     "server-name" : "Human name for server",
     "url" : "http://server/endpoint" // actual FHIR endpoint of the server 
     "fhirVersion" : "4.0.1", // FHIR version - semver
-    "open" | "password" | "token" | "oauth" | "smart | "cert": true // as above
+    "open" | "password" | "token" | "oauth" | "smart" | "cert": true // as above
   }],
   "candidate" : [{
     // same content as for authoritative
@@ -237,8 +238,8 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
 
 Notes:
 
-* the resolve operation may return more that one server that is labelled as authoritative if the eco-system is defined that way. Resolving this is up to the client
-* the resolve operation may return more than one candidate server if more than one server hosts the terminology. Resolving this is up to the client
+* The resolve operation may return more that one server that is labelled as authoritative if the ecosystem is defined that way. Resolving this is up to the client
+* The resolve operation may return more than one candidate server if more than one server hosts the terminology. Resolving this is up to the client
 * A server listed as authoritative won't also be listed as a candidate
 * Servers are not listed as authoritative unless they actually host the CodeSystem(+version) in the request 
 
@@ -249,9 +250,9 @@ If a server is marked as having a restricted use, the server will only be return
 
 A client can provide a usage token with the parameter 'usage': ```GET {root}/resolve?fhirVersion={ver}&url={url}&usage=publication```
 
-it's up to the client to provide a usage token that accurately represents it's usage. 
+It's up to the client to provide a usage token that accurately represents its usage. 
 
-The open source hapi core java tools that support the ecosystem populate usage with one of three values:
+The open source HAPI core Java tools that support the ecosystem populate usage with one of three values:
 * ```publication``` - the tool is publishing an IG, or building the core FHIR Specification
 * ```validation``` - the tool is validating the content of a resource (this may be in production or from the command line, or validator.fhir.org)
 * ```code-generation``` - the tool is generating some kind of code
@@ -262,16 +263,16 @@ The primary purpose of the usage flag is so that an administrator can deny acces
 
 There's a limitation of use associated with the ecosystem, which is a little tricky to explain. 
 
-The page [Using SNOMED CT with HL7 Standards](https://terminology.hl7.org/SNOMEDCT.html) defines a series of implicit SNOMED CT value set URLs. These implicit value sets are very useful since profiles / valuesets etc can just refer to them directly without having to ensure that they are created, and they are supported by all the terminology servers in the ecosystem. However there's a limitation of their use, associated with the need to decide which SNOMED CT server is the correct one to use for any particular request. 
+The page [Using SNOMED CT with HL7 Standards](https://terminology.hl7.org/SNOMEDCT.html) defines a series of implicit SNOMED CT value set URLs. These implicit value sets are very useful since profiles, ValueSets, etc., can just refer to them directly without having to ensure that they are created, and they are supported by all the terminology servers in the ecosystem. However there's a limitation on their use associated with the need to decide which SNOMED CT server is the correct one to use for any particular request. 
 
 The implicit value set URL has two parts:
 
-* **base**: the SNOMED CT edition / version on which the value set is based e.g. `http://snomed.info/sct/20611000087101` is any Canadian version
-* **specifier**: the details of the value set e.g. `?fhir_vs=refset/22071000087104`
+* **base**: the SNOMED CT edition/version on which the value set is based, e.g. `http://snomed.info/sct/20611000087101` is any Canadian version
+* **specifier**: the details of the value set, e.g. `?fhir_vs=refset/22071000087104`
 
-Given the way that the value sets are defined, they are only valid against a given edition and version, and can only be evaluated (and even instantiated) against that known version. One way to manage this is bind the value set to a specific version in the definition itself:  e.g. `http://snomed.info/sct/20611000087101/version/20240731?fhir_vs=refset/22071000087104` identifies a specific version. 
+Given the way that the value sets are defined, they are only valid against a given edition and version, and can only be evaluated (and even instantiated) against that known version. One way to manage this is to bind the value set to a specific version in the definition itself,  e.g. `http://snomed.info/sct/20611000087101/version/20240731?fhir_vs=refset/22071000087104` identifies a specific version. 
 
-But it's often more useful to allow late binding of the valueset to a specific version. E.g. `http://snomed.info/sct/20611000087101?fhir_vs=refset/22071000087104` is whatever is the applicable SNOMED CT version, where that might be specified using a `system-version` parameter in the expansion parameters, or the server might just use the latest version of the Canadian edition that it has. 
+But it's often more useful to allow late binding of the value set to a specific version. E.g. `http://snomed.info/sct/20611000087101?fhir_vs=refset/22071000087104` is whatever is the applicable SNOMED CT version, where that might be specified using a `system-version` parameter in the expansion parameters, or the server might just use the latest version of the Canadian edition that it has. 
 
 In the same way, `http://snomed.info/sct?fhir_vs=refset/22071000087104` means 'whatever version of whatever edition', as decided by the infrastructure when the reference is used. (this particular example neatly shows the risk of this approach, because 22071000087104 is a Canadian specific reference set, but it would be fine for most SCT content).
 
@@ -279,6 +280,6 @@ Unfortunately, the ecosystem infrastructure doesn't know how to route `http://sn
 
 Hence, in the terminology ecosystem, all SNOMED CT implicit value sets must include the edition if they're not based on the international edition, and if evaluation by the correct server is desired. 
 
-This restriction applies to value set references in StructureDefinitions, Questionanires, ValueSets,and other resources used in IGs, packages etc. It does not apply to value sets used by import on one of the servers - the ecosystem does not resolve such a value set, and it's up to the server to do so.
+This restriction applies to value set references in StructureDefinitions, Questionnaires, ValueSets, and other resources used in IGs, packages, etc. It does not apply to value sets used by import on one of the servers - the ecosystem does not resolve such a value set, and it's up to the server to do so.
 
 Note: this restriction might change in the future e.g. if there's only one SNOMED CT server for all editions, but there's no plan for that at this time. 
