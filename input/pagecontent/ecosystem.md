@@ -226,9 +226,10 @@ When the ```Accept``` header is ```application/json```, the return value is a JS
   "registry-url" : url,
   "authoritative" : [{
     "server-name" : "Human name for server",
-    "url" : "http://server/endpoint" // actual FHIR endpoint of the server 
+    "url" : "http://server/endpoint", // actual FHIR endpoint of the server 
     "fhirVersion" : "4.0.1", // FHIR version - semver
-    "open" | "password" | "token" | "oauth" | "smart" | "cert": true // as above
+    "open" | "password" | "token" | "oauth" | "smart | "cert": true, // as above
+    "access_info" : "description" // provided if the server has some, for error messages
   }],
   "candidate" : [{
     // same content as for authoritative
