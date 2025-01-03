@@ -10,7 +10,7 @@
   },
   {
     "name" : "display",
-    "valueCode" : "Anzeige 1"
+    "valueString" : "Anzeige 1"
   },
   {
     "name" : "system",
