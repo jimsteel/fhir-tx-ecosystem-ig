@@ -61,6 +61,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <name value="r4.html"/>
+        <title value="R4 and Test Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <name value="history.html"/>
         <title value="Version History"/>
         <generation value="markdown"/>
