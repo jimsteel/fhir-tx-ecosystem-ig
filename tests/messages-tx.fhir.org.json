@@ -49,8 +49,8 @@
     "2" : "Wrong Display Name 'Anzeige 1' for http://hl7.org/fhir/test/CodeSystem/en-multi#code1. Valid display is 'Display 1' (en) (for the language(s) 'en')"
   },
   "validation/simple-coding-bad-language-response-parameters.json" : {
-    "1" : "Wrong Display Name 'Anzeige 1' for http://hl7.org/fhir/test/CodeSystem/en-multi#code1. Valid display is 'Display 1' (en) (for the language(s) 'en, en-AU; q=0.4')",
-    "2" : "Wrong Display Name 'Anzeige 1' for http://hl7.org/fhir/test/CodeSystem/en-multi#code1. Valid display is 'Display 1' (en) (for the language(s) 'en, en-AU; q=0.4')"  
+    "1" : "Wrong Display Name 'Anzeige 1' for http://hl7.org/fhir/test/CodeSystem/en-multi#code1. Valid display is 'Display 1' (en) (for the language(s) 'en, en-AU')",
+    "2" : "Wrong Display Name 'Anzeige 1' for http://hl7.org/fhir/test/CodeSystem/en-multi#code1. Valid display is 'Display 1' (en) (for the language(s) 'en, en-AU')"
   },
   "validation/simple-codeableconcept-bad-display-response-parameters.json" : {
     "1" : "Wrong Display Name 'Display 1X' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is 'Display 1 (1.0)' (en) (for the language(s) '--')",
