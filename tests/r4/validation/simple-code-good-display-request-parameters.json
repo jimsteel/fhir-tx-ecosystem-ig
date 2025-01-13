@@ -17,7 +17,7 @@
     "valueUri" : "http://hl7.org/fhir/test/CodeSystem/version"
   },
   {
-    "name" : "version",
+    "name" : "systemVersion",
     "valueString" : "1.0.0"
   }]
 }
