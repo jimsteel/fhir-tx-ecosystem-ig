@@ -34,5 +34,10 @@
   {
     "name" : "system",
     "valueUri" : "http://hl7.org/fhir/test/CodeSystem/supplement"
+  },
+  {
+    "$optional$" : true,
+    "name" : "x-caused-by-unknown-system",
+    "valueCanonical" : "http://hl7.org/fhir/test/CodeSystem/supplement"
   }]
 }

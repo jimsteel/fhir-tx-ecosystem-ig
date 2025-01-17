@@ -12,6 +12,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="FeatureDefinition/CodeSystemAsParameter" key="StructureDefinition-ig-actor-example-url" name=""/>
 <artifact id="FeatureDefinition/TestCaseVersion" key="StructureDefinition-ig-actor-example-url" name=""/>
 <artifact deprecated="true" id="StructureDefinition/ig-example-actor" key="StructureDefinition-ig-example-actor" name="Actor For Example"/>
 <artifact deprecated="true" id="StructureDefinition/additional-binding" key="StructureDefinition-additional-binding" name="Additional Binding Extension"/>
@@ -235,6 +236,7 @@
 <page deprecated="true" key="other" name="Other Information"/>
 <page deprecated="true" key="page-factories" name="Page Factories"/>
 <page deprecated="true" key="profiles" name="Profiles and Extensions"/>
+<page key="r4" name="R4 and Test Cases"/>
 <page key="requirements" name="Requirements for Servers"/>
 <page deprecated="true" key="summary-reporting" name="Summary Reporting"/>
 <page key="toc" name="Table of Contents"/>

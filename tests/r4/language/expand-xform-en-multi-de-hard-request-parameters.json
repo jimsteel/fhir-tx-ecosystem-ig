@@ -6,7 +6,7 @@
   },
   {
     "name" : "displayLanguage",
-    "valueCode" : "de,*; q=0"
+    "valueCode" : "de,*"
   },
   {
     "name" : "includeDesignations",
