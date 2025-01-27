@@ -57,7 +57,7 @@
       "valueCode" : "new"
     },{
       "code" : "notSelectable",
-      "valueBoolean" : "true"
+      "valueBoolean" : true
     },{
       "code" : "status",
       "valueCode" : "retired"
