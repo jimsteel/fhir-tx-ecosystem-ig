@@ -9,6 +9,10 @@
     "resource" : {
       "resourceType" : "OperationOutcome",
       "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
         "severity" : "error",
         "code" : "code-invalid",
         "details" : {
@@ -22,6 +26,10 @@
         "expression" : ["Coding.code"]
       },
       {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Unknown_Code_in_Version"
+        }],
         "severity" : "error",
         "code" : "code-invalid",
         "details" : {
