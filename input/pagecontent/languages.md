@@ -83,10 +83,7 @@ Each of the tests below comes as a set of variants, depending on how the languag
 ## Change the language 
 
 Having done these, we turn to the really interesting tests, switching the display language. These tests use the weight feature of the language, 
-specifying to return en: ```displayLanguage: en```. By default, the wildcard is understood to be present at some low weight: ```displayLanguage: en, *; q=0.1```.
-This results in the client getting displays in the language of it's choice, *if there are any*, and otherwise falling back to whatever is available. 
-If the client wants to insist that it only get displays if they are in the specified language, it has to turn the wild card of explicitly: 
-```displayLanguage: en, *; q=0```
+specifying to return en: ```displayLanguage: en```. By default, the wildcard is understood to be present at some low weight: ```displayLanguage: en, *; q=0.1```. This results in the client getting displays in the language of it's choice, *if there are any*, and otherwise falling back to whatever is available. If the client wants to insist that it only get displays if they are in the specified language, it has to turn the wild card off explicitly: ```displayLanguage: en, *; q=0```
 
 For these tests, it's anticipated that the parameter handling tested out in the previous tests is working, so instead, these tests come in three 
 variants:

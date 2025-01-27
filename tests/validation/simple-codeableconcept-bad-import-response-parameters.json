@@ -25,6 +25,11 @@
         }
       },
       {
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "UNABLE_TO_CHECK_IF_THE_PROVIDED_CODES_ARE_IN_THE_VALUE_SET_VS"
+        }],
         "severity" : "warning",
         "code" : "not-found",
         "details" : {

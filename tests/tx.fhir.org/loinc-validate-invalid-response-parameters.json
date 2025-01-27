@@ -9,6 +9,10 @@
     "resource" : {
       "resourceType" : "OperationOutcome",
       "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Unknown_Code_in_Version"
+        }],
         "severity" : "error",
         "code" : "code-invalid",
         "details" : {
