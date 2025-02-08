@@ -3,12 +3,14 @@
   "title" : "HL7 Terminology Ecosystem IG", 
   "category" : "Infrastructure",
   "introduction" : "This implementation guide defines the HL7 terminology ecosystem",
-  "version" : "1.7.0",
+  "version" : "1.7.5",
   "desc" : "Base line - first publication of the IG (assembling content from elsewhere)",
-  "path" : "http://hl7.org/fhir/uv/tx-ecosystem/1.7.0",
+  "path" : "http://hl7.org/fhir/uv/tx-ecosystem/1.7.5",
   "status" : "informative",
   "sequence" : "Releases",
   "first" : true,
   "ci-build" : "https://build.fhir.org/ig/HL7/fhir-tx-ecosystem-ig/",
-  "mode" : "rolling"
+  "mode" : "milestone",
+  "allow-current-dependencies" : true,
+  "publish-pattern" : "current-only"
 }
