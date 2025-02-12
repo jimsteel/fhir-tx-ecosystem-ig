@@ -1936,7 +1936,8 @@
     "description" : "These are tx.fhir.org specific tests. There's no expectation that other servers will pass these tests, and they are not executed by default. (other servers can, but they depend on other set up not controlled by the tests",
     "setup" : [ "tx.fhir.org/valueset-all.json", "tx.fhir.org/valueset-enumerated-bad.json", "tx.fhir.org/valueset-enumerated.json", "tx.fhir.org/valueset-filter-prop-component.json", "tx.fhir.org/valueset-filter-prop-method.json", "tx.fhir.org/valueset-filter-prop-component-str.json", 
       "tx.fhir.org/valueset-filter-prop-order-obs.json", "tx.fhir.org/valueset-concept-is-a.json", "tx.fhir.org/valueset-filter-copyright.json", "tx.fhir.org/valueset-filter-status.json", "tx.fhir.org/valueset-filter-class-regex.json", 
-      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json"],
+      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json", 
+      "tx.fhir.org/codesystem-loinc-supplement.json"],
     "tests" : [
       {
         "name" : "snomed-validation-1",
@@ -1979,6 +1980,20 @@
         "operation" : "cs-validate-code",
         "request" : "tx.fhir.org/loinc-validate-code-request-parameters.json",
         "response" : "tx.fhir.org/loinc-validate-code-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-code-supp1",
+        "description" : "LOINC supplement test - code in the supplement, but english",
+        "operation" : "cs-validate-code",
+        "request" : "tx.fhir.org/loinc-validate-code-supp1-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-validate-code-supp1-response-parameters.json"
+      },
+      {
+        "name" : "loinc-validate-code-supp2",
+        "description" : "LOINC supplement test - code in the supplement, but german from the supplement",
+        "operation" : "cs-validate-code",
+        "request" : "tx.fhir.org/loinc-validate-code-supp2-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-validate-code-supp2-response-parameters.json"
       },
       {
         "name" : "loinc-validate-part",
