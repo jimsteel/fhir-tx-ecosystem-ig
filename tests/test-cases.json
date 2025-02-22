@@ -1936,7 +1936,8 @@
     "description" : "These are tx.fhir.org specific tests. There's no expectation that other servers will pass these tests, and they are not executed by default. (other servers can, but they depend on other set up not controlled by the tests",
     "setup" : [ "tx.fhir.org/valueset-all.json", "tx.fhir.org/valueset-enumerated-bad.json", "tx.fhir.org/valueset-enumerated.json", "tx.fhir.org/valueset-filter-prop-component.json", "tx.fhir.org/valueset-filter-prop-method.json", "tx.fhir.org/valueset-filter-prop-component-str.json", 
       "tx.fhir.org/valueset-filter-prop-order-obs.json", "tx.fhir.org/valueset-concept-is-a.json", "tx.fhir.org/valueset-filter-copyright.json", "tx.fhir.org/valueset-filter-status.json", "tx.fhir.org/valueset-filter-class-regex.json", 
-      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json", 
+      "tx.fhir.org/valueset-filter-scale-type.json", "tx.fhir.org/valueset-filter-list.json", "tx.fhir.org/valueset-filter-prop-dockind-exists.json", "tx.fhir.org/valueset-filter-classtype.json", 
+      "tx.fhir.org/valueset-filter-answers-for1.json", "tx.fhir.org/valueset-filter-answers-for2.json", "tx.fhir.org/valueset-filter-answer-list.json",
       "tx.fhir.org/codesystem-loinc-supplement.json"],
     "tests" : [
       {
@@ -2215,6 +2216,36 @@
         "operation" : "validate-code",
         "request" : "tx.fhir.org/loinc-validate-filter-prop-dockind-bad-request-parameters.json",
         "response" : "tx.fhir.org/loinc-validate-filter-prop-dockind-bad-response-parameters.json"
+      },{
+        "name" : "loinc-validate-filter-classtype-good",
+        "description" : "test classtype filter (numerical)",
+        "operation" : "validate-code",
+        "request" : "tx.fhir.org/loinc-validate-filter-classtype-good-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-validate-filter-classtype-good-response-parameters.json"
+      },{
+        "name" : "loinc-validate-filter-classtype-bad",
+        "description" : "test classtype filter (numerical)",
+        "operation" : "validate-code",
+        "request" : "tx.fhir.org/loinc-validate-filter-classtype-bad-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-validate-filter-classtype-bad-response-parameters.json"
+      },{
+        "name" : "loinc-expand-filter-answers-for1",
+        "description" : "Test answers-for filters with LL code",
+        "operation" : "expand",
+        "request" : "tx.fhir.org/loinc-expand-filter-answers-for1-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-expand-filter-answers-for1-response-valueSet.json"
+      },{
+        "name" : "loinc-expand-filter-answers-for2",
+        "description" : "Test answers-for filters with normal code",
+        "operation" : "expand",
+        "request" : "tx.fhir.org/loinc-expand-filter-answers-for2-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-expand-filter-answers-for2-response-valueSet.json"
+      },{
+        "name" : "loinc-expand-filter-answer-list",
+        "description" : "Test answer-list filters with normal code",
+        "operation" : "expand",
+        "request" : "tx.fhir.org/loinc-expand-filter-answer-list-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-expand-filter-answer-list-response-valueSet.json"
       }
     ]
   }],
