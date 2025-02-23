@@ -1840,8 +1840,8 @@
       }
     ]
   },{
-    "name" : "valueset-version",
-    "description" : "Test the valueset-version parameter",
+    "name" : "default-valueset-version",
+    "description" : "Test the default-valueset-version parameter",
     "setup" : ["valueset-version/codesystem-vs-version.json","valueset-version/valueset-vs-version-a1.json","valueset-version/valueset-vs-version-a2.json","valueset-version/valueset-vs-version-b0.json","valueset-version/valueset-vs-version-b1.json","valueset-version/valueset-vs-version-b2.json"],
     "tests" : [
       {
@@ -1849,42 +1849,42 @@
         "description" : "Test the actual value set directly - v1",
         "operation" : "expand",
         "request" : "valueset-version/expand-direct-expand-one-request-parameters.json",
-        "response" : "valueset-version/expand-direct-expand-one-request-response-valueSet.json"
+        "response" : "valueset-version/expand-direct-expand-one-response-valueSet.json"
       },
       {
         "name" : "direct-expand-two",
         "description" : "Test the actual value set directly - v2",
         "operation" : "expand",
         "request" : "valueset-version/expand-direct-expand-two-request-parameters.json",
-        "response" : "valueset-version/expand-direct-expand-two-request-response-valueSet.json"
+        "response" : "valueset-version/expand-direct-expand-two-response-valueSet.json"
       },
       {
         "name" : "indirect-expand-one",
         "description" : "Test the actual value set indirectly - v1",
         "operation" : "expand",
         "request" : "valueset-version/expand-indirect-expand-one-request-parameters.json",
-        "response" : "valueset-version/expand-indirect-expand-one-request-response-valueSet.json"
+        "response" : "valueset-version/expand-indirect-expand-one-response-valueSet.json"
       },
       {
         "name" : "indirect-expand-two",
         "description" : "Test the actual value set indirectly - v2",
         "operation" : "expand",
         "request" : "valueset-version/expand-indirect-expand-two-request-parameters.json",
-        "response" : "valueset-version/expand-indirect-expand-two-request-response-valueSet.json"
+        "response" : "valueset-version/expand-indirect-expand-two-response-valueSet.json"
       },
       {
         "name" : "indirect-expand-zero",
         "description" : "Test the actual value set indirectly - versionless",
         "operation" : "expand",
         "request" : "valueset-version/expand-indirect-expand-zero-request-parameters.json",
-        "response" : "valueset-version/expand-indirect-expand-zero-request-response-valueSet.json"
+        "response" : "valueset-version/expand-indirect-expand-zero-response-valueSet.json"
       },
       {
         "name" : "indirect-expand-zero-pinned",
         "description" : "Test the actual value set indirectly - versionless, and specify a version",
         "operation" : "expand",
         "request" : "valueset-version/expand-indirect-expand-zero-pinned-request-parameters.json",
-        "response" : "valueset-version/expand-indirect-expand-zero-pinned-request-response-valueSet.json"
+        "response" : "valueset-version/expand-indirect-expand-zero-pinned-response-valueSet.json"
       },
       {
         "name" : "indirect-expand-zero-pinned-wrong",

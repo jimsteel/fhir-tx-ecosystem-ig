@@ -4,7 +4,7 @@
     "name" : "url",
     "valueUrl" : "http://hl7.org/fhir/test/ValueSet/vs-version-b0"
   },{
-    "name" : "valueset-version",
+    "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0"
   }]
 }
