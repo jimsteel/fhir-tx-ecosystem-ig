@@ -6,7 +6,7 @@
     <valueCode value="director"/>
   </extension>
   <url value="http://hl7.org/fhir/uv/tx-ecosystem/ImplementationGuide/hl7.fhir.uv.tx-ecosystem"/>
-  <version value="1.7.5"/>
+  <version value="1.7.6-SNAPSHOT"/>
   <name value="FHIRTerminologyEcosystemIG"/>
   <title value="FHIR Terminology Ecosystem IG"/>
   <status value="active"/>
