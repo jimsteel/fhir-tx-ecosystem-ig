@@ -18,3 +18,8 @@ by tools including:
 * [Registry of Test Cases](testcases.html) (and [notes about R4/R5](r4.html))
 * [History](history.html) of this documentation - and importantly, the test cases 
 
+<div style="display: none">
+{% include ip-statements.xhtml %}
+{% include dependency-table-short.xhtml %}
+{% include globals-table.xhtml %}
+</div>
