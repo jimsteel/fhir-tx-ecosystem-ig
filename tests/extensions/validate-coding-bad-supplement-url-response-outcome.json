@@ -21,7 +21,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-data"
           }],
-          "text" : "CodeSystem http://hl7.org/fhir/test/CodeSystem/supplement is a supplement, so can't be used as a value in Coding.system"
+          "text" : "CodeSystem http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1 is a supplement, so can't be used as a value in Coding.system"
         },
         "location" : ["Coding.system"],
         "expression" : ["Coding.system"]
@@ -30,7 +30,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "CodeSystem http://hl7.org/fhir/test/CodeSystem/supplement is a supplement, so can't be used as a value in Coding.system"
+    "valueString" : "CodeSystem http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1 is a supplement, so can't be used as a value in Coding.system"
   },
   {
     "name" : "result",
