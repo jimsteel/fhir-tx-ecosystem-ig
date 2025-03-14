@@ -6,6 +6,6 @@
   </parameter>
   <parameter>
     <name value="binding-style"/>
-    <valueUuid value="CDA"/>
+    <valueCode value="CDA"/>
   </parameter>
 </Parameters>
