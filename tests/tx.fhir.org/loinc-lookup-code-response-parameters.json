@@ -164,6 +164,25 @@
     "name" : "designation",
     "part" : [{
       "name" : "language",
+      "valueCode" : "fr-FR"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://loinc.org",
+        "code" : "LONG_COMMON_NAME",
+        "display" : "LONG_COMMON_NAME"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Glucose [Masse/Volume] Sang ; Numérique"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
       "valueCode" : "nl-NL"
     },
     {
@@ -423,6 +442,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "2.78"
+    "valueString" : "2.80"
   }]
 }

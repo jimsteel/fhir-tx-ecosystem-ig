@@ -16,11 +16,11 @@
     "total" : 2,
     "parameter" : [{
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     }],
     "contains" : [{
       "system" : "http://loinc.org",

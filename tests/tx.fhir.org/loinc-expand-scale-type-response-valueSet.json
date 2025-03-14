@@ -13,7 +13,7 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 12226,
+    "total" : 12265,
     "offset" : 0,
     "parameter" : [{
       "name" : "count",
@@ -33,11 +33,11 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     }],
     "contains" : [{
       "system" : "http://loinc.org",

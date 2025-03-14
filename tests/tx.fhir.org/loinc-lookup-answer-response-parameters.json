@@ -2166,6 +2166,17 @@
     },
     {
       "name" : "value",
+      "valueCode" : "LL5454-5"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "AnswerList"
+    },
+    {
+      "name" : "value",
       "valueCode" : "LL546-3"
     }]
   },
@@ -2584,6 +2595,39 @@
     },
     {
       "name" : "value",
+      "valueCode" : "LL6944-4"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "AnswerList"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "LL6950-1"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "AnswerList"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "LL7005-3"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "AnswerList"
+    },
+    {
+      "name" : "value",
       "valueCode" : "LL760-0"
     }]
   },
@@ -2802,6 +2846,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "2.78"
+    "valueString" : "2.80"
   }]
 }

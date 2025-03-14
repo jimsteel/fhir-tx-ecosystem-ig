@@ -31,11 +31,11 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -2440,7 +2440,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100430-8",
-      "display" : "Cells.LRBA+/100 Cells.CD3+CD14-CD45+ in Blood by Flow cytometry (FC)"
+      "display" : "Cells.LRBA+/Cells.CD3+CD14-CD45+ in Blood by Flow cytometry (FC)"
     },
     {
       "system" : "http://loinc.org",
@@ -2450,7 +2450,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100432-4",
-      "display" : "Cells.LRBA+/100 Cells.CD3-CD14-CD19+CD45+ in Blood by Flow cytometry (FC)"
+      "display" : "Cells.LRBA+/Cells.CD3-CD14-CD19+CD45+ in Blood by Flow cytometry (FC)"
     },
     {
       "system" : "http://loinc.org",
@@ -3895,7 +3895,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100693-1",
-      "display" : "Pneumocystis jiroveci DNA [Log #/volume] in Respiratory system specimen by NAA with probe detection"
+      "display" : "Pneumocystis jirovecii DNA [Log #/volume] in Respiratory system specimen by NAA with probe detection"
     },
     {
       "system" : "http://loinc.org",
@@ -3975,12 +3975,12 @@
     {
       "system" : "http://loinc.org",
       "code" : "100707-9",
-      "display" : "Polymorphonuclear cells [#/volume] in Peritoneal dialysis fluid by Automated count"
+      "display" : "Granulocytes [#/volume] in Peritoneal dialysis fluid by Automated count"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100708-7",
-      "display" : "Plasma cells/100 leukocytes in Synovial fluid"
+      "display" : "Plasma cells/Leukocytes in Synovial fluid"
     },
     {
       "system" : "http://loinc.org",
@@ -4790,22 +4790,22 @@
     {
       "system" : "http://loinc.org",
       "code" : "100854-9",
-      "display" : "Lymphocytes/100 cells in Blood mononuclear cells by Immunoassay"
+      "display" : "Lymphocytes/cells in Blood mononuclear cells by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100855-6",
-      "display" : "CD3 cells/100 cells in Blood mononuclear cells"
+      "display" : "CD3 cells/cells in Blood mononuclear cells"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100856-4",
-      "display" : "CD3+CD4+ (T4 helper) cells/100 cells in Blood mononuclear cells"
+      "display" : "CD3+CD4+ (T4 helper) cells/cells in Blood mononuclear cells"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100857-2",
-      "display" : "CD3+CD8+ (T8 suppressor) cells/100 cells in Blood mononuclear cells"
+      "display" : "CD3+CD8+ (T8 suppressor) cells/cells in Blood mononuclear cells"
     },
     {
       "system" : "http://loinc.org",

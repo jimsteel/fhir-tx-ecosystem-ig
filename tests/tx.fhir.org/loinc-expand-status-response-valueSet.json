@@ -13,7 +13,7 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 1501,
+    "total" : 1504,
     "offset" : 0,
     "parameter" : [{
       "name" : "count",
@@ -33,13 +33,33 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     }],
     "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "102006-4",
+      "display" : "von Willebrand factor.platelet binding activity without ristocetin [Units/volume] in Platelet poor plasma by Latex agglutination"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "105046-7",
+      "display" : "aPTT.factor substitution [Time Ratio] in Control Platelet poor plasma by Coagulation assay --2H post incubation with 1:1 normal plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "105048-3",
+      "display" : "aPTT.factor substitution [Time Ratio] in Control Platelet poor plasma by Coagulation assay --immediately after addition of normal plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "105049-1",
+      "display" : "Prothrombin time (PT) factor substitution [Time Ratio] in Control Platelet poor plasma by Coagulation assay --2H post incubation with 1:1 normal plasma"
+    },
+    {
       "system" : "http://loinc.org",
       "code" : "10735-9",
       "display" : "Viral sequencing [Identifier] in Serum by Sequencing"
@@ -518,26 +538,6 @@
       "system" : "http://loinc.org",
       "code" : "13388-4",
       "display" : "Asparagine [Mass/volume] in Amniotic fluid"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "13389-2",
-      "display" : "Aspartate [Mass/volume] in Amniotic fluid"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "13390-0",
-      "display" : "Beta alanine [Mass/volume] in Amniotic fluid"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "13391-8",
-      "display" : "Carnosine [Mass/volume] in Amniotic fluid"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "13392-6",
-      "display" : "Citrulline [Mass/volume] in Amniotic fluid"
     }]
   }
 }

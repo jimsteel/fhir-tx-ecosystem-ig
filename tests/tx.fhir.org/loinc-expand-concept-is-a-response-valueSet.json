@@ -13,18 +13,18 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 422,
+    "total" : 427,
     "parameter" : [{
       "name" : "excludeNested",
       "valueBoolean" : true
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.78"
+      "valueUri" : "http://loinc.org|2.80"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -128,8 +128,33 @@
     },
     {
       "system" : "http://loinc.org",
+      "code" : "106016-9",
+      "display" : "Bacteria identified in Penis by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
       "code" : "106018-5",
       "display" : "Bacteria [#/volume] in Semen by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "106032-6",
+      "display" : "Bacteria identified in Pus by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "106033-4",
+      "display" : "Bacteria identified in Pus by Anaerobe culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "106042-5",
+      "display" : "Bacteria identified in Mother's milk by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "107188-5",
+      "display" : "Bacteria identified in Abscess by Anaerobe culture"
     },
     {
       "system" : "http://loinc.org",

@@ -37,7 +37,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.78'"
+          "text" : "Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.80'"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
@@ -46,7 +46,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://loinc.org#LP111373-9X' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0'; Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.78'"
+    "valueString" : "The provided code 'http://loinc.org#LP111373-9X' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/loinc-enumerated|5.0.0'; Unknown code 'LP111373-9X' in the CodeSystem 'http://loinc.org' version '2.80'"
   },
   {
     "name" : "result",
