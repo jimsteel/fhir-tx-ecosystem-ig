@@ -17,8 +17,11 @@
     }]
   },
   "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
+    "offset":0,
     "total" : 2,
     "parameter" : [
     {
