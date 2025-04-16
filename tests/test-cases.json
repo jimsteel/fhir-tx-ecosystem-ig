@@ -21,7 +21,7 @@
   }, {
     "name" : "simple-cases",
     "description" : "basic tests, setting up for the API tests to come",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex2.json"],
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json"],
     "tests" :[
       {
         "name" : "simple-expand-all",
@@ -98,6 +98,12 @@
         "operation" : "expand",
         "request" : "simple/simple-expand-regex2-request-parameters.json",
         "response" : "simple/simple-expand-regex2-response-valueSet.json"
+      },{
+        "name" : "simple-expand-regexp-prop",
+        "description" : "Expansion containing a filter on the code system using regex on the property values of prop",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-regex-prop-request-parameters.json",
+        "response" : "simple/simple-expand-regex-prop-response-valueSet.json"
       },{
         "name" : "simple-lookup-1",
         "description" : "Check that $lookup works (there's not many tests for $lookup because it's not used much by the tools)",
