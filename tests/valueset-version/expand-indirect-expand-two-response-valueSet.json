@@ -17,9 +17,12 @@
     }]
   },
   "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
     "total" : 2,
+    "offset" : 0,
     "parameter" : [
     {
       "name" : "used-codesystem",
