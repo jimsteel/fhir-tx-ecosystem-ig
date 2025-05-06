@@ -16,9 +16,12 @@
     }]
   },
   "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
     "total" : 3,
+    "offset" : 0,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/experimental|0.1.0"
