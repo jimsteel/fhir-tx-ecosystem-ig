@@ -1265,21 +1265,49 @@
   },{
     "name" : "errors",
     "description" : "Testing Various Error Conditions",
-    "setup" : ["errors/valueset-unknown-system.json"],
+    "setup" : ["simple/codesystem-simple.json", "errors/valueset-unknown-system.json", "errors/valueset-broken-filter.json", "errors/valueset-broken-filter2.json"],
     "tests" : [
       {
         "name" : "unknown-system1",
-        "description" : "to be provided",
+        "description" : "Value set & request refers to an unknown system",
         "operation" : "validate-code",
         "request" : "errors/errors-unknown-system1-request.json",
         "response" : "errors/errors-unknown-system1-response.json"
       },{
         "name" : "unknown-system2",
-        "description" : "to be provided",
+        "description" : "Value set & request refers to an unknown system; request is a different unknown system",
         "operation" : "validate-code",
         "request" : "errors/errors-unknown-system2-request.json",
         "response" : "errors/errors-unknown-system2-response.json"
-      }     
+      },{
+        "name" : "broken-filter-validate",
+        "description" : "Make sure that filters without value cause an error",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "errors/errors-broken-filter-validate-request.json",
+        "response" : "errors/errors-broken-filter-validate-response.json"
+      },{
+        "name" : "broken-filter2-validate",
+        "description" : "Make sure that filters without value cause an error (extension only)",
+        "operation" : "validate-code",
+        "http-code" : "4xx",
+        "request" : "errors/errors-broken-filter2-validate-request.json",
+        "response" : "errors/errors-broken-filter2-validate-response.json"
+      },{
+        "name" : "broken-filter-expand",
+        "description" : "Make sure that filters without value cause an error",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "errors/errors-broken-filter-expand-request.json",
+        "response" : "errors/errors-broken-filter-expand-response.json"
+      } ,{
+        "name" : "broken-filter2-expand",
+        "description" : "Make sure that filters without value cause an error (extension only)",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "errors/errors-broken-filter2-expand-request.json",
+        "response" : "errors/errors-broken-filter2-expand-response.json"
+      }  
     ]
   },{
     "name" : "deprecated",
@@ -1824,6 +1852,32 @@
         "operation" : "translate",
         "request" : "translate/translate-1-request-parameters.json",
         "response" : "translate/translate-1-response-parameters.json"
+      }
+    ]
+  },{
+    "name" : "tho",
+    "description" : "Misc assorted test cases from tho",
+    "setup" : [ "tho/cs-act-class.json", "tho/vs-act-class.json" ],
+    "tests" : [
+      {
+        "name" : "act-class",
+        "description" : "to be provided",
+        "operation" : "expand",
+        "request" : "tho/expand-vs-act-class-request-parameters.json",
+        "response" : "tho/expand-vs-act-class-response-valueSet.json"
+      }
+    ]
+  },{
+    "name" : "exclude",
+    "description" : "Tests for proper functioning of exclude",
+    "setup" : [ "exclude/codesystem-exclude.json", "exclude/valueset-exclude.json"],
+    "tests" : [
+      {
+        "name" : "exclude-1",
+        "description" : "Test a simple exclude",
+        "operation" : "expand",
+        "request" : "exclude/exclude-expand-parameters.json",
+        "response" : "exclude/exclude-expand-valueSet.json"
       }
     ]
   },{
