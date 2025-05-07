@@ -1,13 +1,19 @@
 {
-  "$optional-properties$" : ["id"],
+  "$optional-properties$" : ["id", "version", "status", "description"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/dual-filter",
+  "version" : "1",
   "title" : "Active concepts",
+  "status" : "unknown",
+  "description": "Active concepts",
   "expansion" : {
+    "$optional-properties$" : ["id", "offset"],
+    "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
     "total" : 1,
+    "offset" : 0,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/dual-filter"
