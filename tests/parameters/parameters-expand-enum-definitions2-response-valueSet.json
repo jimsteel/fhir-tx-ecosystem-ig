@@ -1,5 +1,5 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher"],
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
   "resourceType" : "ValueSet",
   "id" : "$id$",
   "url" : "http://hl7.org/fhir/test/ValueSet/simple-enumerated",
