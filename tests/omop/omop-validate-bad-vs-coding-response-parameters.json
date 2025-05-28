@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "21600012"
+  },
+  {
+    "name" : "display",
+    "valueString" : "hydrogen peroxide; local oral"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
+        "severity" : "error",
+        "code" : "code-invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "not-in-vs"
+          }],
+          "text" : "The provided code 'https://fhir-terminology.ohdsi.org#21600012 ('hydrogen peroxide; local oral')' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/14|20240716'"
+        },
+        "location" : ["Coding.code"],
+        "expression" : ["Coding.code"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "Code '21600012' is not in the value set; The provided code 'https://fhir-terminology.ohdsi.org#21600012 ('hydrogen peroxide; local oral')' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/14|20240716'"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "https://fhir-terminology.ohdsi.org"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20240716"
+  }]
+}

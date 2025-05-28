@@ -1,0 +1,11 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "coding",
+    "valueCoding" : {
+      "system" : "https://fhir-terminology.ohdsi.org",
+      "code" : "45756805X",
+      "display" : "Not the display"
+    }
+  }]
+}

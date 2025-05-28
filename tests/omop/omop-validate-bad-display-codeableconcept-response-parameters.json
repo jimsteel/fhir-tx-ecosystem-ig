@@ -1,0 +1,60 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "45756805"
+  },
+  {
+    "name" : "codeableConcept",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://fhir-terminology.ohdsi.org",
+        "code" : "45756805",
+        "display" : "Not the display"
+      }]
+    }
+  },
+  {
+    "name" : "display",
+    "valueString" : "Pediatric Cardiology"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+        }],
+        "severity" : "error",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-display"
+          }],
+          "text" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#45756805. Valid display is 'Pediatric Cardiology' (en) (for the language(s) '--')"
+        },
+        "location" : ["CodeableConcept.coding[0].display"],
+        "expression" : ["CodeableConcept.coding[0].display"]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#45756805. Valid display is 'Pediatric Cardiology' (en) (for the language(s) '--')"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "https://fhir-terminology.ohdsi.org"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20240716"
+  }]
+}

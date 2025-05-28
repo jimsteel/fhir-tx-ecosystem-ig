@@ -1,0 +1,104 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "abstract",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "code",
+    "valueCode" : "21600012"
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "value",
+      "valueString" : "hydrogen peroxide"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "value",
+      "valueString" : "hydrogen peroxide 60 mg Oral Product"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "hydrogen peroxide; local oral"
+  },
+  {
+    "name" : "name",
+    "valueString" : "OMOP Concepts"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "class_id"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "44819284"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "domain"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "13"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "end_date"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "20991231"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "start_date"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "19700101"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "https://fhir-terminology.ohdsi.org"
+  },
+  {
+    "name" : "version",
+    "valueString" : "20240716"
+  }]
+}
