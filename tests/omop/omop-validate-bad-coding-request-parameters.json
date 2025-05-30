@@ -4,8 +4,8 @@
     "name" : "coding",
     "valueCoding" : {
       "system" : "https://fhir-terminology.ohdsi.org",
-      "code" : "45756805X",
-      "display" : "Not the display"
+      "code" : "1029267",
+      "display" : "Pulse oximetry"
     }
   }]
 }

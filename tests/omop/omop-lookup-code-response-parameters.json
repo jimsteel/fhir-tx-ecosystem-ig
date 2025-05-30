@@ -6,7 +6,7 @@
   },
   {
     "name" : "code",
-    "valueCode" : "21600012"
+    "valueCode" : "45772705"
   },
   {
     "name" : "designation",
@@ -16,7 +16,7 @@
     },
     {
       "name" : "value",
-      "valueString" : "hydrogen peroxide"
+      "valueString" : "Denies alcohol use (finding)"
     }]
   },
   {
@@ -27,12 +27,23 @@
     },
     {
       "name" : "value",
-      "valueString" : "hydrogen peroxide 60 mg Oral Product"
+      "valueString" : "niega consumo de alcohol"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "value",
+      "valueString" : "niega consumo de alcohol (hallazgo)"
     }]
   },
   {
     "name" : "display",
-    "valueString" : "hydrogen peroxide; local oral"
+    "valueString" : "Denies alcohol use"
   },
   {
     "name" : "name",
@@ -46,7 +57,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "44819284"
+      "valueCode" : "44818997"
     }]
   },
   {
@@ -57,7 +68,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "13"
+      "valueCode" : "27"
     }]
   },
   {
@@ -90,7 +101,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "19700101"
+      "valueCode" : "20150131"
     }]
   },
   {

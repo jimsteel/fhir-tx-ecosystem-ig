@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "45756805"
+    "valueCode" : "4097430"
   },
   {
     "name" : "display",
-    "valueString" : "Pediatric Cardiology"
+    "valueString" : "Sodium measurement"
   },
   {
     "name" : "issues",
@@ -24,7 +24,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-display"
           }],
-          "text" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#45756805. Valid display is 'Pediatric Cardiology' (en) (for the language(s) '--')"
+          "text" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#4097430. Valid display is one of 4 choices: 'Sodium measurement' (en), 'Sodium measurement (procedure)' (en), 'medición de sodio' (en) or 'medición de sodio (procedimiento)' (en) (for the language(s) '--')"
         },
         "location" : ["display"],
         "expression" : ["display"]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#45756805. Valid display is 'Pediatric Cardiology' (en) (for the language(s) '--')"
+    "valueString" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#4097430. Valid display is one of 4 choices: 'Sodium measurement' (en), 'Sodium measurement (procedure)' (en), 'medición de sodio' (en) or 'medición de sodio (procedimiento)' (en) (for the language(s) '--')"
   },
   {
     "name" : "result",

@@ -5,11 +5,11 @@
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "https://fhir-terminology.ohdsi.org",
-        "code" : "21600012"
+        "code" : "36274733"
       }]
     }
   },{
     "name" : "url",
-    "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/14"
+    "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/15"
   }]
 }

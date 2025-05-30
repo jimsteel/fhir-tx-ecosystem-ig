@@ -5,7 +5,7 @@
     "valueUri" : "https://fhir-terminology.ohdsi.org"
   },{
     "name" : "code",
-    "valueCode" : "21600012"
+    "valueCode" : "36274733"
   },{
     "name" : "url",
     "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/13"

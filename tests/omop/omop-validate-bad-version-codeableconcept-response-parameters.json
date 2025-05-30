@@ -6,7 +6,7 @@
       "coding" : [{
         "system" : "https://fhir-terminology.ohdsi.org",
         "version" : "20250101",
-        "code" : "45756805"
+        "code" : "4097430"
       }]
     }
   },

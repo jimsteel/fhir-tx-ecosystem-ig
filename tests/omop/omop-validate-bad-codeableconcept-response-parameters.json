@@ -5,7 +5,7 @@
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "https://fhir-terminology.ohdsi.org",
-        "code" : "45756805.0"
+        "code" : "4097430.0"
       }]
     }
   },
@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code '45756805.0' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
+          "text" : "Unknown code '4097430.0' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
         },
         "location" : ["CodeableConcept.coding[0].code"],
         "expression" : ["CodeableConcept.coding[0].code"]
@@ -34,7 +34,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Unknown code '45756805.0' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
+    "valueString" : "Unknown code '4097430.0' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
   },
   {
     "name" : "result",

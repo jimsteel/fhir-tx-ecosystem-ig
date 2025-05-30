@@ -4,11 +4,11 @@
     "name" : "coding",
     "valueCoding" : {
       "system" : "https://fhir-terminology.ohdsi.org",
-      "code" : "21600012",
-      "display" : "hydrogen peroxide; local oral"
+      "code" : "36274733",
+      "display" : "Furosemide Injection [Lasix]"
     }
   },{
     "name" : "url",
-    "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/14"
+    "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/15"
   }]
 }

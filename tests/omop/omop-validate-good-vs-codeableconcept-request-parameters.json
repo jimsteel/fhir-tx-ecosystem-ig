@@ -5,7 +5,7 @@
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "https://fhir-terminology.ohdsi.org",
-        "code" : "21600012"
+        "code" : "36274733"
       }]
     }
   },{
