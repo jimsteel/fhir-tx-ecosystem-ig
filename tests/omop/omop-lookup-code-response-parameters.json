@@ -97,6 +97,20 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
+      "valueCode" : "source"
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "http://snomed.info/sct",
+        "code" : "704198001"
+      }
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
       "valueCode" : "start_date"
     },
     {
