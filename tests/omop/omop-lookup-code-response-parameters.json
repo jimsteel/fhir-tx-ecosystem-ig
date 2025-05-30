@@ -97,6 +97,51 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
+      "valueCode" : "Is a"
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "https://fhir-terminology.ohdsi.org",
+        "code" : "4042860",
+        "display" : "Finding relating to alcohol drinking behavior"
+      }
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "Mapped from"
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "https://fhir-terminology.ohdsi.org",
+        "code" : "45772705",
+        "display" : "Denies alcohol use"
+      }
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "Maps to"
+    },
+    {
+      "name" : "value",
+      "valueCoding" : {
+        "system" : "https://fhir-terminology.ohdsi.org",
+        "code" : "45772705",
+        "display" : "Denies alcohol use"
+      }
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
       "valueCode" : "source"
     },
     {
