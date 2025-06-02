@@ -2461,6 +2461,20 @@
         "operation" : "expand",
         "request" : "omop/omop-expand-explicit-request-parameters.json",
         "response" : "omop/omop-expand-explicit-response-valueSet.json"
+      },
+      {
+        "name" : "translate-loinc-implicit",
+        "description" : "translating sucessfully from OMOP to LOINC, leaving it to the server to choose a concept map if it can find one. Note that not all servers are willing to let the client trust it like this, so this test is optional",
+        "operation" : "translate",
+        "request" : "omop/omop-translate-loinc-implicit-request-parameters.json",
+        "response" : "omop/omop-translate-loinc-implicit-response-parameters.json"
+      },
+      {
+        "name" : "translate-loinc-implicit-bad",
+        "description" : "translating unsucessfully from OMOP to LOINC, leaving it to the server to choose a concept map if it can find one, Also this test - and the last one - assume that the server has no other source of OMOP -> LOINC mappings available",
+        "operation" : "translate",
+        "request" : "omop/omop-translate-loinc-implicit-bad-request-parameters.json",
+        "response" : "omop/omop-translate-loinc-implicit-bad-response-parameters.json"
       }
     ]
   }],
