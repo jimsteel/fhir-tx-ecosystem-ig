@@ -2302,9 +2302,9 @@
         "response" : "tx.fhir.org/loinc-expand-filter-answer-list-response-valueSet.json"
       }
     ]
-  }],
+  }], 
   "todo" : "incomplete code systems, inactive/abstract, filter = notSelectable",
   "not-done" : [
-    "At this point, the tests do not cover ConceptMap, nor do they test the http://hl7.org/fhir/tools/StructureDefinition-select-by-map.html extension"
+    "At this point, the tests do not test the http://hl7.org/fhir/tools/StructureDefinition-select-by-map.html extension"
   ]
 }
