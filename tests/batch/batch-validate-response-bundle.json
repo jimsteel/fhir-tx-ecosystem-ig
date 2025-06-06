@@ -1,0 +1,122 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "$id$",
+  "type" : "batch-response",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "code",
+        "valueCode" : "code1"
+      },
+      {
+        "name" : "display",
+        "valueString" : "Display 1"
+      },
+      {
+        "name" : "result",
+        "valueBoolean" : true
+      },
+      {
+        "name" : "system",
+        "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+      },
+      {
+        "name" : "version",
+        "valueString" : "0.1.0"
+      }]
+    },
+    "response" : {
+      "status" : "200",
+      "etag" : "W/",
+      "lastModified" : "$instant$"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "code",
+        "valueCode" : "code2"
+      },
+      {
+        "name" : "display",
+        "valueString" : "Display 2"
+      },
+      {
+        "name" : "result",
+        "valueBoolean" : true
+      },
+      {
+        "name" : "system",
+        "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+      },
+      {
+        "name" : "version",
+        "valueString" : "0.1.0"
+      }]
+    },
+    "response" : {
+      "status" : "200",
+      "etag" : "W/",
+      "lastModified" : "$instant$"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "code",
+        "valueCode" : "code3"
+      },
+      {
+        "name" : "display",
+        "valueString" : "Display 3"
+      },
+      {
+        "name" : "issues",
+        "resource" : {
+          "resourceType" : "OperationOutcome",
+          "issue" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+              "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+            }],
+            "severity" : "error",
+            "code" : "code-invalid",
+            "details" : {
+              "coding" : [{
+                "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                "code" : "not-in-vs"
+              }],
+              "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"
+            },
+            "location" : ["Coding.code"],
+            "expression" : ["Coding.code"]
+          }]
+        }
+      },
+      {
+        "name" : "message",
+        "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"
+      },
+      {
+        "name" : "result",
+        "valueBoolean" : false
+      },
+      {
+        "name" : "system",
+        "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+      },
+      {
+        "name" : "version",
+        "valueString" : "0.1.0"
+      }]
+    },
+    "response" : {
+      "status" : "200",
+      "etag" : "W/",
+      "lastModified" : "$instant$"
+    }
+  }]
+}
