@@ -6,7 +6,7 @@
   },
   {
     "name" : "code",
-    "valueCode" : "45772705"
+    "valueCode" : "3033733"
   },
   {
     "name" : "designation",
@@ -16,34 +16,45 @@
     },
     {
       "name" : "value",
-      "valueString" : "Denies alcohol use (finding)"
+      "valueString" : "Sodium, Blood"
     }]
   },
   {
     "name" : "designation",
     "part" : [{
       "name" : "language",
-      "valueCode" : "es"
+      "valueCode" : "en"
     },
     {
       "name" : "value",
-      "valueString" : "niega consumo de alcohol"
+      "valueString" : "Sodium SerPl-msCnc"
     }]
   },
   {
     "name" : "designation",
     "part" : [{
       "name" : "language",
-      "valueCode" : "es"
+      "valueCode" : "en"
     },
     {
       "name" : "value",
-      "valueString" : "niega consumo de alcohol (hallazgo)"
+      "valueString" : "Chemistry; Level; Na; Na+; Pl; Plasma; Plsm; Point in time; QNT; Quan; Quant; Quantitative; Random; SerP; SerPl; SerPlas; Serum; Serum or plasma; SR"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "value",
+      "valueString" : "钠:质量或物质的量浓度:时间点:血清/血浆:定量型"
     }]
   },
   {
     "name" : "display",
-    "valueString" : "Denies alcohol use"
+    "valueString" : "Sodium [Mass or Moles/volume] in Serum or Plasma"
   },
   {
     "name" : "name",
@@ -57,7 +68,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "44818997"
+      "valueCode" : "45754678"
     }]
   },
   {
@@ -68,7 +79,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "Observation"
+      "valueCode" : "Measurement"
     }]
   },
   {
@@ -79,7 +90,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "27"
+      "valueCode" : "21"
     }]
   },
   {
@@ -90,7 +101,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "Observation"
+      "valueCode" : "Measurement"
     }]
   },
   {
@@ -108,30 +119,11 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "Is a"
+      "valueCode" : "invalid-reason"
     },
     {
       "name" : "value",
-      "valueCoding" : {
-        "system" : "https://fhir-terminology.ohdsi.org",
-        "code" : "4042860",
-        "display" : "Finding relating to alcohol drinking behavior"
-      }
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "Mapped from"
-    },
-    {
-      "name" : "value",
-      "valueCoding" : {
-        "system" : "https://fhir-terminology.ohdsi.org",
-        "code" : "45772705",
-        "display" : "Denies alcohol use"
-      }
+      "valueCode" : "D"
     }]
   },
   {
@@ -144,8 +136,8 @@
       "name" : "value",
       "valueCoding" : {
         "system" : "https://fhir-terminology.ohdsi.org",
-        "code" : "45772705",
-        "display" : "Denies alcohol use"
+        "code" : "4208938",
+        "display" : "Sodium measurement, blood"
       }
     }]
   },
@@ -158,8 +150,8 @@
     {
       "name" : "value",
       "valueCoding" : {
-        "system" : "http://snomed.info/sct",
-        "code" : "704198001"
+        "system" : "http://loinc.org",
+        "code" : "42570-2"
       }
     }]
   },
@@ -171,7 +163,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "S"
+      "valueCode" : "NS"
     }]
   },
   {
@@ -182,7 +174,7 @@
     },
     {
       "name" : "value",
-      "valueDate" : "2099-12-31"
+      "valueDate" : "2015-06-29"
     }]
   },
   {
@@ -193,7 +185,7 @@
     },
     {
       "name" : "value",
-      "valueDate" : "2015-01-31"
+      "valueDate" : "2015-06-28"
     }]
   },
   {
@@ -204,7 +196,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "44819097"
+      "valueCode" : "44819102"
     }]
   },
   {
@@ -215,7 +207,7 @@
     },
     {
       "name" : "value",
-      "valueCode" : "Clinical Finding"
+      "valueCode" : "Lab Test"
     }]
   },
   {
