@@ -23,7 +23,7 @@
     "name" : "designation",
     "part" : [{
       "name" : "language",
-      "valueCode" : "en"
+      "valueCode" : "es"
     },
     {
       "name" : "value",
@@ -34,7 +34,7 @@
     "name" : "designation",
     "part" : [{
       "name" : "language",
-      "valueCode" : "en"
+      "valueCode" : "es"
     },
     {
       "name" : "value",
@@ -53,7 +53,7 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "class_id"
+      "valueCode" : "concept-class-concept-id"
     },
     {
       "name" : "value",
@@ -64,7 +64,18 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "domain"
+      "valueCode" : "concept-class-id"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "Observation"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "domain-concept-id"
     },
     {
       "name" : "value",
@@ -75,11 +86,11 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "end_date"
+      "valueCode" : "domain-id"
     },
     {
       "name" : "value",
-      "valueCode" : "20991231"
+      "valueCode" : "Observation"
     }]
   },
   {
@@ -142,7 +153,7 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "source"
+      "valueCode" : "source-concept-code"
     },
     {
       "name" : "value",
@@ -156,11 +167,44 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "start_date"
+      "valueCode" : "standard-concept"
     },
     {
       "name" : "value",
-      "valueCode" : "20150131"
+      "valueCode" : "S"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "valid-end-date"
+    },
+    {
+      "name" : "value",
+      "valueDate" : "2099-12-31"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "valid-start-date"
+    },
+    {
+      "name" : "value",
+      "valueDate" : "2015-01-31"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "vocabulary-concept-id"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "44819097"
     }]
   },
   {
