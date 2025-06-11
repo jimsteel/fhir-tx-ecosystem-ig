@@ -4,7 +4,7 @@
     "name" : "coding",
     "valueCoding" : {
       "system" : "https://fhir-terminology.ohdsi.org",
-      "code" : "1029267",
+      "code" : "1029267C",
       "display" : "Pulse oximetry"
     }
   }]

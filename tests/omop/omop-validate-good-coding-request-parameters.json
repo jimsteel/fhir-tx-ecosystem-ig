@@ -4,8 +4,8 @@
     "name" : "coding",
     "valueCoding" : {
       "system" : "https://fhir-terminology.ohdsi.org",
-      "code" : "4097430",
-      "display" : "Sodium measurement"
+      "code" : "1029267",
+      "display" : "Pulse oximetry"
     }
   }]
 }

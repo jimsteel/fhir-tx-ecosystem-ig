@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "4097430"
+    "valueCode" : "1029267"
   },
   {
     "name" : "display",
-    "valueString" : "Sodium measurement"
+    "valueString" : "Pulse oximetry"
   },
   {
     "name" : "result",

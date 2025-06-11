@@ -8,6 +8,6 @@
     "valueCode" : "36274733"
   },{
     "name" : "url",
-    "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/15"
+    "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/Route"
   }]
 }

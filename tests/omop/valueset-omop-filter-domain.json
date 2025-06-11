@@ -8,7 +8,7 @@
       "filter" : [{
         "property" : "domain",
         "op" : "=",
-        "value" : "13"
+        "value" : "Drug"
       }]
     }]
   }

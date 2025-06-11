@@ -10,6 +10,6 @@
     }
   },{
     "name" : "url",
-    "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/13"
+    "valueUri" : "https://fhir-terminology.ohdsi.org/ValueSet/Drug"
   }]
 }

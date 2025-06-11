@@ -2,7 +2,7 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "1029267"
+    "valueCode" : "1029267C"
   },
   {
     "name" : "issues",
@@ -20,7 +20,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code '1029267' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
+          "text" : "Unknown code '1029267C' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
@@ -29,7 +29,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Unknown code '1029267' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
+    "valueString" : "Unknown code '1029267C' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
   },
   {
     "name" : "result",

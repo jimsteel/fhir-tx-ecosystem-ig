@@ -24,7 +24,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'https://fhir-terminology.ohdsi.org#36274733 ('Furosemide Injection [Lasix]')' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/15|20240716'"
+          "text" : "The provided code 'https://fhir-terminology.ohdsi.org#36274733 ('Furosemide Injection [Lasix]')' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Code '36274733' is not in the value set; The provided code 'https://fhir-terminology.ohdsi.org#36274733 ('Furosemide Injection [Lasix]')' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/15|20240716'"
+    "valueString" : "Code '36274733' is not in the value set; The provided code 'https://fhir-terminology.ohdsi.org#36274733 ('Furosemide Injection [Lasix]')' was not found in the value set 'https://fhir-terminology.ohdsi.org/ValueSet/Route|20240716'"
   },
   {
     "name" : "result",
