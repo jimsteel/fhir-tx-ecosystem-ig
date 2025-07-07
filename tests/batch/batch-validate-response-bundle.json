@@ -1,8 +1,7 @@
 {
-  "resourceType" : "Bundle",
-  "id" : "$id$",
-  "type" : "batch-response",
-  "entry" : [{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "validation",
     "resource" : {
       "resourceType" : "Parameters",
       "parameter" : [{
@@ -25,14 +24,10 @@
         "name" : "version",
         "valueString" : "0.1.0"
       }]
-    },
-    "response" : {
-      "status" : "200",
-      "etag" : "W/",
-      "lastModified" : "$instant$"
     }
   },
   {
+    "name" : "validation",
     "resource" : {
       "resourceType" : "Parameters",
       "parameter" : [{
@@ -55,14 +50,10 @@
         "name" : "version",
         "valueString" : "0.1.0"
       }]
-    },
-    "response" : {
-      "status" : "200",
-      "etag" : "W/",
-      "lastModified" : "$instant$"
     }
   },
   {
+    "name" : "validation",
     "resource" : {
       "resourceType" : "Parameters",
       "parameter" : [{
@@ -112,11 +103,6 @@
         "name" : "version",
         "valueString" : "0.1.0"
       }]
-    },
-    "response" : {
-      "status" : "200",
-      "etag" : "W/",
-      "lastModified" : "$instant$"
     }
   }]
 }

@@ -21,6 +21,9 @@
     "name" : "url",
     "valueUri" : "urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b"
   },{
+    "name" : "lenient-display-validation",
+    "valueBoolean" : "true"
+  },{
     "name" : "validation",
     "resource" : {
       "resourceType" : "Parameters",
@@ -28,7 +31,24 @@
         "name" : "coding",
         "valueCoding" : {
           "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
-          "code" : "code1"
+          "code" : "code1",
+          "display" : "xx"
+        }
+      },{
+        "name" : "lenient-display-validation",
+        "valueBoolean" : "false"
+      }]
+    }
+  },{
+    "name" : "validation",
+    "resource" : {
+      "resourceType" : "Parameters",
+      "parameter" : [{
+        "name" : "codingX",
+        "valueCoding" : {
+          "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+          "code" : "code2",
+          "display" : "xx"
         }
       }]
     }
@@ -40,19 +60,8 @@
         "name" : "coding",
         "valueCoding" : {
           "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
-          "code" : "code2"
-        }
-      }]
-    }
-  },{
-    "name" : "validation",
-    "resource" : {
-      "resourceType" : "Parameters",
-      "parameter" : [{
-        "name" : "coding",
-        "valueCoding" : {
-          "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
-          "code" : "code3"
+          "code" : "code3",
+          "display" : "xx"
         }
       }]
     }
