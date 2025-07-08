@@ -1,8 +1,8 @@
 {
   "package-id" : "hl7.fhir.uv.tx-ecosystem",
-  "version" : "1.7.6",
+  "version" : "1.7.7",
   "desc" : "Rolling Update - see test history",
-  "path" : "http://hl7.org/fhir/uv/tx-ecosystem/1.7.6",
+  "path" : "http://hl7.org/fhir/uv/tx-ecosystem/1.7.7",
   "status" : "informative",
   "sequence" : "Releases",
   "mode" : "milestone",
