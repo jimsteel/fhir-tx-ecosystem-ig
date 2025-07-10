@@ -2343,11 +2343,11 @@
         "response" : "omop/omop-validate-good-coding-response-parameters.json"
       },
       {
-        "name" : "omop-basic-validation-codeableConcept-good",
+        "name" : "omop-basic-validation-codeableconcept-good",
         "description" : "Just validate a randomly chosen real OMOP code provided as codeableConcept",
         "operation" : "validate-code",
-        "request" : "omop/omop-validate-good-codeableConcept-request-parameters.json",
-        "response" : "omop/omop-validate-good-codeableConcept-response-parameters.json"
+        "request" : "omop/omop-validate-good-codeableconcept-request-parameters.json",
+        "response" : "omop/omop-validate-good-codeableconcept-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-code-bad",
@@ -2364,11 +2364,11 @@
         "response" : "omop/omop-validate-bad-coding-response-parameters.json"
       },
       {
-        "name" : "omop-basic-validation-codeableConcept-bad",
+        "name" : "omop-basic-validation-codeableconcept-bad",
         "description" : "Just validate a randomly chosen fake OMOP code that is not valid provided as CodeableConcept",
         "operation" : "validate-code",
-        "request" : "omop/omop-validate-bad-codeableConcept-request-parameters.json",
-        "response" : "omop/omop-validate-bad-codeableConcept-response-parameters.json"
+        "request" : "omop/omop-validate-bad-codeableconcept-request-parameters.json",
+        "response" : "omop/omop-validate-bad-codeableconcept-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-code-bad-display",
@@ -2385,11 +2385,11 @@
         "response" : "omop/omop-validate-bad-display-coding-response-parameters.json"
       },
       {
-        "name" : "omop-basic-validation-codeableConcept-bad-display",
+        "name" : "omop-basic-validation-codeableconcept-bad-display",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as CodeableConcept",
         "operation" : "validate-code",
-        "request" : "omop/omop-validate-bad-display-codeableConcept-request-parameters.json",
-        "response" : "omop/omop-validate-bad-display-codeableConcept-response-parameters.json"
+        "request" : "omop/omop-validate-bad-display-codeableconcept-request-parameters.json",
+        "response" : "omop/omop-validate-bad-display-codeableconcept-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-code-bad-version",
@@ -2406,11 +2406,11 @@
         "response" : "omop/omop-validate-bad-version-coding-response-parameters.json"
       },
       {
-        "name" : "omop-basic-validation-codeableConcept-bad-display",
+        "name" : "omop-basic-validation-codeableconcept-bad-display",
         "description" : "Just validate a randomly chosen real OMOP code with a wrong display provided as CodeableConcept",
         "operation" : "validate-code",
-        "request" : "omop/omop-validate-bad-version-codeableConcept-request-parameters.json",
-        "response" : "omop/omop-validate-bad-version-codeableConcept-response-parameters.json"
+        "request" : "omop/omop-validate-bad-version-codeableconcept-request-parameters.json",
+        "response" : "omop/omop-validate-bad-version-codeableconcept-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-code-good-vs",
@@ -2427,11 +2427,11 @@
         "response" : "omop/omop-validate-good-vs-coding-response-parameters.json"
       },
       {
-        "name" : "omop-basic-validation-codeableConcept-good-vs",
+        "name" : "omop-basic-validation-codeableconcept-good-vs",
         "description" : "Just validate a randomly chosen real OMOP code provided as a CodeableConcept and require that it's in a particular domain by value set (it is!)",
         "operation" : "validate-code",
-        "request" : "omop/omop-validate-good-vs-codeableConcept-request-parameters.json",
-        "response" : "omop/omop-validate-good-vs-codeableConcept-response-parameters.json"
+        "request" : "omop/omop-validate-good-vs-codeableconcept-request-parameters.json",
+        "response" : "omop/omop-validate-good-vs-codeableconcept-response-parameters.json"
       },
       {
         "name" : "omop-basic-validation-code-bad-vs",
@@ -2448,11 +2448,11 @@
         "response" : "omop/omop-validate-bad-vs-coding-response-parameters.json"
       },
       {
-        "name" : "omop-basic-validation-codeableConcept-bad-vs",
+        "name" : "omop-basic-validation-codeableconcept-bad-vs",
         "description" : "Just validate a randomly chosen real OMOP code provided as a CodeableConcept and require that it's in a particular domain by value set (it is not!)",
         "operation" : "validate-code",
-        "request" : "omop/omop-validate-bad-vs-codeableConcept-request-parameters.json",
-        "response" : "omop/omop-validate-bad-vs-codeableConcept-response-parameters.json"
+        "request" : "omop/omop-validate-bad-vs-codeableconcept-request-parameters.json",
+        "response" : "omop/omop-validate-bad-vs-codeableconcept-response-parameters.json"
       },
       {
         "name" : "omop-lookup-code",
