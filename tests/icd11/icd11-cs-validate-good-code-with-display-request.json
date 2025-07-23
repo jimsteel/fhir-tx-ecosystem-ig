@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://id.who.int/icd/entity"
+  },{
+    "name" : "code",
+    "valueCode" : "1564691570"
+  },
+  {
+    "name": "display",
+    "valueString": "Enlarged lymph nodes"
+  }]
+}

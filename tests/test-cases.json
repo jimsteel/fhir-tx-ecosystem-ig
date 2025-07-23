@@ -2511,7 +2511,49 @@
         "response" : "omop/omop-translate-loinc-implicit-bad-response-parameters.json"
       }
     ]
-  }], 
+  },{
+    "name" : "icd11",
+    "description" : "Tests for OMOP implementations. Note that some servers only do OMOP (and some don't). The tests are based on a stable subset of OMOP maintained by Davera Gabriel",
+    "setup" : ["icd11/valueset-icd11-foundation-all.json"],
+    "tests": [
+      {
+        "name": "icd11-basic-cs-validation-code-good",
+        "description": "Just validate a randomly chosen real ICD-11 code provided as system and code",
+        "operation": "cs-validate-code",
+        "request": "icd11/icd11-cs-validate-good-code-request.json",
+        "response": "icd11/icd11-cs-validate-good-code-response.json"
+      },
+      {
+        "name": "icd11-basic-cs-validation-code-good-with-display",
+        "description": "Just validate a randomly chosen real ICD-11 code provided as system and code and display text",
+        "operation": "cs-validate-code",
+        "request": "icd11/icd11-cs-validate-good-code-with-display-request.json",
+        "response": "icd11/icd11-cs-validate-good-code-with-display-response.json"
+      },
+      {
+        "name": "icd11-basic-cs-validation-code-good-with-synonym-display",
+        "description": "Just validate a randomly chosen real ICD-11 code provided as system and code and a synonym as display text",
+        "operation": "cs-validate-code",
+        "request": "icd11/icd11-cs-validate-good-code-with-synonym-display-request.json",
+        "response": "icd11/icd11-cs-validate-good-code-with-synonym-display-response.json"
+      },
+      {
+        "name": "icd11-basic-validation-code-good",
+        "description": "Just validate a randomly chosen real ICD-11 code provided as system and code",
+        "operation": "validate-code",
+        "request": "icd11/icd11-validate-good-code-request.json",
+        "response": "icd11/icd11-validate-good-code-response.json"
+      },
+      {
+        "name": "icd11-basic-validation-coding-good",
+        "description": "Just validate a randomly chosen real ICD-11 code provided as coding",
+        "operation": "validate-code",
+        "request": "icd11/icd11-validate-coding-good-request-parameters.json",
+        "response": "icd11/icd11-validate-coding-good-response-parameters.json"
+      }
+    ]
+  }
+],
   "todo" : "incomplete code systems, inactive/abstract, filter = notSelectable",
   "not-done" : [
     "At this point, the tests do not test the http://hl7.org/fhir/tools/StructureDefinition-select-by-map.html extension"

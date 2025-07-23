@@ -1,0 +1,10 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "icd11-foundation-all",
+  "url" : "http://hl7.org/fhir/test/ValueSet/icd11-foundation-all",
+  "compose" : {
+    "include" : [{
+      "system" : "http://id.who.int/icd/entity"
+    }]
+  }
+}

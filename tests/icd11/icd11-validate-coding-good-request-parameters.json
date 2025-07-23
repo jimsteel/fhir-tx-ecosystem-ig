@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "url",
+    "valueUri" : "http://hl7.org/fhir/test/ValueSet/icd11-foundation-all"
+  },{
+    "name" : "coding",
+    "valueCoding" : {
+      "system" : "http://id.who.int/icd/entity",
+      "code" : "399491868"
+    }
+  }]
+}
