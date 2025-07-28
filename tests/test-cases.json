@@ -2,6 +2,7 @@
   "introduction" : "see the readme!",
   "suites" : [{
     "name" : "metadata",
+    "mode-note" : "These tests apply to all servers",
     "description" : "tests for minimal requirements for metadata statements",
     "setup" : [],
     "tests" : [
@@ -20,6 +21,7 @@
     ]
   }, {
     "name" : "simple-cases",
+    "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json"],
     "tests" :[
@@ -120,6 +122,7 @@
     ]
   },{
     "name" : "parameters",
+    "mode" : "general",
     "description" : "Testing out the various expansion parameters that the IG publisher makes use of",
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", 
        "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-enumerated.json"],
@@ -302,6 +305,7 @@
     ]
   },{
     "name" : "language",
+    "mode" : "general",
     "description" : "Testing returning language by request, getting the right designation",
     "notes" : "see languages.md for an explanation",
     "setup" : [
@@ -505,6 +509,7 @@
     ]
   },{
     "name" : "language2",
+    "mode" : "general",
     "description" : "A series of tests that test display name validation for various permutations of languages",
     "notes" : "see display/index.md for an explanation",
     "setup" : [
@@ -690,6 +695,7 @@
     ]
   },{
     "name" : "extensions",
+    "mode" : "general",
     "description" : "Testing proper handling of extensions, which depends on the extension",
     "setup" : ["extensions/codesystem-extensions.json", "extensions/codesystem-supplement.json", "extensions/valueset-extensions-all.json", "extensions/valueset-extensions-bad-supplement.json", "extensions/valueset-extensions-enumerated.json"],
     "extensions-handled-doco": [
@@ -776,6 +782,7 @@
     ]
   },{
     "name" : "validation",
+    "mode" : "general",
     "description" : "Testing various validation parameter combinations",
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-import-bad.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json",
         "language/codesystem-de-multi.json", "language/codesystem-de-single.json", "language/codesystem-en-multi.json", "language/codesystem-en-single.json",
@@ -1185,6 +1192,7 @@
     ]
   },{
     "name" : "big",
+    "mode" : "general",
     "description" : "Testing handling a big code system",
     "setup" : ["big/codesystem-big.json", "big/codesystem-not-so-big.json", "big/valueset-big.json", "big/valueset-big-circle1.json", "big/valueset-big-circle2.json"],
     "tests" : [
@@ -1237,6 +1245,7 @@
     ]
   },{
     "name" : "other",
+    "mode" : "general",
     "description" : "Misc tests based on issues submitted by users",
     "setup" : ["other/codesystem-dual-filter.json", "other/valueset-dual-filter.json"],
     "tests" : [
@@ -1264,6 +1273,7 @@
     ]
   },{
     "name" : "errors",
+    "mode" : "general",
     "description" : "Testing Various Error Conditions",
     "setup" : ["simple/codesystem-simple.json", "errors/valueset-unknown-system.json", "errors/valueset-broken-filter.json", "errors/valueset-broken-filter2.json"],
     "tests" : [
@@ -1311,6 +1321,7 @@
     ]
   },{
     "name" : "deprecated",
+    "mode" : "general",
     "description" : "Testing Deprecated+Withdrawn warnings",
     "setup" : ["deprecated/codesystem-deprecated.json","deprecated/valueset-withdrawn.json","deprecated/valueset-not-withdrawn.json", 
                "deprecated/codesystem-experimental.json","deprecated/valueset-experimental.json",
@@ -1371,6 +1382,7 @@
     ]
   },{
     "name" : "notSelectable",
+    "mode" : "general",
     "description" : "Testing notSelectable",
     "setup" : [
        "notSelectable/codesystem-notSelectable-prop.json", "notSelectable/valueset-notSelectable-prop-all.json", "notSelectable/valueset-notSelectable-prop-false.json", "notSelectable/valueset-notSelectable-prop-true.json", "notSelectable/valueset-notSelectable-prop-trueUC.json", "notSelectable/valueset-notSelectable-prop-in.json", "notSelectable/valueset-notSelectable-prop-out.json",
@@ -1703,6 +1715,7 @@
     ]
   },{
     "name" : "inactive",
+    "mode" : "general",
     "description" : "Testing Inactive codes",
     "setup" : ["inactive/codesystem-inactive.json","inactive/valueset-all.json","inactive/valueset-all-inactive.json","inactive/valueset-all-active.json"],
     "tests" : [
@@ -1793,6 +1806,7 @@
     ]
   },{
     "name" : "case",
+    "mode" : "general",
     "description" : "Test Case Sensitivity handling",
     "setup" : [ "case/codesystem-case-insensitive.json", "case/codesystem-case-sensitive.json", "case/valueset-case-insensitive.json", "case/valueset-case-sensitive.json" ],
     "tests" : [
@@ -1841,6 +1855,7 @@
     ]
   },{
     "disabled" : true,
+    "mode" : "general",
     "name" : "translate",
     "description" : "Tests for ConceptMap.$translate",
     "setup" : [ "translate/codesystem-source.json", "translate/codesystem-target.json", "translate/ConceptMap-full.json",
@@ -1856,6 +1871,7 @@
     ]
   },{
     "name" : "tho",
+    "mode" : "general",
     "description" : "Misc assorted test cases from tho",
     "setup" : [ "tho/cs-act-class.json", "tho/vs-act-class.json" ],
     "tests" : [
@@ -1869,6 +1885,7 @@
     ]
   },{
     "name" : "exclude",
+    "mode" : "general",
     "description" : "Tests for proper functioning of exclude",
     "setup" : [ "exclude/codesystem-exclude.json", "exclude/valueset-exclude.json"],
     "tests" : [
@@ -1881,20 +1898,8 @@
       }
     ]
   },{
-    "name" : "tho",
-    "description" : "Misc assorted test cases from tho",
-    "setup" : [ "tho/cs-act-class.json", "tho/vs-act-class.json" ],
-    "tests" : [
-      {
-        "name" : "act-class",
-        "description" : "to be provided",
-        "operation" : "expand",
-        "request" : "tho/expand-vs-act-class-request-parameters.json",
-        "response" : "tho/expand-vs-act-class-response-valueSet.json"
-      }
-    ]
-  },{
     "name" : "default-valueset-version",
+    "mode" : "general",
     "description" : "Test the default-valueset-version parameter",
     "setup" : ["valueset-version/codesystem-vs-version.json","valueset-version/valueset-vs-version-a1.json","valueset-version/valueset-vs-version-a2.json","valueset-version/valueset-vs-version-b0.json","valueset-version/valueset-vs-version-b1.json","valueset-version/valueset-vs-version-b2.json"],
     "tests" : [
@@ -2304,6 +2309,7 @@
     ]
   },{
     "name" : "batch",
+    "mode" : "general",
     "description" : "Test Batch Validation",
     "setup" : ["simple/codesystem-simple.json"],
     "tests" : [
@@ -2324,7 +2330,7 @@
     ]
   },{
     "name" : "omop",
-    "mode" : "tx.fhir.org",
+    "mode" : "omop",
     "description" : "Tests for OMOP implementations. Note that some servers only do OMOP (and some don't). The tests are based on a stable subset of OMOP maintained by Davera Gabriel",
     "setup" : ["omop/valueset-omop-filter-domain.json"],
     "tests" : [
@@ -2509,6 +2515,19 @@
         "operation" : "translate",
         "request" : "omop/omop-translate-loinc-implicit-bad-request-parameters.json",
         "response" : "omop/omop-translate-loinc-implicit-bad-response-parameters.json"
+      }
+    ]
+  },{
+    "name" : "icd-11",
+    "mode" : "icd-11",
+    "description" : "ICD-11 Test Cases",
+    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json"],
+    "tests" : [
+      {
+        "name" : "term-caps",
+        "description" : "Check that the minimum expected things are found in the server TerminologyCapabilities for ICD-11 servers",
+        "operation" : "term-caps",
+        "response" : "icd-11/capterms.json"
       }
     ]
   }], 
