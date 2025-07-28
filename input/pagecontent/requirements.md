@@ -133,7 +133,7 @@ The content on that page MAY be static or active; it is at the discretion of the
 
 The server MAY choose to make this content available at the end-point for the relevant resource. e.g. a request for `{root}/CodeSystem/123` with an ```Accept``` header of 'application/fhir+json' returns the resource, and the same URL with an ```Accept``` header of 'text/html' returns a web page suitable for human consumption. Servers are not required to do this; they MAY choose to make the content available elsewhere.
 
-If the server chooses to make them available elsewhere, it SHALL populate the extension ```http://hl7.org/fhir/tools/StructureDefinition/web-source``` in any resources it makes available with a `valueUrl` where the web view can be found. This SHALL be populated when the CodeSystem and ValueSet are read, and also in any `$expand` of the value set (just for the root value set in this case).
+If the server chooses to make them available elsewhere, it SHALL populate the extension ```http://hl7.org/fhir/StructureDefinition/web-source``` in any resources it makes available with a `valueUrl` where the web view can be found. This SHALL be populated when the CodeSystem and ValueSet are read, and also in any `$expand` of the value set (just for the root value set in this case).
 
 ## Parameter Support
 

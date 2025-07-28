@@ -38,7 +38,7 @@ Value sets may them selves make rules about the language behavior using a combin
 
 * Specifying a language in ValueSet.language
 * Providing language specific displays and designations on ValueSet.compose.include.concept 
-* Specifying a specific displayLanguage parameter in a [[[http://hl7.org/fhir/tools/StructureDefinition/valueset-expansion-parameter]]] extension
+* Specifying a specific displayLanguage parameter in a [[[http://hl7.org/fhir/StructureDefinition/valueset-expansion-parameter]]] extension
 
 ## Server Behavior
 
