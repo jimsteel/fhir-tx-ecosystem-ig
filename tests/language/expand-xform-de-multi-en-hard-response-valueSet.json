@@ -51,8 +51,8 @@
         "language" : "de",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Anzeige 1"
       }]
@@ -65,8 +65,8 @@
         "language" : "de",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Anzeige 2"
       },
@@ -87,8 +87,8 @@
         "language" : "de",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Anzeige 2a"
       },
@@ -104,8 +104,8 @@
         "language" : "de",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Anzeige 2aI"
       },
@@ -121,8 +121,8 @@
         "language" : "de",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Anzeige 2aII"
       }]
@@ -135,8 +135,8 @@
         "language" : "de",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Anzeige 2b"
       }]
@@ -149,8 +149,8 @@
         "language" : "de",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Anzeige 3"
       }]

@@ -51,8 +51,8 @@
         "language" : "en",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Display 1"
       }]
@@ -65,8 +65,8 @@
         "language" : "en",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Display 2"
       },
@@ -83,8 +83,8 @@
         "language" : "en",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Display 2a"
       },
@@ -115,8 +115,8 @@
         "language" : "en",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Display 2b"
       }]
@@ -129,8 +129,8 @@
         "language" : "en",
         "use" : {
 	  "$optional$" : true,
-          "system" : "http://terminology.hl7.org/CodeSystem/designation-usage",
-          "code" : "display"
+          "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+          "code" : "preferredForLanguage"
         },
         "value" : "Display 3"
       }]
