@@ -24,6 +24,7 @@ The subset is prepared by the code at https://github.com/HealthIntersections/nod
 and running
 
 ```
+npm install
 tx-import loinc-subset
 ```
 
