@@ -13,18 +13,18 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 427,
+    "total" : 429,
     "parameter" : [{
       "name" : "excludeNested",
       "valueBoolean" : true
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -145,6 +145,16 @@
       "system" : "http://loinc.org",
       "code" : "106033-4",
       "display" : "Bacteria identified in Pus by Anaerobe culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "106036-7",
+      "display" : "Bacteria identified in Fistula by Culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "106037-5",
+      "display" : "Bacteria identified in Fistula by Anaerobe culture"
     },
     {
       "system" : "http://loinc.org",
@@ -729,7 +739,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "19127-0",
-      "display" : "Bacteria identified in Sputum by Acute Respiratoy Distress (ARDS) culture"
+      "display" : "Bacteria identified in Sputum by Acute Respiratory Distress (ARDS) culture"
     },
     {
       "system" : "http://loinc.org",

@@ -2166,17 +2166,6 @@
     },
     {
       "name" : "value",
-      "valueCode" : "LL5454-5"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "AnswerList"
-    },
-    {
-      "name" : "value",
       "valueCode" : "LL546-3"
     }]
   },
@@ -2846,6 +2835,6 @@
   },
   {
     "name" : "version",
-    "valueString" : "2.80"
+    "valueString" : "2.81"
   }]
 }

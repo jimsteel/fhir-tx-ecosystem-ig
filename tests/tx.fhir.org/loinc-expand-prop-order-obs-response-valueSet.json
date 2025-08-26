@@ -13,7 +13,7 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 52507,
+    "total" : 53298,
     "offset" : 0,
     "parameter" : [{
       "name" : "count",
@@ -29,11 +29,11 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -243,7 +243,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100217-9",
-      "display" : "Synoptic report Narrative Surgical oncology"
+      "display" : "Synoptic report Document Surgical oncology"
     },
     {
       "system" : "http://loinc.org",

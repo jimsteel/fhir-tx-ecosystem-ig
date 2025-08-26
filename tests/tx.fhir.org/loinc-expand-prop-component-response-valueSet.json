@@ -13,18 +13,18 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 88,
+    "total" : 99,
     "parameter" : [{
       "name" : "excludeNested",
       "valueBoolean" : true
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -55,6 +55,61 @@
       "system" : "http://loinc.org",
       "code" : "105273-7",
       "display" : "Glucose [Moles/volume] in Reporting Period mean Interstitial fluid by calculation"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "108027-4",
+      "display" : "Glucose [Measurement] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "109417-6",
+      "display" : "Glucose [Measurement] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "109485-3",
+      "display" : "Glucose [Measurement] in Arterial blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "109529-8",
+      "display" : "Glucose [Measurement] in Venous blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "109723-7",
+      "display" : "Glucose [Measurement] in Dialysis fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "109729-4",
+      "display" : "Glucose [Measurement] in Peritoneal dialysis fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "109834-2",
+      "display" : "Glucose [Measurement] in Interstitial fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "109888-8",
+      "display" : "Glucose [Measurement] in Capillary blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "110283-9",
+      "display" : "Glucose [Measurement] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "110643-4",
+      "display" : "Glucose [Measurement] in Stool"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "110939-6",
+      "display" : "Glucose [Measurement] in Blood"
     },
     {
       "system" : "http://loinc.org",

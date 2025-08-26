@@ -31,11 +31,11 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -1255,7 +1255,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100217-9",
-      "display" : "Synoptic report Narrative Surgical oncology"
+      "display" : "Synoptic report Document Surgical oncology"
     },
     {
       "system" : "http://loinc.org",
@@ -2135,7 +2135,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100376-3",
-      "display" : "Bambusa vulgaris IgG Ab [Units/volume] in Serum"
+      "display" : "Bamboo sprouts IgG Ab [Units/volume] in Serum"
     },
     {
       "system" : "http://loinc.org",
@@ -2165,7 +2165,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100381-3",
-      "display" : "Mentha balsamea Wild IgG Ab [Units/volume] in Serum"
+      "display" : "Peppermint IgG Ab [Units/volume] in Serum"
     },
     {
       "system" : "http://loinc.org",
@@ -2180,7 +2180,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100384-7",
-      "display" : "Rapeseed IgG Ab [Units/volume] in Serum"
+      "display" : "Turnip IgG Ab [Units/volume] in Serum"
     },
     {
       "system" : "http://loinc.org",
@@ -2245,7 +2245,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100396-1",
-      "display" : "Brassica napus IgG Ab [Units/volume] in Serum"
+      "display" : "Rapeseed IgG Ab [Units/volume] in Serum"
     },
     {
       "system" : "http://loinc.org",
@@ -2390,12 +2390,12 @@
     {
       "system" : "http://loinc.org",
       "code" : "100421-7",
-      "display" : "Chick Pea IgG Ab [Units/volume] in Serum"
+      "display" : "Chickpea IgG Ab [Units/volume] in Serum"
     },
     {
       "system" : "http://loinc.org",
       "code" : "100422-5",
-      "display" : "Chicory IgG Ab [Units/volume] in Serum"
+      "display" : "Common Chicory IgG Ab [Units/volume] in Serum"
     },
     {
       "system" : "http://loinc.org",
@@ -4785,7 +4785,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "100853-1",
-      "display" : "NM Pericardial space Pericardial effusion"
+      "display" : "NM Pericardial space Views for effusion"
     },
     {
       "system" : "http://loinc.org",

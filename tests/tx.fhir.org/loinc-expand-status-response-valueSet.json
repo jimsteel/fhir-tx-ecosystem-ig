@@ -13,7 +13,7 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 1504,
+    "total" : 1590,
     "offset" : 0,
     "parameter" : [{
       "name" : "count",
@@ -33,11 +33,11 @@
     },
     {
       "name" : "used-codesystem",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     },
     {
       "name" : "version",
-      "valueUri" : "http://loinc.org|2.80"
+      "valueUri" : "http://loinc.org|2.81"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -62,7 +62,7 @@
     {
       "system" : "http://loinc.org",
       "code" : "10735-9",
-      "display" : "Viral sequencing [Identifier] in Serum by Sequencing"
+      "display" : "Virus identified in Serum by Sequencing"
     },
     {
       "system" : "http://loinc.org",
