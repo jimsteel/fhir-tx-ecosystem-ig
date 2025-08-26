@@ -1,4 +1,4 @@
-## Multi-Language Support 
+### Multi-Language Support 
 
 This page documents the expectations for servers in the terminology ecosystem around language support. 
 Servers in the ecosystem must support the minimum features in this page around validation, whether or
@@ -8,7 +8,7 @@ Servers are also generally required to support CodeSystem supplements for langua
 may be waived for some code systems with their own alternative translation support and governance on 
 discussion with HL7.
 
-### Client Language Specification
+#### Client Language Specification
 
 Clients might want to do one of three things:
 
@@ -32,7 +32,7 @@ of operational control on the client. ValueSet Language is a single language cod
 From a server point of view, the order of priority for the displayLanguage parameter is 
 `request parameter` > `valueset-extension` > `HTTP Header` > `ValueSet.language`
 
-## Value Set Language Control
+### Value Set Language Control
 
 Value sets may them selves make rules about the language behavior using a combination of:
 
@@ -40,12 +40,12 @@ Value sets may them selves make rules about the language behavior using a combin
 * Providing language specific displays and designations on ValueSet.compose.include.concept 
 * Specifying a specific displayLanguage parameter in a [[[http://hl7.org/fhir/StructureDefinition/valueset-expansion-parameter]]] extension
 
-## Server Behavior
+### Server Behavior
 
 The correct responses depends on the interplay between these various parameters, and are 
 effectively specified by the test cases.
 
-### Test Cases
+#### Test Cases
 
 the tests here test out these combinations. To test this, we define four code systems, all basically related
 to each other:
@@ -57,7 +57,7 @@ to each other:
 
 Then a set of value sets are defined on this, that include all codes from one of those code systems. Some of the value sets specify the language of expansion (discussed below)
 
-## Simple Echo
+### Simple Echo
 
 The first four tests simply echo the four code systems back with no language rules
 
@@ -80,7 +80,7 @@ Each of the tests below comes as a set of variants, depending on how the languag
 * **language-echo-en-multi-en**: Specify to return the english code system in english, but since the code system has german designations, get them too
 * **language-echo-de-multi-de**: Specify to return the german code system in german, but since the code system has english designations, get them too
 
-## Change the language 
+### Change the language 
 
 Having done these, we turn to the really interesting tests, switching the display language. These tests use the weight feature of the language, 
 specifying to return en: ```displayLanguage: en```. By default, the wildcard is understood to be present at some low weight: ```displayLanguage: en, *; q=0.1```. This results in the client getting displays in the language of it's choice, *if there are any*, and otherwise falling back to whatever is available. If the client wants to insist that it only get displays if they are in the specified language, it has to turn the wild card off explicitly: ```displayLanguage: en, *; q=0```
@@ -94,7 +94,7 @@ variants:
 * **language-xform-en-multi-de**: English to German
 * **language-xform-de-multi-en**: German to English
 
-## Restricting the designations
+### Restricting the designations
 
 Finally, we turn to an efficiency concern - restricting the set of designations that we get back
 using the designation parameter. We asked for designations, but we may only want a subset of the 
@@ -103,7 +103,7 @@ full set available. We could filter them on the client side, but it might be qui
 * language-echo-en-designation - only spanish designations
 * language-echo-en-designations - german and english designations
 
-## Validation
+### Validation
 
 The validation use cases around language include tests for language 
 specified as an HTTP header, as a value set parameter, a value set language, 

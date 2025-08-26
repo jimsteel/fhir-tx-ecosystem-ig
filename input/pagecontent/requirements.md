@@ -1,5 +1,5 @@
 
-# Requirements
+### Requirements
 
 This document describes the requirements for all servers that are part of the [HL7 terminology ecosystem](ecosystem.html).
 Note that systems do not need to conform to these requirements to be described as 'FHIR Terminology servers',
@@ -7,14 +7,14 @@ but they do not need to conform to these requirements to be part of the ecosyste
 
 All systems need to conform to the following requirements:
 
-## Metadata
+#### Metadata
 
 * The server SHALL return a CapabilityStatement from ```{root}/metadata```
 * It SHALL populate the `CapabilityStatement.fhirVersion` and `CapabilityStatement.rest[mode = server].security.service properties`
 * It SHALL include a `CapabilityStatement.instantiates` value of `http://hl7.org/fhir/CapabilityStatement/terminology-server`
 * The server SHALL return a TerminologyCapabilities statement from `{root}/metadata?mode=terminology`
 
-## Supporting CodeSystems 
+#### Supporting CodeSystems 
 
 A '<code>supported</code>' CodeSystem is any code system that the server supports correctly for calls to `$expand`, `$validate-code`, and `$lookup`.
 A '<code>pre-defined</code>' CodeSystem is any value set that the server makes available through the `/CodeSystem` endpoint.
@@ -65,7 +65,7 @@ and only by negotiation with the terminology ecosystem managers (see also notes 
   [tx-resource parameter](https://jira.hl7.org/browse/FHIR-33944). (e.g. this rule does not apply servers registered with the ecosystem)
 
 
-### Code system Functionality
+##### Code system Functionality
 
 Servers are required to support code system supplements. Specifically, this means:
 
@@ -87,7 +87,7 @@ Servers are required to support the following properties in the CodeSystem resou
 
 * `CodeSystem.supplements`. Servers SHALL not mistake supplements and code systems for each other.
 
-## Supporting Value Sets 
+#### Supporting Value Sets 
 
 A '<code>supported</code>' value set is any value set that can be used in `$expand` or `$validate-code` operations, including value sets imported into other value sets, and including implicit value sets. A '<code>pre-defined</code>' value set is any value set that the server makes available through the `/ValueSet` endpoint.
 
@@ -106,13 +106,13 @@ It's up to the server how to manage what content they support and implement. Ser
 
 * All predefined value sets SHALL have a web representation that is appropriate for a human to look at (see below)
 
-### Passing ValueSet resources in requests 
+##### Passing ValueSet resources in requests 
 
 * Servers SHALL accept ValueSets passed in the [tx-resource parameter](https://jira.hl7.org/browse/FHIR-33944) to both `$expand` and `$validate-code` operations.
 * Servers SHALL use these value sets when resolving imports in other ValueSet resources
 * Servers SHALL indicate their support for passing ValueSet resources in the tx-resource parameter in `TerminologyCapabilities.expansion.parameter`
 
-### ValueSet functionality 
+##### ValueSet functionality 
 
 * Servers SHALL support `ValueSet.compose` 
 * Servers SHALL support `ValueSet.compose.include` and `ValueSet.compose.exclude` 
@@ -125,7 +125,7 @@ It's up to the server how to manage what content they support and implement. Ser
 
 The ecosystem makes no rules - at this time - about the handling of value sets that have an expansion with no definition.
 
-## Human Representation 
+#### Human Representation 
 
 * All pre-defined code systems and value sets SHALL have a web representation (as above) 
 
@@ -135,9 +135,9 @@ The server MAY choose to make this content available at the end-point for the re
 
 If the server chooses to make them available elsewhere, it SHALL populate the extension ```http://hl7.org/fhir/StructureDefinition/web-source``` in any resources it makes available with a `valueUrl` where the web view can be found. This SHALL be populated when the CodeSystem and ValueSet are read, and also in any `$expand` of the value set (just for the root value set in this case).
 
-## Parameter Support
+#### Parameter Support
 
-### Common Parameters ($expand and $validate-code)
+##### Common Parameters ($expand and $validate-code)
 
 * The server SHALL support the [tx-resource](https://jira.hl7.org/browse/FHIR-33944) parameter for passing related terminology, per the rules above
 * If a server receives a terminology resource it does not process correctly, it SHALL return an error
@@ -149,7 +149,7 @@ If the server chooses to make them available elsewhere, it SHALL populate the ex
   * Clarification: Servers SHALL not ignore supplements; if they don't support a relevant supplement (per the rules above), they SHALL return an error that they cannot process the supplement (e.g. if it is passed in a tx-resource parameter)
   * Whether servers actually accept and use supplements for the purposes of designations is a matter for negotiation with the server's relevant user base and whether there are other arrangements in place for supporting translation (e.g. SNOMED CT, LOINC)
 
-### $expand parameters
+##### $expand parameters
 
 * The server SHALL support the `count` parameter (`offset` is used, but will always be 0)
 * The server SHOULD return hierarchical expansions when possible (this is not a technical requirement, but comes up as important to authors)
@@ -159,7 +159,7 @@ If the server chooses to make them available elsewhere, it SHALL populate the ex
 * The server SHALL support language correctly (both `displayLanguage` parameter and Accept-Language header, as specified in [Languages](./languages.html))
 * The server SHALL support the `excludeNested`, `includeDesignations`, `activeOnly`, `includeDefinition`, `property`, `designation` parameters
 
-### $validate-code parameters
+##### $validate-code parameters
 
 * The server SHALL support validating code+system(+version)(+display), `Coding`, and `CodeableConcept`
 * The server SHALL support the [mode/valueSetMode](https://jira.hl7.org/browse/FHIR-41229) parameter
@@ -171,7 +171,7 @@ If the server chooses to make them available elsewhere, it SHALL populate the ex
 * The server SHOULD return a `normalized-code` parameter where appropriate (e.g. case insensitive code systems, code systems with complex grammars)
 * The server SHOULD return an issue with tx issue type ```processing-note``` when it has not fully validated the code e.g. an SCT expression against the MRCM 
 
-### Extensions
+##### Extensions
 
 The following extensions SHALL be supported:
 
