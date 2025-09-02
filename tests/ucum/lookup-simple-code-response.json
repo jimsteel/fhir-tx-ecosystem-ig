@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "abstract",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "code",
+    "valueCode" : "mg/dL"
+  },
+  {
+    "$optional$" : true,
+    "name" : "display",
+    "valueString" : "milligram per deciliter"
+  },
+  {
+    "name" : "name",
+    "valueString" : "UCUM"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "inactive"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : false
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://unitsofmeasure.org"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2.2"
+  }]
+}

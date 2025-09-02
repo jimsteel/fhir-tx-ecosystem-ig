@@ -2518,6 +2518,27 @@
       }
     ]
   },{
+    "name" : "UCUM",
+    "mode" : "ucum",
+    "description" : "UCUM Test Cases",
+    "setup" : [],
+    "tests" : [
+      {
+        "name" : "lookup",
+        "description" : "Tests the $lookup operation",
+        "operation" : "lookup",
+        "request" : "ucum/lookup-simple-code-request.json",
+        "response" : "ucum/lookup-simple-code-response.json"
+      },
+      {
+        "name" : "lookup-with-annotation",
+        "description" : "Tests the $lookup operation with annotation",
+        "operation" : "lookup",
+        "request" : "ucum/lookup-with-annotation-code-request.json",
+        "response" : "ucum/lookup-with-annotation-code-response.json"
+      }
+    ]
+  },{
     "name" : "icd-11",
     "mode" : "icd-11",
     "description" : "ICD-11 Test Cases",
