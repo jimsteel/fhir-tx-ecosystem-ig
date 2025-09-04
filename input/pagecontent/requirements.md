@@ -171,6 +171,27 @@ If the server chooses to make them available elsewhere, it SHALL populate the ex
 * The server SHOULD return a `normalized-code` parameter where appropriate (e.g. case insensitive code systems, code systems with complex grammars)
 * The server SHOULD return an issue with tx issue type ```processing-note``` when it has not fully validated the code e.g. an SCT expression against the MRCM 
 
+##### Inactive Codes 
+
+Code systems vary in whether codes and/or designations can be labelled as inactive, and if they do, how it is done. 
+SNOMED CT defines 'inactive' explicitly. For other Code Systems, codes or designations are labelled as 'should not use' 
+in any fashion, they are regard as inactive.
+
+For the CodeSystem resource:
+- a concept that as a 'http://hl7.org/fhir/concept-properties#status' property value of 'deprecated' or 'retired' is inactive
+- if there is no status property for a concept, the standards-status extension (see below) may provide the status
+- for a designation, the only way to denote inactive (at this time) is to use the standards-status extension.
+
+If a concept is defined as inactive:
+* inactive SHALL be true when the concept is found in an expansion 
+* in expansions, the status property SHALL be populated with a status indicating why the concept is inactive (usually 'inactive', 'withdrawn', or 'deprecated')
+* the return value from $validate-code for the concept SHALL include a warning that the code is invalid, and the parameters 'inactive' and 'status' SHALL be populated
+
+If a designation is defined as inactive:
+* if the designation is included in an expansion, it SHALL either have a standards-status extension with a value of either 'withdrawn' or 'deprecated', or a use code of 'http://snomed.org/info#900000000000546006'
+* if provided as the display to $validate-code, an inactive display causes a warning that the display is no longer current (but it is valid)
+
+
 ##### Extensions
 
 The following extensions SHALL be supported:
@@ -187,6 +208,7 @@ The following extensions SHALL be supported:
 * `http://hl7.org/fhir/StructureDefinition/valueset-supplement` - check for this, blow up if supplement is properly supported
 * `http://hl7.org/fhir/StructureDefinition/valueset-label` - echo in value set if defined in code system or value set
 * `http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder` - echo in value set if defined in code system or value set
+* `http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status` - may be found on either a concept or a concept designation. The status codes 'withdrawn' and 'deprecated' mean that the concept / designation is inactive
 
 Note that some of these extensions may be supported by rejecting instances that contain them, depending on the 
 specific use cases that the server supports. E.g., if the server does not support externally derived code systems 

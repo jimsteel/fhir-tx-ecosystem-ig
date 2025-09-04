@@ -56,12 +56,29 @@
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "INACTIVE_CONCEPT_FOUND"
+        }],
+        "severity" : "warning",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-comment"
+          }],
+          "text" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed."
+        },
+        "location" : ["Coding"],
+        "expression" : ["Coding"]
       }]
     }
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-all|5.0.0'"
+    "valueString" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed.; The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-all|5.0.0'"
   },
   {
     "name" : "result",
