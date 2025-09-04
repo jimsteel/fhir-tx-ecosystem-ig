@@ -778,6 +778,20 @@
         "operation" : "validate-code",
         "request" : "extensions/validate-coding-good2-supplement-request-parameters.json",
         "response" : "extensions/validate-coding-good2-supplement-response-parameters.json"
+      },
+      {
+        "name" : "validate-code-inactive-display",
+        "description" : "Check handling of a deprecated designation",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-code-inactive-display-request-parameters.json",
+        "response" : "extensions/validate-code-inactive-display-response-outcome.json"
+      },
+      {
+        "name" : "validate-code-inactive",
+        "description" : "Check handling of a deprecated concept",
+        "operation" : "cs-validate-code",
+        "request" : "extensions/validate-code-inactive-request-parameters.json",
+        "response" : "extensions/validate-code-inactive-response-outcome.json"
       }
     ]
   },{
@@ -2305,6 +2319,27 @@
         "operation" : "expand",
         "request" : "tx.fhir.org/loinc-expand-filter-answer-list-request-parameters.json",
         "response" : "tx.fhir.org/loinc-expand-filter-answer-list-response-valueSet.json"
+      }
+    ]
+  },{
+    "name" : "snomed",
+    "mode" : "snomed",
+    "description" : "This snomed tests are based on the subset distributed with the tx-ecosystem IG",
+    "setup" : [ "sct/valueset-inactive.json" ],
+    "tests" : [
+      {
+        "name" : "snomed-inactive-display",
+        "description" : "check that inactive displays are validated properly",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-inactive-display-request.json",
+        "response" : "sct/validate-code-inactive-display-response.json"
+      },
+      {
+        "name" : "snomed-expand-inactive",
+        "description" : "check that inactive concepts and displays are expanded properly",
+        "operation" : "expand",
+        "request" : "sct/expand-inactive-request.json",
+        "response" : "sct/expand-inactive-response.json"
       }
     ]
   },{
