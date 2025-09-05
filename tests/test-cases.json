@@ -1339,7 +1339,7 @@
     "description" : "Testing Deprecated+Withdrawn warnings",
     "setup" : ["deprecated/codesystem-deprecated.json","deprecated/valueset-withdrawn.json","deprecated/valueset-not-withdrawn.json", 
                "deprecated/codesystem-experimental.json","deprecated/valueset-experimental.json",
-               "deprecated/codesystem-draft.json","deprecated/valueset-draft.json"],
+               "deprecated/codesystem-draft.json","deprecated/valueset-draft.json","deprecated/valueset-deprecating.json"],
     "tests" : [
       {
         "name" : "withdrawn",
@@ -1392,6 +1392,27 @@
         "operation" : "validate-code",
         "request" : "deprecated/validate-draft-request-parameters.json",
         "response" : "deprecated/validate-draft-response-parameters.json"
+      },
+      {
+        "name" : "vs-deprecation",
+        "description" : "Deprecating a code in a valueset",
+        "operation" : "expand",
+        "request" : "deprecated/expand-deprecating-request-parameters.json",
+        "response" : "deprecated/expand-deprecating-response-valueSet.json"
+      },
+      {
+        "name" : "deprecating-validate",
+        "description" : "Validating a code that has been deprecated in the value set using a deprecated extension",
+        "operation" : "validate-code",
+        "request" : "deprecated/validate-deprecating-request-parameters.json",
+        "response" : "deprecated/validate-deprecating-response-parameters.json"
+      },
+      {
+        "name" : "deprecating-validate-2",
+        "description" : "Validating a code that has been deprecated in the value set",
+        "operation" : "validate-code",
+        "request" : "deprecated/validate-deprecating-2-request-parameters.json",
+        "response" : "deprecated/validate-deprecating-2-response-parameters.json"
       }
     ]
   },{
