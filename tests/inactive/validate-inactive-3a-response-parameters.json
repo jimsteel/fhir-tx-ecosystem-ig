@@ -73,7 +73,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-comment"
           }],
-          "text" : "The concept 'codeRetired' has a status of retired and its use should be reviewed."
+          "text" : "The concept 'codeRetired' has a status of retired and its use should be reviewed"
         },
         "location" : ["Coding"],
         "expression" : ["Coding"]
