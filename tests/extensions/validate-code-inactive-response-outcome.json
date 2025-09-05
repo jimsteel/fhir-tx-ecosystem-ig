@@ -30,7 +30,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-comment"
           }],
-          "text" : "The concept 'code5' has a status of deprecated and its use should be reviewed."
+          "text" : "The concept 'code5' has a status of deprecated and its use should be reviewed"
         },
         "location" : ["code"],
         "expression" : ["code"]
@@ -39,7 +39,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The concept 'code5' has a status of deprecated and its use should be reviewed."
+    "valueString" : "The concept 'code5' has a status of deprecated and its use should be reviewed"
   },
   {
     "name" : "result",

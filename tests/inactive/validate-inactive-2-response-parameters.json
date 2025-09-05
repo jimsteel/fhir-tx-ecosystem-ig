@@ -28,7 +28,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-comment"
           }],
-          "text" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed."
+          "text" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed"
         },
         "location" : ["Coding"],
         "expression" : ["Coding"]
@@ -37,7 +37,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed."
+    "valueString" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed"
   },
   {
     "name" : "result",

@@ -208,7 +208,7 @@ The following extensions SHALL be supported:
 * `http://hl7.org/fhir/StructureDefinition/valueset-supplement` - check for this, blow up if supplement is properly supported
 * `http://hl7.org/fhir/StructureDefinition/valueset-label` - echo in value set if defined in code system or value set
 * `http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder` - echo in value set if defined in code system or value set
-* `http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status` - may be found on either a concept or a concept designation. The status codes 'withdrawn' and 'deprecated' mean that the concept / designation is inactive
+* `http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status` - may be found on either a concept or a concept designation. The status codes 'withdrawn' and 'deprecated' mean that the concept / designation is inactive. In addition, it might be found on a ValueSet.compose.include.concept to indicate that the concept's inclusion in the value set is deprecated/withdrawn etc
 
 Note that some of these extensions may be supported by rejecting instances that contain them, depending on the 
 specific use cases that the server supports. E.g., if the server does not support externally derived code systems 
