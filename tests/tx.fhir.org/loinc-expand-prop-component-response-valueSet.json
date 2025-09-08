@@ -318,11 +318,13 @@
     },
     {
       "system" : "http://loinc.org",
+      "inactive" : true,
       "code" : "35211-2",
       "display" : "Glucose [Mass or Moles/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
+      "inactive" : true,
       "code" : "35212-0",
       "display" : "Glucose [Mass or Moles/volume] in Urine"
     },
@@ -453,6 +455,7 @@
     },
     {
       "system" : "http://loinc.org",
+      "inactive" : true,
       "code" : "5914-7",
       "display" : "Glucose [Presence] in Blood by Test strip"
     },

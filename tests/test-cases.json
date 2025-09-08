@@ -2077,6 +2077,13 @@
         "response" : "tx.fhir.org/loinc-validate-code-response-parameters.json"
       },
       {
+        "name" : "loinc-validate-discouraged-code",
+        "description" : "to be provided",
+        "operation" : "cs-validate-code",
+        "request" : "tx.fhir.org/loinc-validate-code-discouraged-request-parameters.json",
+        "response" : "tx.fhir.org/loinc-validate-code-discouraged-response-parameters.json"
+      },
+      {
         "name" : "loinc-validate-code-supp1",
         "description" : "LOINC supplement test - code in the supplement, but english",
         "operation" : "cs-validate-code",

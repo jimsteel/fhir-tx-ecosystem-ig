@@ -22,7 +22,7 @@
           "valueString" : "INACTIVE_CONCEPT_FOUND"
         }],
         "severity" : "warning",
-        "code" : "invalid",
+        "code" : "business-rule",
         "details" : {
           "coding" : [{
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
