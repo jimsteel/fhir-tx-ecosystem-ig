@@ -39,8 +39,45 @@
         "valueString" : "Display 2"
       },
       {
+        "name" : "inactive",
+        "valueBoolean" : true
+      },
+      {
+        "name" : "issues",
+        "resource" : {
+          "resourceType" : "OperationOutcome",
+          "issue" : [{
+            "$optional-properties$" : ["location" ],
+            "extension" : [{
+              "$optional$" : "!tx.fhir.org",
+              "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+              "valueString" : "INACTIVE_CONCEPT_FOUND"
+            }],
+            "severity" : "warning",
+            "code" : "business-rule",
+            "details" : {
+              "coding" : [{
+                "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+                "code" : "code-comment"
+              }],
+              "text" : "The concept 'code2' has a status of retired and its use should be reviewed"
+            },
+            "location" : ["Coding"],
+            "expression" : ["Coding"]
+          }]
+        }
+      },
+      {
+        "name" : "message",
+        "valueString" : "The concept 'code2' has a status of retired and its use should be reviewed"
+      },
+      {
         "name" : "result",
         "valueBoolean" : true
+      },
+      {
+        "name" : "status",
+        "valueString" : "retired"
       },
       {
         "name" : "system",
@@ -61,6 +98,7 @@
         "valueCode" : "code3"
       },
       {
+        "$optional$" : true,
         "name" : "display",
         "valueString" : "Display 3"
       },
@@ -69,7 +107,9 @@
         "resource" : {
           "resourceType" : "OperationOutcome",
           "issue" : [{
+            "$optional-properties$" : ["location" ],
             "extension" : [{
+              "$optional$" : "!tx.fhir.org",
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
             }],

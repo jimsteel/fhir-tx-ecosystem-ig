@@ -17,7 +17,9 @@
         "resource" : {
           "resourceType" : "OperationOutcome",
           "issue" : [{
+            "$optional-properties$" : ["location" ],
             "extension" : [{
+              "$optional$" : true,
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "Display_Name_for__should_be_one_of__instead_of"
             }],
@@ -57,10 +59,6 @@
     "name" : "validation",
     "resource" : {
       "resourceType" : "OperationOutcome",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Unable to find code to validate (looked for coding | codeableConcept | code in parameters =codingX:Coding)</p></div>"
-      },
       "issue" : [{
         "severity" : "error",
         "code" : "$choice:invalid|not-found$",
@@ -87,7 +85,9 @@
         "resource" : {
           "resourceType" : "OperationOutcome",
           "issue" : [{
+            "$optional-properties$" : ["location" ],
             "extension" : [{
+              "$optional$" : true,
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
             }],
@@ -104,6 +104,7 @@
             "expression" : ["Coding.code"]
           },
           {
+            "$optional-properties$" : ["location" ],
             "extension" : [{
               "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
               "valueString" : "Display_Name_for__should_be_one_of__instead_of"

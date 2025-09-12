@@ -5,7 +5,6 @@
   "status" : "active",
   "experimental" : false,
   "caseSensitive" : true,
-  "valueSet" : "http://hl7.org/fhir/test/ValueSet/exclude",
   "content" : "complete",
   "concept" : [{
     "code" : "individual",
