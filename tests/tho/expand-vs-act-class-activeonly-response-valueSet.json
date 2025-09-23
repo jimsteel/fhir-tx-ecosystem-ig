@@ -14,9 +14,13 @@
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 119,
+    "total" : 98,
     "offset": 0,
     "parameter" : [{
+      "name" : "activeOnly",
+      "valueBoolean" : true
+    },
+    {
       "name" : "excludeNested",
       "valueBoolean" : true
     },
@@ -211,58 +215,8 @@
     },
     {
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "DOCCNTNT",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "DOCLIST",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "DOCLSTITM",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "DOCPARA",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
       "code" : "DOCSECT",
       "display" : "document section"
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "DOCTBL",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
     },
     {
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
@@ -273,17 +227,6 @@
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
       "code" : "ENC",
       "display" : "encounter"
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "ENTRY",
-      "display" : "entry",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
     },
     {
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
@@ -357,16 +300,6 @@
     },
     {
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "LINKHTML",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
       "code" : "LIST",
       "display" : "working list"
     },
@@ -387,26 +320,6 @@
     },
     {
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "LOCALATTR",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "LOCALMRKP",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
       "code" : "MPROT",
       "display" : "monitoring program"
     },
@@ -424,17 +337,6 @@
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
       "code" : "OBSSER",
       "display" : "observation series"
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "ORGANIZER",
-      "display" : "organizer",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
     },
     {
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
@@ -505,16 +407,6 @@
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
       "code" : "PROC",
       "display" : "procedure"
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "REFR",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
     },
     {
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
@@ -663,56 +555,6 @@
     },
     {
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "TBLCOL",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "TBLCOLGP",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "TBLDATA",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "TBLHDR",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "TBLROW",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
       "code" : "TEXPOS",
       "display" : "transmission exposure"
     },
@@ -750,56 +592,6 @@
       "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
       "code" : "XACT",
       "display" : "financial transaction"
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "ordered",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "tbody",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "tfoot",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "thead",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/tests/CodeSystem/act-class",
-      "inactive" : true,
-      "code" : "unordered",
-      "property" : [{
-        "$optional$" : true,
-        "code" : "status",
-        "valueCode" : "retired"
-      }]
     }]
   }
 }

@@ -34,10 +34,10 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://loinc.org|2.81"
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://loinc.org|2.81"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
     "contains" : [{
       "system" : "http://loinc.org",

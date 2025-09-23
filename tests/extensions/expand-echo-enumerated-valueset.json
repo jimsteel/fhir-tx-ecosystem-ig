@@ -131,7 +131,7 @@
       "designation" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-          "valueId" : "deprecated"
+          "valueCode" : "deprecated"
         }],
         "language" : "de",
         "value" : "2nd Code"
@@ -209,7 +209,6 @@
         "valueString" : "A valueset specific definition"
       }],
       "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",
-      "inactive" : true,
       "code" : "code5",
       "display" : "Display 5",
       "property" : [{

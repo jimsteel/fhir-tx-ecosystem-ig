@@ -21,10 +21,10 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://loinc.org|2.81"
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://loinc.org|2.81"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -209,7 +209,11 @@
     {
       "system" : "http://loinc.org",
       "code" : "14320-6",
-      "display" : "Deprecated Bacteria identified in Urine by Culture @1:100"
+      "display" : "Deprecated Bacteria identified in Urine by Culture @1:100",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DEPRECATED"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -699,7 +703,11 @@
     {
       "system" : "http://loinc.org",
       "code" : "17969-7",
-      "display" : "Deprecated Bacteria identified in Urine by Aerobe culture"
+      "display" : "Deprecated Bacteria identified in Urine by Aerobe culture",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DEPRECATED"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -854,7 +862,11 @@
     {
       "system" : "http://loinc.org",
       "code" : "41741-0",
-      "display" : "Deprecated Bacteria identified in Unspecified specimen"
+      "display" : "Deprecated Bacteria identified in Unspecified specimen",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DEPRECATED"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -869,7 +881,11 @@
     {
       "system" : "http://loinc.org",
       "code" : "42806-0",
-      "display" : "Deprecated Bacteria identified in Isolate"
+      "display" : "Deprecated Bacteria identified in Isolate",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DEPRECATED"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -1349,7 +1365,11 @@
     {
       "system" : "http://loinc.org",
       "code" : "629-6",
-      "display" : "Deprecated Bacteria identified in Ulcer by Aerobe culture"
+      "display" : "Deprecated Bacteria identified in Ulcer by Aerobe culture",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "DEPRECATED"
+      }]
     },
     {
       "system" : "http://loinc.org",
