@@ -34,7 +34,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-rule"
           }],
-          "text" : "The code 'codeInactive' is valid but is not active"
+          "text" : "The concept 'codeInactive' is valid but is not active"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
