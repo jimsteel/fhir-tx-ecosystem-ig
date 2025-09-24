@@ -9,6 +9,7 @@
         "valueCode" : "code1"
       },
       {
+        "$optional$" : true,
         "name" : "display",
         "valueString" : "Display 1"
       },
@@ -77,6 +78,7 @@
         "valueCode" : "code3"
       },
       {
+        "$optional$" : true,
         "name" : "display",
         "valueString" : "Display 3"
       },
