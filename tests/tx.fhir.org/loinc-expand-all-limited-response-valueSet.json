@@ -32,10 +32,10 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://loinc.org|2.81"
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://loinc.org|2.81"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -415,22 +415,38 @@
     {
       "system" : "http://loinc.org",
       "code" : "100066-0",
-      "display" : "Specular microscopy panel"
+      "display" : "Specular microscopy panel",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100067-8",
-      "display" : "Eye Image magnification"
+      "display" : "Eye Image magnification",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100068-6",
-      "display" : "Right eye Fixation point [Angle]"
+      "display" : "Right eye Fixation point [Angle]",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100069-4",
-      "display" : "Left eye Fixation point [Angle]"
+      "display" : "Left eye Fixation point [Angle]",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -440,52 +456,92 @@
     {
       "system" : "http://loinc.org",
       "code" : "100070-2",
-      "display" : "Right cornea Cell density"
+      "display" : "Right cornea Cell density",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100071-0",
-      "display" : "Left cornea Cell density"
+      "display" : "Left cornea Cell density",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100072-8",
-      "display" : "Right cornea Coefficient of variation"
+      "display" : "Right cornea Coefficient of variation",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100073-6",
-      "display" : "Left cornea Coefficient of variation"
+      "display" : "Left cornea Coefficient of variation",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100074-4",
-      "display" : "Right cornea Hexagonality"
+      "display" : "Right cornea Hexagonality",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100075-1",
-      "display" : "Left cornea Hexagonality"
+      "display" : "Left cornea Hexagonality",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100076-9",
-      "display" : "Right cornea Endothelial cells counted"
+      "display" : "Right cornea Endothelial cells counted",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100077-7",
-      "display" : "Left cornea Endothelial cells counted"
+      "display" : "Left cornea Endothelial cells counted",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100078-5",
-      "display" : "Right cornea Endothelial cell area.min"
+      "display" : "Right cornea Endothelial cell area.min",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100079-3",
-      "display" : "Left cornea Endothelial cell area.min"
+      "display" : "Left cornea Endothelial cell area.min",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -495,37 +551,65 @@
     {
       "system" : "http://loinc.org",
       "code" : "100080-1",
-      "display" : "Right cornea Endothelial cell area.max"
+      "display" : "Right cornea Endothelial cell area.max",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100081-9",
-      "display" : "Left cornea Endothelial cell area.max"
+      "display" : "Left cornea Endothelial cell area.max",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100082-7",
-      "display" : "Right cornea Endothelial cell area.mean"
+      "display" : "Right cornea Endothelial cell area.mean",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100083-5",
-      "display" : "Left cornea Endothelial cell area.mean"
+      "display" : "Left cornea Endothelial cell area.mean",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100084-3",
-      "display" : "Right cornea Cell area.standard deviation"
+      "display" : "Right cornea Cell area.standard deviation",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100085-0",
-      "display" : "Left cornea Cell area.standard deviation"
+      "display" : "Left cornea Cell area.standard deviation",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100086-8",
-      "display" : "Right cornea Type of Analysis method by Specular microscopy"
+      "display" : "Right cornea Type of Analysis method by Specular microscopy",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -910,7 +994,11 @@
     {
       "system" : "http://loinc.org",
       "code" : "100155-1",
-      "display" : "Left cornea Type of Analysis method by Specular microscopy"
+      "display" : "Left cornea Type of Analysis method by Specular microscopy",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -4790,32 +4878,56 @@
     {
       "system" : "http://loinc.org",
       "code" : "100854-9",
-      "display" : "Lymphocytes/cells in Blood mononuclear cells by Immunoassay"
+      "display" : "Lymphocytes/cells in Blood mononuclear cells by Immunoassay",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100855-6",
-      "display" : "CD3 cells/cells in Blood mononuclear cells"
+      "display" : "CD3 cells/cells in Blood mononuclear cells",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100856-4",
-      "display" : "CD3+CD4+ (T4 helper) cells/cells in Blood mononuclear cells"
+      "display" : "CD3+CD4+ (T4 helper) cells/cells in Blood mononuclear cells",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100857-2",
-      "display" : "CD3+CD8+ (T8 suppressor) cells/cells in Blood mononuclear cells"
+      "display" : "CD3+CD8+ (T8 suppressor) cells/cells in Blood mononuclear cells",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100858-0",
-      "display" : "Cells.CD4+CD154+/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide"
+      "display" : "Cells.CD4+CD154+/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100859-8",
-      "display" : "Cells.CD4.Interferon gamma-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide"
+      "display" : "Cells.CD4.Interferon gamma-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
@@ -4825,22 +4937,38 @@
     {
       "system" : "http://loinc.org",
       "code" : "100860-6",
-      "display" : "Cells.CD4.Tumor necrosis factor alfa-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide"
+      "display" : "Cells.CD4.Tumor necrosis factor alfa-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100861-4",
-      "display" : "Cells.CD4+CD154+/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+      "display" : "Cells.CD4+CD154+/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100862-2",
-      "display" : "Cells.CD4.Interferon gamma-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+      "display" : "Cells.CD4.Interferon gamma-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",
       "code" : "100863-0",
-      "display" : "Cells.CD4.Tumor necrosis factor alfa-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+      "display" : "Cells.CD4.Tumor necrosis factor alfa-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "TRIAL"
+      }]
     },
     {
       "system" : "http://loinc.org",

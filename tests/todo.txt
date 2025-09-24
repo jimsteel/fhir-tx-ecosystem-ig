@@ -1,0 +1,3 @@
+validation to add:
+ - a code can't have status = active and inactive = true (task 51249)
+ 

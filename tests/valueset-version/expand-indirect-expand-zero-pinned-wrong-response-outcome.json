@@ -2,6 +2,11 @@
   "resourceType" : "OperationOutcome",
   "issue" : [{
     "$optional-properties$" : ["diagnostics"],
+    "extension" : [{
+      "$optional$" : true,
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "VS_EXP_IMPORT_UNK_PINNED"
+    }],
     "severity" : "error",
     "code" : "not-found",
     "details" : {

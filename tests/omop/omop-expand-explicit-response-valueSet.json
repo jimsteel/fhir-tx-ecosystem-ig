@@ -9,11 +9,6 @@
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "https://fhir-terminology.ohdsi.org|20240716"
-    },
-    {
-      "$optional$" : true,
-      "name" : "version",
-      "valueUri" : "https://fhir-terminology.ohdsi.org|20240716"
     }],
     "contains" : [{
       "system" : "https://fhir-terminology.ohdsi.org",

@@ -33,16 +33,6 @@
     {
       "name" : "used-supplement",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1"
-    },
-    {
-      "$optional$" : true,
-      "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/extensions"
-    },
-    {
-      "$optional$" : true,
-      "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1"
     }],
     "property" : [{
       "code" : "weight",
@@ -106,7 +96,7 @@
       "designation" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-          "valueId" : "deprecated"
+          "valueCode" : "deprecated"
         }],
         "language" : "de",
         "value" : "2nd Code"
@@ -158,7 +148,6 @@
     },
     {
       "system" : "http://hl7.org/fhir/test/CodeSystem/extensions",
-      "inactive" : true,
       "code" : "code5",
       "display" : "Display 5",
       "property" : [{

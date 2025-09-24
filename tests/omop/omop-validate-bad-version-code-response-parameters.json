@@ -20,7 +20,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-found"
           }],
-          "text" : "A definition for CodeSystem 'https://fhir-terminology.ohdsi.org' version '20250101' could not be found, so the code cannot be validated. Valid versions: [20240716]"
+          "text" : "A definition for CodeSystem 'https://fhir-terminology.ohdsi.org' version '20250101' could not be found, so the code cannot be validated. Valid versions: 20240716"
         },
         "location" : ["system"],
         "expression" : ["system"]
@@ -29,7 +29,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'https://fhir-terminology.ohdsi.org' version '20250101' could not be found, so the code cannot be validated. Valid versions: [20240716]"
+    "valueString" : "A definition for CodeSystem 'https://fhir-terminology.ohdsi.org' version '20250101' could not be found, so the code cannot be validated. Valid versions: 20240716"
   },
   {
     "name" : "result",

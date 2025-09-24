@@ -21,10 +21,6 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://loinc.org|2.81"
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://loinc.org|2.81"
     }],
     "contains" : [{
       "system" : "http://loinc.org",

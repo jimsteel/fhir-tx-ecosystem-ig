@@ -20,10 +20,10 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -47,6 +47,10 @@
           "display" : "Fully specified name"
         },
         "value" : "Appendicitis (disorder)"
+      }],
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
       }]
     },
     {

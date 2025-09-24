@@ -34,7 +34,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-rule"
           }],
-          "text" : "The code 'codeRetired' is valid but is not active"
+          "text" : "The concept 'codeRetired' is valid but is not active"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]

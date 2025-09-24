@@ -33,11 +33,6 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://hl7.org/fhir/test/CodeSystem/big"
-    },
-    {
-      "$optional$" : true,
-      "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/test/CodeSystem/big"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/test/CodeSystem/big",

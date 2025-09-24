@@ -32,7 +32,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-rule"
           }],
-          "text" : "The code 'codeInactive' is valid but is not active"
+          "text" : "The concept 'codeInactive' is valid but is not active"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
@@ -78,7 +78,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed; The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-all|5.0.0'"
+    "valueString" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed; The concept 'codeInactive' is valid but is not active; The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/inactive-all|5.0.0'"
   },
   {
     "name" : "result",

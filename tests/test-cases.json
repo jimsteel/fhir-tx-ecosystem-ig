@@ -447,8 +447,6 @@
         "request" : "language/expand-echo-de-multi-de-header-request-parameters.json",
         "response" : "language/expand-echo-de-multi-de-header-response-valueSet.json"
       },
-      
-
       {
         "name" : "language-xform-en-multi-de-soft",
         "description" : "to be provided",
@@ -801,8 +799,8 @@
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-import-bad.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json",
         "language/codesystem-de-multi.json", "language/codesystem-de-single.json", "language/codesystem-en-multi.json", "language/codesystem-en-single.json",
         "language/valueset-de-multi.json", "language/valueset-de-single.json", "language/valueset-en-multi.json", "language/valueset-en-single.json",
-        "version/codesystem-version-1.json", "version/codesystem-version-2.json", "version/valueset-all-version-1.json", "version/valueset-all-version-2.json", "version/valueset-all-version.json",
-        "language/valueset-en-enlang-multi.json", "language/valueset-en-en-multi.json", "inactive/valueset-all.json", "inactive/codesystem-inactive.json"
+        "language/valueset-en-enlang-multi.json", "language/valueset-en-en-multi.json", "inactive/valueset-all.json", "inactive/codesystem-inactive.json",
+        "version/codesystem-version-1.json", "version/valueset-all-version-1.json"
       ],
     "tests" : [
       {
@@ -954,55 +952,6 @@
         "operation" : "validate-code",
         "request" : "validation/simple-codeableconcept-bad-system-request-parameters.json",
         "response" : "validation/simple-codeableconcept-bad-system-response-parameters.json"
-      },
-      {
-        "name" : "validation-simple-code-bad-version1",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "validation/simple-code-bad-version1-request-parameters.json",
-        "response" :  "validation/simple-code-bad-version1-response-parameters.json"
-      },
-      {
-        "name" : "validation-simple-coding-bad-version1",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "validation/simple-coding-bad-version1-request-parameters.json",
-        "response" :  "validation/simple-coding-bad-version1-response-parameters.json"
-      },
-      {
-        "name" : "validation-simple-codeableconcept-bad-version1",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "validation/simple-codeableconcept-bad-version1-request-parameters.json",
-        "response" : "validation/simple-codeableconcept-bad-version1-response-parameters.json"
-      },
-      {
-        "name" : "validation-simple-codeableconcept-bad-version2",
-        "description" : "Check that a bad system with a version doesn't generate a warning that the version can't be found",
-        "operation" : "validate-code",
-        "request" : "validation/simple-codeableconcept-bad-version2-request-parameters.json",
-        "response" : "validation/simple-codeableconcept-bad-version2-response-parameters.json"
-      },
-      {
-        "name" : "validation-simple-code-good-version",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "validation/simple-code-good-version-request-parameters.json",
-        "response" :  "validation/simple-code-good-version-response-parameters.json"
-      },
-      {
-        "name" : "validation-simple-coding-good-version",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "validation/simple-coding-good-version-request-parameters.json",
-        "response" :  "validation/simple-coding-good-version-response-parameters.json"
-      },
-      {
-        "name" : "validation-simple-codeableconcept-good-version",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "validation/simple-codeableconcept-good-version-request-parameters.json",
-        "response" : "validation/simple-codeableconcept-good-version-response-parameters.json"
       },
       {
         "name" : "validation-simple-code-good-display",
@@ -1167,29 +1116,6 @@
         "response" : "validation/complex-codeableconcept-vsonly-response-parameters.json"
       },
       {
-        "name" : "validation-version-profile-none",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "request" : "validation/version-profile-none-request-parameters.json",
-        "response" : "validation/version-profile-none-response-parameters.json"
-      },
-      {
-        "name" : "validation-version-profile-default",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "profile" : "version/parameters-default-version.json",
-        "request" : "validation/version-profile-default-request-parameters.json",
-        "response" : "validation/version-profile-default-response-parameters.json"
-      },
-      {
-        "name" : "validation-version-profile-coding",
-        "description" : "to be provided",
-        "operation" : "validate-code",
-        "profile" : "version/parameters-default-version.json",
-        "request" : "validation/version-profile-coding-request-parameters.json",
-        "response" : "validation/version-profile-coding-response-parameters.json"
-      },
-      {
         "name" : "validation-cs-code-good",
         "description" : "to be provided",
         "operation" : "cs-validate-code",
@@ -1202,6 +1128,1214 @@
         "operation" : "cs-validate-code",
         "request" : "validation/cs-code-bad-code-request-parameters.json",
         "response" :  "validation/cs-code-bad-code-response-parameters.json"
+      }
+    ]
+  },{
+    "name" : "version",
+    "mode" : "general",
+    "description" : "Testing various version issues. There's two versions of a code system, and three value sets that select different versions",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json",
+        "version/codesystem-version-1.json", "version/codesystem-version-2.json", "version/valueset-all-version-1.json", "version/valueset-all-version-2.json", "version/valueset-all-version.json",
+        "version/valueset-version-1.json", "version/valueset-version-2.json", "version/valueset-version-n.json", "version/valueset-version-w.json", "version/valueset-version-w-bad.json", "version/valueset-version-mixed.json"
+      ],
+    "tests" : [
+      {
+        "name" : "version-simple-code-bad-version1",
+        "description" : "Code. Invalid CodeSystem version. No ValueSet version pinning. No version parameters",
+        "operation" : "validate-code",
+        "request" : "version/simple-code-bad-version1-request-parameters.json",
+        "response" :  "version/simple-code-bad-version1-response-parameters.json"
+      },
+      {
+        "name" : "version-simple-coding-bad-version1",
+        "description" : "Coding. Invalid CodeSystem version. No ValueSet version pinning. No version parameters",
+        "operation" : "validate-code",
+        "request" : "version/simple-coding-bad-version1-request-parameters.json",
+        "response" :  "version/simple-coding-bad-version1-response-parameters.json"
+      },
+      {
+        "name" : "version-simple-codeableconcept-bad-version1",
+        "description" : "CodeableConcept. Invalid CodeSystem version. No ValueSet version pinning. No version parameters",
+        "operation" : "validate-code",
+        "request" : "version/simple-codeableconcept-bad-version1-request-parameters.json",
+        "response" : "version/simple-codeableconcept-bad-version1-response-parameters.json"
+      },
+      {
+        "name" : "version-simple-codeableconcept-bad-version2",
+        "description" : "Check that a bad system with a version doesn't generate a warning that the version can't be found",
+        "operation" : "validate-code",
+        "request" : "version/simple-codeableconcept-bad-version2-request-parameters.json",
+        "response" : "version/simple-codeableconcept-bad-version2-response-parameters.json"
+      },
+      {
+        "name" : "version-simple-code-good-version",
+        "description" : "Code. Valid CodeSystem version. ValueSet pinned to same version. No version parameters",
+        "operation" : "validate-code",
+        "request" : "version/simple-code-good-version-request-parameters.json",
+        "response" :  "version/simple-code-good-version-response-parameters.json"
+      },
+      {
+        "name" : "version-simple-coding-good-version",
+        "description" : "Coding. Valid CodeSystem version. ValueSet pinned to same version. No version parameters",
+        "operation" : "validate-code",
+        "request" : "version/simple-coding-good-version-request-parameters.json",
+        "response" :  "version/simple-coding-good-version-response-parameters.json"
+      },
+      {
+        "name" : "version-simple-codeableconcept-good-version",
+        "description" : "CodeableConcept. Valid CodeSystem version. ValueSet pinned to same version. No version parameters",
+        "operation" : "validate-code",
+        "request" : "version/simple-codeableconcept-good-version-request-parameters.json",
+        "response" : "version/simple-codeableconcept-good-version-response-parameters.json"
+      },
+      {
+        "name" : "version-version-profile-none",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "request" : "version/version-profile-none-request-parameters.json",
+        "response" : "version/version-profile-none-response-parameters.json"
+      },
+      {
+        "name" : "version-version-profile-default",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "profile" : "version/parameters-default-version.json",
+        "request" : "version/version-profile-default-request-parameters.json",
+        "response" : "version/version-profile-default-response-parameters.json"
+      },
+      {
+        "name" : "validation-version-profile-coding",
+        "description" : "to be provided",
+        "operation" : "validate-code",
+        "profile" : "version/parameters-default-version.json",
+        "request" : "version/version-profile-coding-request-parameters.json",
+        "response" : "version/version-profile-coding-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vsnn",
+        "description": "Coding. No CodeSystem version.  No ValueSet version pinning. No version parameters",
+        "operation": "validate-code",
+        "request": "version/coding-vnn-vsnn-request-parameters.json",
+        "response": "version/coding-vnn-vsnn-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs1w",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/coding-v10-vs1w-request-parameters.json",
+        "response": "version/coding-v10-vs1w-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs1wb",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/coding-v10-vs1wb-request-parameters.json",
+        "response": "version/coding-v10-vs1wb-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs10",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.0. No version parameters",
+        "operation": "validate-code",
+        "request": "version/coding-v10-vs10-request-parameters.json",
+        "response": "version/coding-v10-vs10-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs20",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.2. No version parameters",
+        "operation": "validate-code",
+        "request": "version/coding-v10-vs20-request-parameters.json",
+        "response": "version/coding-v10-vs20-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsbb",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). No version parameters",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "request": "version/coding-v10-vsbb-request-parameters.json",
+        "response": "version/coding-v10-vsbb-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsbb",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). No version parameters",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "request": "version/coding-v10-vsbb-request-parameters.json",
+        "response": "version/coding-v10-vsbb-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsnn",
+        "description": "Coding. CodeSystem version 1.0. No ValueSet version pinning. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/coding-v10-vsnn-request-parameters.json",
+        "response": "version/coding-v10-vsnn-response-parameters.json"
+      },
+      {
+        "name": "coding-vbb-vs10",
+        "description": "Coding. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/coding-vbb-vs10-request-parameters.json",
+        "response": "version/coding-vbb-vs10-response-parameters.json"
+      },
+      {
+        "name": "coding-vbb-vsnn",
+        "description": "Coding. CodeSystem version 2.4 (bad). No ValueSet version pinning. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/coding-vbb-vsnn-request-parameters.json",
+        "response": "version/coding-vbb-vsnn-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs1w",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/coding-vnn-vs1w-request-parameters.json",
+        "response": "version/coding-vnn-vs1w-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs1wb",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/coding-vnn-vs1wb-request-parameters.json",
+        "response": "version/coding-vnn-vs1wb-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs10",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.0. No version parameters",
+        "operation": "validate-code",
+        "request": "version/coding-vnn-vs10-request-parameters.json",
+        "response": "version/coding-vnn-vs10-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vsbb",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 2.4 (bad). No version parameters ",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "request": "version/coding-vnn-vsbb-request-parameters.json",
+        "response": "version/coding-vnn-vsbb-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vsnn-default",
+        "description": "Coding. No CodeSystem version.  No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-vnn-vsnn-request-parameters.json",
+        "response": "version/coding-vnn-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs1w-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-v10-vs1w-request-parameters.json",
+        "response": "version/coding-v10-vs1w-default-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs1wb-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-v10-vs1wb-request-parameters.json",
+        "response": "version/coding-v10-vs1wb-default-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs10-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-v10-vs10-request-parameters.json",
+        "response": "version/coding-v10-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs20-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-v10-vs20-request-parameters.json",
+        "response": "version/coding-v10-vs20-default-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsbb-default",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-v10-vsbb-request-parameters.json",
+        "response": "version/coding-v10-vsbb-default-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsnn-default",
+        "description": "Coding. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-v10-vsnn-request-parameters.json",
+        "response": "version/coding-v10-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "coding-vbb-vs10-default",
+        "description": "Coding. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-vbb-vs10-request-parameters.json",
+        "response": "version/coding-vbb-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "coding-vbb-vsnn-default",
+        "description": "Coding. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-vbb-vsnn-request-parameters.json",
+        "response": "version/coding-vbb-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs1w-default",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-vnn-vs1w-request-parameters.json",
+        "response": "version/coding-vnn-vs1w-default-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs1wb-default",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-vnn-vs1wb-request-parameters.json",
+        "response": "version/coding-vnn-vs1wb-default-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs10-default",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-vnn-vs10-request-parameters.json",
+        "response": "version/coding-vnn-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vsbb-default",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/coding-vnn-vsbb-request-parameters.json",
+        "response": "version/coding-vnn-vsbb-default-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vsnn-check",
+        "description": "Coding. No CodeSystem version.  No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-vnn-vsnn-request-parameters.json",
+        "response": "version/coding-vnn-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs1w-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-v10-vs1w-request-parameters.json",
+        "response": "version/coding-v10-vs1w-check-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs1wb-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-v10-vs1wb-request-parameters.json",
+        "response": "version/coding-v10-vs1wb-check-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs10-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: check is1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-v10-vs10-request-parameters.json",
+        "response": "version/coding-v10-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs20-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-v10-vs20-request-parameters.json",
+        "response": "version/coding-v10-vs20-check-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsbb-check",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-v10-vsbb-request-parameters.json",
+        "response": "version/coding-v10-vsbb-check-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsnn-check",
+        "description": "Coding. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-v10-vsnn-request-parameters.json",
+        "response": "version/coding-v10-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "coding-vbb-vs10-check",
+        "description": "Coding. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-vbb-vs10-request-parameters.json",
+        "response": "version/coding-vbb-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "coding-vbb-vsnn-check",
+        "description": "Coding. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-vbb-vsnn-request-parameters.json",
+        "response": "version/coding-vbb-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs1w-check",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-vnn-vs1w-request-parameters.json",
+        "response": "version/coding-vnn-vs1w-check-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs1wb-check",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-vnn-vs1wb-request-parameters.json",
+        "response": "version/coding-vnn-vs1wb-check-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs10-check",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-vnn-vs10-request-parameters.json",
+        "response": "version/coding-vnn-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vsbb-check",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/coding-vnn-vsbb-request-parameters.json",
+        "response": "version/coding-vnn-vsbb-check-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vsnn-force",
+        "description": "Coding. No CodeSystem version.  No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-vnn-vsnn-request-parameters.json",
+        "response": "version/coding-vnn-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs1w-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-v10-vs1w-request-parameters.json",
+        "response": "version/coding-v10-vs1w-force-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs1wb-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-v10-vs1wb-request-parameters.json",
+        "response": "version/coding-v10-vs1wb-force-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs10-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-v10-vs10-request-parameters.json",
+        "response": "version/coding-v10-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vs20-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-v10-vs20-request-parameters.json",
+        "response": "version/coding-v10-vs20-force-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsbb-force",
+        "description": "Coding. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-v10-vsbb-request-parameters.json",
+        "response": "version/coding-v10-vsbb-force-response-parameters.json"
+      },
+      {
+        "name": "coding-v10-vsnn-force",
+        "description": "Coding. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-v10-vsnn-request-parameters.json",
+        "response": "version/coding-v10-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "coding-vbb-vs10-force",
+        "description": "Coding. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-vbb-vs10-request-parameters.json",
+        "response": "version/coding-vbb-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "coding-vbb-vsnn-force",
+        "description": "Coding. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-vbb-vsnn-request-parameters.json",
+        "response": "version/coding-vbb-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs1w-force",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-vnn-vs1w-request-parameters.json",
+        "response": "version/coding-vnn-vs1w-force-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs1wb-force",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-vnn-vs1wb-request-parameters.json",
+        "response": "version/coding-vnn-vs1wb-force-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vs10-force",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-vnn-vs10-request-parameters.json",
+        "response": "version/coding-vnn-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "coding-vnn-vsbb-force",
+        "description": "Coding. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/coding-vnn-vsbb-request-parameters.json",
+        "response": "version/coding-vnn-vsbb-force-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsnn",
+        "description": "code. No CodeSystem version.  No ValueSet version pinning. No version parameters",
+        "operation": "validate-code",
+        "request": "version/code-vnn-vsnn-request-parameters.json",
+        "response": "version/code-vnn-vsnn-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs1w",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/code-v10-vs1w-request-parameters.json",
+        "response": "version/code-v10-vs1w-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs1wb",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/code-v10-vs1wb-request-parameters.json",
+        "response": "version/code-v10-vs1wb-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs10",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.0. No version parameters",
+        "operation": "validate-code",
+        "request": "version/code-v10-vs10-request-parameters.json",
+        "response": "version/code-v10-vs10-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs20",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.2. No version parameters",
+        "operation": "validate-code",
+        "request": "version/code-v10-vs20-request-parameters.json",
+        "response": "version/code-v10-vs20-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vsbb",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). No version parameters",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "request": "version/code-v10-vsbb-request-parameters.json",
+        "response": "version/code-v10-vsbb-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vsnn",
+        "description": "code. CodeSystem version 1.0. No ValueSet version pinning. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/code-v10-vsnn-request-parameters.json",
+        "response": "version/code-v10-vsnn-response-parameters.json"
+      },
+      {
+        "name": "code-vbb-vs10",
+        "description": "code. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/code-vbb-vs10-request-parameters.json",
+        "response": "version/code-vbb-vs10-response-parameters.json"
+      },
+      {
+        "name": "code-vbb-vsnn",
+        "description": "code. CodeSystem version 2.4 (bad). No ValueSet version pinning. No version parameters ",
+        "operation": "validate-code",
+        "request": "version/code-vbb-vsnn-request-parameters.json",
+        "response": "version/code-vbb-vsnn-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs1w",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/code-vnn-vs1w-request-parameters.json",
+        "response": "version/code-vnn-vs1w-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs1wb",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.x. No version parameters",
+        "operation": "validate-code",
+        "request": "version/code-vnn-vs1wb-request-parameters.json",
+        "response": "version/code-vnn-vs1wb-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs10",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.0. No version parameters",
+        "operation": "validate-code",
+        "request": "version/code-vnn-vs10-request-parameters.json",
+        "response": "version/code-vnn-vs10-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsbb",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 2.4 (bad). No version parameters ",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "request": "version/code-vnn-vsbb-request-parameters.json",
+        "response": "version/code-vnn-vsbb-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsnn-default",
+        "description": "code. No CodeSystem version.  No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-vnn-vsnn-request-parameters.json",
+        "response": "version/code-vnn-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs1w-default",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-v10-vs1w-request-parameters.json",
+        "response": "version/code-v10-vs1w-default-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs1wb-default",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-v10-vs1wb-request-parameters.json",
+        "response": "version/code-v10-vs1wb-default-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs10-default",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-v10-vs10-request-parameters.json",
+        "response": "version/code-v10-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs20-default",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-v10-vs20-request-parameters.json",
+        "response": "version/code-v10-vs20-default-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vsbb-default",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-v10-vsbb-request-parameters.json",
+        "response": "version/code-v10-vsbb-default-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vsnn-default",
+        "description": "code. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-v10-vsnn-request-parameters.json",
+        "response": "version/code-v10-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "code-vbb-vs10-default",
+        "description": "code. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-vbb-vs10-request-parameters.json",
+        "response": "version/code-vbb-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "code-vbb-vsnn-default",
+        "description": "code. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-vbb-vsnn-request-parameters.json",
+        "response": "version/code-vbb-vsnn-default-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs1wb-default",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-vnn-vs1wb-request-parameters.json",
+        "response": "version/code-vnn-vs1wb-default-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs10-default",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-vnn-vs10-request-parameters.json",
+        "response": "version/code-vnn-vs10-default-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsbb-default",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: default to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-default-version.json",
+        "request": "version/code-vnn-vsbb-request-parameters.json",
+        "response": "version/code-vnn-vsbb-default-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsnn-check",
+        "description": "code. No CodeSystem version.  No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-vnn-vsnn-request-parameters.json",
+        "response": "version/code-vnn-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs1w-check",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-v10-vs1w-request-parameters.json",
+        "response": "version/code-v10-vs1w-check-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs1wb-check",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-v10-vs1wb-request-parameters.json",
+        "response": "version/code-v10-vs1wb-check-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs10-check",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: check is1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-v10-vs10-request-parameters.json",
+        "response": "version/code-v10-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs20-check",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-v10-vs20-request-parameters.json",
+        "response": "version/code-v10-vs20-check-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vsbb-check",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-v10-vsbb-request-parameters.json",
+        "response": "version/code-v10-vsbb-check-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vsnn-check",
+        "description": "code. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-v10-vsnn-request-parameters.json",
+        "response": "version/code-v10-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "code-vbb-vs10-check",
+        "description": "code. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-vbb-vs10-request-parameters.json",
+        "response": "version/code-vbb-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "code-vbb-vsnn-check",
+        "description": "code. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-vbb-vsnn-request-parameters.json",
+        "response": "version/code-vbb-vsnn-check-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs1w-check",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-vnn-vs1w-request-parameters.json",
+        "response": "version/code-vnn-vs1w-check-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs1wb-check",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-vnn-vs1wb-request-parameters.json",
+        "response": "version/code-vnn-vs1wb-check-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs10-check",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-vnn-vs10-request-parameters.json",
+        "response": "version/code-vnn-vs10-check-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsbb-check",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: check is 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request": "version/code-vnn-vsbb-request-parameters.json",
+        "response": "version/code-vnn-vsbb-check-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsnn-force",
+        "description": "code. No CodeSystem version.  No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-vnn-vsnn-request-parameters.json",
+        "response": "version/code-vnn-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs1w-force",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-v10-vs1w-request-parameters.json",
+        "response": "version/code-v10-vs1w-force-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs1wb-force",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-v10-vs1wb-request-parameters.json",
+        "response": "version/code-v10-vs1wb-force-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs10-force",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-v10-vs10-request-parameters.json",
+        "response": "version/code-v10-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vs20-force",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 1.2. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-v10-vs20-request-parameters.json",
+        "response": "version/code-v10-vs20-force-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vsbb-force",
+        "description": "code. CodeSystem version 1.0. ValueSet version pinned to 2.4 (bad). Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-v10-vsbb-request-parameters.json",
+        "response": "version/code-v10-vsbb-force-response-parameters.json"
+      },
+      {
+        "name": "code-v10-vsnn-force",
+        "description": "code. CodeSystem version 1.0. No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-v10-vsnn-request-parameters.json",
+        "response": "version/code-v10-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "code-vbb-vs10-force",
+        "description": "code. CodeSystem version 2.4 (bad). ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-vbb-vs10-request-parameters.json",
+        "response": "version/code-vbb-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "code-vbb-vsnn-force",
+        "description": "code. CodeSystem version 2.4 (bad). No ValueSet version pinning. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-vbb-vsnn-request-parameters.json",
+        "response": "version/code-vbb-vsnn-force-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs1w-force",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-vnn-vs1w-request-parameters.json",
+        "response": "version/code-vnn-vs1w-force-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs1wb-force",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.x. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-vnn-vs1wb-request-parameters.json",
+        "response": "version/code-vnn-vs1wb-force-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vs10-force",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 1.0. Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-vnn-vs10-request-parameters.json",
+        "response": "version/code-vnn-vs10-force-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsbb-force",
+        "description": "code. No CodeSystem version. ValueSet version pinned to 2.4 (bad). Version Parameter: force to 1.2.0",
+        "operation": "validate-code",
+        "http-code" : "4xx",
+        "profile": "version/parameters-fixed-version.json",
+        "request": "version/code-vnn-vsbb-request-parameters.json",
+        "response": "version/code-vnn-vsbb-force-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsmix-1",
+        "description": "code (1). No CodeSystem version. ValueSet version includes both versions of the code system. No Version Parameter",
+        "operation": "validate-code",
+        "request": "version/code-vnn-vsmix-1-request-parameters.json",
+        "response": "version/code-vnn-vsmix-1-response-parameters.json"
+      },
+      {
+        "name": "code-vnn-vsmix-2",
+        "description": "code (2). No CodeSystem version. ValueSet version includes both versions of the code system. No Version Parameter",
+        "operation": "validate-code",
+        "request": "version/code-vnn-vsmix-1-request-parameters.json",
+        "response": "version/code-vnn-vsmix-1-response-parameters.json"
+      },
+      {
+        "name" : "vs-expand-all-v",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "request" : "version/vs-expand-all-v-request-parameters.json",
+        "response" : "version/vs-expand-all-v-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-all-v1",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "request" : "version/vs-expand-all-v1-request-parameters.json",
+        "response" : "version/vs-expand-all-v1-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-all-v2",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "request" : "version/vs-expand-all-v2-request-parameters.json",
+        "response" : "version/vs-expand-all-v2-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-mixed",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "request" : "version/vs-expand-v-mixed-request-parameters.json",
+        "response" : "version/vs-expand-v-mixed-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-n-request",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "request" : "version/vs-expand-v-n-request-parameters.json",
+        "response" : "version/vs-expand-v-n-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-w",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "request" : "version/vs-expand-v-w-request-parameters.json",
+        "response" : "version/vs-expand-v-w-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-wb",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "version/vs-expand-v-wb-request-parameters.json",
+        "response" : "version/vs-expand-v-wb-response-outcome.json"
+      },
+      {
+        "name" : "vs-expand-v1",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "request" : "version/vs-expand-v1-request-parameters.json",
+        "response" : "version/vs-expand-v1-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v2",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "request" : "version/vs-expand-v2-request-parameters.json",
+        "response" : "version/vs-expand-v2-response-valueSet.json"
+      },
+
+      {
+        "name" : "vs-expand-all-v-force",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-all-v-request-parameters.json",
+        "response" : "version/vs-expand-all-v-force-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-all-v1-force",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-all-v1-request-parameters.json",
+        "response" : "version/vs-expand-all-v1-force-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-all-v2-force",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-all-v2-request-parameters.json",
+        "response" : "version/vs-expand-all-v2-force-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-mixed-force",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-v-mixed-request-parameters.json",
+        "response" : "version/vs-expand-v-mixed-force-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-n-force-request",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-v-n-request-parameters.json",
+        "response" : "version/vs-expand-v-n-force-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-w-force",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-v-w-request-parameters.json",
+        "response" : "version/vs-expand-v-w-force-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-wb-force",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-v-wb-request-parameters.json",
+        "response" : "version/vs-expand-v-wb-force-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v1-force",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-v1-request-parameters.json",
+        "response" : "version/vs-expand-v1-force-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v2-force",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-fixed-version.json",
+        "request" : "version/vs-expand-v2-request-parameters.json",
+        "response" : "version/vs-expand-v2-force-response-valueSet.json"
+      },
+      
+      {
+        "name" : "vs-expand-all-v-default",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-all-v-request-parameters.json",
+        "response" : "version/vs-expand-all-v-default-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-all-v1-default",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-all-v1-request-parameters.json",
+        "response" : "version/vs-expand-all-v1-default-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-all-v2-default",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-all-v2-request-parameters.json",
+        "response" : "version/vs-expand-all-v2-default-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-mixed-default",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-v-mixed-request-parameters.json",
+        "response" : "version/vs-expand-v-mixed-default-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-n-default-request",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-v-n-request-parameters.json",
+        "response" : "version/vs-expand-v-n-default-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-w-default",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-v-w-request-parameters.json",
+        "response" : "version/vs-expand-v-w-default-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-wb-default",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-v-wb-request-parameters.json",
+        "response" : "version/vs-expand-v-wb-default-response-outcome.json"
+      },
+      {
+        "name" : "vs-expand-v1-default",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-v1-request-parameters.json",
+        "response" : "version/vs-expand-v1-default-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v2-default",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-default-version.json",
+        "request" : "version/vs-expand-v2-request-parameters.json",
+        "response" : "version/vs-expand-v2-default-response-valueSet.json"
+      },
+      
+      {
+        "name" : "vs-expand-all-v-check",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-all-v-request-parameters.json",
+        "response" : "version/vs-expand-all-v-check-response-outcome.json"
+      },
+      {
+        "name" : "vs-expand-all-v1-check",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-all-v1-request-parameters.json",
+        "response" : "version/vs-expand-all-v1-check-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-all-v2-check",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-all-v2-request-parameters.json",
+        "response" : "version/vs-expand-all-v2-check-response-outcome.json"
+      },
+      {
+        "name" : "vs-expand-v-mixed-check",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-v-mixed-request-parameters.json",
+        "response" : "version/vs-expand-v-mixed-check-response-outcome.json"
+      },
+      {
+        "name" : "vs-expand-v-n-check-request",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-v-n-request-parameters.json",
+        "response" : "version/vs-expand-v-n-check-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v-w-check",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-v-w-request-parameters.json",
+        "response" : "version/vs-expand-v-w-check-response-outcome.json"
+      },
+      {
+        "name" : "vs-expand-v-wb-check",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-v-wb-request-parameters.json",
+        "response" : "version/vs-expand-v-wb-check-response-outcome.json"
+      },
+      {
+        "name" : "vs-expand-v1-check",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-v1-request-parameters.json",
+        "response" : "version/vs-expand-v1-check-response-valueSet.json"
+      },
+      {
+        "name" : "vs-expand-v2-check",
+        "description" : "version specific expand tests",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "profile": "version/parameters-check-version.json",
+        "request" : "version/vs-expand-v2-request-parameters.json",
+        "response" : "version/vs-expand-v2-check-response-outcome.json"
       }
     ]
   },{
@@ -1912,10 +3046,17 @@
     "tests" : [
       {
         "name" : "act-class",
-        "description" : "to be provided",
+        "description" : "act class - don't remember what bug this was testing for but now it tests for proper handling of retired and deprecated codes",
         "operation" : "expand",
         "request" : "tho/expand-vs-act-class-request-parameters.json",
         "response" : "tho/expand-vs-act-class-response-valueSet.json"
+      },
+      {
+        "name" : "act-class-activeonly",
+        "description" : "tests for proper handling of retired and deprecated codes (part 2)",
+        "operation" : "expand",
+        "request" : "tho/expand-vs-act-class-activeonly-request-parameters.json",
+        "response" : "tho/expand-vs-act-class-activeonly-response-valueSet.json"
       }
     ]
   },{

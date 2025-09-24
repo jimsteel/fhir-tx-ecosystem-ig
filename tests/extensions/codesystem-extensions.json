@@ -50,7 +50,7 @@
       "value" : "2nd Code",
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-        "valueId" : "deprecated"
+        "valueCode" : "deprecated"
       }]
     }]
   },
@@ -87,7 +87,7 @@
       "valueInteger" : 2
     }, {
       "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-      "valueId" : "deprecated"
+      "valueCode" : "deprecated"
     }]
   },
   {
