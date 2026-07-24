@@ -4599,14 +4599,14 @@
         "response" : "sct/validate-code-inactive-display-response.json"
       },
       {
-        "name" : "snomed-isa-in-display",
+        "name" : "snomed-isa-in",
         "description" : "check that codes are validated properly (is-a heirachy) - in the value set",
         "operation" : "validate-code",
         "request" : "sct/validate-code-isa-in-request.json",
         "response" : "sct/validate-code-isa-in-response.json"
       },
       {
-        "name" : "snomed-isa-out-display",
+        "name" : "snomed-isa-out",
         "description" : "check that codes are validated properly (is-a heirachy) - not in the value set",
         "operation" : "validate-code",
         "request" : "sct/validate-code-isa-out-request.json",
@@ -4969,7 +4969,7 @@
         "response" : "sct/validate-code-pc-list-response.json"
       },
       {
-        "name" : "validate-code-pc-list-no-pc",
+        "name" : "validate-code-pc-list-bad",
         "description" : "Checks that a valid expression is not allowed just because it's primacy code is listed",
         "operation" : "validate-code",
         "request" : "sct/validate-code-pc-list-bad-request.json",
