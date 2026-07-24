@@ -22,17 +22,17 @@
     "contains" : [{
       "system" : "http://snomed.info/sct",
       "code" : "128241005",
-      "display" : "Inflammatory disorder of liver"
+      "display" : "Inflammatory disease of liver"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "128241005:{363698007=181268008}",
-      "display" : "128241005|Inflammatory disorder of liver|:{363698007|Finding site|=181268008|Entire liver|}"
+      "display" : "128241005|Inflammatory disease of liver|:{363698007|Finding site|=181268008|Entire liver|}"
     },
     {
       "system" : "http://snomed.info/sct",
       "code" : "128241005:{363698007=362185005}",
-      "display" : "128241005|Inflammatory disorder of liver|:{363698007|Finding site|=362185005|Entire hepatic capsule|}"
+      "display" : "128241005|Inflammatory disease of liver|:{363698007|Finding site|=362185005|Entire hepatic capsule|}"
     }]
   }
 }

@@ -38,13 +38,13 @@
       "name" : "use",
       "valueCoding" : {
         "system" : "http://snomed.info/sct",
-        "code" : "900000000000013009",
-        "display" : "Synonym"
+        "code" : "900000000000003001",
+        "display" : "Fully specified name"
       }
     },
     {
       "name" : "value",
-      "valueString" : "Tenoplasty of hand"
+      "valueString" : "Repair of tendon of hand (procedure)"
     }]
   },
   {
@@ -57,13 +57,13 @@
       "name" : "use",
       "valueCoding" : {
         "system" : "http://snomed.info/sct",
-        "code" : "900000000000003001",
-        "display" : "Fully specified name"
+        "code" : "900000000000013009",
+        "display" : "Synonym"
       }
     },
     {
       "name" : "value",
-      "valueString" : "Repair of tendon of hand (procedure)"
+      "valueString" : "Tenoplasty of hand"
     }]
   },
   {
