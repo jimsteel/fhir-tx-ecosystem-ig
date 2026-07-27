@@ -4259,6 +4259,13 @@
         "request" : "tx.fhir.org/loinc-expand-all-request-parameters.json",
         "response" : "tx.fhir.org/loinc-expand-all-response-outcome.json"
       },{
+        "name" : "hgvs-expand-all",
+        "description" : "Attempt to expand the whole HGVS code system: it has a grammar and cannot be iterated, so a not-supported OperationOutcome is expected",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "tx.fhir.org/hgvs-expand-all-request-parameters.json",
+        "response" : "tx.fhir.org/hgvs-expand-all-response-outcome.json"
+      },{
         "name" : "loinc-expand-all-limited",
         "description" : "to be provided",
         "operation" : "expand",
@@ -4627,290 +4634,12 @@
         "response" : "sct/expand-isa-response.json"
       },
       {
-        "name" : "snomed-expand-ecl-descOrSelf",
-        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent-or-self)",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-descOrSelf-request.json",
-        "response" : "sct/expand-ecl-descOrSelf-response.json"
-      },
-      {
-        "name" : "snomed-expand-ecl-descendents",
-        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent)",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-descendents-request.json",
-        "response" : "sct/expand-ecl-descendents-response.json"
-      },
-      {
-        "name" : "snomed-expand-ecl-ancestors",
-        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor)",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-ancestors-request.json",
-        "response" : "sct/expand-ecl-ancestors-response.json"
-      },
-      {
-        "name" : "snomed-expand-ecl-ancOrSelf",
-        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor-or-self)",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-ancOrSelf-request.json",
-        "response" : "sct/expand-ecl-ancOrSelf-response.json"
-      },
-      {
-        "name" : "snomed-expand-ecl-childrenOrSelf",
-        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent-or-self)",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-childrenOrSelf-request.json",
-        "response" : "sct/expand-ecl-childrenOrSelf-response.json"
-      },
-      {
-        "name" : "snomed-expand-ecl-children",
-        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent)",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-children-request.json",
-        "response" : "sct/expand-ecl-children-response.json"
-      },
-      {
-        "name" : "snomed-expand-ecl-parents",
-        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor)",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-parents-request.json",
-        "response" : "sct/expand-ecl-parents-response.json"
-      },
-      {
-        "name" : "snomed-expand-ecl-parentsOrSelf",
-        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor-or-self)",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-parentsOrSelf-request.json",
-        "response" : "sct/expand-ecl-parentsOrSelf-response.json"
-      },
-      {
         "name" : "snomed-expand-count-all",
         "description" : "Smoke test: total concept count for the loaded SNOMED edition subset must be 2206.",
         "operation" : "expand",
         "request" : "sct/expand-count-all-request.json",
         "response" : "sct/expand-count-all-response.json"
       },
-
-      {
-        "name" : "snomed-expand-ecl-wildcard",
-        "description" : "All active concepts in the subset (wildcard).",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-wildcard-request.json",
-        "response" : "sct/expand-ecl-wildcard-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-memberOf-refset",
-        "description" : "Members of the REPLACED-BY association reference set.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-memberOf-refset-request.json",
-        "response" : "sct/expand-ecl-memberOf-refset-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-memberOf-nonRefset",
-        "description" : "Negative case: ^ applied to a concept that is not a reference set should error.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-memberOf-nonRefset-request.json",
-        "response" : "sct/expand-ecl-memberOf-nonRefset-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-or",
-        "description" : "Union of Cellulitis subtree and Liver-structure subtree.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-or-request.json",
-        "response" : "sct/expand-ecl-or-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-and",
-        "description" : "Intersection: Cellulitis subtree AND Disease subtree; should equal << 128045006.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-and-request.json",
-        "response" : "sct/expand-ecl-and-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-minus",
-        "description" : "Exclusion: Disease subtree minus Cellulitis subtree.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-minus-request.json",
-        "response" : "sct/expand-ecl-minus-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-minus-empty",
-        "description" : "Degenerate exclusion: set minus itself, expects empty.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-minus-empty-request.json",
-        "response" : "sct/expand-ecl-minus-empty-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-wildcard-minus",
-        "description" : "All active concepts minus the Liver-structure subtree.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-wildcard-minus-request.json",
-        "response" : "sct/expand-ecl-wildcard-minus-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-grouped-or",
-        "description" : "Grouped OR: (<< A OR << B) AND << C — OR subexpression parenthesised; union of cellulitis and liver-structure subtrees intersected with disease; yields 1 result.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-grouped-or-request.json",
-        "response" : "sct/expand-ecl-grouped-or-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-grouped-and",
-        "description" : "Grouped AND: << A OR (<< B AND << C) — AND subexpression parenthesised; liver-structure unioned with intersection of cellulitis and disease; yields 311 results.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-grouped-and-request.json",
-        "response" : "sct/expand-ecl-grouped-and-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-ambiguous-precedence",
-        "description" : "Invalid ECL: mixing AND/OR without explicit grouping is forbidden by ECL spec (section 6.4) — must return an error.",
-        "operation" : "expand",
-        "http-code" : "4xx",
-        "request" : "sct/expand-ecl-ambiguous-precedence-request.json",
-        "response" : "sct/expand-ecl-ambiguous-precedence-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-term-match",
-        "description" : "Concept reference with matching term; should be accepted.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-term-match-request.json",
-        "response" : "sct/expand-ecl-term-match-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-term-mismatch",
-        "description" : "Concept reference with incorrect term; should error with a term-mismatch message.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-term-mismatch-request.json",
-        "response" : "sct/expand-ecl-term-mismatch-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-term-with-operator",
-        "description" : "Hierarchy operator plus concept plus term; should expand to same set as << 10200004.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-term-with-operator-request.json",
-        "response" : "sct/expand-ecl-term-with-operator-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-unknown-concept",
-        "description" : "Unknown (non-existent) concept ID; expects an unknown-concept error.",
-        "operation" : "expand",
-        "http-code" : "4xx",
-        "request" : "sct/expand-ecl-unknown-concept-request.json",
-        "response" : "sct/expand-ecl-unknown-concept-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-invalid-sctid",
-        "description" : "Non-numeric focus concept; expects a lexer/parser error.",
-        "operation" : "expand",
-        "http-code" : "4xx",
-        "request" : "sct/expand-ecl-invalid-sctid-request.json",
-        "response" : "sct/expand-ecl-invalid-sctid-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-missing-focus",
-        "description" : "Operator with nothing after it; expects a parser error.",
-        "operation" : "expand",
-        "http-code" : "4xx",
-        "request" : "sct/expand-ecl-missing-focus-request.json",
-        "response" : "sct/expand-ecl-missing-focus-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-trailing-tokens",
-        "description" : "Extra tokens after a complete expression; expects a parser error.",
-        "operation" : "expand",
-        "http-code" : "4xx",
-        "request" : "sct/expand-ecl-trailing-tokens-request.json",
-        "response" : "sct/expand-ecl-trailing-tokens-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-nested-parens",
-        "description" : "Deeply nested parentheses; should expand to the same set as << 10200004.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-nested-parens-request.json",
-        "response" : "sct/expand-ecl-nested-parens-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-refinement-simple",
-        "description" : "Refinement: Disease with finding-site in the Liver subtree. Currently unsupported; expect a clear error.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-refinement-simple-request.json",
-        "response" : "sct/expand-ecl-refinement-simple-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-refinement-morphology",
-        "description" : "Refinement: Disease with associated-morphology = Closed fracture. Currently unsupported.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-refinement-morphology-request.json",
-        "response" : "sct/expand-ecl-refinement-morphology-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-refinement-wildcard",
-        "description" : "Refinement with wildcard value. Currently unsupported.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-refinement-wildcard-request.json",
-        "response" : "sct/expand-ecl-refinement-wildcard-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-refinement-group",
-        "description" : "Refinement with an attribute group. Currently unsupported.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-refinement-group-request.json",
-        "response" : "sct/expand-ecl-refinement-group-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-refinement-cardinality",
-        "description" : "Ungrouped [1..1] cardinality: exactly 1 Finding site in liver across all role groups — excludes concepts with 2+ groups each containing a liver Finding site (573).",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-refinement-cardinality-request.json",
-        "response" : "sct/expand-ecl-refinement-cardinality-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-refinement-cardinality-grouped",
-        "description" : "Grouped [1..1] cardinality: exactly 1 role group containing exactly 1 Finding site in liver — same result as ungrouped for typical SNOMED models (573).",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-refinement-cardinality-grouped-request.json",
-        "response" : "sct/expand-ecl-refinement-cardinality-grouped-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-refinement-cardinality-rolegroup",
-        "description" : "Role group cardinality without outer count: at least one role group containing exactly 1 Finding site in liver — more permissive, includes concepts with multiple groups each having 1 liver Finding site (661).",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-refinement-cardinality-rolegroup-request.json",
-        "response" : "sct/expand-ecl-refinement-cardinality-rolegroup-response.json"
-      },
-
-      {
-        "name" : "snomed-expand-ecl-dotted",
-        "description" : "Dotted expression: finding-site values across Disease descendants. Currently unsupported.",
-        "operation" : "expand",
-        "request" : "sct/expand-ecl-dotted-request.json",
-        "response" : "sct/expand-ecl-dotted-response.json"
-      },
-
       {
         "name" : "snomed-expand-too-big",
         "description" : "return too many codes at once - fails",
@@ -5032,6 +4761,739 @@
         "http-code" : "4xx",
         "request" : "sct/validate-code-implied-2b-request.json",
         "response" : "sct/validate-code-implied-2b-response.json"
+      }
+    ]
+  },{
+    "name" : "sct-ecl",
+    "mode" : "snomed",
+    "description" : "SNOMED CT ECL tests (expand + validate-code), split out of the snomed suite for manageability. Files live in sct/ecl/.",
+    "setup" : [],
+    "tests" : [
+      {
+        "name" : "snomed-validate-ecl-descendents-code-in",
+        "description" : "validate-code against ECL \"descendents\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-descendents-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-descendents-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-descendents-code-out",
+        "description" : "validate-code against ECL \"descendents\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-descendents-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-descendents-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-descendents-expr-in",
+        "description" : "validate-code against ECL \"descendents\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-descendents-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-descendents-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-descendents-expr-out",
+        "description" : "validate-code against ECL \"descendents\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-descendents-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-descendents-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-descOrSelf-code-in",
+        "description" : "validate-code against ECL \"descOrSelf\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-descOrSelf-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-descOrSelf-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-descOrSelf-code-out",
+        "description" : "validate-code against ECL \"descOrSelf\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-descOrSelf-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-descOrSelf-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-descOrSelf-expr-in",
+        "description" : "validate-code against ECL \"descOrSelf\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-descOrSelf-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-descOrSelf-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-descOrSelf-expr-out",
+        "description" : "validate-code against ECL \"descOrSelf\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-descOrSelf-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-descOrSelf-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-children-code-in",
+        "description" : "validate-code against ECL \"children\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-children-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-children-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-children-code-out",
+        "description" : "validate-code against ECL \"children\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-children-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-children-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-children-expr-in",
+        "description" : "validate-code against ECL \"children\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-children-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-children-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-children-expr-out",
+        "description" : "validate-code against ECL \"children\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-children-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-children-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-childrenOrSelf-code-in",
+        "description" : "validate-code against ECL \"childrenOrSelf\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-childrenOrSelf-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-childrenOrSelf-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-childrenOrSelf-code-out",
+        "description" : "validate-code against ECL \"childrenOrSelf\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-childrenOrSelf-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-childrenOrSelf-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-childrenOrSelf-expr-in",
+        "description" : "validate-code against ECL \"childrenOrSelf\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-childrenOrSelf-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-childrenOrSelf-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-childrenOrSelf-expr-out",
+        "description" : "validate-code against ECL \"childrenOrSelf\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-childrenOrSelf-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-childrenOrSelf-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-ancestors-code-in",
+        "description" : "validate-code against ECL \"ancestors\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-ancestors-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-ancestors-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-ancestors-code-out",
+        "description" : "validate-code against ECL \"ancestors\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-ancestors-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-ancestors-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-ancestors-expr-out",
+        "description" : "validate-code against ECL \"ancestors\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-ancestors-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-ancestors-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-ancOrSelf-code-in",
+        "description" : "validate-code against ECL \"ancOrSelf\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-ancOrSelf-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-ancOrSelf-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-ancOrSelf-code-out",
+        "description" : "validate-code against ECL \"ancOrSelf\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-ancOrSelf-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-ancOrSelf-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-ancOrSelf-expr-out",
+        "description" : "validate-code against ECL \"ancOrSelf\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-ancOrSelf-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-ancOrSelf-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-parents-code-in",
+        "description" : "validate-code against ECL \"parents\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-parents-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-parents-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-parents-code-out",
+        "description" : "validate-code against ECL \"parents\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-parents-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-parents-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-parents-expr-out",
+        "description" : "validate-code against ECL \"parents\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-parents-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-parents-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-parentsOrSelf-code-in",
+        "description" : "validate-code against ECL \"parentsOrSelf\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-parentsOrSelf-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-parentsOrSelf-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-parentsOrSelf-code-out",
+        "description" : "validate-code against ECL \"parentsOrSelf\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-parentsOrSelf-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-parentsOrSelf-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-parentsOrSelf-expr-out",
+        "description" : "validate-code against ECL \"parentsOrSelf\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-parentsOrSelf-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-parentsOrSelf-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-simple-code-in",
+        "description" : "validate-code against ECL \"refinement-simple\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-simple-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-simple-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-simple-code-out",
+        "description" : "validate-code against ECL \"refinement-simple\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-simple-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-simple-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-simple-expr-in",
+        "description" : "validate-code against ECL \"refinement-simple\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-simple-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-simple-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-simple-expr-out",
+        "description" : "validate-code against ECL \"refinement-simple\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-simple-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-simple-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-group-code-out",
+        "description" : "validate-code against ECL \"refinement-group\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-group-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-group-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-group-expr-in",
+        "description" : "validate-code against ECL \"refinement-group\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-group-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-group-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-group-expr-out",
+        "description" : "validate-code against ECL \"refinement-group\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-group-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-group-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-morphology-code-in",
+        "description" : "validate-code against ECL \"refinement-morphology\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-morphology-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-morphology-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-morphology-code-out",
+        "description" : "validate-code against ECL \"refinement-morphology\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-morphology-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-morphology-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-morphology-expr-in",
+        "description" : "validate-code against ECL \"refinement-morphology\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-morphology-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-morphology-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-morphology-expr-out",
+        "description" : "validate-code against ECL \"refinement-morphology\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-morphology-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-morphology-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-wildcard-code-in",
+        "description" : "validate-code against ECL \"refinement-wildcard\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-wildcard-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-wildcard-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-wildcard-code-out",
+        "description" : "validate-code against ECL \"refinement-wildcard\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-wildcard-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-wildcard-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-wildcard-expr-in",
+        "description" : "validate-code against ECL \"refinement-wildcard\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-wildcard-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-wildcard-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-wildcard-expr-out",
+        "description" : "validate-code against ECL \"refinement-wildcard\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-wildcard-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-wildcard-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-code-in",
+        "description" : "validate-code against ECL \"refinement-cardinality\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-code-out",
+        "description" : "validate-code against ECL \"refinement-cardinality\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-expr-in",
+        "description" : "validate-code against ECL \"refinement-cardinality\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-expr-out",
+        "description" : "validate-code against ECL \"refinement-cardinality\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-grouped-code-in",
+        "description" : "validate-code against ECL \"refinement-cardinality-grouped\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-grouped-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-grouped-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-grouped-code-out",
+        "description" : "validate-code against ECL \"refinement-cardinality-grouped\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-grouped-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-grouped-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-grouped-expr-in",
+        "description" : "validate-code against ECL \"refinement-cardinality-grouped\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-grouped-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-grouped-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-grouped-expr-out",
+        "description" : "validate-code against ECL \"refinement-cardinality-grouped\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-grouped-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-grouped-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-rolegroup-code-in",
+        "description" : "validate-code against ECL \"refinement-cardinality-rolegroup\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-rolegroup-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-rolegroup-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-rolegroup-code-out",
+        "description" : "validate-code against ECL \"refinement-cardinality-rolegroup\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-rolegroup-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-rolegroup-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-rolegroup-expr-in",
+        "description" : "validate-code against ECL \"refinement-cardinality-rolegroup\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-rolegroup-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-rolegroup-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-refinement-cardinality-rolegroup-expr-out",
+        "description" : "validate-code against ECL \"refinement-cardinality-rolegroup\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-refinement-cardinality-rolegroup-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-refinement-cardinality-rolegroup-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-memberOf-refset-code-in",
+        "description" : "validate-code against ECL \"memberOf-refset\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-memberOf-refset-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-memberOf-refset-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-memberOf-refset-code-out",
+        "description" : "validate-code against ECL \"memberOf-refset\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-memberOf-refset-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-memberOf-refset-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-memberOf-refset-expr-out",
+        "description" : "validate-code against ECL \"memberOf-refset\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-memberOf-refset-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-memberOf-refset-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-minus-code-in",
+        "description" : "validate-code against ECL \"minus\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-minus-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-minus-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-minus-code-out",
+        "description" : "validate-code against ECL \"minus\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-minus-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-minus-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-minus-expr-in",
+        "description" : "validate-code against ECL \"minus\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-minus-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-minus-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-minus-expr-out",
+        "description" : "validate-code against ECL \"minus\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-minus-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-minus-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-wildcard-code-in",
+        "description" : "validate-code against ECL \"wildcard\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-wildcard-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-wildcard-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-wildcard-expr-in",
+        "description" : "validate-code against ECL \"wildcard\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-wildcard-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-wildcard-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-wildcard-minus-code-in",
+        "description" : "validate-code against ECL \"wildcard-minus\": a code that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-wildcard-minus-code-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-wildcard-minus-code-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-wildcard-minus-code-out",
+        "description" : "validate-code against ECL \"wildcard-minus\": a code that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-wildcard-minus-code-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-wildcard-minus-code-out-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-wildcard-minus-expr-in",
+        "description" : "validate-code against ECL \"wildcard-minus\": a post-coordinated expression that IS in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-wildcard-minus-expr-in-request.json",
+        "response" : "sct/ecl/validate-code-ecl-wildcard-minus-expr-in-response.json"
+      },
+      {
+        "name" : "snomed-validate-ecl-wildcard-minus-expr-out",
+        "description" : "validate-code against ECL \"wildcard-minus\": a post-coordinated expression that is NOT in the set",
+        "operation" : "validate-code",
+        "request" : "sct/ecl/validate-code-ecl-wildcard-minus-expr-out-request.json",
+        "response" : "sct/ecl/validate-code-ecl-wildcard-minus-expr-out-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-descOrSelf",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent-or-self)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-descOrSelf-request.json",
+        "response" : "sct/ecl/expand-ecl-descOrSelf-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-descendents",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-descendents-request.json",
+        "response" : "sct/ecl/expand-ecl-descendents-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-ancestors",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-ancestors-request.json",
+        "response" : "sct/ecl/expand-ecl-ancestors-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-ancOrSelf",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor-or-self)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-ancOrSelf-request.json",
+        "response" : "sct/ecl/expand-ecl-ancOrSelf-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-childrenOrSelf",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent-or-self)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-childrenOrSelf-request.json",
+        "response" : "sct/ecl/expand-ecl-childrenOrSelf-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-children",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl descendent)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-children-request.json",
+        "response" : "sct/ecl/expand-ecl-children-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-parents",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-parents-request.json",
+        "response" : "sct/ecl/expand-ecl-parents-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-parentsOrSelf",
+        "description" : "check that a set of concepts and displays are expanded properly (ecl ancestor-or-self)",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-parentsOrSelf-request.json",
+        "response" : "sct/ecl/expand-ecl-parentsOrSelf-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-wildcard",
+        "description" : "All active concepts in the subset (wildcard).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-wildcard-request.json",
+        "response" : "sct/ecl/expand-ecl-wildcard-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-memberOf-refset",
+        "description" : "Members of the REPLACED-BY association reference set.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-memberOf-refset-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-refset-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-memberOf-nonRefset",
+        "description" : "Negative case: ^ applied to a concept that is not a reference set should error.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-memberOf-nonRefset-request.json",
+        "response" : "sct/ecl/expand-ecl-memberOf-nonRefset-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-or",
+        "description" : "Union of Cellulitis subtree and Liver-structure subtree.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-or-request.json",
+        "response" : "sct/ecl/expand-ecl-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-and",
+        "description" : "Intersection: Cellulitis subtree AND Disease subtree; should equal << 128045006.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-and-request.json",
+        "response" : "sct/ecl/expand-ecl-and-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-minus",
+        "description" : "Exclusion: Disease subtree minus Cellulitis subtree.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-minus-request.json",
+        "response" : "sct/ecl/expand-ecl-minus-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-minus-empty",
+        "description" : "Degenerate exclusion: set minus itself, expects empty.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-minus-empty-request.json",
+        "response" : "sct/ecl/expand-ecl-minus-empty-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-wildcard-minus",
+        "description" : "All active concepts minus the Liver-structure subtree.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-wildcard-minus-request.json",
+        "response" : "sct/ecl/expand-ecl-wildcard-minus-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-grouped-or",
+        "description" : "Grouped OR: (<< A OR << B) AND << C — OR subexpression parenthesised; union of cellulitis and liver-structure subtrees intersected with disease; yields 1 result.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-grouped-or-request.json",
+        "response" : "sct/ecl/expand-ecl-grouped-or-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-grouped-and",
+        "description" : "Grouped AND: << A OR (<< B AND << C) — AND subexpression parenthesised; liver-structure unioned with intersection of cellulitis and disease; yields 311 results.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-grouped-and-request.json",
+        "response" : "sct/ecl/expand-ecl-grouped-and-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-ambiguous-precedence",
+        "description" : "Invalid ECL: mixing AND/OR without explicit grouping is forbidden by ECL spec (section 6.4) — must return an error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-ambiguous-precedence-request.json",
+        "response" : "sct/ecl/expand-ecl-ambiguous-precedence-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-term-match",
+        "description" : "Concept reference with matching term; should be accepted.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-term-match-request.json",
+        "response" : "sct/ecl/expand-ecl-term-match-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-term-mismatch",
+        "description" : "Concept reference with incorrect term; should error with a term-mismatch message.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-term-mismatch-request.json",
+        "response" : "sct/ecl/expand-ecl-term-mismatch-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-term-with-operator",
+        "description" : "Hierarchy operator plus concept plus term; should expand to same set as << 10200004.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-term-with-operator-request.json",
+        "response" : "sct/ecl/expand-ecl-term-with-operator-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-unknown-concept",
+        "description" : "Unknown (non-existent) concept ID; expects an unknown-concept error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-unknown-concept-request.json",
+        "response" : "sct/ecl/expand-ecl-unknown-concept-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-invalid-sctid",
+        "description" : "Non-numeric focus concept; expects a lexer/parser error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-invalid-sctid-request.json",
+        "response" : "sct/ecl/expand-ecl-invalid-sctid-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-missing-focus",
+        "description" : "Operator with nothing after it; expects a parser error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-missing-focus-request.json",
+        "response" : "sct/ecl/expand-ecl-missing-focus-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-trailing-tokens",
+        "description" : "Extra tokens after a complete expression; expects a parser error.",
+        "operation" : "expand",
+        "http-code" : "4xx",
+        "request" : "sct/ecl/expand-ecl-trailing-tokens-request.json",
+        "response" : "sct/ecl/expand-ecl-trailing-tokens-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-nested-parens",
+        "description" : "Deeply nested parentheses; should expand to the same set as << 10200004.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-nested-parens-request.json",
+        "response" : "sct/ecl/expand-ecl-nested-parens-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-simple",
+        "description" : "Refinement: Disease with finding-site in the Liver subtree. Currently unsupported; expect a clear error.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-simple-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-simple-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-morphology",
+        "description" : "Refinement: Disease with associated-morphology = Closed fracture. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-morphology-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-morphology-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-wildcard",
+        "description" : "Refinement with wildcard value. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-wildcard-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-wildcard-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-group",
+        "description" : "Refinement with an attribute group. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-group-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-group-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality",
+        "description" : "Ungrouped [1..1] cardinality: exactly 1 Finding site in liver across all role groups — excludes concepts with 2+ groups each containing a liver Finding site (573).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-grouped",
+        "description" : "Grouped [1..1] cardinality: exactly 1 role group containing exactly 1 Finding site in liver — same result as ungrouped for typical SNOMED models (573).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-grouped-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-grouped-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-refinement-cardinality-rolegroup",
+        "description" : "Role group cardinality without outer count: at least one role group containing exactly 1 Finding site in liver — more permissive, includes concepts with multiple groups each having 1 liver Finding site (661).",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-refinement-cardinality-rolegroup-request.json",
+        "response" : "sct/ecl/expand-ecl-refinement-cardinality-rolegroup-response.json"
+      },
+      {
+        "name" : "snomed-expand-ecl-dotted",
+        "description" : "Dotted expression: finding-site values across Disease descendants. Currently unsupported.",
+        "operation" : "expand",
+        "request" : "sct/ecl/expand-ecl-dotted-request.json",
+        "response" : "sct/ecl/expand-ecl-dotted-response.json"
       }
     ]
   },{
@@ -5542,6 +6004,20 @@
         "http-code" : "4xx",
         "request" : "bugs/expand-cpt-request.json",
         "response" : "bugs/expand-cpt-response.json"
+      },
+      {
+        "name" : "cpt-0",
+        "operation" : "expand",
+        "full-set" : true,
+        "request" : "bugs/expand-cpt-0-request.json",
+        "response" : "bugs/expand-cpt-0-response.json"
+      },
+      {
+        "name" : "cpt-100",
+        "operation" : "expand",
+        "full-set" : true,
+        "request" : "bugs/expand-cpt-100-request.json",
+        "response" : "bugs/expand-cpt-100-response.json"
       },
       {
         "name" : "sct-ver-ex",
@@ -6314,6 +6790,20 @@
         "operation": "compare",
         "request": "related/compare-ver-import-version-cascade-request-parameters.json",
         "response": "related/compare-ver-import-version-cascade-response-parameters.json"
+      }
+    ]
+  },{
+    "name" : "langcodes",
+    "mode" : "tx.fhir.org",
+    "description" : "IETF language code (BCP-47) test cases",
+    "setup" : [ "langcodes/valueset-langcodes-all.json" ],
+    "tests" : [
+      {
+        "name" : "expand-langcodes-all",
+        "description" : "Tests the $expand operation for all language codes (a special case): the grammar is unbounded, so the common-languages base value set is returned, marked as an incomplete (unclosed) expansion",
+        "operation" : "expand",
+        "request" : "langcodes/expand-langcodes-all-request.json",
+        "response" : "langcodes/expand-langcodes-all-response.json"
       }
     ]
   }],

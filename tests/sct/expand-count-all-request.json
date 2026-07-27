@@ -8,6 +8,10 @@
     {
       "name": "count",
       "valueInteger": 0
+    },
+    {
+      "name" : "system-version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
     }
   ]
 }
