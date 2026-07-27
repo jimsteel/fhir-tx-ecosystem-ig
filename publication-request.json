@@ -1,8 +1,8 @@
 {
   "package-id" : "hl7.fhir.uv.tx-ecosystem",
-  "version" : "1.9.1",
-  "desc" : "New tests for ValueSets that include different versions of the same code system + fix $validate-code status parameter to code, + other minor fixes ",
-  "path" : "http://hl7.org/fhir/uv/tx-ecosystem/1.9.1",
+  "version" : "1.9.2",
+  "desc" : "Many changes - catching up",
+  "path" : "http://hl7.org/fhir/uv/tx-ecosystem/1.9.2",
   "status" : "informative",
   "sequence" : "Releases",
   "mode" : "milestone",
