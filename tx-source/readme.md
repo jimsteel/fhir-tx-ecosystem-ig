@@ -8,7 +8,7 @@ What follows is notes about how to prepare the subsets
 == SNOMED CT ==
 
 The data under the `snomed/` folder is a subset extracted from the
-`SnomedCT_InternationalRF2_PRODUCTION_20250801T120000Z.zip` release.
+`{unknown}.zip` release.
 
 To regenerate the subset, take that international SNOMED distribution and run:
 
@@ -23,11 +23,11 @@ where `{snomed-subset.txt}` is the file in this folder.
 === Import ===
 
 After importing the snapshot files, you must create a **beta version**
-with effective time `20250814` so that the version URI returned by the server
+with effective time `20250909` so that the version URI returned by the server
 matches what the tests expect. e.g. Mark it as an **internal release** in Snowstorm —
 this causes the server to use `xsct` (not `sct`) in the version URI:
 ```
-http://snomed.info/xsct/900000000000207008/version/20250814
+http://snomed.info/xsct/31000003106/version/20250909
 ```
 
 Once the server is running, run the `snomed-expand-count-all` test as a quick
