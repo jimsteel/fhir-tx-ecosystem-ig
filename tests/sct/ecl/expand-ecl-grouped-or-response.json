@@ -9,7 +9,7 @@
   "compose": {
     "include": [{
       "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/xsct/900000000000207008/version/20250814",
+      "version": "http://snomed.info/xsct/31000003106/version/20250909",
       "filter": [{ "property": "constraint", "op": "=", "value": "(<< 128045006 OR << 10200004) AND << 64572001" }]
     }]
   },
@@ -25,7 +25,7 @@
     "total" : 1,
     "parameter" : [{
       "name" : "used-codesystem",
-      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/900000000000207008/version/20250814"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
