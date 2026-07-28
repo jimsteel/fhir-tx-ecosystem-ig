@@ -1,5 +1,9 @@
 This page details the changes made to the terminology tests over time, based on the GitHub releases. Note that the GitHub repository that contains these tests also contains many other test cases for other kinds of functionality; this history only lists releases that include changes to the terminology tests.
 
+### 1.9.3
+
+* Fix the SNOMED CT test set URL: correct the edition/version identifier used across the SNOMED test cases to the terminology-ecosystem test edition (`http://snomed.info/xsct/31000003106/version/20250909`), updating the affected requests and expected responses (display names and version URIs) to match
+
 ### 1.9.2
 
 This is preparatory for settling the SNOMED CT tests, and then it will be labelled as 2.0.0
