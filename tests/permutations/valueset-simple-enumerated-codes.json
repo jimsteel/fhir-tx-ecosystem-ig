@@ -1,9 +1,9 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "simple-enumerated",
-  "url" : "http://hl7.org/fhir/test/ValueSet/simple-enumerated",
+  "id" : "simple-enumerated-codes",
+  "url" : "http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes",
   "version" : "5.0.0",
-  "name" : "SimpleValueSetEnumerated",
+  "name" : "SimpleValueSetEnumeratedCodes",
   "title" : "Simple ValueSet - Enumerated Codes",
   "status" : "active",
   "experimental" : false,
