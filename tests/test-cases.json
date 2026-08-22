@@ -102,6 +102,12 @@
         "request" : "simple/simple-expand-repeating-prop-request-parameters.json",
         "response" : "simple/simple-expand-repeating-prop-response-valueSet.json"
       },{
+        "name" : "simple-expand-repeating-prop-values",
+        "description" : "expansion.contains.property is 0..* as well: a concept carrying several values for one property must report all of them, not just one",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-repeating-prop-values-request-parameters.json",
+        "response" : "simple/simple-expand-repeating-prop-values-response-valueSet.json"
+      },{
         "name" : "simple-expand-regex",
         "description" : "Expansion containing a filter on the code system using regex on the codes",
         "operation" : "expand",

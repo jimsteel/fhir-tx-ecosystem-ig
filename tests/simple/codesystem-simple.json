@@ -19,6 +19,7 @@
   "content" : "complete",
   "property" : [{
     "code" : "dup",
+    "uri" : "http://hl7.org/fhir/test/CodeSystem/properties#dup",
     "description" : "A property a concept may carry more than one value for",
     "type" : "code"
   },
