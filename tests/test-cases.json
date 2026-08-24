@@ -24,7 +24,7 @@
     "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json",
-    "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-regex-none.json"],
+    "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-regex-none.json", "simple/valueset-filter-repeating-property.json"],
     "tests" :[
       {
         "name" : "simple-expand-all",
@@ -95,6 +95,18 @@
         "operation" : "expand",
         "request" : "simple/simple-expand-prop-request-parameters.json",
         "response" : "simple/simple-expand-prop-response-valueSet.json"
+      },{
+        "name" : "simple-expand-repeating-prop",
+        "description" : "A concept may carry several values for one property (CodeSystem.concept.property is 0..*). code3 has dup=alpha and dup=beta; filtering on beta - which is not its first value - must still select it",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-repeating-prop-request-parameters.json",
+        "response" : "simple/simple-expand-repeating-prop-response-valueSet.json"
+      },{
+        "name" : "simple-expand-repeating-prop-values",
+        "description" : "expansion.contains.property is 0..* as well: a concept carrying several values for one property must report all of them, not just one",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-repeating-prop-values-request-parameters.json",
+        "response" : "simple/simple-expand-repeating-prop-values-response-valueSet.json"
       },{
         "name" : "simple-expand-regex",
         "description" : "Expansion containing a filter on the code system using regex on the codes",

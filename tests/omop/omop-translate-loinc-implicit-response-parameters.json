@@ -16,6 +16,7 @@
       "valueCode" : "equivalent"
     },
     {
+      "$optional$" : "version:4",
       "name" : "originMap",
       "valueCanonical" : "https://fhir-terminology.ohdsi.org/ConceptMap/44819102|"
     },
@@ -23,6 +24,11 @@
       "$optional$" : "version:4",
       "name" : "relationship",
       "valueCode" : "equivalent"
+    },
+    {
+      "$optional$" : "version:5",
+      "name" : "source",
+      "valueUri" : "https://fhir-terminology.ohdsi.org/ConceptMap/44819102|"
     }]
   },
   {
