@@ -24,7 +24,7 @@
     "mode" : "general",
     "description" : "basic tests, setting up for the API tests to come",
     "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-active.json", "simple/valueset-inactive.json", "simple/valueset-enumerated.json", "simple/valueset-enumerated-bad.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-child-of.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json",
-    "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-repeating-property.json"],
+    "simple/valueset-filter-regex2.json", "simple/valueset-filter-regex-prop.json", "simple/valueset-filter-regex-none.json", "simple/valueset-filter-repeating-property.json"],
     "tests" :[
       {
         "name" : "simple-expand-all",
@@ -125,6 +125,12 @@
         "operation" : "expand",
         "request" : "simple/simple-expand-regex-prop-request-parameters.json",
         "response" : "simple/simple-expand-regex-prop-response-valueSet.json"
+      },{
+        "name" : "simple-expand-regex-none",
+        "description" : "Expansion containing a filter on the code system using a valid regex on the codes that matches none of them. The expansion is empty - an include whose filter selects nothing must not be treated as an include with no filter, which would select every code in the code system",
+        "operation" : "expand",
+        "request" : "simple/simple-expand-regex-none-request-parameters.json",
+        "response" : "simple/simple-expand-regex-none-response-valueSet.json"
       },{
         "name" : "simple-lookup-1",
         "description" : "Check that $lookup works (there's not many tests for $lookup because it's not used much by the tools)",
@@ -880,7 +886,7 @@
     "name" : "validation",
     "mode" : "general",
     "description" : "Testing various validation parameter combinations",
-    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-import-bad.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json",
+    "setup" : ["simple/codesystem-simple.json", "simple/valueset-all.json", "simple/valueset-import-bad.json", "simple/valueset-enumerated.json", "simple/valueset-filter-isa.json", "simple/valueset-filter-property.json", "simple/valueset-filter-regex.json", "simple/valueset-filter-regex-none.json",
         "language/codesystem-de-multi.json", "language/codesystem-de-single.json", "language/codesystem-en-multi.json", "language/codesystem-en-single.json",
         "language/valueset-de-multi.json", "language/valueset-de-single.json", "language/valueset-en-multi.json", "language/valueset-en-single.json",
         "language/valueset-en-enlang-multi.json", "language/valueset-en-en-multi.json", "inactive/valueset-all.json", "inactive/codesystem-inactive.json",
@@ -1148,6 +1154,13 @@
         "operation" : "validate-code",
         "request" : "validation/simple-code-bad-regex-request-parameters.json",
         "response" :  "validation/simple-code-bad-regex-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-code-regex-none",
+        "description" : "A code that exists in the code system is not in a value set whose only include is a valid regex filter that matches no codes",
+        "operation" : "validate-code",
+        "request" : "validation/simple-code-regex-none-request-parameters.json",
+        "response" :  "validation/simple-code-regex-none-response-parameters.json"
       },
       {
         "name" : "validation-simple-coding-bad-language",
