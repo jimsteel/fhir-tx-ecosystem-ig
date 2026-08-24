@@ -51,6 +51,10 @@
           "code" : "olde-english"
         },
         "value" : "mine own second code"
+      }],
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "retired"
       }]
     },
     {
@@ -86,6 +90,10 @@
         },
         "value" : "Mine own second second leveleth code"
       }]
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }]
   }
 }

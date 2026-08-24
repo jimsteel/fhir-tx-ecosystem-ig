@@ -58,6 +58,10 @@
           "code" : "olde-english"
         },
         "value" : "mine own second code"
+      }],
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "retired"
       }]
     },
     {
@@ -98,6 +102,10 @@
       "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
       "code" : "code3",
       "display" : "Display 3"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }]
   }
 }

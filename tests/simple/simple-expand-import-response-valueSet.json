@@ -37,7 +37,11 @@
       "abstract" : true,
       "inactive" : true,
       "code" : "code2",
-      "display" : "Display 2"
+      "display" : "Display 2",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "retired"
+      }]
     },
     {
       "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
@@ -58,6 +62,10 @@
       "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
       "code" : "code2b",
       "display" : "Display 2b"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }]
   }
 }
