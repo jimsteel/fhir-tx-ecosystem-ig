@@ -5,6 +5,7 @@
     "part" : [{
       "name" : "concept",
       "valueCoding" : {
+        "$optional-properties$" : ["display"],
         "system" : "http://hl7.org/fhir/test/CodeSystem/target",
         "code" : "code1"
       }
@@ -27,6 +28,7 @@
     {
       "name" : "source",
       "valueCoding" : {
+        "$optional-properties$" : ["display"],
         "system" : "http://hl7.org/fhir/test/CodeSystem/source",
         "code" : "code-1"
       }

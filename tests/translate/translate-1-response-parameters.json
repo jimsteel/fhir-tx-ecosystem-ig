@@ -5,6 +5,7 @@
     "part" : [{
       "name" : "concept",
       "valueCoding" : {
+        "$optional-properties$" : ["display"],
         "system" : "http://hl7.org/fhir/test/CodeSystem/target",
         "code" : "code1"
       }
@@ -15,6 +16,7 @@
       "valueCode" : "equivalent"
     },
     {
+      "$optional$" : "version:4",
       "name" : "originMap",
       "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
     },
@@ -22,6 +24,11 @@
       "$optional$" : "version:4",
       "name" : "relationship",
       "valueCode" : "equivalent"
+    },
+    {
+      "$optional$" : "version:5",
+      "name" : "source",
+      "valueUri" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
     }]
   },
   {
