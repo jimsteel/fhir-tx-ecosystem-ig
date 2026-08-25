@@ -1,0 +1,10 @@
+{
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "severity" : "error",
+    "code" : "not-supported",
+    "details" : {
+      "text" : "The 'reverse' parameter is not defined in R5: name the target concept with targetCode, targetCoding or targetCodeableConcept instead"
+    }
+  }]
+}

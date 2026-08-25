@@ -7,30 +7,33 @@
       "valueCoding" : {
         "$optional-properties$" : ["display"],
         "system" : "http://hl7.org/fhir/test/CodeSystem/target",
-        "code" : "code1"
+        "code" : "code2b"
       }
     },
     {
-      "$optional$" : "version:5",
+      "$only$" : "version:4",
       "name" : "equivalence",
-      "valueCode" : "equivalent"
+      "valueCode" : "disjoint"
     },
     {
-      "$optional$" : true,
       "name" : "originMap",
       "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
     },
     {
-      "$optional$" : "version:4",
+      "$only$" : "version:5",
       "name" : "relationship",
-      "valueCode" : "equivalent"
+      "valueCode" : "not-related-to"
     },
     {
+      "$only$" : "version:4",
       "name" : "source",
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
+    },
+    {
+      "name" : "sourceConcept",
       "valueCoding" : {
-        "$optional-properties$" : ["display"],
         "system" : "http://hl7.org/fhir/test/CodeSystem/source",
-        "code" : "code-1"
+        "code" : "code-2b"
       }
     }]
   },

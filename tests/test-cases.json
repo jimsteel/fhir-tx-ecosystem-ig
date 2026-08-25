@@ -3934,10 +3934,113 @@
     "tests" : [
       {
         "name" : "translate-1",
-        "description" : "A very simple translation",
+        "description" : "A very simple translation, using sourceCode + sourceSystem",
         "operation" : "translate",
         "request" : "translate/translate-1-request-parameters.json",
         "response" : "translate/translate-1-response-parameters.json"
+      },
+      {
+        "name" : "translate-1-coding",
+        "description" : "The same translation, but naming the source concept with sourceCoding",
+        "operation" : "translate",
+        "request" : "translate/translate-1-coding-request-parameters.json",
+        "response" : "translate/translate-1-coding-response-parameters.json"
+      },
+      {
+        "name" : "translate-1-codeableconcept",
+        "description" : "The same translation, but naming the source concept with sourceCodeableConcept",
+        "operation" : "translate",
+        "request" : "translate/translate-1-codeableconcept-request-parameters.json",
+        "response" : "translate/translate-1-codeableconcept-response-parameters.json"
+      },
+      {
+        "name" : "translate-1-r4-code",
+        "description" : "The same translation, using the R4 input names: code + system, and targetsystem",
+        "operation" : "translate",
+        "version" : "4.0",
+        "request" : "translate/translate-1-r4-code-request-parameters.json",
+        "response" : "translate/translate-1-r4-response-parameters.json"
+      },
+      {
+        "name" : "translate-1-r4-coding",
+        "description" : "The same translation, using the R4 input names: coding, and targetsystem",
+        "operation" : "translate",
+        "version" : "4.0",
+        "request" : "translate/translate-1-r4-coding-request-parameters.json",
+        "response" : "translate/translate-1-r4-response-parameters.json"
+      },
+      {
+        "name" : "translate-1-r4-codeableconcept",
+        "description" : "The same translation, using the R4 input names: codeableConcept, and targetsystem",
+        "operation" : "translate",
+        "version" : "4.0",
+        "request" : "translate/translate-1-r4-codeableconcept-request-parameters.json",
+        "response" : "translate/translate-1-r4-response-parameters.json"
+      },
+      {
+        "name" : "translate-2",
+        "description" : "Testing different relationship types",
+        "operation" : "translate",
+        "request" : "translate/translate-2-request-parameters.json",
+        "response" : "translate/translate-2-response-parameters.json"
+      },
+      {
+        "name" : "translate-2b",
+        "description" : "Testing different relationship types",
+        "operation" : "translate",
+        "request" : "translate/translate-2b-request-parameters.json",
+        "response" : "translate/translate-2b-response-parameters.json"
+      },
+      {
+        "name" : "translate-3",
+        "description" : "Testing different relationship types",
+        "operation" : "translate",
+        "request" : "translate/translate-3-request-parameters.json",
+        "response" : "translate/translate-3-response-parameters.json"
+      },
+      {
+        "name" : "translate-4",
+        "description" : "Testing nomap functionality. In R4 the ConceptMap states this with a codeless 'unmatched' target; either way the response reports noMap and no concept",
+        "operation" : "translate",
+        "request" : "translate/translate-4-request-parameters.json",
+        "response" : "translate/translate-4-response-parameters.json"
+      }
+    ]
+  },{
+    "mode" : "general",
+    "name" : "translate2",
+    "description" : "Tests for ConceptMap.$translate",
+    "setup" : [ "translate/codesystem-source.json", "translate/codesystem-target.json", "translate/ConceptMap-full.json",
+                "translate/ConceptMap-othermap.json", "translate/ConceptMap-othermap2.json",
+                "translate/ConceptMap-novs.json", "translate/valueset-source.json", "translate/valueset-target.json"],
+    "tests" : [
+      {
+        "name" : "translate-5",
+        "description" : "Testing unmapped functionality",
+        "operation" : "translate",
+        "request" : "translate/translate-5-request-parameters.json",
+        "response" : "translate/translate-5-response-parameters.json"
+      },
+      {
+        "name" : "translate-5a",
+        "description" : "Testing unmapped functionality which specifying a particular map",
+        "operation" : "translate",
+        "request" : "translate/translate-5a-request-parameters.json",
+        "response" : "translate/translate-5a-response-parameters.json"
+      },
+      {
+        "name" : "translate-5b",
+        "description" : "Testing unmapped functionality which specifying a particular map",
+        "operation" : "translate",
+        "request" : "translate/translate-5b-request-parameters.json",
+        "response" : "translate/translate-5b-response-parameters.json"
+      },
+      {
+        "name" : "translate-6a",
+        "description" : "Testing other map - default concept map ",
+        "operation" : "translate",
+        "request" : "translate/translate-5-request-parameters.json",
+        "response" : "translate/translate-5-response-parameters.json"
       },
       {
         "name" : "translate-reverse-r5+",
@@ -3948,12 +4051,37 @@
         "response" : "translate/translate-reverse-response-r5-parameters.json"
       },
       {
+        "name" : "translate-reverse-r5+-a",
+        "description" : "reverse is not allowed in R5",
+        "operation" : "translate",
+        "version": "!4.0",
+        "http-code" : "4xx",
+        "request" : "translate/translate-reverse-request-r5-a-parameters.json",
+        "response" : "translate/translate-reverse-response-r5-a-outcome.json"
+      },
+      {
         "name" : "translate-reverse-r4",
-        "description" : "Same translation, but in reverse",
+        "description" : "Same translation, but in reverse, using the reverse parameter",
         "operation" : "translate",
         "version": "4.0",
         "request" : "translate/translate-reverse-request-r4-parameters.json",
         "response" : "translate/translate-reverse-response-r4-parameters.json"
+      },
+      {
+        "name" : "translate-reverse-r4-a",
+        "description" : "Same translation, using the reverse parameter (e.g. double reversed)",
+        "operation" : "translate",
+        "version": "4.0",
+        "request" : "translate/translate-reverse-request-r4-a-parameters.json",
+        "response" : "translate/translate-reverse-response-r4-a-parameters.json"
+      },
+      {
+        "name" : "translate-reverse-r4-b",
+        "description" : "Same translation, but in reverse, not using the reverse parameter",
+        "operation" : "translate",
+        "version": "4.0",
+        "request" : "translate/translate-reverse-request-r4-b-parameters.json",
+        "response" : "translate/translate-reverse-response-r4-b-parameters.json"
       }
     ]
   },{
