@@ -2,11 +2,11 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "name" : "code",
-    "valueCode" : "128241005:{363698007=181268008}"
+    "valueCode" : "367430006:{405813007=85562004:272741003=24028007}"
   },
   {
     "name" : "display",
-    "valueString" : "128241005|Inflammatory disease of liver|:{363698007|Finding site|=181268008|Entire liver|}"
+    "valueString" : "367430006|Repair of tendon of hand|:{405813007|Procedure site - Direct|=85562004|Hand structure|:272741003|Laterality|=24028007|Right|}"
   },
   {
     "name" : "result",

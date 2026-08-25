@@ -32,7 +32,7 @@
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 2251,
+    "total" : 2252,
     "parameter" : [{
       "name" : "count",
       "valueInteger" : 3000
@@ -8935,6 +8935,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "723108006",
       "display" : "Idiopathic granulomatous hepatitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "723264001",
+      "display" : "Lateralizable body structure reference set"
     },
     {
       "system" : "http://snomed.info/sct",
