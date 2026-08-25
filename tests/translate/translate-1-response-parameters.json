@@ -11,24 +11,30 @@
       }
     },
     {
-      "$optional$" : "version:5",
+      "$only$" : "version:4",
       "name" : "equivalence",
       "valueCode" : "equivalent"
     },
     {
-      "$optional$" : "version:4",
       "name" : "originMap",
       "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
     },
     {
-      "$optional$" : "version:4",
+      "$only$" : "version:5",
       "name" : "relationship",
       "valueCode" : "equivalent"
     },
     {
-      "$optional$" : "version:5",
+      "$only$" : "version:4",
       "name" : "source",
-      "valueUri" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
+      "valueCanonical" : "http://hl7.org/fhir/test/ConceptMap/full|0.1.0"
+    },
+    {
+      "name" : "sourceConcept",
+      "valueCoding" : {
+        "system" : "http://hl7.org/fhir/test/CodeSystem/source",
+        "code" : "code-1"
+      }
     }]
   },
   {

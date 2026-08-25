@@ -32,7 +32,7 @@
     "id" : "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 2252,
+    "total" : 2259,
     "parameter" : [{
       "name" : "count",
       "valueInteger" : 3000
@@ -40,6 +40,10 @@
     {
       "name" : "used-codesystem",
       "valueUri" : "http://snomed.info/sct|http://snomed.info/xsct/31000003106/version/20250909"
+    }],
+    "property" : [{
+      "code" : "status",
+      "uri" : "http://hl7.org/fhir/concept-properties#status"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -1923,6 +1927,26 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "155728006",
+      "display" : "Appendicitis",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "155729003",
+      "display" : "Appendicitis",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "15619004",
       "display" : "Hepatocellular carcinoma, fibrolamellar"
     },
@@ -3718,6 +3742,16 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "268677005",
+      "display" : "[X]Other delirium",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "269182005",
       "display" : "Entire lateral branch of left hepatic duct"
     },
@@ -4803,6 +4837,16 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "inactive" : true,
+      "code" : "307530000",
+      "display" : "Appendicitis NOS",
+      "property" : [{
+        "code" : "status",
+        "valueCode" : "inactive"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "307757001",
       "display" : "Chronic alcoholic hepatitis"
     },
@@ -4860,6 +4904,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "309417009",
       "display" : "Diabetes dietitian"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31000003106",
+      "display" : "Test subontology module"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10858,6 +10907,11 @@
     },
     {
       "system" : "http://snomed.info/sct",
+      "code" : "900000000000012004",
+      "display" : "SNOMED CT model component"
+    },
+    {
+      "system" : "http://snomed.info/sct",
       "code" : "900000000000013009",
       "display" : "Synonym"
     },
@@ -10880,6 +10934,11 @@
       "system" : "http://snomed.info/sct",
       "code" : "900000000000074008",
       "display" : "Primitive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "900000000000207008",
+      "display" : "SNOMED CT core"
     },
     {
       "system" : "http://snomed.info/sct",
