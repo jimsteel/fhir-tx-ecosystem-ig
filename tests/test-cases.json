@@ -868,11 +868,20 @@
         "response" : "extensions/validate-coding-good2-supplement-response-parameters.json"
       },
       {
-        "name" : "validate-code-inactive-display",
-        "description" : "Check handling of a deprecated designation",
+        "name" : "validate-code-inactive-display-lenient",
+        "description" : "Check handling of a deprecated designation (lenient display validation)",
         "operation" : "cs-validate-code",
+        "lenient-display" : true,
         "request" : "extensions/validate-code-inactive-display-request-parameters.json",
-        "response" : "extensions/validate-code-inactive-display-response-outcome.json"
+        "response" : "extensions/validate-code-inactive-display-lenient-response-outcome.json"
+      },
+      {
+        "name" : "validate-code-inactive-display-notlenient",
+        "description" : "Check handling of a deprecated designation (strict display validation)",
+        "operation" : "cs-validate-code",
+        "lenient-display" : false,
+        "request" : "extensions/validate-code-inactive-display-request-parameters.json",
+        "response" : "extensions/validate-code-inactive-display-not-lenient-response-outcome.json"
       },
       {
         "name" : "validate-code-inactive",
@@ -1065,11 +1074,20 @@
         "response" : "validation/simple-codeableconcept-good-display-response-parameters.json"
       },
       {
-        "name" : "validation-simple-code-bad-display",
-        "description" : "to be provided",
+        "name" : "validation-simple-code-bad-display-lenient",
+        "description" : "a bad display, with lenient display validation - a warning, and the code is valid",
         "operation" : "validate-code",
+        "lenient-display" : true,
         "request" : "validation/simple-code-bad-display-request-parameters.json",
-        "response" :  "validation/simple-code-bad-display-response-parameters.json"
+        "response" :  "validation/simple-code-bad-display-lenient-response-parameters.json"
+      },
+      {
+        "name" : "validation-simple-code-bad-display-notlenient",
+        "description" : "a bad display, with strict display validation - an error, and the code is not valid",
+        "operation" : "validate-code",
+        "lenient-display" : false,
+        "request" : "validation/simple-code-bad-display-request-parameters.json",
+        "response" :  "validation/simple-code-bad-display-not-lenient-response-parameters.json"
       },
       {
         "name" : "validation-simple-code-bad-display-ws",
@@ -3922,11 +3940,20 @@
         "response" : "translate/translate-1-response-parameters.json"
       },
       {
-        "name" : "translate-reverse",
+        "name" : "translate-reverse-r5+",
         "description" : "Same translation, but in reverse",
         "operation" : "translate",
-        "request" : "translate/translate-reverse-request-parameters.json",
-        "response" : "translate/translate-reverse-response-parameters.json"
+        "version": "!4.0",
+        "request" : "translate/translate-reverse-request-r5-parameters.json",
+        "response" : "translate/translate-reverse-response-r5-parameters.json"
+      },
+      {
+        "name" : "translate-reverse-r4",
+        "description" : "Same translation, but in reverse",
+        "operation" : "translate",
+        "version": "4.0",
+        "request" : "translate/translate-reverse-request-r4-parameters.json",
+        "response" : "translate/translate-reverse-response-r4-parameters.json"
       }
     ]
   },{
@@ -4624,11 +4651,20 @@
     "setup" : [ "sct/valueset-inactive.json", "sct/valueset-pc-none.json", "sct/valueset-pc-list.json", "sct/valueset-pc-list-no-pc.json", "sct/valueset-pc-filter.json" ],
     "tests" : [
       {
-        "name" : "snomed-inactive-display",
+        "name" : "snomed-inactive-display-lenient",
         "description" : "check that inactive displays are validated properly",
         "operation" : "cs-validate-code",
+        "lenient-display" : true,
         "request" : "sct/validate-code-inactive-display-request.json",
-        "response" : "sct/validate-code-inactive-display-response.json"
+        "response" : "sct/validate-code-inactive-display-lenient-response.json"
+      },
+      {
+        "name" : "snomed-inactive-display-notlenient",
+        "description" : "check that inactive displays are validated properly",
+        "operation" : "cs-validate-code",
+        "lenient-display" : false,
+        "request" : "sct/validate-code-inactive-display-request.json",
+        "response" : "sct/validate-code-inactive-display-not-lenient-response.json"
       },
       {
         "name" : "snomed-isa-in",
@@ -4707,6 +4743,83 @@
         "operation" : "cs-validate-code",
         "request" : "sct/validate-code-procedure-pc-bad2-request.json",
         "response" : "sct/validate-code-procedure-pc-bad2-response.json"
+      },
+      {
+        "name" : "validate-code-pc-nested-good",
+        "description" : "Tests the $validate-code operation for an expression whose attribute value is itself refined - right hand as the procedure site",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-nested-good-request.json",
+        "response" : "sct/validate-code-pc-nested-good-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-lateralizable",
+        "description" : "The concept model does not allow laterality on a body structure that is not in the lateralizable body structure reference set",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-lateralizable-request.json",
+        "response" : "sct/validate-code-pc-mrcm-lateralizable-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-domain",
+        "description" : "The concept model does not allow an attribute outside its domain - finding site on a body structure",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-domain-request.json",
+        "response" : "sct/validate-code-pc-mrcm-domain-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-range",
+        "description" : "The concept model does not allow a value outside the attribute's range - a body structure as the value of laterality",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-range-request.json",
+        "response" : "sct/validate-code-pc-mrcm-range-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-cardinality",
+        "description" : "The concept model does not allow an attribute more times than its cardinality - laterality is 0..1",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-cardinality-request.json",
+        "response" : "sct/validate-code-pc-mrcm-cardinality-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-grouped",
+        "description" : "The concept model does not allow an ungrouped attribute inside a relationship group - laterality is ungrouped",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-grouped-request.json",
+        "response" : "sct/validate-code-pc-mrcm-grouped-response.json"
+      },
+      {
+        "name" : "validate-code-pc-concrete-good",
+        "description" : "Tests the $validate-code operation for an expression with a concrete value",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-concrete-good-request.json",
+        "response" : "sct/validate-code-pc-concrete-good-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-concrete-range",
+        "description" : "The concept model does not allow a concrete value outside the attribute's range - the value must be greater than zero",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-concrete-range-request.json",
+        "response" : "sct/validate-code-pc-mrcm-concrete-range-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-concrete-int",
+        "description" : "The concept model does not allow a decimal where the attribute's range is an integer",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-concrete-int-request.json",
+        "response" : "sct/validate-code-pc-mrcm-concrete-int-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-concrete-wanted",
+        "description" : "The concept model does not allow a concept where the attribute's range is a concrete value",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-concrete-wanted-request.json",
+        "response" : "sct/validate-code-pc-mrcm-concrete-wanted-response.json"
+      },
+      {
+        "name" : "validate-code-pc-mrcm-concept-wanted",
+        "description" : "The concept model does not allow a concrete value where the attribute's range is a concept",
+        "operation" : "cs-validate-code",
+        "request" : "sct/validate-code-pc-mrcm-concept-wanted-request.json",
+        "response" : "sct/validate-code-pc-mrcm-concept-wanted-response.json"
       },
       {
         "name" : "validate-code-pc-none",

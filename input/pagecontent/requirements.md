@@ -212,13 +212,14 @@ SNOMED CT defines 'inactive' explicitly. For other Code Systems, codes or design
 in any fashion, they are regard as inactive.
 
 For the CodeSystem resource:
-- a concept that as a 'http://hl7.org/fhir/concept-properties#status' property value of 'deprecated' or 'retired' is inactive
+- a concept that has a 'http://hl7.org/fhir/concept-properties#status' property value of 'inactive' or 'retired' is inactive
+- a status of 'deprecated' does not make a concept inactive - the concept is still valid to use, though its use is discouraged
 - if there is no status property for a concept, the standards-status extension (see below) may provide the status
 - for a designation, the only way to denote inactive (at this time) is to use the standards-status extension.
 
 If a concept is defined as inactive:
 * inactive SHALL be true when the concept is found in an expansion 
-* in expansions, the status property SHALL be populated with a status indicating why the concept is inactive (usually 'inactive', 'withdrawn', or 'deprecated')
+* in expansions, the status property SHALL be populated with a status indicating why the concept is inactive (usually 'inactive', 'retired', or 'withdrawn'). This is not optional - a server that knows a concept is inactive SHALL say why
 * the return value from $validate-code for the concept SHALL include a warning that the code is invalid, and the parameters 'inactive' and 'status' SHALL be populated
 
 If a designation is defined as inactive:
