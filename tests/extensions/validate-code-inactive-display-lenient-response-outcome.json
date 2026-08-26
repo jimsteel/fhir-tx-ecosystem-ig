@@ -34,6 +34,11 @@
     }
   },
   {
+    "$optional$" : true,
+    "name" : "message",
+    "valueString" : "'2nd Code' is no longer considered a correct display for code 'code2' (status = withdrawn). The correct display is 'Display 2'"
+  },
+  {
     "name" : "result",
     "valueBoolean" : true
   },
