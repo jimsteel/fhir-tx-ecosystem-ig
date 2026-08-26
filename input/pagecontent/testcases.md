@@ -26,23 +26,120 @@ Notes:
 * the output folder will default to your temporary directory. It produces output for the failed tests that you can compare with the /tests directory in the package for this IG with a comparison software of your choice (winmerge, beyondCompare, etc)
 * modes - see below. you can pass in multiple modes if necessary, separated by commas 
 
+#### Test Suites and Test Cases 
+
+All the tests are registered in `tests/test-cases.json`, which contains a list of suites, 
+each of which contains a list of tests. A suite may have:
+
+* `name`: the name of the suite (used in the test output, and to run a single suite)
+* `description`: what the suite is for
+* `setup`: a list of files containing the resources (code systems, value sets, concept maps) 
+  that the server needs in order to run the tests in the suite. Servers that cannot accept 
+  resources on the fly have to load these some other way
+* `mode` / `modes`: the suite only runs when the runner is in that mode (see below)
+* `version`: the suite only runs against servers of that FHIR version (see below)
+* `disabled`: if true, the suite is not run at all
+
+A test may have:
+
+* `name`: the name of the test, unique within the suite
+* `description`: what the test is checking. This is the documentation for the requirement 
+  the test enforces, so it should say why the expected response is the correct one
+* `operation`: one of `expand`, `validate-code`, `cs-validate-code`, `lookup`, `translate`, 
+  `compare`, `batch`, `batch-validate`, `metadata`, `term-caps`
+* `request`: the file containing the request parameters (not used by `metadata` / `term-caps`)
+* `response`: the file containing the expected response
+* `request:{mode}` / `response:{mode}`: an alternative request or response used when the 
+  runner is in that mode - e.g. `response:flat` for servers that return a flat expansion
+* `mode` / `modes`, `version`, `disabled`: as for suites
+* `http-code`: the expected HTTP status code, where it isn't 200 (e.g. `422`, or `4xx`)
+* `lenient-display`: sets the `lenient-display-validation` parameter on a `validate-code` or 
+  `cs-validate-code` request, so that the same request can be tested both ways
+* `profile`: a file containing a Parameters resource with the expansion parameters to use
+* `Accept-Language`: the language to ask for
+* `header`: an additional HTTP header to send ( `name`, `value`, and optionally `mode`)
+
+#### Versions 
+
+The test cases are written in R5, and most of them are the same for an R4 server, but 
+some questions have different answers in different versions of FHIR. Where a test only 
+makes sense for particular versions, the `version` property says which:
+
+* `"version" : "4.0"`: only run this against an R4 server (matches `4.0`, and any version 
+  starting `4.0.`, so `4.0.1` matches)
+* `"version" : "!4.0"`: run this against anything except an R4 server
+
+Where the same test applies to all versions but the *response* differs, the difference is 
+marked in the expected response with `$optional$` or `$only$` (see below).
+
 #### Test Templates 
 
-$$: any value
+Expected responses are not compared literally - they are templates. A string in an expected 
+response may be one of:
 
-$xx$: value specifier: id, semver, url, token, string, date, version, uuid, instant, 
+* `$$`: any value
+* `$id$`, `$uuid$`, `$url$`, `$token$`, `$string$`, `$date$`, `$instant$`, `$semver$`: any 
+  value of that kind. (`$string$` means any string that has no leading or trailing whitespace)
+* `$version$`: the FHIR version of the server being tested. `$version$` is also substituted 
+  into longer strings, so `"...|$version$"` works
+* `$choice:a|b|c$`: any one of the listed values
+* `$fragments:a|b$`: any string that contains all of the listed fragments (case insensitive). 
+  This is how messages are checked where the exact wording is not fixed
+* `$external:N$`: the string registered as `N` in the externals file, which lets a server 
+  provide its own wording for a message. See `tests/messages-tx.fhir.org.json` for the format. 
+  `$external:N:a|b$` also gives fragments to use when no externals file is provided
 
-$optional-properties" : an array of string of properties that are allowed to be omitted
+An object in an expected response may carry:
 
-$optional$ : a boolean that can mark an object in an array as optional
+* `$optional-properties$`: an array of the names of properties that the server is allowed to 
+  omit. `*` means all of them
+* `$count-arrays$`: an array of the names of properties whose content is not checked - only 
+  the number of entries in them
+* `$optional$`: this object may be omitted (see below)
+* `$only$`: this object is required in some versions or modes, and prohibited in the rest 
+  (see below)
 
-$external:N$ : reference to string N in a list of external strings 
+#### $optional$ and $only$ 
 
-$count-array$ : ignore what's in the array, and just check the count 
+`$optional$` marks an entry in an array that the server does not have to return. It is either 
+a boolean, or a filter that says when it is optional:
 
-$choice: array|$: a list of allowed values 
+* `"$optional$" : true`: always optional. Note that this must be a boolean - `"true"` as a 
+  string is read as a mode name, and does nothing
+* `"$optional$" : "{mode}"`: optional unless the runner is in that mode
+* `"$optional$" : "!{mode}"`: optional only when the runner is *not* in that mode. e.g. 
+  `"!tx.fhir.org"` means "every server except tx.fhir.org may leave this out"
+* `"$optional$" : "version:4"`: optional when the server's FHIR version starts with `4`
+* `"$optional$" : "warning:{message}"`: always optional, but the runner reports the message 
+  when the content is missing
 
-$fragments$: ??
+`$only$` is the counterpart: where `$optional$` only ever relaxes a requirement, `$only$` 
+says that the entry belongs to exactly one version or mode. When its filter passes the entry 
+is required, and when it does not, the entry must **not** be present at all. The filter 
+grammar is the same as `$optional$`'s. So `"$only$" : "version:4"` marks content that an R4 
+server must return and an R5 server must not.
+
+#### Modes 
+
+Some tests, and some parts of expected responses, only apply to servers with particular 
+characteristics, or to a particular server. These are marked with a mode, and only run 
+when that mode is passed to the runner with the `-mode` parameter. `general` is always 
+on unless it is turned off with `-mode !general`. The modes in use are:
+
+* `general`: the tests every server is expected to pass. This is the default
+* `snomed`: servers that support SNOMED CT, loaded with the test subontology described in 
+  `tx-source/readme.md`
+* `omop`: servers that support OMOP
+* `icd-11`: servers that support ICD-11
+* `tx.fhir.org`: tests that are specific to tx.fhir.org - either its own bugs, or operations 
+  that are still being trialled there. No other server is expected to pass these
+* `flat`: servers that return a flat expansion rather than a hierarchical one. This mode 
+  selects the `response:flat` alternative for the tests that have one
+
+A mode name can also appear in `$optional$` / `$only$` in an expected response, so that a 
+particular server (or every server but one) is held to a different requirement than the rest 
+- `"$optional$" : "!tx.fhir.org"` is used throughout for content that only tx.fhir.org is 
+required to return.
 
 #### Registry
 
