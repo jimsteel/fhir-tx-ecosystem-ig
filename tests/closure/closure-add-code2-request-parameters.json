@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "name",
+    "valueString" : "55e02fcb-d7a6-46db-94b4-3c3a4b619f7c"
+  },{
+    "name" : "concept",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/test/CodeSystem/simple",
+      "code" : "code2"
+    }
+  }]
+}

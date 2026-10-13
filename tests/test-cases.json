@@ -8965,6 +8965,84 @@
         "response" : "langcodes/expand-langcodes-all-response.json"
       }
     ]
+  },
+  {
+    "name" : "closure",
+    "mode" : "closure",
+    "sequential" : true,
+    "description" : "$closure: build a closure table one concept at a time. The tests depend on each other, so the suite runs in order, on one thread, after all the other suites. The table is reset by the first test, and the code system it uses is only sent in that request",
+    "tests" : [
+      {
+        "name" : "closure-init",
+        "description" : "Initialise (reset) the closure table, supplying the code system it uses. The code system is only sent here: the server keeps it with the table",
+        "operation" : "closure",
+        "request" : "closure/closure-init-request-parameters.json",
+        "response" : "closure/closure-init-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-add-code2a",
+        "description" : "Add the first concept: nothing to relate it to yet",
+        "operation" : "closure",
+        "request" : "closure/closure-add-code2a-request-parameters.json",
+        "response" : "closure/closure-add-code2a-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-add-code2aI",
+        "description" : "Add a child of a concept already in the table",
+        "operation" : "closure",
+        "request" : "closure/closure-add-code2aI-request-parameters.json",
+        "response" : "closure/closure-add-code2aI-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-add-code2",
+        "description" : "Add an ancestor of concepts already in the table, including a transitive one",
+        "operation" : "closure",
+        "request" : "closure/closure-add-code2-request-parameters.json",
+        "response" : "closure/closure-add-code2-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-add-code1",
+        "description" : "Add a concept unrelated to anything in the table",
+        "operation" : "closure",
+        "request" : "closure/closure-add-code1-request-parameters.json",
+        "response" : "closure/closure-add-code1-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-add-code2aII",
+        "description" : "Add a concept below two concepts already in the table",
+        "operation" : "closure",
+        "request" : "closure/closure-add-code2aII-request-parameters.json",
+        "response" : "closure/closure-add-code2aII-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-add-code2aI-again",
+        "description" : "Add a concept that is already in the table: nothing changes, and the version does not move",
+        "operation" : "closure",
+        "request" : "closure/closure-add-code2aI-again-request-parameters.json",
+        "response" : "closure/closure-add-code2aI-again-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-add-code2b",
+        "description" : "Add a sibling of a concept already in the table: related to the parent only",
+        "operation" : "closure",
+        "request" : "closure/closure-add-code2b-request-parameters.json",
+        "response" : "closure/closure-add-code2b-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-resync-2",
+        "description" : "Resynchronise from version 2: every entry added after it",
+        "operation" : "closure",
+        "request" : "closure/closure-resync-2-request-parameters.json",
+        "response" : "closure/closure-resync-2-response-conceptMap.json"
+      },
+      {
+        "name" : "closure-resync-0",
+        "description" : "Resynchronise from the start: the whole table",
+        "operation" : "closure",
+        "request" : "closure/closure-resync-0-request-parameters.json",
+        "response" : "closure/closure-resync-0-response-conceptMap.json"
+      }
+    ]
   }],
   "todo" : "incomplete code systems, inactive/abstract, filter = notSelectable",
   "not-done" : [

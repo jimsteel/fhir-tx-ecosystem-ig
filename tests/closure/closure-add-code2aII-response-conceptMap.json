@@ -1,0 +1,22 @@
+{
+  "resourceType" : "ConceptMap",
+  "$optional-properties$" : ["id", "meta", "text", "url", "identifier", "name", "title", "status", "experimental", "date", "publisher", "contact", "description"],
+  "version" : "5",
+  "group" : [{
+    "source" : "http://hl7.org/fhir/test/CodeSystem/simple",
+    "target" : "http://hl7.org/fhir/test/CodeSystem/simple",
+    "element" : [{
+      "$optional-properties$" : ["display"],
+      "code" : "code2aII",
+      "target" : [{
+        "$optional-properties$" : ["display"],
+        "code" : "code2",
+        "relationship" : "source-is-narrower-than-target"
+      },{
+        "$optional-properties$" : ["display"],
+        "code" : "code2a",
+        "relationship" : "source-is-narrower-than-target"
+      }]
+    }]
+  }]
+}
