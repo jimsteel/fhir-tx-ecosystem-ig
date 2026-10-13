@@ -1,4 +1,5 @@
 {
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
   "resourceType" : "ValueSet",
   "url" : "http://id.who.int/icd/release/11/mms/257068234/postcoordinationScale/infectiousAgent",
   "version" : "2026-01",

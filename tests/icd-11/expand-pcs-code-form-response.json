@@ -1,4 +1,5 @@
 {
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
   "resourceType" : "ValueSet",
   "url" : "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-pcs-code",
   "version" : "2026-01",
