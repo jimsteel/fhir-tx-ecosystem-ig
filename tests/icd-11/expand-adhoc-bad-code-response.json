@@ -1,21 +1,19 @@
 {
-  "resourceType": "ValueSet",
-  "url": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-bad-code",
-  "version": "2026-01",
-  "name": "icd11.bad.code",
-  "title": "$string$",
-  "status": "active",
-  "experimental": false,
-  "date": "$date$",
-  "expansion": {
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-bad-code",
+  "version" : "2026-01",
+  "name" : "icd11.bad.code",
+  "title" : "ICD-11 MMS: a value set naming a code that does not exist",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-01-17",
+  "expansion" : {
     "identifier": "$uuid$",
     "timestamp": "$instant$",
-    "total": 0,
-    "parameter": [
-      {
-        "name": "used-codesystem",
-        "valueUri": "http://id.who.int/icd/release/11/mms|2026-01"
-      }
-    ]
+    "total" : 0,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
+    }]
   }
 }
