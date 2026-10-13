@@ -8,8 +8,8 @@
   "experimental" : false,
   "date" : "2026-01",
   "expansion" : {
-    "identifier" : "urn:uuid:48e2f236-c7a1-47a6-b201-52492484335b",
-    "timestamp" : "2026-10-12T23:17:53.499Z",
+    "identifier": "$uuid$",
+    "timestamp": "$instant$",
     "total" : 1,
     "parameter" : [{
       "name" : "filter",
