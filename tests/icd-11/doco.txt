@@ -244,6 +244,10 @@ Currently failing, with the reason
     The display renders the syntax (cluster members joined by " / ", values in
     brackets); the properties report the semantics. For 1D01.0Y/1G41/1G40 those
     two disagree, and both are right.
+    lookup-pc-cluster asserts only the syntax and display of the cluster;
+    lookup-pc-cluster-properties asks for id, stem and postcoordinationValues on
+    the same expression, so the reading of both stems and their four values is
+    asserted too.
 
 13. Values on non-disjoint axes are coalesced onto one axis.
     lookup-pc-nondisjoint

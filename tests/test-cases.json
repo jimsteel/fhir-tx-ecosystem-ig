@@ -8147,6 +8147,13 @@
         "response" : "icd-11/lookup-pc-cluster-response.json"
       },
       {
+        "name" : "lookup-pc-cluster-properties",
+        "description" : "The cluster of lookup-pc-cluster with the stem, id and postcoordinationValues properties requested: which value went on which axis of which stem",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-cluster-properties-request.json",
+        "response" : "icd-11/lookup-pc-cluster-properties-response.json"
+      },
+      {
         "name" : "lookup-pc-repeated-value",
         "description" : "A value repeated on two different axes must not be silently dropped - the code that comes back must be the code that was asked about",
         "operation" : "lookup",

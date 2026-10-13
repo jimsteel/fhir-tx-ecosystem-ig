@@ -1,0 +1,215 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "NC53.Y&XK8G&XJ778/PA71&XE5UF&XE4TZ"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Fracture at other specified part of wrist or hand level [Left] [Compression fracture] / Unintentionally struck, kicked, or bumped by animal [Organised sports and exercise during leisure time] [Marsupials]"
+  },
+  {
+    "name" : "name",
+    "valueString" : "ICD-11 for Mortality and Morbidity Statistics"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "NC53.Y&XK8G&XJ778/PA71&XE5UF&XE4TZ"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "id"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/release/11/mms/1008825613/other & http://id.who.int/icd/release/11/mms/271422288 & http://id.who.int/icd/release/11/mms/56999138 / http://id.who.int/icd/release/11/mms/355825185 & http://id.who.int/icd/release/11/mms/1710227827 & http://id.who.int/icd/release/11/mms/1457143575"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "XE5UF"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Organised sports and exercise during leisure time"
+      },
+      {
+        "name" : "value",
+        "valueUri" : "http://id.who.int/icd/release/11/mms/1710227827"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/activityWhenInjured"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "XJ778"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Compression fracture"
+      },
+      {
+        "name" : "value",
+        "valueUri" : "http://id.who.int/icd/release/11/mms/56999138"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/fractureSubtype"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "XK8G"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Left"
+      },
+      {
+        "name" : "value",
+        "valueUri" : "http://id.who.int/icd/release/11/mms/271422288"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/laterality"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "XE4TZ"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Marsupials"
+      },
+      {
+        "name" : "value",
+        "valueUri" : "http://id.who.int/icd/release/11/mms/1457143575"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/objectOrSubstanceProducingInjury"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemLabel"
+      },
+      {
+        "name" : "value",
+        "valueString" : "Fracture at other specified part of wrist or hand level"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemUri"
+      },
+      {
+        "name" : "value",
+        "valueUri" : "http://id.who.int/icd/release/11/mms/1008825613/other"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "NC53.Y"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemLabel"
+      },
+      {
+        "name" : "value",
+        "valueString" : "Unintentionally struck, kicked, or bumped by animal"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemUri"
+      },
+      {
+        "name" : "value",
+        "valueUri" : "http://id.who.int/icd/release/11/mms/355825185"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "PA71"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}
