@@ -1,6 +1,11 @@
 {
   "resourceType" : "OperationOutcome",
   "issue" : [{
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "ICD11_PC_VALUE_NOT_ON_AXIS"
+    }],
     "severity" : "error",
     "code" : "code-invalid",
     "details" : {
