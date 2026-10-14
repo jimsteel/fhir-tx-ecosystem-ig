@@ -13,7 +13,7 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "not-found"
       }],
-      "text" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+      "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/version|2.4.0$"
     }
   }]
 }
