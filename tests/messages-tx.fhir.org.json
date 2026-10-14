@@ -148,5 +148,11 @@
   },
   "valueset-version/expand-indirect-expand-zero-pinned-wrong-response-outcome.json" : {
     "1" : "Unable to find included value set 'http://hl7.org/fhir/test/ValueSet/vs-version' version '3.0.0'"
+  },
+  "icd-11/lookup-pc-invalid-axis-response.json" : {
+    "1" : "'XE729' is not a permitted value on any postcoordination axis of '1A00'. That stem declares: infectiousAgent, associatedWith"
+  },
+  "icd-11/lookup-pc-other-response.json" : {
+    "1" : "'XT8W' is not a permitted value on any postcoordination axis of 'BD11.2'. That stem declares: hasCausingCondition, hasSeverity"
   }
 }

@@ -13,7 +13,7 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "invalid-code"
       }],
-      "text" : "'XE729' is not a permitted value on any postcoordination axis of '1A00'. That stem declares: infectiousAgent, associatedWith"
+      "text" : "$external:1:XE729$"
     }
   }]
 }

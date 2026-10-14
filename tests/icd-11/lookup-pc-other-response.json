@@ -13,7 +13,7 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "invalid-code"
       }],
-      "text" : "'XT8W' is not a permitted value on any postcoordination axis of 'BD11.2'. That stem declares: hasCausingCondition, hasSeverity"
+      "text" : "$external:1:XT8W$"
     }
   }]
 }
