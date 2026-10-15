@@ -154,5 +154,201 @@
   },
   "icd-11/lookup-pc-other-response.json" : {
     "1" : "'XT8W' is not a permitted value on any postcoordination axis of 'BD11.2'. That stem declares: hasCausingCondition, hasSeverity"
+  },
+  "case/case-coding-sensitive-code1-3-response-parameters.json" : {
+    "2" : "Unknown code 'Code1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'; Unknown code 'Code1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive' version '0.1.0'"
+  },
+  "permutations/simple-bad-cc1-all-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-cc1-enumerated-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'",
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-cc1-exclude-filter-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'",
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-cc1-exclude-import-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'",
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-cc1-exclude-list-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'",
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-cc1-import-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'",
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-cc1-isa-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-cc2-isa-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "4" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('Display 3')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "5" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-coding-all-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-coding-enumerated-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-coding-exclude-filter-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-coding-exclude-import-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-coding-exclude-list-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-coding-import-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-coding-isa-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-scd-all-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-scd-enumerated-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-scd-exclude-filter-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-scd-exclude-import-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-scd-exclude-list-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-scd-import-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "permutations/simple-bad-scd-isa-response-parameters.json" : {
+    "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'",
+    "3" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+  },
+  "version/vs-expand-v-wb-check-response-outcome.json" : {
+    "1" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the value set cannot be expanded. Valid versions: 1.0.0 or 1.2.0"
+  },
+  "version/vs-expand-v-wb-default-response-outcome.json" : {
+    "1" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the value set cannot be expanded. Valid versions: 1.0.0 or 1.2.0"
+  },
+  "version/vs-expand-v-wb-response-outcome.json" : {
+    "1" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1' could not be found, so the value set cannot be expanded. Valid versions: 1.0.0 or 1.2.0"
+  },
+  "version/code-v10-vsbb-check-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/code-v10-vsbb-default-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/code-v10-vsbb-force-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/code-v10-vsbb-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/code-vnn-vsbb-check-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/code-vnn-vsbb-default-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/code-vnn-vsbb-force-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/code-vnn-vsbb-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/codeableconcept-v10-vsbb-check-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/codeableconcept-v10-vsbb-default-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/codeableconcept-v10-vsbb-force-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/codeableconcept-v10-vsbb-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/codeableconcept-vnn-vsbb-check-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/codeableconcept-vnn-vsbb-default-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/codeableconcept-vnn-vsbb-force-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/codeableconcept-vnn-vsbb-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/coding-v10-vsbb-check-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/coding-v10-vsbb-default-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/coding-v10-vsbb-force-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/coding-v10-vsbb-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' could not be found"
+  },
+  "version/coding-vnn-vsbb-check-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/coding-vnn-vsbb-default-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/coding-vnn-vsbb-force-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "version/coding-vnn-vsbb-response-parameters.json" : {
+    "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
   }
 }

@@ -39,7 +39,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "invalid-code"
                 }],
-              "text" : "Unknown code 'Code1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive' version '0.1.0'"
+              "text" : "$external:2:Code1|http://hl7.org/fhir/test/CodeSystem/case-sensitive|0.1.0$"
             },
             "location" : ["Coding.code"],
             "expression" : ["Coding.code"]
@@ -48,7 +48,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'; Unknown code 'Code1' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive' version '0.1.0'"
+      "valueString" : "$external:3:http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1|http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0|Code1|http://hl7.org/fhir/test/CodeSystem/case-sensitive|0.1.0$"
     },
     {
       "name" : "result",
