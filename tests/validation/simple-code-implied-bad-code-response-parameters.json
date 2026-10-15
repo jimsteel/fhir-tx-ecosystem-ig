@@ -43,7 +43,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "cannot-infer"
           }],
-          "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simple$"
+          "text" : "$external:2:code1x|http://hl7.org/fhir/test/ValueSet/simple-all$"
         },
         "location" : ["code"],
         "expression" : ["code"]
@@ -52,7 +52,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "$external:3:http://hl7.org/fhir/test/CodeSystem/simple$"
+    "valueString" : "$external:3:code1x|http://hl7.org/fhir/test/ValueSet/simple-all$"
   },
   {
     "name" : "result",
