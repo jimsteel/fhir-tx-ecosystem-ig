@@ -8154,6 +8154,13 @@
         "response" : "icd-11/lookup-pc-cluster-properties-response.json"
       },
       {
+        "name" : "lookup-pc-cluster-medication",
+        "description" : "A second cluster with properties: DA42.83&XM3973/PB28&XM7YD4, where both stems take a value on the medication axis",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-cluster-medication-request.json",
+        "response" : "icd-11/lookup-pc-cluster-medication-response.json"
+      },
+      {
         "name" : "lookup-pc-repeated-value",
         "description" : "A value repeated on two different axes must not be silently dropped - the code that comes back must be the code that was asked about",
         "operation" : "lookup",

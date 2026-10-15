@@ -248,6 +248,8 @@ Currently failing, with the reason
     lookup-pc-cluster-properties asks for id, stem and postcoordinationValues on
     the same expression, so the reading of both stems and their four values is
     asserted too.
+    lookup-pc-cluster-medication does the same for DA42.83&XM3973/PB28&XM7YD4,
+    where both stems carry a value on their medication axis.
 
 13. Values on non-disjoint axes are coalesced onto one axis.
     lookup-pc-nondisjoint
