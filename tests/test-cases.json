@@ -5066,7 +5066,7 @@
         "response" : "tx.fhir.org/loinc-expand-prop-order-obs-response-valueSet.json"
       },{
         "name" : "loinc-expand-concept-is-a",
-        "description" : "to be provided",
+        "description" : "is-a on the LOINC hierarchy includes the concept itself. The hierarchy is read from ComponentHierarchyBySystem path by path: a code is a descendant of the parts on its own PATH_TO_ROOT, and the children a part has under one parent are not inherited by its other parents (LP263671-2 Bacilliform bacteria is under both LP14082-9 Bacteria and LP30609-9, and only its children on the Bacteria path are in this expansion)",
         "operation" : "expand",
         "request" : "tx.fhir.org/loinc-expand-concept-is-a-request-parameters.json",
         "response" : "tx.fhir.org/loinc-expand-concept-is-a-response-valueSet.json"

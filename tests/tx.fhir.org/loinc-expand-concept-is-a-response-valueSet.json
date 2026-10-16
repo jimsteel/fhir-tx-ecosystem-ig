@@ -13,7 +13,7 @@
   "expansion" : {
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "total" : 430,
+    "total" : 431,
     "parameter" : [{
       "name" : "excludeNested",
       "valueBoolean" : true
@@ -1760,6 +1760,11 @@
       "system" : "http://loinc.org",
       "code" : "99932-6",
       "display" : "Bacteria [Presence] in Body fluid by Automated"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP14082-9",
+      "display" : "Bacteria"
     },
     {
       "system" : "http://loinc.org",

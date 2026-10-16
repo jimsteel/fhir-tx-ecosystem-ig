@@ -4,6 +4,7 @@ This page details the changes made to the terminology tests over time, based on 
 
 * Contained value sets: a `#id` reference is resolved against the `contained` resources of the containing resource, so a contained value set can import another value set contained in the same resource (`simple-expand-contained-nested`, `validation-contained-nested`); contained value sets that import each other are a circular reference (`simple-expand-contained-circular`). The requirements now say explicitly that value sets contained in value sets are the only use of contained resources servers are required to support
 * Excluding a whole value set - an exclude with only a `valueSet` - had no test of its own (`exclude-combo` excludes a value set together with a code system and concepts); `exclude-valueset` excludes one by url, and `exclude-contained` a contained one by `#id`. An excluded value set is reported as a `used-valueset`, as an imported one is
+* LOINC (`tx.fhir.org` suite): `is-a` includes the concept itself, as FHIR defines it, so `loinc-expand-concept-is-a` now includes `LP14082-9` (431 codes, not 430). The LOINC hierarchy is read from `ComponentHierarchyBySystem` path by path: a code is a descendant of the parts on its own `PATH_TO_ROOT`, and the children a part has under one parent are not inherited by its other parents
 
 ### 1.9.6
 
