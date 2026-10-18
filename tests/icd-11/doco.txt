@@ -387,6 +387,10 @@ Open questions - deliberately not asserted
   - totals: expand-mms-total (37,211, the count from walking the native API
     from its 28 roots), expand-icf-total, expand-foundation-total. A total is
     enough: per-chapter totals would only say where a loss was, not whether.
+    expand-mms-extension-total (17,752, the native count of chapter X's
+    descendants) and expand-mms-medicaments-total (6,470) check the other
+    count path: count=0 over a filtered include bigger than the expansion
+    limit has to be answered by counting, not refused as too costly.
   - one $lookup per kind of place, with its parent and children in full: a
     chapter root (lookup-mms-chapter-x), a window (lookup-mms-window - most
     windows have no children of their own; their members are Foundation

@@ -385,5 +385,11 @@
   },
   "icd-11/cs-validate-nf-axis-not-multiple-response.json" : {
     "1" : "'2110065613' takes one value on its laterality axis, but has several: 271422288, 627678743"
+  },
+  "icd-11/lookup-mms-zxx-response.json" : {
+    "1" : "There is no display in the language 'zxx' for the code '1A00' in http://id.who.int/icd/release/11/mms|2026-01, so the display is in the default language 'en'"
+  },
+  "simple/simple-lookup-zxx-response-parameters.json" : {
+    "1" : "There is no display in the language 'zxx' for the code 'code2' in http://hl7.org/fhir/test/CodeSystem/simple|0.1.0, so the display is in the default language 'en'"
   }
 }

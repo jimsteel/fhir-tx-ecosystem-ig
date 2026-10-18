@@ -166,6 +166,13 @@
         "response" : "simple/simple-lookup2-response-parameters.json"
       },
       {
+        "name" : "simple-lookup-zxx",
+        "description" : "$lookup with a valid displayLanguage that the code system has no content in (zxx, No linguistic content): the display is in the default language, and a warning says so",
+        "operation" : "lookup",
+        "request" : "simple/simple-lookup-zxx-request-parameters.json",
+        "response" : "simple/simple-lookup-zxx-response-parameters.json"
+      },
+      {
         "name" : "simple-expand-all-count",
         "description" : "Expansion containing all the code system, but only a count",
         "operation" : "expand",
@@ -8013,7 +8020,7 @@
     "mode" : "icd-11",
     "todo" : "capabilities and termcaps issues. Check parameters. check definitions, Code system in language, add a test for axis being plain wrong. research sub-properties on /Users/grahame/igs/tx-ecosystem-ig/tests/icd-11/lookup-pc-simple-response.json",
     "description" : "ICD-11 Test Cases. See tests/icd-11/doco.txt for what these assert and why several of them are expected to fail against the current ICD-API.",
-    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/vs3.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-enumerated-id.json", "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-isa-id.json", "icd-11/valueset-bad-code.json", "icd-11/valueset-icd11-all.json", "icd-11/valueset-mms-all.json", "icd-11/valueset-icf-all.json", "icd-11/valueset-foundation-all.json"],
+    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/vs3.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-enumerated-id.json", "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-isa-id.json", "icd-11/valueset-bad-code.json", "icd-11/valueset-icd11-all.json", "icd-11/valueset-mms-all.json", "icd-11/valueset-icf-all.json", "icd-11/valueset-foundation-all.json", "icd-11/valueset-mms-extension.json", "icd-11/valueset-mms-medicaments.json"],
     "tests" : [
       {
         "name" : "term-caps",
@@ -8132,6 +8139,13 @@
         "http-code" : "4xx",
         "request" : "icd-11/lookup-bad-language-request.json",
         "response" : "icd-11/lookup-bad-language-response.json"
+      },
+      {
+        "name" : "lookup-mms-zxx",
+        "description" : "$lookup with a valid displayLanguage that ICD-11 has no content in and never will (zxx, No linguistic content): the English display, and a warning that the default language was used",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-zxx-request.json",
+        "response" : "icd-11/lookup-mms-zxx-response.json"
       },
       {
         "name" : "lookup-pc-simple",
@@ -8741,6 +8755,20 @@
         "operation" : "expand",
         "request" : "icd-11/expand-foundation-total-request.json",
         "response" : "icd-11/expand-foundation-total-response.json"
+      },
+      {
+        "name" : "expand-mms-extension-total",
+        "description" : "The number of extension codes (the descendants of chapter X) in MMS 2026-01 is 17,752, the count from the native ICD-API: count=0 over a filter bigger than the expansion limit is answered by counting, not refused",
+        "operation" : "expand",
+        "request" : "icd-11/expand-mms-extension-total-request.json",
+        "response" : "icd-11/expand-mms-extension-total-response.json"
+      },
+      {
+        "name" : "expand-mms-medicaments-total",
+        "description" : "The number of medicaments (the descendants of 1170065830) in MMS 2026-01 is 6,470: count=0 over a filter bigger than the expansion limit is answered by counting, not refused",
+        "operation" : "expand",
+        "request" : "icd-11/expand-mms-medicaments-total-request.json",
+        "response" : "icd-11/expand-mms-medicaments-total-response.json"
       },
       {
         "name" : "lookup-mms-chapter-x",
