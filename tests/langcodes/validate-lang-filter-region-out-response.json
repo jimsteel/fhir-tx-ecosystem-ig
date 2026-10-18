@@ -24,7 +24,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'urn:ietf:bcp:47#en-GB' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/langcodes-us|0.1.0'"
+          "text" : "$external:1:urn:ietf:bcp:47#en-GB|http://hl7.org/fhir/test/ValueSet/langcodes-us|0.1.0$"
         },
         "expression" : ["code"]
       }]
@@ -32,7 +32,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The language code en-GB does not have a region of 'US'; The provided code 'urn:ietf:bcp:47#en-GB' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/langcodes-us|0.1.0'"
+    "valueString" : "$external:2:US|urn:ietf:bcp:47#en-GB|http://hl7.org/fhir/test/ValueSet/langcodes-us|0.1.0|region$"
   },
   {
     "name" : "result",

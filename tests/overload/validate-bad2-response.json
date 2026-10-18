@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-display"
           }],
-          "text" : "Wrong Display Name 'Display Two' for http://hl7.org/fhir/test/CodeSystem/overload#code2. Valid display is 'Display #2' (en) (for the language(s) '--')"
+          "text" : "$external:1:Display Two|Display #2|http://hl7.org/fhir/test/CodeSystem/overload#code2|en$"
         },
         "expression" : ["Coding.display"]
       }]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Wrong Display Name 'Display Two' for http://hl7.org/fhir/test/CodeSystem/overload#code2. Valid display is 'Display #2' (en) (for the language(s) '--')"
+    "valueString" : "$external:1:Display Two|Display #2|http://hl7.org/fhir/test/CodeSystem/overload#code2|en$"
   },
   {
     "name" : "result",

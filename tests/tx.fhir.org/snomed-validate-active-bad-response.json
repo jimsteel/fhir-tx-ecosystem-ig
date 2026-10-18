@@ -29,7 +29,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://snomed.info/sct#100005' was not found in the value set '(unidentified)'"
+          "text" : "$external:1:http://snomed.info/sct#100005$"
         },
         "expression" : ["code"]
       },
@@ -45,7 +45,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-comment"
           }],
-          "text" : "The concept '100005' has a status of inactive and its use should be reviewed"
+          "text" : "$external:2:100005|inactive$"
         },
         "expression" : ["code"]
       }]
@@ -53,7 +53,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The concept '100005' has a status of inactive and its use should be reviewed; The provided code 'http://snomed.info/sct#100005' was not found in the value set '(unidentified)'"
+    "valueString" : "$external:3:100005|inactive|http://snomed.info/sct#100005$"
   },
   {
     "name" : "result",

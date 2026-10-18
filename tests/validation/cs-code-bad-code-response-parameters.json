@@ -22,7 +22,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "invalid-code"
                 }],
-              "text" : "Unknown code 'code1x' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+              "text" : "$external:1:code1x|http://hl7.org/fhir/test/CodeSystem/simple|0.1.0$"
             },
             "location" : ["code"],
             "expression" : ["code"]
@@ -31,7 +31,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "Unknown code 'code1x' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+      "valueString" : "$external:1:code1x|http://hl7.org/fhir/test/CodeSystem/simple|0.1.0$"
     },
     {
       "name" : "result",

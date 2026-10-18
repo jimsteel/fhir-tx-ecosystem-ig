@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/overload#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/overload-enum-good|5.0.0'"
+          "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/overload#code1|http://hl7.org/fhir/test/ValueSet/overload-enum-good|5.0.0$"
         },
         "expression" : ["Coding.code"]
       }]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/overload#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/overload-enum-good|5.0.0'"
+    "valueString" : "$external:1:http://hl7.org/fhir/test/CodeSystem/overload#code1|http://hl7.org/fhir/test/ValueSet/overload-enum-good|5.0.0$"
   },
   {
     "name" : "result",

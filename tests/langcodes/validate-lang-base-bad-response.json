@@ -20,7 +20,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code 'zz' in the CodeSystem 'urn:ietf:bcp:47'"
+          "text" : "$external:1:zz|urn:ietf:bcp:47$"
         },
         "expression" : ["code"]
       },
@@ -40,7 +40,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Unknown code 'zz' in the CodeSystem 'urn:ietf:bcp:47'"
+    "valueString" : "$external:1:zz|urn:ietf:bcp:47$"
   },
   {
     "name" : "result",

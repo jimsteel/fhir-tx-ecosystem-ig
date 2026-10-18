@@ -25,7 +25,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "code-rule"
                 }],
-              "text" : "The code 'Code1' differs from the correct code 'code1' by case. Although the code system 'http://hl7.org/fhir/test/CodeSystem/case-insensitive|0.1.0' is case insensitive, implementers are strongly encouraged to use the correct case anyway"
+              "text" : "$external:1:Code1|code1|http://hl7.org/fhir/test/CodeSystem/case-insensitive|0.1.0|insensitive$"
             },
             "location" : ["Coding.code"],
             "expression" : ["Coding.code"]

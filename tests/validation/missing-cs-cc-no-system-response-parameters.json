@@ -25,7 +25,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "invalid-data"
                 }],
-              "text" : "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided"
+              "text" : "$external:1$"
             },
             "expression" : [
               "CodeableConcept.coding[0]"
@@ -35,7 +35,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided"
+      "valueString" : "$external:1$"
     },
     {
       "name" : "result",

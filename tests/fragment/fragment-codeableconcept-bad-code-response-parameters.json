@@ -31,7 +31,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "invalid-code"
                 }],
-              "text" : "Unknown Code 'code1x' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/fragment' version '0.1.0' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment"
+              "text" : "$external:1:code1x|http://hl7.org/fhir/test/CodeSystem/fragment|0.1.0$"
             },
             "location" : ["CodeableConcept.coding[0].code"],
             "expression" : ["CodeableConcept.coding[0].code"]

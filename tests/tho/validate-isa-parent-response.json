@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#ACT' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'"
+          "text" : "$external:1:http://hl7.org/fhir/tests/CodeSystem/act-class#ACT|http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0$"
         },
         "expression" : ["code"]
       }]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://hl7.org/fhir/tests/CodeSystem/act-class#ACT' was not found in the value set 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'"
+    "valueString" : "$external:1:http://hl7.org/fhir/tests/CodeSystem/act-class#ACT|http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0$"
   },
   {
     "name" : "result",

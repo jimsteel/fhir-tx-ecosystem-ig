@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}' was not found in the value set 'http://snomed.info/sct?fhir_vs=refset/734139008'"
+          "text" : "$external:1:http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}|http://snomed.info/sct?fhir_vs=refset/734139008$"
         },
         "expression" : ["code"]
       }]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}' was not found in the value set 'http://snomed.info/sct?fhir_vs=refset/734139008'"
+    "valueString" : "$external:1:http://snomed.info/sct#367430006:{405813007=(85562004:272741003=24028007)}|http://snomed.info/sct?fhir_vs=refset/734139008$"
   },
   {
     "name" : "result",

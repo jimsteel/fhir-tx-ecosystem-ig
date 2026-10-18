@@ -28,7 +28,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-comment"
           }],
-          "text" : "The concept '10879-5' has a status of DISCOURAGED and its use should be reviewed"
+          "text" : "$external:1:10879-5|DISCOURAGED$"
         },
         "expression" : ["Coding"]
       }]
@@ -36,7 +36,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The concept '10879-5' has a status of DISCOURAGED and its use should be reviewed"
+    "valueString" : "$external:1:10879-5|DISCOURAGED$"
   },
   {
     "name" : "result",

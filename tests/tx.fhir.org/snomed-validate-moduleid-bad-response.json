@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://snomed.info/sct#102613000' was not found in the value set '(unidentified)'"
+          "text" : "$external:1:http://snomed.info/sct#102613000$"
         },
         "expression" : ["code"]
       }]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://snomed.info/sct#102613000' was not found in the value set '(unidentified)'"
+    "valueString" : "$external:1:http://snomed.info/sct#102613000$"
   },
   {
     "name" : "result",

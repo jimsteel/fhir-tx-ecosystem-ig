@@ -23,7 +23,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/ValueSet/simple-all#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+          "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/simple-all#code1|http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
@@ -43,7 +43,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-data"
           }],
-          "text" : "The Coding references a value set, not a code system ('http://hl7.org/fhir/test/ValueSet/simple-all')"
+          "text" : "$external:2:http://hl7.org/fhir/test/ValueSet/simple-all$"
         },
         "location" : ["Coding.system"],
         "expression" : ["Coding.system"]
@@ -52,7 +52,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The Coding references a value set, not a code system ('http://hl7.org/fhir/test/ValueSet/simple-all'); The provided code 'http://hl7.org/fhir/test/ValueSet/simple-all#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+    "valueString" : "$external:3:http://hl7.org/fhir/test/ValueSet/simple-all#code1|http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
   },
   {
     "name" : "result",

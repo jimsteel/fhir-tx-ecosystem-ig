@@ -28,7 +28,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-comment"
           }],
-          "text" : "The concept '307530000' has a status of inactive and its use should be reviewed"
+          "text" : "$external:1:307530000|inactive$"
         },
         "expression" : ["code"]
       }]
@@ -36,7 +36,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The concept '307530000' has a status of inactive and its use should be reviewed"
+    "valueString" : "$external:1:307530000|inactive$"
   },
   {
     "name" : "result",

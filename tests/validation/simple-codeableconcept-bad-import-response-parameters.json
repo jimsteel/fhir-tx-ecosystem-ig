@@ -26,14 +26,14 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-found"
           }],
-          "text" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-filter-isaX' could not be found"
+          "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/simple-filter-isaX$"
         }
       }]
     }
   },
   {
     "name" : "message",
-    "valueString" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-filter-isaX' could not be found"
+    "valueString" : "$external:1:http://hl7.org/fhir/test/ValueSet/simple-filter-isaX$"
   },
   {
     "name" : "result",
