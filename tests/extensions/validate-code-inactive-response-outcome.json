@@ -26,7 +26,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-comment"
           }],
-          "text" : "The concept 'code5' is deprecated and its use should be reviewed"
+          "text" : "$external:1:code5|deprecated$"
         },
         "location" : ["code"],
         "expression" : ["code"]
@@ -35,7 +35,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The concept 'code5' is deprecated and its use should be reviewed"
+    "valueString" : "$external:1:code5|deprecated$"
   },
   {
     "name" : "result",

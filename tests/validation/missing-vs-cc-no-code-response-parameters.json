@@ -25,7 +25,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "not-in-vs"
                 }],
-              "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+              "text" : "$external:2:http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
             }
           },
           {

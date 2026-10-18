@@ -27,7 +27,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "version-error"
                 }],
-              "text" : "The version '1.2.0' is not allowed for system 'http://hl7.org/fhir/test/CodeSystem/version': required to be '1.0.x' by a version-check parameter"
+              "text" : "$external:1:1.2.0|http://hl7.org/fhir/test/CodeSystem/version|1.0.x$"
             },
             "location" : ["version"],
             "expression" : ["version"]
@@ -36,7 +36,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "The version '1.2.0' is not allowed for system 'http://hl7.org/fhir/test/CodeSystem/version': required to be '1.0.x' by a version-check parameter"
+      "valueString" : "$external:1:1.2.0|http://hl7.org/fhir/test/CodeSystem/version|1.0.x$"
     },
     {
       "name" : "result",

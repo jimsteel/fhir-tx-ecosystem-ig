@@ -40,7 +40,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "invalid-code"
                 }],
-              "text" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+              "text" : "$external:1:codeXXX|http://hl7.org/fhir/test/CodeSystem/simple|0.1.0$"
             },
             "expression" : ["CodeableConcept.coding[0].code"]
           },
@@ -57,7 +57,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "this-code-not-in-vs"
                 }],
-              "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX ('Wrong Display')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'"
+              "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simple#codeXXX|http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0$"
             },
             "expression" : ["CodeableConcept.coding[0].code"]
           }]
@@ -65,7 +65,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "Unknown code 'codeXXX' in the CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '0.1.0'"
+      "valueString" : "$external:1:codeXXX|http://hl7.org/fhir/test/CodeSystem/simple|0.1.0$"
     },
     {
       "name" : "result",

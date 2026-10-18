@@ -22,7 +22,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-found"
           }],
-          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' could not be found, so the code cannot be validated"
+          "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/simpleX$"
         },
         "location" : ["system"],
         "expression" : ["system"]
@@ -31,7 +31,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' could not be found, so the code cannot be validated"
+    "valueString" : "$external:1:http://hl7.org/fhir/test/CodeSystem/simpleX$"
   },
   {
     "name" : "result",

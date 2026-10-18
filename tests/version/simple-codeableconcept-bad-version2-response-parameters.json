@@ -27,7 +27,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+          "text" : "$external:3:http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
         }
       },
       {
@@ -44,7 +44,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-found"
           }],
-          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleXX' version '1.0.4234' could not be found, so the code cannot be validated. No versions of this code system are known"
+          "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/simpleXX|1.0.4234$"
         },
         "location" : ["CodeableConcept.coding[0].system"],
         "expression" : ["CodeableConcept.coding[0].system"]
@@ -62,7 +62,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "this-code-not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simpleXX|1.0.4234#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+          "text" : "$external:4:http://hl7.org/fhir/test/CodeSystem/simpleXX|1.0.4234|code1|http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
         },
         "location" : ["CodeableConcept.coding[0].code"],
         "expression" : ["CodeableConcept.coding[0].code"]
@@ -71,7 +71,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleXX' version '1.0.4234' could not be found, so the code cannot be validated. No versions of this code system are known; No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+    "valueString" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simpleXX|1.0.4234|http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
   },
   {
     "name" : "result",

@@ -35,7 +35,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "invalid-display"
                 }],
-              "text" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#4097430. Valid display is 'Sodium measurement' (en) (for the language(s) '--')"
+              "text" : "$external:1:Not the display|Sodium measurement|https://fhir-terminology.ohdsi.org#4097430|en$"
             },
             "location" : ["CodeableConcept.coding[0].display"],
             "expression" : ["CodeableConcept.coding[0].display"]
@@ -44,7 +44,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "Wrong Display Name 'Not the display' for https://fhir-terminology.ohdsi.org#4097430. Valid display is 'Sodium measurement' (en) (for the language(s) '--')"
+      "valueString" : "$external:1:Not the display|Sodium measurement|https://fhir-terminology.ohdsi.org#4097430|en$"
     },
     {
       "name" : "result",

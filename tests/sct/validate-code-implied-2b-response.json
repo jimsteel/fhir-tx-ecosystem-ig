@@ -13,7 +13,7 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "not-found"
       }],
-      "text" : "A definition for the value Set 'http://snomed.info/sct?fhir_vs=refset/71388002' could not be found"
+      "text" : "$external:1:http://snomed.info/sct?fhir_vs=refset/71388002$"
     }
   }]
 }

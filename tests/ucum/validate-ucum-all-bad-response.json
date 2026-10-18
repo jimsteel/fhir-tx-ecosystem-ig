@@ -21,7 +21,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://unitsofmeasure.org#kgXX' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ucum-all'"
+          "text" : "$external:1:http://unitsofmeasure.org#kgXX|http://hl7.org/fhir/test/ValueSet/ucum-all$"
         },
         "expression" : ["code"]
       },
@@ -38,7 +38,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code 'kgXX' in the CodeSystem 'http://unitsofmeasure.org' version '2.2'"
+          "text" : "$external:2:kgXX|http://unitsofmeasure.org|2.2$"
         },
         "expression" : ["code"]
       },
@@ -58,7 +58,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://unitsofmeasure.org#kgXX' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/ucum-all'; Unknown code 'kgXX' in the CodeSystem 'http://unitsofmeasure.org' version '2.2'"
+    "valueString" : "$external:3:http://unitsofmeasure.org#kgXX|http://hl7.org/fhir/test/ValueSet/ucum-all|kgXX|http://unitsofmeasure.org|2.2$"
   },
   {
     "name" : "result",

@@ -21,7 +21,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "not-in-vs"
                 }],
-              "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'"
+              "text" : "$external:4:http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1|http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0$"
             },
             "location" : ["Coding.code"],
             "expression" : ["Coding.code"]

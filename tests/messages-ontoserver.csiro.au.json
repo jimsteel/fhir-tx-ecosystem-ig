@@ -17,7 +17,8 @@
   "validation/simple-codeableconcept-bad-code-response-parameters.json" : {
     "1" : "There was no valid code provided that is in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
     "2" : "The provided code 'code1x' is not known to belong to the provided code system 'http://hl7.org/fhir/test/CodeSystem/simple'",
-    "3" : "The provided code 'code1x' is not known to belong to the provided code system 'http://hl7.org/fhir/test/CodeSystem/simple'"
+    "3" : "The provided code 'code1x' is not known to belong to the provided code system 'http://hl7.org/fhir/test/CodeSystem/simple'",
+    "4" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
   },
   "validation/simple-code-bad-displayW-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/version#code1' exists in the ValueSet, but the display 'Display 1X' is incorrect",
@@ -57,11 +58,15 @@
   },
   "inactive/validate-inactive-2a-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in value set http://hl7.org/fhir/test/ValueSet/inactive-all-active",
-    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in value set http://hl7.org/fhir/test/ValueSet/inactive-all-active"
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' was not found in value set http://hl7.org/fhir/test/ValueSet/inactive-all-active",
+    "3" : "The concept 'codeInactive' is valid but is not active",
+    "4" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed"
   },
   "inactive/validate-inactive-3a-response-parameters.json" : {
     "1" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' was not found in value set http://hl7.org/fhir/test/ValueSet/inactive-all-active",
-    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' was not found in value set http://hl7.org/fhir/test/ValueSet/inactive-all-active"
+    "2" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' was not found in value set http://hl7.org/fhir/test/ValueSet/inactive-all-active",
+    "3" : "The concept 'codeRetired' is valid but is not active",
+    "4" : "The concept 'codeRetired' has a status of retired and its use should be reviewed"
   },
   "validation/simple-coding-bad-language-header-response-parameters.json" : {
     "1" : "Wrong Display Name 'Anzeige 1' for http://hl7.org/fhir/test/CodeSystem/en-multi#code1 - should be 'Display 1' (en) (for the language(s) 'en, en-AU; q=0.4')",

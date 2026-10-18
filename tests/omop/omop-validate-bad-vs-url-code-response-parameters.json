@@ -25,7 +25,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "not-in-vs"
                 }],
-              "text" : "The provided code 'https://fhir-terminology.ohdsi.org#45773555' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/omop-filter-domain'"
+              "text" : "$external:1:https://fhir-terminology.ohdsi.org#45773555|http://hl7.org/fhir/test/ValueSet/omop-filter-domain$"
             },
             "location" : ["code"],
             "expression" : ["code"]
@@ -34,7 +34,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "Code '45773555' is not in the value set; The provided code 'https://fhir-terminology.ohdsi.org#45773555' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/omop-filter-domain'"
+      "valueString" : "$external:2:45773555|https://fhir-terminology.ohdsi.org#45773555|http://hl7.org/fhir/test/ValueSet/omop-filter-domain$"
     },
     {
       "name" : "result",

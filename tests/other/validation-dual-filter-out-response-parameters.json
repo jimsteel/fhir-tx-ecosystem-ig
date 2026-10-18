@@ -32,7 +32,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/dual-filter'"
+          "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/dual-filter$"
         }
       },
       {
@@ -50,7 +50,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "this-code-not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/dual-filter#AA' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/dual-filter'"
+          "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/dual-filter#AA|http://hl7.org/fhir/test/ValueSet/dual-filter$"
         },
         "location" : ["CodeableConcept.coding[0].code"],
         "expression" : ["CodeableConcept.coding[0].code"]
@@ -59,7 +59,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/dual-filter'"
+    "valueString" : "$external:1:http://hl7.org/fhir/test/ValueSet/dual-filter$"
   },
   {
     "name" : "result",

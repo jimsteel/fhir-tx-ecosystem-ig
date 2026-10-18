@@ -36,7 +36,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+          "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0$"
         }
       },
       {
@@ -52,7 +52,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "this-code-not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code1 ('Display 1')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+          "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simple#code1|http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0$"
         },
         "expression" : ["CodeableConcept.coding[0].code"]
       },
@@ -69,7 +69,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "this-code-not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('Display 3')' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+          "text" : "$external:3:http://hl7.org/fhir/test/CodeSystem/simple#code3|http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0$"
         },
         "expression" : ["CodeableConcept.coding[1].code"]
       }]
@@ -77,7 +77,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "No valid coding was found for the value set 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+    "valueString" : "$external:1:http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0$"
   },
   {
     "name" : "result",

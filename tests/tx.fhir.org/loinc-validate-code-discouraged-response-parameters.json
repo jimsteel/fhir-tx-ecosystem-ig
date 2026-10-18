@@ -29,7 +29,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "code-comment"
                 }],
-              "text" : "The concept '52495-9' has a status of DISCOURAGED and its use should be reviewed"
+              "text" : "$external:1:52495-9|DISCOURAGED$"
             },
             "expression" : ["code"]
           }]
@@ -37,7 +37,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "The concept '52495-9' has a status of DISCOURAGED and its use should be reviewed"
+      "valueString" : "$external:1:52495-9|DISCOURAGED$"
     },
     {
       "name" : "result",
