@@ -61,13 +61,39 @@ an alternative spelling - `$validate-code` reports it as valid but not in normal
 returns the entity id as `normalized-code` - and is returned as the `classificationCode` property
 and output parameter. The full entity uri is not a code in MMS or ICF.
 
-A Coding may carry the classification code alongside the id, in the extension
-`http://id.who.int/icd/schema/extension/classificationCode` (provisional url), so that software can
-show the code users know without a lookup. The extension is only defined for an MMS Coding whose
-code is an entity id or an expression in id form; when present it is validated, and a wrong value
-is an error.
-
 The Foundation was not part of this decision: its codes are, for now, the full entity uri.
+
+```json
+{
+   "resourceType": "Condition",
+   "code": {
+      "coding": [
+         {
+            "extension": [{
+                  "url": "http://id.who.int/icd/schema/extension/classificationCode",
+                  "valueCode": "1A00"
+            }],
+            "system": "http://id.who.int/icd/release/11/mms",
+            "version": "2026-01",
+            "code": "257068234",
+            "display": "Cholera"
+         }
+      ]
+   }
+}
+```
+
+**The classificationCode extension.** Because the code is the entity id, a Coding by itself does
+not carry the classification code users know. The extension
+`http://id.who.int/icd/schema/extension/classificationCode` (provisional url) carries it beside
+the id, as a `valueCode`: the short code for a simple code, or the short-code form of the
+expression - the same expression with each part's classification code - for an expression. It
+saves receiving software from looking up the code to show it. The extension is optional, and is
+only defined for a Coding whose system is the MMS or ICF and whose code is an entity id or an expression
+in id form. When it is present it is validated: a value that is not the code's classification
+code, the extension on a code that has no classification code, on a code that is already given
+as its classification code, or on a Coding in any other system, is an error, and the Coding is
+not valid.
 
 ## Post Coordination Expressions
 
