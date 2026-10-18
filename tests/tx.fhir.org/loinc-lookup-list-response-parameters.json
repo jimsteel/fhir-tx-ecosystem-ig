@@ -37,7 +37,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "LOINC"
+    "valueString" : "$choice:LOINC|Logical Observation Identifier Names and Codes (LOINC)$"
   },
   {
     "name" : "property",

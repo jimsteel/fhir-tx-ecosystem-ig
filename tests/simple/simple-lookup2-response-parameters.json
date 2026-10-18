@@ -57,7 +57,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "SimpleTestCodeSystem"
+    "valueString" : "$choice:SimpleTestCodeSystem|Simple Test Code System$"
   },
   {
     "name" : "property",

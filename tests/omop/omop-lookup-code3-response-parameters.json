@@ -37,7 +37,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "OMOP Concepts"
+    "valueString" : "$choice:OMOP|OMOP_Concepts|OMOP Unified Vocabularies$"
   },
   {
     "name" : "property",

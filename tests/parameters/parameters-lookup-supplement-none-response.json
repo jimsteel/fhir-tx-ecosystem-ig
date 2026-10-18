@@ -51,7 +51,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "ExtensionsTestCodeSystem"
+    "valueString" : "$choice:ExtensionsTestCodeSystem|Extensions Test Code System$"
   },
   {
     "name" : "property",

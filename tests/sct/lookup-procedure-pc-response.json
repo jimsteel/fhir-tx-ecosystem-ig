@@ -36,7 +36,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "SNOMED CT Test Edition"
+    "valueString" : "$choice:SNOMED_CT|SNOMED CT|SNOMED CT Test Edition$"
   },
   {
     "name" : "property",

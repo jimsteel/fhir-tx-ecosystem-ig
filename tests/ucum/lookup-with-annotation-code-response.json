@@ -57,7 +57,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "UCUM"
+    "valueString" : "$choice:UCUM|Unified Code for Units of Measure (UCUM)$"
   },
   {
     "name" : "property",
