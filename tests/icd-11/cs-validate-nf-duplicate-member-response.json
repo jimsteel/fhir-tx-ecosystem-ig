@@ -1,6 +1,10 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
+    "name" : "classificationCode",
+    "valueCode" : "CA40.00/MG51.00"
+  },
+  {
     "name" : "code",
     "valueCode" : "1258650683/1710270895/1710270895"
   },

@@ -8349,10 +8349,17 @@
       },
       {
         "name" : "cs-validate-coding-cc-icf",
-        "description" : "A Coding with the classificationCode extension: the extension is on an ICF coding - it is only defined for the MMS: an error",
+        "description" : "A Coding with the classificationCode extension: on an ICF coding, where it is defined as for the MMS - correct for the entity id: valid",
         "operation" : "cs-validate-code",
         "request" : "icd-11/cs-validate-coding-cc-icf-request.json",
         "response" : "icd-11/cs-validate-coding-cc-icf-response.json"
+      },
+      {
+        "name" : "cs-validate-coding-cc-foundation",
+        "description" : "A Coding with the classificationCode extension: on a Foundation coding - the Foundation has no classification codes, so the extension is not defined there: an error",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-coding-cc-foundation-request.json",
+        "response" : "icd-11/cs-validate-coding-cc-foundation-response.json"
       },
       {
         "name" : "cs-validate-bad-display",
@@ -8695,45 +8702,52 @@
       },
       {
         "name" : "vs-validate-coding-cc-good",
-        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension is right for the entity id: valid, and the coding is otherwise as cs-validate-id",
+        "description" : "The same Coding validated against a value set of all of MMS, ICF and the Foundation: the extension is right for the entity id: valid, and the coding is otherwise as cs-validate-id",
         "operation" : "validate-code",
         "request" : "icd-11/vs-validate-coding-cc-good-request.json",
         "response" : "icd-11/vs-validate-coding-cc-good-response.json"
       },
       {
         "name" : "vs-validate-coding-cc-pc",
-        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension carries the short-code form of a postcoordinated expression given in id form: valid",
+        "description" : "The same Coding validated against a value set of all of MMS, ICF and the Foundation: the extension carries the short-code form of a postcoordinated expression given in id form: valid",
         "operation" : "validate-code",
         "request" : "icd-11/vs-validate-coding-cc-pc-request.json",
         "response" : "icd-11/vs-validate-coding-cc-pc-response.json"
       },
       {
         "name" : "vs-validate-coding-cc-wrong",
-        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension has the wrong short code (1A01 is not the classification code of 257068234): an error",
+        "description" : "The same Coding validated against a value set of all of MMS, ICF and the Foundation: the extension has the wrong short code (1A01 is not the classification code of 257068234): an error",
         "operation" : "validate-code",
         "request" : "icd-11/vs-validate-coding-cc-wrong-request.json",
         "response" : "icd-11/vs-validate-coding-cc-wrong-response.json"
       },
       {
         "name" : "vs-validate-coding-cc-no-short",
-        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension is on a grouper that has no short code (its code range is not one): an error",
+        "description" : "The same Coding validated against a value set of all of MMS, ICF and the Foundation: the extension is on a grouper that has no short code (its code range is not one): an error",
         "operation" : "validate-code",
         "request" : "icd-11/vs-validate-coding-cc-no-short-request.json",
         "response" : "icd-11/vs-validate-coding-cc-no-short-response.json"
       },
       {
         "name" : "vs-validate-coding-cc-short",
-        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension is on a coding whose code is already the short code - it is only used with an entity id: an error",
+        "description" : "The same Coding validated against a value set of all of MMS, ICF and the Foundation: the extension is on a coding whose code is already the short code - it is only used with an entity id: an error",
         "operation" : "validate-code",
         "request" : "icd-11/vs-validate-coding-cc-short-request.json",
         "response" : "icd-11/vs-validate-coding-cc-short-response.json"
       },
       {
         "name" : "vs-validate-coding-cc-icf",
-        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension is on an ICF coding - it is only defined for the MMS: an error",
+        "description" : "The same Coding validated against a value set of all of MMS, ICF and the Foundation: on an ICF coding, where it is defined as for the MMS - correct for the entity id: valid",
         "operation" : "validate-code",
         "request" : "icd-11/vs-validate-coding-cc-icf-request.json",
         "response" : "icd-11/vs-validate-coding-cc-icf-response.json"
+      },
+      {
+        "name" : "vs-validate-coding-cc-foundation",
+        "description" : "The same Coding validated against a value set of all of MMS, ICF and the Foundation: on a Foundation coding, where the extension is not defined: an error",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-coding-cc-foundation-request.json",
+        "response" : "icd-11/vs-validate-coding-cc-foundation-response.json"
       },
       {
         "name" : "expand-mms-total",

@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "http://id.who.int/icd/entity/257068234"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Cholera"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "$optional-properties$" : ["location"],
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "severity" : "error",
+        "code" : "invalid",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "invalid-data"
+          }],
+          "text" : "$external:1:entity$"
+        },
+        "location" : ["Coding.extension[0]"],
+        "expression" : ["Coding.extension[0]"],
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_CLASSIFICATION_CODE_SYSTEM"
+        }]
+      }]
+    }
+  },
+  {
+    "name" : "message",
+    "valueString" : "$external:2:entity$"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/entity"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

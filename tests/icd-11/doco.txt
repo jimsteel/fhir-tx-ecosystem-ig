@@ -362,7 +362,10 @@ Open questions - deliberately not asserted
   $validate-code: a short code is valid but not the normal form - it gets
   normalized-code (the id) and an information CODE_NOT_IN_NORMAL_FORM issue;
   an id gets neither, but gets a classificationCode output parameter (the
-  short form of whatever is in `code`). This applies to CodeSystem and
+  short form of the code). An expression written with ids but not in normal
+  order gets normalized-code and the issue, and also a classificationCode -
+  the short form of the normal form (cs-validate-nf-*, decided 2026-10-19);
+  a short-code spelling never gets one. This applies to CodeSystem and
   ValueSet validation alike, including a value set that enumerates the other
   form (vs-validate-adhoc-id). Value sets: is-a filter values and enumerated
   codes are ids or short codes (valueset-isa-id, valueset-enumerated-id, vs3),
@@ -372,16 +375,17 @@ Open questions - deliberately not asserted
   matches the start of a short code (expand-pcs-filter-code).
 * The classificationCode extension. DECIDED October 2026 (provisional url
   http://id.who.int/icd/schema/extension/classificationCode): a Coding whose
-  system is the MMS and whose code is an entity id (or the id form of an
-  expression) may carry the short code (or the short-code form of the
+  system is the MMS or ICF and whose code is an entity id (or the id form of
+  an expression) may carry the short code (or the short-code form of the
   expression) as this extension's valueCode, so software can show the code
   users know without a lookup. If present it is validated, and anything wrong
   is an error and makes the coding invalid: a wrong value
   (*-validate-coding-cc-wrong), the extension on a code with no short code
   (-no-short), on a coding whose code is already the short code (-short), or
-  on a coding in any other system, ICF included (-icf). -good and -pc are the
-  correct uses. Each is tested through CodeSystem and ValueSet $validate-code
-  (the value set is valueset-icd11-all.json, all of MMS and ICF 2026-01).
+  on a coding in any other system, the Foundation included (-foundation).
+  -good, -pc and -icf are the correct uses. Each is tested through CodeSystem
+  and ValueSet $validate-code (the value set is valueset-icd11-all.json, all
+  of MMS, ICF and the Foundation 2026-01).
 * Was the import complete? Checked against figures from the native ICD-API,
   not from the database the server built (2026-10-18):
   - totals: expand-mms-total (37,211, the count from walking the native API

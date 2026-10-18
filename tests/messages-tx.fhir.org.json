@@ -351,10 +351,6 @@
   "version/coding-vnn-vsbb-response-parameters.json" : {
     "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
   },
-  "icd-11/cs-validate-coding-cc-icf-response.json" : {
-    "1" : "The classificationCode extension is only defined for codings with the system http://id.who.int/icd/release/11/mms, not http://id.who.int/icd/release/11/icf",
-    "2" : "The classificationCode extension is only defined for codings with the system http://id.who.int/icd/release/11/mms, not http://id.who.int/icd/release/11/icf"
-  },
   "icd-11/cs-validate-coding-cc-no-short-response.json" : {
     "1" : "The classificationCode extension says '1A00-1A0Z', but '135352227' has no classification code",
     "2" : "The classificationCode extension says '1A00-1A0Z', but '135352227' has no classification code"
@@ -366,10 +362,6 @@
   "icd-11/cs-validate-coding-cc-wrong-response.json" : {
     "1" : "The classificationCode extension says '1A01', but the classification code of '257068234' is '1A00'",
     "2" : "The classificationCode extension says '1A01', but the classification code of '257068234' is '1A00'"
-  },
-  "icd-11/vs-validate-coding-cc-icf-response.json" : {
-    "1" : "The classificationCode extension is only defined for codings with the system http://id.who.int/icd/release/11/mms, not http://id.who.int/icd/release/11/icf",
-    "2" : "The classificationCode extension is only defined for codings with the system http://id.who.int/icd/release/11/mms, not http://id.who.int/icd/release/11/icf"
   },
   "icd-11/vs-validate-coding-cc-no-short-response.json" : {
     "1" : "The classificationCode extension says '1A00-1A0Z', but '135352227' has no classification code",
@@ -391,5 +383,13 @@
   },
   "simple/simple-lookup-zxx-response-parameters.json" : {
     "1" : "There is no display in the language 'zxx' for the code 'code2' in http://hl7.org/fhir/test/CodeSystem/simple|0.1.0, so the display is in the default language 'en'"
+  },
+  "icd-11/cs-validate-coding-cc-foundation-response.json" : {
+    "1" : "The classificationCode extension is only defined for ICD-11 MMS and ICF codings, not http://id.who.int/icd/entity",
+    "2" : "The classificationCode extension is only defined for ICD-11 MMS and ICF codings, not http://id.who.int/icd/entity"
+  },
+  "icd-11/vs-validate-coding-cc-foundation-response.json" : {
+    "1" : "The classificationCode extension is only defined for ICD-11 MMS and ICF codings, not http://id.who.int/icd/entity",
+    "2" : "The classificationCode extension is only defined for ICD-11 MMS and ICF codings, not http://id.who.int/icd/entity"
   }
 }

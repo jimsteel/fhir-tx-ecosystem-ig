@@ -58,8 +58,11 @@ entity id, so it is split between `Coding.system` and `Coding.code`:
 
 The entity id is the code, and the normal form. The classification code is accepted on input as
 an alternative spelling - `$validate-code` reports it as valid but not in normal form, and
-returns the entity id as `normalized-code` - and is returned as the `classificationCode` property
-and output parameter. The full entity uri is not a code in MMS or ICF.
+returns the entity id as `normalized-code` - and is returned as the `classificationCode` property.
+`$validate-code` also returns a `classificationCode` output parameter when the code was given with
+entity ids, whether or not in normal form: it is the classification code of the normal form, so
+for an expression written out of order it matches `normalized-code`. A code given with
+classification codes gets none. The full entity uri is not a code in MMS or ICF.
 
 The Foundation was not part of this decision: its codes are, for now, the full entity uri.
 
@@ -89,11 +92,11 @@ not carry the classification code users know. The extension
 the id, as a `valueCode`: the short code for a simple code, or the short-code form of the
 expression - the same expression with each part's classification code - for an expression. It
 saves receiving software from looking up the code to show it. The extension is optional, and is
-only defined for a Coding whose system is the MMS or ICF and whose code is an entity id or an expression
-in id form. When it is present it is validated: a value that is not the code's classification
-code, the extension on a code that has no classification code, on a code that is already given
-as its classification code, or on a Coding in any other system, is an error, and the Coding is
-not valid.
+only defined for a Coding whose system is the MMS or ICF and whose code is an entity id or an
+expression in id form. When it is present it is validated: a value that is not the code's
+classification code, the extension on a code that has no classification code, on a code that is
+already given as its classification code, or on a Coding in any other system - the Foundation
+included, which has no classification codes - is an error, and the Coding is not valid.
 
 ## Post Coordination Expressions
 

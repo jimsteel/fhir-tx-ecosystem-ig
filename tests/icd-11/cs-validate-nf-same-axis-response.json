@@ -1,6 +1,10 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
+    "name" : "classificationCode",
+    "valueCode" : "1A00&XN8P1&XN62R"
+  },
+  {
     "name" : "code",
     "valueCode" : "257068234&802386629&194483911"
   },

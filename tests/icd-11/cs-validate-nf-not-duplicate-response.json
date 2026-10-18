@@ -1,6 +1,10 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
+    "name" : "classificationCode",
+    "valueCode" : "NA00.2/PG50&XE3HC/PG50&XE266"
+  },
+  {
     "name" : "code",
     "valueCode" : "2110065613/1847586521&1670965842/1847586521&1021954298"
   },
