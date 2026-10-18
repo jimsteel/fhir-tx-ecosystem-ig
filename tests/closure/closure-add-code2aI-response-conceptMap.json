@@ -10,6 +10,12 @@
       "code" : "code2aI",
       "target" : [{
         "$optional-properties$" : ["display"],
+        "modifierExtension" : [{
+          "$only$" : "version:4",
+          "$optional$" : true,
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "$choice:wider|subsumes$"
+        }],
         "code" : "code2a",
         "relationship" : "source-is-narrower-than-target"
       }]
