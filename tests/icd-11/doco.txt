@@ -427,15 +427,42 @@ Open questions - deliberately not asserted
   cs-validate-nf-* tests, all but one written as entity ids so that
   normalized-code appears only when the order or duplicates are wrong.
 * The axes a concept declares. DECIDED October 2026: $lookup returns one
-  postcoordinationScale property per axis, in WHO's order, its value the axis
-  schema uri (as in postcoordinationValues), with subproperties valueSet (the
-  canonical of the scale ValueSet), requiredPostcoordination and
-  allowMultipleValues (AllowAlways | NotAllowed | AllowedExceptFromSameBlock).
-  Subproperties because the axis repeats: nothing else ties a flag to its axis.
-  This is the WHO server's shape, with two type corrections: valueSet is
-  valueString, not valueUri, and allowMultipleValues is valueCode, not
-  valueString - property and subproperty value[x] do not include uri
-  (lookup-mms-pc-scales, lookup-mms-pc-scales-required).
+  postcoordination property per axis, in WHO's order, in the same shape an
+  expression uses (below) but with no values: subproperties axis (Coding),
+  required, allowMultipleValues (Coding) and valueSet (the canonical of the
+  scale ValueSet, as valueString - property value[x] has no uri). This
+  replaces postcoordinationScale. The WHO server returns postcoordinationScale
+  with the axis uri as its value, valueSet as valueUri and
+  allowMultipleValues as valueString (lookup-mms-pc-scales,
+  lookup-mms-pc-scales-required).
+* $lookup on an expression. DECIDED October 2026. Besides code and
+  classificationCode, `stem` is the root as a Coding, and there is one
+  `postcoordination` property per axis the root declares, valued or not,
+  with subproperties:
+    axis                 Coding, system http://id.who.int/icd/schema
+    required             boolean
+    allowMultipleValues  Coding, system http://id.who.int/icd/schema/allowMultipleValues
+    valueSet             string: the canonical of the axis's ValueSet
+    value                Coding, repeating: each code on the axis
+  `/` members on no axis of the root go in one more postcoordination
+  property that has only `value`s. A `value` that is a `/` member is a code
+  with axes of its own, and carries its own postcoordination subproperties
+  inside it, one level down, in the same shape - for all the axes it declares.
+  This replaces postcoordinationValues and the per-member stem properties;
+  `id` is gone. Values are Codings (system, code = entity id, display). The
+  $lookup OperationDefinition does not describe subproperties inside
+  subproperties; Parameters allows them, and nothing validates against it.
+  (lookup-pc-*, lookup-icf-pc; lookup-pc-breast is the worked example.)
+  TxTester sorts a property with no value of its own by its subproperties,
+  and a Coding value by system|code.
+* post-coordination-metadata. DECIDED October 2026: a $lookup parameter. Only
+  when it is true does a lookup list every declared axis and carry required,
+  allowMultipleValues and valueSet. Without it (or false) only the axes that
+  have a value are listed, each with just axis and its values - so a plain
+  concept gets no postcoordination properties at all, and a cluster member
+  with no qualifiers is just its Coding. Every lookup test sets it to true,
+  except the *-no-metadata tests (lookup-pc-breast, lookup-pc-injury-fall
+  (as false), lookup-pc-pneumonia-cluster, lookup-mms-pc-scales).
 * "Other" postcoordination - whether a value outside the stem's declared scales
   should validate (lookup-pc-other). Left open in Geneva. The test currently
   asserts the error, but asserts that the error explains itself.

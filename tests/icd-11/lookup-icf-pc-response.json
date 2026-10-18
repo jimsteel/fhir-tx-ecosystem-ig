@@ -38,37 +38,131 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "qp3"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "SEVERE performance difficulty (high, extreme,...) 50-95 %"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "992904195"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "capacity",
+          "display" : "Capacity"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/performance"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/icf/1860600370/unspecified/postcoordinationScale/capacity"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "performance",
+          "display" : "Performance"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/icf",
+          "code" : "992904195",
+          "display" : "SEVERE performance difficulty (high, extreme,...) 50-95 %"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/icf/1860600370/unspecified/postcoordinationScale/performance"
+      }]
     }]
   },
   {
@@ -78,30 +172,12 @@
       "valueCode" : "stem"
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "classificationCode"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "d5409"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Dressing, unspecified"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "1860600370/unspecified"
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/release/11/icf",
+        "code" : "1860600370/unspecified",
+        "display" : "Dressing, unspecified"
+      }
     }]
   },
   {

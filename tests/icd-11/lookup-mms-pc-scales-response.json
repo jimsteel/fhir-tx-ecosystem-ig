@@ -38,7 +38,7 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationScale"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
@@ -48,14 +48,32 @@
       },
       {
         "name" : "value",
-        "valueCode" : "AllowAlways"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "requiredPostcoordination"
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "associatedWith",
+          "display" : "Associated with"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
       },
       {
         "name" : "value",
@@ -72,17 +90,13 @@
         "name" : "value",
         "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/associatedWith"
       }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/associatedWith"
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationScale"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
@@ -92,102 +106,32 @@
       },
       {
         "name" : "value",
-        "valueCode" : "NotAllowed"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "requiredPostcoordination"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueBoolean" : false
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "hasManifestation",
+          "display" : "Has manifestation"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "valueSet"
-      },
-      {
-        "name" : "value",
-        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/hasAlternativeSeverity1"
-      }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/hasAlternativeSeverity1"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "postcoordinationScale"
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "allowMultipleValues"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "NotAllowed"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "requiredPostcoordination"
-      },
-      {
-        "name" : "value",
-        "valueBoolean" : false
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "valueSet"
-      },
-      {
-        "name" : "value",
-        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/hasAlternativeSeverity2"
-      }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/hasAlternativeSeverity2"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "postcoordinationScale"
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "allowMultipleValues"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "AllowAlways"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "requiredPostcoordination"
+        "valueCode" : "required"
       },
       {
         "name" : "value",
@@ -204,17 +148,13 @@
         "name" : "value",
         "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/hasManifestation"
       }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/hasManifestation"
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationScale"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
@@ -224,146 +164,32 @@
       },
       {
         "name" : "value",
-        "valueCode" : "NotAllowed"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "requiredPostcoordination"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueBoolean" : false
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "specificAnatomy",
+          "display" : "Specific anatomy"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "valueSet"
-      },
-      {
-        "name" : "value",
-        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/hasSeverity"
-      }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/hasSeverity"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "postcoordinationScale"
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "allowMultipleValues"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "NotAllowed"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "requiredPostcoordination"
-      },
-      {
-        "name" : "value",
-        "valueBoolean" : false
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "valueSet"
-      },
-      {
-        "name" : "value",
-        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/histopathology"
-      }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/histopathology"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "postcoordinationScale"
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "allowMultipleValues"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "NotAllowed"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "requiredPostcoordination"
-      },
-      {
-        "name" : "value",
-        "valueBoolean" : false
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "valueSet"
-      },
-      {
-        "name" : "value",
-        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/laterality"
-      }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/laterality"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "postcoordinationScale"
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "allowMultipleValues"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "AllowAlways"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "requiredPostcoordination"
+        "valueCode" : "required"
       },
       {
         "name" : "value",
@@ -380,10 +206,296 @@
         "name" : "value",
         "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/specificAnatomy"
       }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/specificAnatomy"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "hasAlternativeSeverity1",
+          "display" : "Has alternative severity 1"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/hasAlternativeSeverity1"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "hasAlternativeSeverity2",
+          "display" : "Has alternative severity 2"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/hasAlternativeSeverity2"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "hasSeverity",
+          "display" : "Has severity"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/hasSeverity"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "histopathology",
+          "display" : "Histopathology"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/histopathology"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "laterality",
+          "display" : "Laterality"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1448983042/postcoordinationScale/laterality"
+      }]
     }]
   },
   {

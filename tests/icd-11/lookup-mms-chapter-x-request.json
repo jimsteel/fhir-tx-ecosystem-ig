@@ -32,6 +32,10 @@
     {
       "name": "property",
       "valueCode": "child"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

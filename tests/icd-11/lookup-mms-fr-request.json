@@ -20,6 +20,10 @@
     {
       "name": "displayLanguage",
       "valueCode": "fr"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

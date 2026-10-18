@@ -12,6 +12,10 @@
     {
       "name": "code",
       "valueCode": "2119181386"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

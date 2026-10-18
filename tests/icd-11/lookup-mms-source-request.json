@@ -24,6 +24,10 @@
     {
       "name": "property",
       "valueCode": "source"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

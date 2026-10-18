@@ -27,74 +27,494 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "1G41"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Sepsis with septic shock"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "1683090852"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "associatedWith",
+          "display" : "Associated with"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/hasCausingCondition"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/684930313/other/postcoordinationScale/associatedWith"
+      }]
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "1G40"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Sepsis without septic shock"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "622600769"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "hasCausingCondition",
+          "display" : "Has causing condition"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/hasManifestation"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : true
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowAlways"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "associatedWith",
+              "display" : "Associated with"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/1683090852/postcoordinationScale/associatedWith"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowAlways"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "hasCausingCondition",
+              "display" : "Has causing condition"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : true
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/1683090852/postcoordinationScale/hasCausingCondition"
+          }]
+        }]
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "1683090852",
+          "display" : "Sepsis with septic shock"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/684930313/other/postcoordinationScale/hasCausingCondition"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "hasManifestation",
+          "display" : "Has manifestation"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowAlways"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "associatedWith",
+              "display" : "Associated with"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/622600769/postcoordinationScale/associatedWith"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowAlways"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "hasCausingCondition",
+              "display" : "Has causing condition"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : true
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/622600769/postcoordinationScale/hasCausingCondition"
+          }]
+        }]
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "622600769",
+          "display" : "Sepsis without septic shock"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/684930313/other/postcoordinationScale/hasManifestation"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "infectiousAgent",
+          "display" : "Infectious agent"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/684930313/other/postcoordinationScale/infectiousAgent"
+      }]
     }]
   },
   {
@@ -104,30 +524,12 @@
       "valueCode" : "stem"
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "classificationCode"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "1D01.0Y"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Other specified bacterial meningitis"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "684930313/other"
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "684930313/other",
+        "display" : "Other specified bacterial meningitis"
+      }
     }]
   },
   {

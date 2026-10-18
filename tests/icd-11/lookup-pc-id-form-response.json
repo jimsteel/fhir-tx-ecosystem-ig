@@ -38,37 +38,131 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "XN8P1"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Vibrio cholerae O1, biovar cholerae"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "194483911"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "associatedWith",
+          "display" : "Associated with"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/infectiousAgent"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/257068234/postcoordinationScale/associatedWith"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "infectiousAgent",
+          "display" : "Infectious agent"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "194483911",
+          "display" : "Vibrio cholerae O1, biovar cholerae"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/257068234/postcoordinationScale/infectiousAgent"
+      }]
     }]
   },
   {
@@ -78,30 +172,12 @@
       "valueCode" : "stem"
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "classificationCode"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "1A00"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Cholera"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "257068234"
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "257068234",
+        "display" : "Cholera"
+      }
     }]
   },
   {

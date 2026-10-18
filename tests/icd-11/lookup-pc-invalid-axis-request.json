@@ -16,6 +16,10 @@
     {
       "name": "property",
       "valueCode": "classificationCode"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

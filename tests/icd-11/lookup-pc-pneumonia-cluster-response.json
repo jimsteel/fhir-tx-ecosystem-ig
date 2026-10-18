@@ -38,37 +38,559 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "MG51.00"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Methicillin resistant Staphylococcus aureus"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "1710270895"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "associatedWith",
+          "display" : "Associated with"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/associatedWith"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowAlways"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "hasCausingCondition",
+              "display" : "Has causing condition"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : true
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/1710270895/postcoordinationScale/hasCausingCondition"
+          }]
+        }]
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "1710270895",
+          "display" : "Methicillin resistant Staphylococcus aureus"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1258650683/postcoordinationScale/associatedWith"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "hasManifestation",
+          "display" : "Has manifestation"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1258650683/postcoordinationScale/hasManifestation"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "specificAnatomy",
+          "display" : "Specific anatomy"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1258650683/postcoordinationScale/specificAnatomy"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "causality",
+          "display" : "Causality"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1258650683/postcoordinationScale/causality"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "laterality",
+          "display" : "Laterality"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1258650683/postcoordinationScale/laterality"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowAlways"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "associatedWith",
+              "display" : "Associated with"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/983550510/postcoordinationScale/associatedWith"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowAlways"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "specificAnatomy",
+              "display" : "Specific anatomy"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/983550510/postcoordinationScale/specificAnatomy"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "NotAllowed"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "diagnosisConfirmedBy",
+              "display" : "Diagnosis confirmed by"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/983550510/postcoordinationScale/diagnosisConfirmedBy"
+          }]
+        }]
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "983550510",
+          "display" : "Respiratory tuberculosis, confirmed"
+        }
+      }]
     }]
   },
   {
@@ -78,63 +600,12 @@
       "valueCode" : "stem"
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "classificationCode"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "CA40.00"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Pneumonia due to Chlamydophila pneumoniae"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "1258650683"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "stem"
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "classificationCode"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "1B10.0"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Respiratory tuberculosis, confirmed"
-      }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "983550510"
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "1258650683",
+        "display" : "Pneumonia due to Chlamydophila pneumoniae"
+      }
     }]
   },
   {

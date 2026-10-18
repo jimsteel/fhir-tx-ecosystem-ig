@@ -20,6 +20,10 @@
     {
       "name": "property",
       "valueCode": "parent"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

@@ -38,185 +38,713 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "XE5UF"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Organised sports and exercise during leisure time"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "1710227827"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "associatedWith",
+          "display" : "Associated with"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/activityWhenInjured"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowedExceptFromSameBlock"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "alcoholUseInInjury",
+              "display" : "Alcohol use in injury"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/355825185/postcoordinationScale/alcoholUseInInjury"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowedExceptFromSameBlock"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "placeOfOccurrence",
+              "display" : "Place of occurrence"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/355825185/postcoordinationScale/placeOfOccurrence"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowedExceptFromSameBlock"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "psychoactiveDrugUseInInjury",
+              "display" : "Psychoactive drug use in injury"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/355825185/postcoordinationScale/psychoactiveDrugUseInInjury"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "NotAllowed"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "activityWhenInjured",
+              "display" : "Activity when injured"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "value"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/release/11/mms",
+              "code" : "1710227827",
+              "display" : "Organised sports and exercise during leisure time"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/355825185/postcoordinationScale/activityWhenInjured"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "NotAllowed"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "objectOrSubstanceProducingInjury",
+              "display" : "Object or substance producing injury"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "value"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/release/11/mms",
+              "code" : "1457143575",
+              "display" : "Marsupials"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/355825185/postcoordinationScale/objectOrSubstanceProducingInjury"
+          }]
+        }]
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "355825185",
+          "display" : "Unintentionally struck, kicked, or bumped by animal"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1008825613/other/postcoordinationScale/associatedWith"
+      }]
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "PA71"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Unintentionally struck, kicked, or bumped by animal"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "355825185"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "specificAnatomy",
+          "display" : "Specific anatomy"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/associatedWith"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1008825613/other/postcoordinationScale/specificAnatomy"
+      }]
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "XJ778"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Compression fracture"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "56999138"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "fractureOpenOrClosed",
+          "display" : "Fracture open or closed"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/fractureSubtype"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1008825613/other/postcoordinationScale/fractureOpenOrClosed"
+      }]
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "XK8G"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Left"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "271422288"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "fractureSubtype",
+          "display" : "Fracture subtype"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/laterality"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "56999138",
+          "display" : "Compression fracture"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1008825613/other/postcoordinationScale/fractureSubtype"
+      }]
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "classificationCode"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueCode" : "XE4TZ"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
       }]
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "code"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Marsupials"
+        "valueCode" : "axis"
       },
       {
         "name" : "value",
-        "valueCode" : "1457143575"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "jointInvolvementInFracture",
+          "display" : "Joint involvement in fracture"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/objectOrSubstanceProducingInjury"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1008825613/other/postcoordinationScale/jointInvolvementInFracture"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "laterality",
+          "display" : "Laterality"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "271422288",
+          "display" : "Left"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/1008825613/other/postcoordinationScale/laterality"
+      }]
     }]
   },
   {
@@ -226,63 +754,12 @@
       "valueCode" : "stem"
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "classificationCode"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "NC53.Y"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Fracture at other specified part of wrist or hand level"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "1008825613/other"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "stem"
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "classificationCode"
-      },
-      {
-        "name" : "value",
-        "valueCode" : "PA71"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Unintentionally struck, kicked, or bumped by animal"
-      }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "355825185"
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "1008825613/other",
+        "display" : "Fracture at other specified part of wrist or hand level"
+      }
     }]
   },
   {

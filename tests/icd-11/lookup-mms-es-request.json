@@ -24,6 +24,10 @@
     {
       "name": "displayLanguage",
       "valueCode": "es"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

@@ -8141,6 +8141,20 @@
         "response" : "icd-11/lookup-pc-simple-response.json"
       },
       {
+        "name" : "lookup-pc-breast",
+        "description" : "Look up 2090549892/unspecified&271422288&831985561 (Invasive carcinoma of breast, unspecified, left, breast): one postcoordination property per axis the stem declares, with the values on laterality and specificAnatomy",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-breast-request.json",
+        "response" : "icd-11/lookup-pc-breast-response.json"
+      },
+      {
+        "name" : "lookup-pc-breast-no-metadata",
+        "description" : "Without post-coordination-metadata: only the two valued axes, each with just its axis and value - no required, allowMultipleValues or valueSet, and no unvalued axes",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-breast-no-metadata-request.json",
+        "response" : "icd-11/lookup-pc-breast-no-metadata-response.json"
+      },
+      {
         "name" : "lookup-pc-uri-form",
         "description" : "An expression written with full entity URIs (and spaces) is not a code in the MMS, so it is not found",
         "operation" : "lookup",
@@ -8191,11 +8205,25 @@
         "response" : "icd-11/lookup-pc-injury-fall-response.json"
       },
       {
+        "name" : "lookup-pc-injury-fall-no-metadata",
+        "description" : "With post-coordination-metadata=false: as without it - the valued axes only, and the cluster member PG50 carries only its own valued axes",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-injury-fall-no-metadata-request.json",
+        "response" : "icd-11/lookup-pc-injury-fall-no-metadata-response.json"
+      },
+      {
         "name" : "lookup-pc-pneumonia-cluster",
         "description" : "Look up a cluster of three stem codes: CA40.00/MG51.00/1B10.0",
         "operation" : "lookup",
         "request" : "icd-11/lookup-pc-pneumonia-cluster-request.json",
         "response" : "icd-11/lookup-pc-pneumonia-cluster-response.json"
+      },
+      {
+        "name" : "lookup-pc-pneumonia-cluster-no-metadata",
+        "description" : "Without post-coordination-metadata: the cluster members, which have no qualifiers, are just their Codings",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-pneumonia-cluster-no-metadata-request.json",
+        "response" : "icd-11/lookup-pc-pneumonia-cluster-no-metadata-response.json"
       },
       {
         "name" : "lookup-pc-repeated-value",
@@ -8741,6 +8769,13 @@
         "operation" : "lookup",
         "request" : "icd-11/lookup-mms-pc-scales-request.json",
         "response" : "icd-11/lookup-mms-pc-scales-response.json"
+      },
+      {
+        "name" : "lookup-mms-pc-scales-no-metadata",
+        "description" : "Without post-coordination-metadata: a plain concept has nothing on any axis, so no postcoordination properties at all",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-pc-scales-no-metadata-request.json",
+        "response" : "icd-11/lookup-mms-pc-scales-no-metadata-response.json"
       },
       {
         "name" : "lookup-mms-pc-scales-required",

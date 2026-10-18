@@ -28,6 +28,10 @@
     {
       "name": "property",
       "valueCode": "definition"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

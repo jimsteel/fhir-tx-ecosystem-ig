@@ -23,7 +23,11 @@
     },
     {
       "name": "property",
-      "valueCode": "postcoordinationValues"
+      "valueCode": "postcoordination"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

@@ -20,6 +20,10 @@
     {
       "name": "displayLanguage",
       "valueCode": "zz"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }
