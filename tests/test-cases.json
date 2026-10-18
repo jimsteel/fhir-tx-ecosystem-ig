@@ -8212,6 +8212,13 @@
         "response" : "icd-11/lookup-pc-injury-fall-no-metadata-response.json"
       },
       {
+        "name" : "lookup-pc-retinopathy",
+        "description" : "Look up 5A11/9B71.00&XS25&XK9K/9B71.00&XS5W&XK8G (type 2 diabetes; nonproliferative diabetic retinopathy, severe, right; and again, mild, left), written as entity ids: the same cluster member twice with different qualifiers is two values, each carrying its own qualifiers",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-retinopathy-request.json",
+        "response" : "icd-11/lookup-pc-retinopathy-response.json"
+      },
+      {
         "name" : "lookup-pc-pneumonia-cluster",
         "description" : "Look up a cluster of three stem codes: CA40.00/MG51.00/1B10.0",
         "operation" : "lookup",
@@ -8374,6 +8381,13 @@
         "operation" : "cs-validate-code",
         "request" : "icd-11/cs-validate-pc-injury-fall-request.json",
         "response" : "icd-11/cs-validate-pc-injury-fall-response.json"
+      },
+      {
+        "name" : "cs-validate-pc-retinopathy",
+        "description" : "Validate 5A11/9B71.00&XS25&XK9K/9B71.00&XS5W&XK8G (type 2 diabetes; nonproliferative diabetic retinopathy, severe, right; and again, mild, left), written as entity ids: valid, and not in normal form - the two members are ordered by their qualifiers, and within each laterality comes before severity",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-pc-retinopathy-request.json",
+        "response" : "icd-11/cs-validate-pc-retinopathy-response.json"
       },
       {
         "name" : "cs-validate-pc-pneumonia-cluster",
