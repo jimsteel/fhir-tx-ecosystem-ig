@@ -33,7 +33,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "code-rule"
                 }],
-              "text" : "The concept 'codeInactive' is valid but is not active"
+              "text" : "$external:3:codeInactive$"
             },
             "location" : ["Coding.code"],
             "expression" : ["Coding.code"]
@@ -71,7 +71,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "code-comment"
                 }],
-              "text" : "The concept 'codeInactive' has a status of inactive and its use should be reviewed"
+              "text" : "$external:4:codeInactive|inactive$"
             },
             "location" : ["Coding"],
             "expression" : ["Coding"]

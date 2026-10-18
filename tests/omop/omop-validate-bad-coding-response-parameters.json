@@ -21,7 +21,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code '1029267C' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
+          "text" : "$external:1:1029267C|https://fhir-terminology.ohdsi.org|20240716$"
         },
         "location" : ["Coding.code"],
         "expression" : ["Coding.code"]
@@ -30,7 +30,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Unknown code '1029267C' in the CodeSystem 'https://fhir-terminology.ohdsi.org' version '20240716'"
+    "valueString" : "$external:1:1029267C|https://fhir-terminology.ohdsi.org|20240716$"
   },
   {
     "name" : "result",

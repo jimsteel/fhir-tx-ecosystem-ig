@@ -33,7 +33,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "code-rule"
                 }],
-              "text" : "The concept 'codeRetired' is valid but is not active"
+              "text" : "$external:3:codeRetired$"
             },
             "location" : ["Coding.code"],
             "expression" : ["Coding.code"]
@@ -70,7 +70,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "code-comment"
                 }],
-              "text" : "The concept 'codeRetired' has a status of retired and inactive and its use should be reviewed"
+              "text" : "$external:4:codeRetired|retired$"
             },
             "location" : ["Coding"],
             "expression" : ["Coding"]

@@ -27,14 +27,14 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "not-found"
                 }],
-              "text" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0' could not be found"
+              "text" : "$external:1:http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0$"
             }
           }]
       }
     },
     {
       "name" : "message",
-      "valueString" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0' could not be found"
+      "valueString" : "$external:1:http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0$"
     },
     {
       "name" : "result",

@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code2a ('Display 2a')' was not found in the value set '(unidentified)'"
+          "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/simple#code2a$"
         },
         "expression" : ["Coding.code"]
       }]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code2a ('Display 2a')' was not found in the value set '(unidentified)'"
+    "valueString" : "$external:1:http://hl7.org/fhir/test/CodeSystem/simple#code2a$"
   },
   {
     "name" : "result",

@@ -31,7 +31,7 @@
                         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                         "code" : "invalid-display"
                       }],
-                    "text" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code1. Valid display is 'Display 1' (en) (for the language(s) '--')"
+                    "text" : "$external:1:xx|Display 1|http://hl7.org/fhir/test/CodeSystem/simple#code1|en$"
                   },
                   "location" : ["Coding.display"],
                   "expression" : ["Coding.display"]
@@ -40,7 +40,7 @@
           },
           {
             "name" : "message",
-            "valueString" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code1. Valid display is 'Display 1' (en) (for the language(s) '--')"
+            "valueString" : "$external:1:xx|Display 1|http://hl7.org/fhir/test/CodeSystem/simple#code1|en$"
           },
           {
             "name" : "result",
@@ -105,7 +105,7 @@
                         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                         "code" : "not-in-vs"
                       }],
-                    "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('xx')' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"
+                    "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simple#code3|urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b$"
                   },
                   "location" : ["Coding.code"],
                   "expression" : ["Coding.code"]
@@ -124,7 +124,7 @@
                         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                         "code" : "invalid-display"
                       }],
-                    "text" : "Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')"
+                    "text" : "$external:3:xx|Display 3|http://hl7.org/fhir/test/CodeSystem/simple#code3|en$"
                   },
                   "location" : ["Coding.display"],
                   "expression" : ["Coding.display"]
@@ -133,7 +133,7 @@
           },
           {
             "name" : "message",
-            "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3 ('xx')' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'; Wrong Display Name 'xx' for http://hl7.org/fhir/test/CodeSystem/simple#code3. Valid display is 'Display 3' (en) (for the language(s) '--')"
+            "valueString" : "$external:4:http://hl7.org/fhir/test/CodeSystem/simple#code3|urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b|xx|Display 3|en$"
           },
           {
             "name" : "result",

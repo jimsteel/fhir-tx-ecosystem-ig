@@ -21,7 +21,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-in-vs"
           }],
-          "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/bad-regex#aaaaaaaaaaaaaaaaaaaaaaaaaaaaX' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad|5.0.0'"
+          "text" : "$external:3:http://hl7.org/fhir/test/CodeSystem/bad-regex#aaaaaaaaaaaaaaaaaaaaaaaaaaaaX|http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad|5.0.0$"
         },
         "expression" : ["code"]
       },
@@ -38,7 +38,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-found"
           }],
-          "text" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/bad-regex' could not be found, so the code cannot be validated"
+          "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/bad-regex$"
         },
         "expression" : ["system"]
       }]
@@ -46,7 +46,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/test/CodeSystem/bad-regex' could not be found, so the code cannot be validated; The provided code 'http://hl7.org/fhir/test/CodeSystem/bad-regex#aaaaaaaaaaaaaaaaaaaaaaaaaaaaX' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad|5.0.0'"
+    "valueString" : "$external:2:http://hl7.org/fhir/test/CodeSystem/bad-regex|http://hl7.org/fhir/test/CodeSystem/bad-regex#aaaaaaaaaaaaaaaaaaaaaaaaaaaaX|http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad|5.0.0$"
   },
   {
     "name" : "result",

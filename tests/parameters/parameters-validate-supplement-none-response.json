@@ -25,7 +25,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-display"
           }],
-          "text" : "Wrong Display Name 'ectenoot' for http://hl7.org/fhir/test/CodeSystem/extensions#code1. Valid display is one of 2 choices: 'Display 1' (en) or 'Mein erster Code' (de) (for the language(s) '--')"
+          "text" : "$external:1:ectenoot|Display 1|Mein erster Code|http://hl7.org/fhir/test/CodeSystem/extensions#code1|en|de$"
         },
         "expression" : ["Coding.display"]
       }]
@@ -33,7 +33,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Wrong Display Name 'ectenoot' for http://hl7.org/fhir/test/CodeSystem/extensions#code1. Valid display is one of 2 choices: 'Display 1' (en) or 'Mein erster Code' (de) (for the language(s) '--')"
+    "valueString" : "$external:1:ectenoot|Display 1|Mein erster Code|http://hl7.org/fhir/test/CodeSystem/extensions#code1|en|de$"
   },
   {
     "name" : "result",

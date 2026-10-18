@@ -1,0 +1,940 @@
+{
+  "big/expand-circle-outcome.json" : {
+    "1" : "Circular ValueSet reference: 'http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0' > 'http://hl7.org/fhir/test/ValueSet/big-circle-2|5.0.0' > 'http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0'"
+  },
+  "big/validation-big-circle-response-outcome.json" : {
+    "1" : "Circular ValueSet reference: 'http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0' > 'http://hl7.org/fhir/test/ValueSet/big-circle-2|5.0.0' > 'http://hl7.org/fhir/test/ValueSet/big-circle-1|5.0.0'"
+  },
+  "case/case-coding-insensitive-code1-2-response-parameters.json" : {
+    "1" : "Code 'CODE1' differs in case from 'code1' (CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-insensitive|0.1.0' is case-insensitive)"
+  },
+  "case/case-coding-insensitive-code1-3-response-parameters.json" : {
+    "1" : "Code 'Code1' differs in case from 'code1' (CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-insensitive|0.1.0' is case-insensitive)"
+  },
+  "case/case-coding-sensitive-code1-3-response-parameters.json" : {
+    "2" : "Unknown code 'Code1' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'; Unknown code 'Code1' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/case-sensitive|0.1.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/case-sensitive#Code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/case-sensitive|5.0.0'"
+  },
+  "display/validation-wrong-de-en-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-en#code1'. No display for 'de', default display: 'Code1'"
+  },
+  "display/validation-wrong-de-ende-N-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-ende-N#code1'. No display for 'de', default display: 'Code1'"
+  },
+  "display/validation-wrong-de-ende-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-ende#code1'. Valid displays for 'de': 'Anzeige1' (de)"
+  },
+  "display/validation-wrong-de-none-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-none#code1'. No display for 'de', default display: 'Code1'"
+  },
+  "display/validation-wrong-en-en-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-en#code1'. Valid displays for 'en': 'Code1' (en)"
+  },
+  "display/validation-wrong-en-ende-N-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-ende-N#code1'. Valid displays for 'en': 'Code1' (en)"
+  },
+  "display/validation-wrong-en-ende-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-ende#code1'. Valid displays for 'en': 'Code1' (en)"
+  },
+  "display/validation-wrong-en-none-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-none#code1'. No display for 'en', default display: 'Code1'"
+  },
+  "display/validation-wrong-none-en-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-en#code1'. Valid displays: 'Code1' (en)"
+  },
+  "display/validation-wrong-none-ende-N-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-ende-N#code1'. Valid displays: 'Code1' (en)"
+  },
+  "display/validation-wrong-none-ende-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-ende#code1'. Valid displays: 'Code1' (en), 'Anzeige1' (de)"
+  },
+  "display/validation-wrong-none-none-response-parameters.json" : {
+    "1" : "Invalid display 'XCode1' for 'http://hl7.org/fhir/test/CodeSystem/lang-none#code1'. Valid displays: 'Code1'"
+  },
+  "errors/errors-broken-filter-validate-response.json" : {
+    "1" : "Filter 'concept is-a null' on CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' has no value"
+  },
+  "errors/errors-broken-filter2-validate-response.json" : {
+    "1" : "Filter 'concept is-a null' on CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' has no value"
+  },
+  "errors/errors-unknown-system1-response.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleX' not found"
+  },
+  "errors/errors-unknown-system2-response.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleXX' not found",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/simpleXX#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/unknown-system|5.0.0'; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simpleXX' not found",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simpleXX#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/unknown-system|5.0.0'"
+  },
+  "extensions/validate-coding-bad-supplement-url-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/supplement|0.1.1' is a supplement and cannot be used in Coding.system"
+  },
+  "inactive/validate-inactive-2-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive (status 'inactive')"
+  },
+  "inactive/validate-inactive-2a-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/inactive-all-active|5.0.0'",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive (status 'inactive'); Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive, and the ValueSet only includes active codes; Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/inactive-all-active|5.0.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive, and the ValueSet only includes active codes",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive (status 'inactive')"
+  },
+  "inactive/validate-inactive-2b-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive (status 'inactive')"
+  },
+  "inactive/validate-inactive-3-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' is inactive (status 'retired')"
+  },
+  "inactive/validate-inactive-3a-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/inactive-all-active|5.0.0'",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' is inactive (status 'inactive'); Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' is inactive, and the ValueSet only includes active codes; Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/inactive-all-active|5.0.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' is inactive, and the ValueSet only includes active codes",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' is inactive (status 'inactive')"
+  },
+  "inactive/validate-inactive-3b-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeRetired' is inactive (status 'retired')"
+  },
+  "inactive/validate-inactive-5-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive (status 'inactive')"
+  },
+  "notSelectable/validate-noprop-false-true-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-noprop#codeNS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-noprop-false|5.0.0'"
+  },
+  "notSelectable/validate-noprop-false-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-noprop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-noprop-false|5.0.0'"
+  },
+  "notSelectable/validate-noprop-true-false-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-noprop#codeS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-noprop-true|5.0.0'"
+  },
+  "notSelectable/validate-noprop-true-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-noprop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-noprop-true|5.0.0'"
+  },
+  "notSelectable/validate-prop-false-true-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-false|5.0.0'"
+  },
+  "notSelectable/validate-prop-false-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-false|5.0.0'"
+  },
+  "notSelectable/validate-prop-in-false-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-in|5.0.0'"
+  },
+  "notSelectable/validate-prop-in-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-in|5.0.0'"
+  },
+  "notSelectable/validate-prop-out-true-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-out|5.0.0'"
+  },
+  "notSelectable/validate-prop-true-false-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-true|5.0.0'"
+  },
+  "notSelectable/validate-prop-true-true-param-false-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is abstract and not selectable here",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-true|5.0.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is abstract and not selectable here; Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-true|5.0.0'"
+  },
+  "notSelectable/validate-prop-true-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-true|5.0.0'"
+  },
+  "notSelectable/validate-prop-trueUC-true-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-prop#codeNS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-prop-trueUC|5.0.0'"
+  },
+  "notSelectable/validate-reprop-false-true-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-reprop#codeNS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-reprop-false|5.0.0'"
+  },
+  "notSelectable/validate-reprop-false-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-reprop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-reprop-false|5.0.0'"
+  },
+  "notSelectable/validate-reprop-true-false-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-reprop#codeS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-reprop-true|5.0.0'"
+  },
+  "notSelectable/validate-reprop-true-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-reprop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-reprop-true|5.0.0'"
+  },
+  "notSelectable/validate-unprop-false-true-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-unprop#codeNS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-unprop-false|5.0.0'"
+  },
+  "notSelectable/validate-unprop-false-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-unprop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-unprop-false|5.0.0'"
+  },
+  "notSelectable/validate-unprop-true-false-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-unprop#codeS' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-unprop-true|5.0.0'"
+  },
+  "notSelectable/validate-unprop-true-unknown-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/notSelectable-unprop#codeU' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/notSelectable-unprop-true|5.0.0'"
+  },
+  "other/validation-dual-filter-out-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/dual-filter#AA' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/dual-filter'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/dual-filter'",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/dual-filter#AA' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/dual-filter'"
+  },
+  "overload/validate-bad-enum-code1-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/overload#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/overload-enum-good|5.0.0'"
+  },
+  "overload/validate-bad-exclude-code1-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/overload#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/overload-exclude|5.0.0'"
+  },
+  "overload/validate-bad-v1code2-wrongdisplay-response.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/overload' version '1.0.0' differs from version '2.0.0' in the ValueSet include; Invalid display 'Display #2' for 'http://hl7.org/fhir/test/CodeSystem/overload#code2'. Valid displays: 'Display 2' (en)"
+  },
+  "overload/validate-bad2-response.json" : {
+    "1" : "Invalid display 'Display Two' for 'http://hl7.org/fhir/test/CodeSystem/overload#code2'. Valid displays: 'Display #2' (en); Invalid display 'Display Two' for 'http://hl7.org/fhir/test/CodeSystem/overload#code2'. Valid displays: 'Display 2' (en)"
+  },
+  "overload/validate-bad2v-response.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/overload' version '2.0.0' differs from version '1.0.0' in the ValueSet include; Invalid display 'Display 2' for 'http://hl7.org/fhir/test/CodeSystem/overload#code2'. Valid displays: 'Display #2' (en)"
+  },
+  "parameters/parameters-validate-supplement-none-response.json" : {
+    "1" : "Invalid display 'ectenoot' for 'http://hl7.org/fhir/test/CodeSystem/extensions#code1'. Valid displays: 'Display 1' (en), 'Mein erster Code' (de)"
+  },
+  "permutations/simple-bad-cc1-all-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "5" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+  },
+  "permutations/simple-bad-cc1-enumerated-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "5" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'"
+  },
+  "permutations/simple-bad-cc1-exclude-filter-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "5" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'"
+  },
+  "permutations/simple-bad-cc1-exclude-import-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "5" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'"
+  },
+  "permutations/simple-bad-cc1-exclude-list-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "5" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'"
+  },
+  "permutations/simple-bad-cc1-import-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "5" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'"
+  },
+  "permutations/simple-bad-cc1-isa-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "5" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+  },
+  "permutations/simple-bad-cc2-isa-response-parameters.json" : {
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "5" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "6" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+  },
+  "permutations/simple-bad-coding-all-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-coding-enumerated-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-coding-exclude-filter-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-coding-exclude-import-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-coding-exclude-list-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-coding-import-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-coding-isa-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-scd-all-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-scd-enumerated-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-enumerated-codes|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-scd-exclude-filter-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-filter|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-scd-exclude-import-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-import|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-scd-exclude-list-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-exclude-list|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-scd-import-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-import|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-bad-scd-isa-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "2" : "Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#codeXXX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Unknown code 'codeXXX' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "permutations/simple-good-cc1-isa-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+  },
+  "permutations/simple-good-cc2-isa-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; Code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+  },
+  "permutations/simple-good-coding-isa-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+  },
+  "permutations/simple-good-scd-isa-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-isa|5.0.0'"
+  },
+  "regex-bad/validate-regex-bad-2-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/regex-bad-2#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad-2|5.0.0'"
+  },
+  "regex-bad/validate-regex-bad-response.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/bad-regex' not found",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/bad-regex#aaaaaaaaaaaaaaaaaaaaaaaaaaaaX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad|5.0.0'; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/bad-regex' not found",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/bad-regex#aaaaaaaaaaaaaaaaaaaaaaaaaaaaX' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex-bad|5.0.0'"
+  },
+  "tho/validate-child-of-grandchild-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#CDALVLONE' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-child-of|0.1.0'"
+  },
+  "tho/validate-child-of-self-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#_ActClassRecordOrganizer' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-child-of|0.1.0'"
+  },
+  "tho/validate-descendent-of-self-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#_ActClassRecordOrganizer' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-descendent-of|0.1.0'"
+  },
+  "tho/validate-isa-parent-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#ACT' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'"
+  },
+  "tho/validate-isa-second-parent-out-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#COMPOSITION' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-isa-second-parent|0.1.0'"
+  },
+  "tho/validate-isa-second-parent-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#ENTRY' is inactive (status 'retired')"
+  },
+  "tho/validate-isa-unknown-code-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#code9' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'",
+    "2" : "Unknown code 'code9' in CodeSystem 'http://hl7.org/fhir/tests/CodeSystem/act-class'",
+    "3" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#code9' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-isa|0.1.0'; Unknown code 'code9' in CodeSystem 'http://hl7.org/fhir/tests/CodeSystem/act-class'"
+  },
+  "tho/validate-isnota-descendant-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#CDALVLONE' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-isnota|0.1.0'"
+  },
+  "tho/validate-isnota-other-branch-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#ENTRY' is inactive (status 'retired')"
+  },
+  "tho/validate-isnota-self-response.json" : {
+    "1" : "Code 'http://hl7.org/fhir/tests/CodeSystem/act-class#_ActClassRecordOrganizer' is not in ValueSet 'http://hl7.org/fhir/tests/ValueSet/act-class-isnota|0.1.0'"
+  },
+  "validation/complex-codeableconcept-full-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#xxxx' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/version-all-1|1.1.0'",
+    "2" : "Unknown code 'xxxx' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple'",
+    "3" : "Invalid display 'xxxxx' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#xxxx' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/version-all-1|1.1.0'; Invalid display 'xxxxx' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en); Unknown code 'xxxx' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple'"
+  },
+  "validation/complex-codeableconcept-vsonly-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#xxxx' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/version#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#xxxx' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Code 'http://hl7.org/fhir/test/CodeSystem/version#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'code1' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version'; Unknown code 'xxxx' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "validation/cs-code-bad-code-response-parameters.json" : {
+    "1" : "Unknown code 'code1x' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "validation/missing-cs-cc-no-system-response-parameters.json" : {
+    "1" : "Coding has no system"
+  },
+  "validation/missing-cs-code-no-url-response-outcome.json" : {
+    "1" : "Code 'code1' has no system, 'url' is required"
+  },
+  "validation/missing-cs-coding-no-system-response-parameters.json" : {
+    "1" : "Coding has no system"
+  },
+  "validation/missing-vs-cc-no-code-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Coding has no code; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+  },
+  "validation/missing-vs-cc-no-system-response-parameters.json" : {
+    "1" : "Code 'code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Coding has no system; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "3" : "Code 'code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "4" : "Coding has no system"
+  },
+  "validation/missing-vs-cc-text-only-response-parameters.json" : {
+    "1" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+  },
+  "validation/missing-vs-coding-no-code-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Coding has no code"
+  },
+  "validation/simple-child-of-grandchild-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code2aI' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-child-of|5.0.0'"
+  },
+  "validation/simple-code-bad-code-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1x' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Unknown code 'code1x' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1x' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'code1x' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "validation/simple-code-bad-display-not-lenient-response-parameters.json" : {
+    "1" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)",
+    "2" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)"
+  },
+  "validation/simple-code-bad-display-response-parameters.json" : {
+    "1" : "Wrong Display Name 'Display 1X' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is one of 1 choices: 'Display 1 (1.0)' (en) (for the language(s) '--')",
+    "2" : "Wrong Display Name 'Display 1X' for http://hl7.org/fhir/test/CodeSystem/version#code1. Valid display is one of 1 choices: 'Display 1 (1.0)' (en) (for the language(s) '--')"
+  },
+  "validation/simple-code-bad-display-ws-response-parameters.json" : {
+    "1" : "Invalid display 'Display  1 (1.0)' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)",
+    "2" : "Invalid display 'Display  1 (1.0)' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)"
+  },
+  "validation/simple-code-bad-displayW-response-parameters.json" : {
+    "1" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)'",
+    "2" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)'"
+  },
+  "validation/simple-code-bad-import-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-isaX' not found"
+  },
+  "validation/simple-code-bad-language-none-response-parameters.json" : {
+    "1" : "Invalid display 'XDisplay 2aII' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII'. No display for 'de', default display: 'Display 2aII'"
+  },
+  "validation/simple-code-bad-language-response-parameters.json" : {
+    "1" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. Valid displays for 'en': 'Display 1' (en)",
+    "2" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. Valid displays for 'en': 'Display 1' (en)"
+  },
+  "validation/simple-code-bad-regex-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code2a' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex|5.0.0'",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code2a' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex|5.0.0'"
+  },
+  "validation/simple-code-bad-system-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' not found",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' not found"
+  },
+  "validation/simple-code-bad-valueSet-response-outcome.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-allX' not found"
+  },
+  "validation/simple-code-good-language-none-response-parameters.json" : {
+    "1" : "Invalid display 'Alternate Display 2aII' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII'. No display for 'de', default display: 'Display 2aII'"
+  },
+  "validation/simple-code-regex-none-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex-none|5.0.0'",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-regex-none|5.0.0'"
+  },
+  "validation/simple-codeableconcept-bad-code-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1x' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Unknown code 'code1x' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1x' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'code1x' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "4" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+  },
+  "validation/simple-codeableconcept-bad-display-response-parameters.json" : {
+    "1" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)",
+    "2" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)"
+  },
+  "validation/simple-codeableconcept-bad-displayW-response-parameters.json" : {
+    "1" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)'",
+    "2" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)'"
+  },
+  "validation/simple-codeableconcept-bad-import-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-isaX' not found"
+  },
+  "validation/simple-codeableconcept-bad-language-none-response-parameters.json" : {
+    "1" : "Invalid display 'XDisplay 2aII' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII'. No display for 'de', default display: 'Display 2aII'"
+  },
+  "validation/simple-codeableconcept-bad-language-response-parameters.json" : {
+    "1" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. Valid displays for 'en': 'Display 1' (en)",
+    "2" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. Valid displays for 'en': 'Display 1' (en)"
+  },
+  "validation/simple-codeableconcept-bad-system-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' not found",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' not found; None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "4" : "None of the codings is in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+  },
+  "validation/simple-codeableconcept-bad-valueSet-response-outcome.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-allX' not found"
+  },
+  "validation/simple-codeableconcept-good-language-none-response-parameters.json" : {
+    "1" : "Invalid display 'Alternate Display 2aII' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII'. No display for 'de', default display: 'Display 2aII'"
+  },
+  "validation/simple-coding-bad-code-inactive-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive, and the ValueSet only includes active codes",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/inactive-all|5.0.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive (status 'inactive')",
+    "4" : "Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive (status 'inactive'); Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is inactive, and the ValueSet only includes active codes; Code 'http://hl7.org/fhir/test/CodeSystem/inactive#codeInactive' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/inactive-all|5.0.0'"
+  },
+  "validation/simple-coding-bad-code-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1x' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Unknown code 'code1x' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simple#code1x' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Unknown code 'code1x' in CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|0.1.0'"
+  },
+  "validation/simple-coding-bad-display-response-parameters.json" : {
+    "1" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)",
+    "2" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)' (en)"
+  },
+  "validation/simple-coding-bad-displayW-response-parameters.json" : {
+    "1" : "Invalid display 'Display 1X' for 'http://hl7.org/fhir/test/CodeSystem/version#code1'. Valid displays: 'Display 1 (1.0)'"
+  },
+  "validation/simple-coding-bad-import-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-filter-isaX' not found"
+  },
+  "validation/simple-coding-bad-language-header-response-parameters.json" : {
+    "1" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. No display for 'en', 'en-AU', default display: 'Display 1'",
+    "2" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. No display for 'en', 'en-AU', default display: 'Display 1'"
+  },
+  "validation/simple-coding-bad-language-none-response-parameters.json" : {
+    "1" : "Invalid display 'XDisplay 2aII' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII'. No display for 'de', default display: 'Display 2aII'"
+  },
+  "validation/simple-coding-bad-language-response-parameters.json" : {
+    "1" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. No display for 'en', 'en-AU', default display: 'Display 1'",
+    "2" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. No display for 'en', 'en-AU', default display: 'Display 1'"
+  },
+  "validation/simple-coding-bad-language-vs-response-parameters.json" : {
+    "1" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. Valid displays for 'en': 'Display 1' (en)",
+    "2" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. Valid displays for 'en': 'Display 1' (en)"
+  },
+  "validation/simple-coding-bad-language-vslang-response-parameters.json" : {
+    "1" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. Valid displays for 'en': 'Display 1' (en)",
+    "2" : "Invalid display 'Anzeige 1' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code1'. Valid displays for 'en': 'Display 1' (en)"
+  },
+  "validation/simple-coding-bad-system-local-response-parameters.json" : {
+    "1" : "CodeSystem 'Location1' not found",
+    "2" : "Code 'Location1#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; CodeSystem 'Location1' not found; Coding.system 'Location1' must be an absolute URI",
+    "3" : "Code 'Location1#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "4" : "Coding.system 'Location1' must be an absolute URI"
+  },
+  "validation/simple-coding-bad-system-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' not found",
+    "2" : "Code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simplex' not found",
+    "3" : "Code 'http://hl7.org/fhir/test/CodeSystem/simplex#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+  },
+  "validation/simple-coding-bad-system2-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/ValueSet/simple-all#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Coding.system 'http://hl7.org/fhir/test/ValueSet/simple-all' is a ValueSet, not a CodeSystem",
+    "3" : "Code 'http://hl7.org/fhir/test/ValueSet/simple-all#code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Coding.system 'http://hl7.org/fhir/test/ValueSet/simple-all' is a ValueSet, not a CodeSystem"
+  },
+  "validation/simple-coding-bad-valueSet-response-outcome.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-allX' not found"
+  },
+  "validation/simple-coding-good-language-none-response-parameters.json" : {
+    "1" : "Invalid display 'Alternate Display 2aII' for 'http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII'. No display for 'de', default display: 'Display 2aII'"
+  },
+  "validation/simple-coding-no-system-response-parameters.json" : {
+    "1" : "Code 'code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'",
+    "2" : "Coding has no system",
+    "3" : "Code 'code1' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'; Coding has no system"
+  },
+  "valueset-version/coding-indirect-one-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/vs-version#code2' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/vs-version-b1|5.0.0'"
+  },
+  "valueset-version/coding-indirect-zero-pinned-response-parameters.json" : {
+    "1" : "Code 'http://hl7.org/fhir/test/CodeSystem/vs-version#code2' is not in ValueSet 'http://hl7.org/fhir/test/ValueSet/vs-version-b0|5.0.0'"
+  },
+  "valueset-version/coding-indirect-zero-pinned-wrong-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0' not found"
+  },
+  "valueset-version/expand-indirect-expand-zero-pinned-wrong-response-outcome.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/vs-version|3.0.0' not found"
+  },
+  "version/code-v10-vs1wb-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/code-v10-vs1wb-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/code-v10-vs1wb-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/code-v10-vs20-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/code-v10-vs20-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/code-v10-vs20-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/code-v10-vsbb-check-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/code-v10-vsbb-default-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/code-v10-vsbb-force-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/code-v10-vsbb-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/code-v10-vsnn-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/code-v10-vsnn-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/code-v10-vsnn-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/code-vbb-vs10-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/code-vbb-vs10-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/code-vbb-vs10-force-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: '1.0.0'); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: '1.0.0')"
+  },
+  "version/code-vbb-vs10-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/code-vbb-vsnn-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none)"
+  },
+  "version/code-vbb-vsnn-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' set by a version parameter (ValueSet include: none)"
+  },
+  "version/code-vbb-vsnn-force-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none)"
+  },
+  "version/code-vbb-vsnn-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.2.0' used for the versionless ValueSet include"
+  },
+  "version/code-vnn-vs1w-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/code-vnn-vs1wb-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/code-vnn-vs1wb-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/code-vnn-vs1wb-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/code-vnn-vsbb-check-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/code-vnn-vsbb-default-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/code-vnn-vsbb-force-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/code-vnn-vsbb-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/codeableconcept-v10-vs1wb-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/codeableconcept-v10-vs1wb-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/codeableconcept-v10-vs1wb-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/codeableconcept-v10-vs20-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/codeableconcept-v10-vs20-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/codeableconcept-v10-vs20-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/codeableconcept-v10-vsbb-check-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/codeableconcept-v10-vsbb-default-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/codeableconcept-v10-vsbb-force-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/codeableconcept-v10-vsbb-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/codeableconcept-v10-vsnn-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/codeableconcept-v10-vsnn-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/codeableconcept-v10-vsnn-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/codeableconcept-vbb-vs10-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/codeableconcept-vbb-vs10-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/codeableconcept-vbb-vs10-force-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: '1.0.0'); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: '1.0.0')"
+  },
+  "version/codeableconcept-vbb-vs10-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/codeableconcept-vbb-vsnn-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none)"
+  },
+  "version/codeableconcept-vbb-vsnn-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' set by a version parameter (ValueSet include: none)"
+  },
+  "version/codeableconcept-vbb-vsnn-force-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none)"
+  },
+  "version/codeableconcept-vbb-vsnn-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.2.0' used for the versionless ValueSet include"
+  },
+  "version/codeableconcept-vnn-vs1w-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/codeableconcept-vnn-vs1wb-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/codeableconcept-vnn-vs1wb-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/codeableconcept-vnn-vs1wb-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/codeableconcept-vnn-vsbb-check-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/codeableconcept-vnn-vsbb-default-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/codeableconcept-vnn-vsbb-force-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/codeableconcept-vnn-vsbb-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/coding-v10-vs1wb-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/coding-v10-vs1wb-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/coding-v10-vs1wb-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1' in the ValueSet include"
+  },
+  "version/coding-v10-vs20-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/coding-v10-vs20-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/coding-v10-vs20-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/coding-v10-vsbb-check-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/coding-v10-vsbb-default-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/coding-v10-vsbb-force-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/coding-v10-vsbb-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/version|2.4.0' not found"
+  },
+  "version/coding-v10-vsnn-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/coding-v10-vsnn-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/coding-v10-vsnn-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.0.0' differs from version '1.2.0' in the ValueSet include"
+  },
+  "version/coding-vbb-vs10-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/coding-vbb-vs10-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/coding-vbb-vs10-force-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: '1.0.0'); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: '1.0.0')"
+  },
+  "version/coding-vbb-vs10-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include; CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' in the ValueSet include"
+  },
+  "version/coding-vbb-vsnn-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none)"
+  },
+  "version/coding-vbb-vsnn-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.0' set by a version parameter (ValueSet include: none)"
+  },
+  "version/coding-vbb-vsnn-force-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none); CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "3" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.0.x' set by a version parameter (ValueSet include: none)"
+  },
+  "version/coding-vbb-vsnn-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|2.4.0' not found. Known versions: '1.0.0', '1.2.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '2.4.0' differs from version '1.2.0' used for the versionless ValueSet include"
+  },
+  "version/coding-vnn-vs1w-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/coding-vnn-vs1wb-check-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/coding-vnn-vs1wb-default-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/coding-vnn-vs1wb-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/coding-vnn-vsbb-check-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/coding-vnn-vsbb-default-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/coding-vnn-vsbb-force-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/coding-vnn-vsbb-response-parameters.json" : {
+    "1" : "ValueSet 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' not found"
+  },
+  "version/simple-code-bad-version1-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|1.0.0' not found. Known versions: '0.1.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '1.0.0' differs from version '0.1.0' used for the versionless ValueSet include"
+  },
+  "version/simple-codeableconcept-bad-version1-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|1.0.0' not found. Known versions: '0.1.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '1.0.0' differs from version '0.1.0' used for the versionless ValueSet include"
+  },
+  "version/simple-coding-bad-version1-response-parameters.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple|1.0.0' not found. Known versions: '0.1.0'",
+    "2" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/simple' version '1.0.0' differs from version '0.1.0' used for the versionless ValueSet include"
+  },
+  "version/vs-expand-all-v-check-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/vs-expand-all-v2-check-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/vs-expand-v-mixed-check-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/vs-expand-v-w-check-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  },
+  "version/vs-expand-v-wb-check-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/vs-expand-v-wb-default-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/vs-expand-v-wb-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version|1' not found. Known versions: '1.0.0', '1.2.0'"
+  },
+  "version/vs-expand-v2-check-response-outcome.json" : {
+    "1" : "CodeSystem 'http://hl7.org/fhir/test/CodeSystem/version' version '1.2.0' does not match 'check-system-version' '1.0.x'"
+  }
+}

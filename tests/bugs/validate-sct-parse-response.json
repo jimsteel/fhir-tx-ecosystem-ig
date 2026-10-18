@@ -21,7 +21,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-code"
           }],
-          "text" : "Unknown code 'freetext' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)"
+          "text" : "$external:1:freetext|http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201$"
         },
         "expression" : ["code"]
       },
@@ -41,7 +41,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Unknown code 'freetext' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)"
+    "valueString" : "$external:1:freetext|http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201$"
   },
   {
     "name" : "result",

@@ -61,7 +61,7 @@
                         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                         "code" : "code-comment"
                       }],
-                    "text" : "The concept 'code2' has a status of retired and inactive and its use should be reviewed"
+                    "text" : "$external:1:code2|retired$"
                   },
                   "location" : ["Coding"],
                   "expression" : ["Coding"]
@@ -70,7 +70,7 @@
           },
           {
             "name" : "message",
-            "valueString" : "The concept 'code2' has a status of retired and inactive and its use should be reviewed"
+            "valueString" : "$external:1:code2|retired$"
           },
           {
             "name" : "result",
@@ -122,7 +122,7 @@
                         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                         "code" : "not-in-vs"
                       }],
-                    "text" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"
+                    "text" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simple#code3|urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b$"
                   },
                   "location" : ["Coding.code"],
                   "expression" : ["Coding.code"]
@@ -131,7 +131,7 @@
           },
           {
             "name" : "message",
-            "valueString" : "The provided code 'http://hl7.org/fhir/test/CodeSystem/simple#code3' was not found in the value set 'urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b'"
+            "valueString" : "$external:2:http://hl7.org/fhir/test/CodeSystem/simple#code3|urn:uuid:80458796-b204-4d17-ac1c-8443dd8cb35b$"
           },
           {
             "name" : "result",

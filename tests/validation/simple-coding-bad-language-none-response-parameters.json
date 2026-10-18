@@ -26,7 +26,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "invalid-display"
           }],
-          "text" : "Wrong Display Name 'XDisplay 2aII' for http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII. There are no valid display names found for language(s) 'de'. Default display is 'Display 2aII'"
+          "text" : "$external:1:XDisplay 2aII|de|Display 2aII|http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII$"
         },
         "location" : ["Coding.display"],
         "expression" : ["Coding.display"]
@@ -35,7 +35,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "Wrong Display Name 'XDisplay 2aII' for http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII. There are no valid display names found for language(s) 'de'. Default display is 'Display 2aII'"
+    "valueString" : "$external:1:XDisplay 2aII|de|Display 2aII|http://hl7.org/fhir/test/CodeSystem/en-multi#code2aII$"
   },
   {
     "name" : "result",

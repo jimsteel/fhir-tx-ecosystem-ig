@@ -24,7 +24,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "code-rule"
           }],
-          "text" : "The code 'EN' differs from the correct code 'en' by case. Although the code system 'urn:ietf:bcp:47' is case insensitive, implementers are strongly encouraged to use the correct case anyway"
+          "text" : "$external:1:EN|en|urn:ietf:bcp:47|insensitive$"
         },
         "expression" : ["code"]
       }]

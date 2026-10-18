@@ -14,7 +14,7 @@
         "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
         "code" : "vs-invalid"
       }],
-      "text" : "The system http://hl7.org/fhir/test/CodeSystem/simple filter with property = concept, op = is-a has no value"
+      "text" : "$external:1:http://hl7.org/fhir/test/CodeSystem/simple|concept|is-a$"
     },
     "location" : ["ValueSet.compose.include[0].filter[0]"],
     "expression" : ["ValueSet.compose.include[0].filter[0]"]

@@ -21,7 +21,7 @@
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
             "code" : "not-found"
           }],
-          "text" : "A definition for CodeSystem 'https://codesystem.x12.org/005010/1338' could not be found, so the code cannot be validated"
+          "text" : "$external:1:https://codesystem.x12.org/005010/1338$"
         },
         "expression" : ["system"]
       }]
@@ -29,7 +29,7 @@
   },
   {
     "name" : "message",
-    "valueString" : "A definition for CodeSystem 'https://codesystem.x12.org/005010/1338' could not be found, so the code cannot be validated"
+    "valueString" : "$external:1:https://codesystem.x12.org/005010/1338$"
   },
   {
     "name" : "result",

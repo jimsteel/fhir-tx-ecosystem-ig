@@ -17,7 +17,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "invalid-data"
                 }],
-              "text" : "Coding has neither a system nor a code, so it cannot be validated. A system and a code should be provided"
+              "text" : "$external:2$"
             },
             "expression" : [
               "Coding"

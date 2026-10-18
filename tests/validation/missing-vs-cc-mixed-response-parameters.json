@@ -37,7 +37,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "this-code-not-in-vs"
                 }],
-              "text" : "The provided code '#code1' was not found in the value set 'http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0'"
+              "text" : "$external:1:code1|http://hl7.org/fhir/test/ValueSet/simple-all|5.0.0$"
             },
             "expression" : [
               "CodeableConcept.coding[0].code"
@@ -56,7 +56,7 @@
                   "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
                   "code" : "invalid-data"
                 }],
-              "text" : "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided"
+              "text" : "$external:2$"
             },
             "expression" : [
               "CodeableConcept.coding[0]"
@@ -66,7 +66,7 @@
     },
     {
       "name" : "message",
-      "valueString" : "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided"
+      "valueString" : "$external:2$"
     },
     {
       "name" : "result",
