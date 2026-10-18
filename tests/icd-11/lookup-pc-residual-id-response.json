@@ -1,0 +1,152 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "344162786/other&1088044739/916407020"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Intestinal infections due to other specified Escherichia coli [Enteroaggregative Escherichia coli] / Antibiotic resistant Escherichia coli"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "classificationCode"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1A03.Y&XN55V/MG50.2"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "344162786/other&1088044739/916407020"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "MG50.2"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Antibiotic resistant Escherichia coli"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "916407020"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/associatedWith"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "XN55V"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Enteroaggregative Escherichia coli"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "1088044739"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/infectiousAgent"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "1A03.Y"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemLabel"
+      },
+      {
+        "name" : "value",
+        "valueString" : "Intestinal infections due to other specified Escherichia coli"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "344162786/other"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

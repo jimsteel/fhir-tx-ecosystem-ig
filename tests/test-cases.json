@@ -8013,7 +8013,7 @@
     "mode" : "icd-11",
     "todo" : "capabilities and termcaps issues. Check parameters. check definitions, Code system in language, add a test for axis being plain wrong. research sub-properties on /Users/grahame/igs/tx-ecosystem-ig/tests/icd-11/lookup-pc-simple-response.json",
     "description" : "ICD-11 Test Cases. See tests/icd-11/doco.txt for what these assert and why several of them are expected to fail against the current ICD-API.",
-    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-bad-code.json"],
+    "setup" : ["icd-11/vs1.json", "icd-11/vs2.json", "icd-11/vs3.json", "icd-11/valueset-enumerated.json", "icd-11/valueset-enumerated-uri.json", "icd-11/valueset-enumerated-id.json", "icd-11/valueset-isa.json", "icd-11/valueset-isa-uri.json", "icd-11/valueset-isa-id.json", "icd-11/valueset-bad-code.json", "icd-11/valueset-icd11-all.json", "icd-11/valueset-mms-all.json", "icd-11/valueset-icf-all.json", "icd-11/valueset-foundation-all.json"],
     "tests" : [
       {
         "name" : "term-caps",
@@ -8030,10 +8030,18 @@
       },
       {
         "name" : "lookup-mms-uri",
-        "description" : "The same concept addressed by its entity URI must give the same answer",
+        "description" : "The full entity URI is not a code in the MMS (the code is the bare entity id), so it is not found",
         "operation" : "lookup",
+        "http-code" : "4xx",
         "request" : "icd-11/lookup-mms-uri-request.json",
         "response" : "icd-11/lookup-mms-uri-response.json"
+      },
+      {
+        "name" : "lookup-mms-id",
+        "description" : "The same concept addressed by its entity id (the code) must give the same answer",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-id-request.json",
+        "response" : "icd-11/lookup-mms-id-response.json"
       },
       {
         "name" : "lookup-mms-grouper",
@@ -8134,10 +8142,25 @@
       },
       {
         "name" : "lookup-pc-uri-form",
-        "description" : "The same expression in entity-URI form (spaces around the delimiter) must give the same concept",
+        "description" : "An expression written with full entity URIs (and spaces) is not a code in the MMS, so it is not found",
         "operation" : "lookup",
+        "http-code" : "4xx",
         "request" : "icd-11/lookup-pc-uri-form-request.json",
         "response" : "icd-11/lookup-pc-uri-form-response.json"
+      },
+      {
+        "name" : "lookup-pc-id-form",
+        "description" : "The same expression written with entity ids (the code form, no spaces) must give the same concept",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-id-form-request.json",
+        "response" : "icd-11/lookup-pc-id-form-response.json"
+      },
+      {
+        "name" : "lookup-pc-residual-id",
+        "description" : "An expression whose stem is a residual, written with entity ids: the /other in 344162786/other is part of the id, the next / is a cluster separator",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-residual-id-request.json",
+        "response" : "icd-11/lookup-pc-residual-id-response.json"
       },
       {
         "name" : "lookup-pc-cluster",
@@ -8159,6 +8182,20 @@
         "operation" : "lookup",
         "request" : "icd-11/lookup-pc-cluster-medication-request.json",
         "response" : "icd-11/lookup-pc-cluster-medication-response.json"
+      },
+      {
+        "name" : "lookup-pc-injury-fall",
+        "description" : "Look up an injury with laterality and type, clustered with its external cause (a fall, place and object): NA00.2&XK8G&XJ9NV/PG50&XE3HC&XE266",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-injury-fall-request.json",
+        "response" : "icd-11/lookup-pc-injury-fall-response.json"
+      },
+      {
+        "name" : "lookup-pc-pneumonia-cluster",
+        "description" : "Look up a cluster of three stem codes: CA40.00/MG51.00/1B10.0",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-pc-pneumonia-cluster-request.json",
+        "response" : "icd-11/lookup-pc-pneumonia-cluster-response.json"
       },
       {
         "name" : "lookup-pc-repeated-value",
@@ -8220,6 +8257,55 @@
         "response" : "icd-11/cs-validate-good-display-response.json"
       },
       {
+        "name" : "cs-validate-display-case",
+        "description" : "Validate a good code with the right display in the wrong case: display matching is not case sensitive, so the code is valid with no display issue",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-display-case-request.json",
+        "response" : "icd-11/cs-validate-display-case-response.json"
+      },
+      {
+        "name" : "cs-validate-coding-cc-good",
+        "description" : "A Coding with the classificationCode extension: the extension is right for the entity id: valid, and the coding is otherwise as cs-validate-id",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-coding-cc-good-request.json",
+        "response" : "icd-11/cs-validate-coding-cc-good-response.json"
+      },
+      {
+        "name" : "cs-validate-coding-cc-pc",
+        "description" : "A Coding with the classificationCode extension: the extension carries the short-code form of a postcoordinated expression given in id form: valid",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-coding-cc-pc-request.json",
+        "response" : "icd-11/cs-validate-coding-cc-pc-response.json"
+      },
+      {
+        "name" : "cs-validate-coding-cc-wrong",
+        "description" : "A Coding with the classificationCode extension: the extension has the wrong short code (1A01 is not the classification code of 257068234): an error",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-coding-cc-wrong-request.json",
+        "response" : "icd-11/cs-validate-coding-cc-wrong-response.json"
+      },
+      {
+        "name" : "cs-validate-coding-cc-no-short",
+        "description" : "A Coding with the classificationCode extension: the extension is on a grouper that has no short code (its code range is not one): an error",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-coding-cc-no-short-request.json",
+        "response" : "icd-11/cs-validate-coding-cc-no-short-response.json"
+      },
+      {
+        "name" : "cs-validate-coding-cc-short",
+        "description" : "A Coding with the classificationCode extension: the extension is on a coding whose code is already the short code - it is only used with an entity id: an error",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-coding-cc-short-request.json",
+        "response" : "icd-11/cs-validate-coding-cc-short-response.json"
+      },
+      {
+        "name" : "cs-validate-coding-cc-icf",
+        "description" : "A Coding with the classificationCode extension: the extension is on an ICF coding - it is only defined for the MMS: an error",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-coding-cc-icf-request.json",
+        "response" : "icd-11/cs-validate-coding-cc-icf-response.json"
+      },
+      {
         "name" : "cs-validate-bad-display",
         "description" : "A wrong display must come back with issues and a message, not a bare result=false",
         "operation" : "cs-validate-code",
@@ -8255,11 +8341,130 @@
         "response" : "icd-11/cs-validate-pc-response.json"
       },
       {
+        "name" : "cs-validate-pc-injury-fall",
+        "description" : "Validate an injury with laterality and type, clustered with its external cause (a fall, place and object): NA00.2&XK8G&XJ9NV/PG50&XE3HC&XE266",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-pc-injury-fall-request.json",
+        "response" : "icd-11/cs-validate-pc-injury-fall-response.json"
+      },
+      {
+        "name" : "cs-validate-pc-pneumonia-cluster",
+        "description" : "Validate a cluster of three stem codes: CA40.00/MG51.00/1B10.0",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-pc-pneumonia-cluster-request.json",
+        "response" : "icd-11/cs-validate-pc-pneumonia-cluster-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-normal",
+        "description" : "Normal form: NA00.2&XK8G&XJ9NV/PG50&XE3HC&XE266 written as entity ids - an expression already in normal form: no normalized-code, and its classificationCode is returned",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-normal-request.json",
+        "response" : "icd-11/cs-validate-nf-normal-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-qualifier-order",
+        "description" : "Normal form: NA00.2&XJ9NV&XK8G written as entity ids - qualifiers out of order: the normal form puts them in the order the root defines its axes (laterality before typeOfInjury)",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-qualifier-order-request.json",
+        "response" : "icd-11/cs-validate-nf-qualifier-order-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-same-axis",
+        "description" : "Normal form: 1A00&XN62R&XN8P1 written as entity ids - two qualifiers on the same axis (infectiousAgent): sorted by entity id, as strings",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-same-axis-request.json",
+        "response" : "icd-11/cs-validate-nf-same-axis-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-member-order",
+        "description" : "Normal form: CA40.00/1B10.0/MG51.00 written as entity ids - cluster members out of order: MG51.00 is on the associatedWith axis of the root and comes first; 1B10.0 is on no axis of the root and comes after",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-member-order-request.json",
+        "response" : "icd-11/cs-validate-nf-member-order-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-member-qualifiers",
+        "description" : "Normal form: NA00.2&XK8G&XJ9NV/PG50&XE266&XE3HC written as entity ids - the qualifiers of a cluster member out of order: sorted by the axes of the member, and they stay with the member",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-member-qualifiers-request.json",
+        "response" : "icd-11/cs-validate-nf-member-qualifiers-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-binding-a",
+        "description" : "Normal form: 1D01.0Y/1G41/1G40 written as entity ids - 1G41 and 1G40 both fit hasManifestation and hasCausingCondition: binding in id order makes the normal form independent of the order written (see -binding-b)",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-binding-a-request.json",
+        "response" : "icd-11/cs-validate-nf-binding-a-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-binding-b",
+        "description" : "Normal form: 1D01.0Y/1G40/1G41 written as entity ids - the same members as -binding-a written the other way round: the same normal form",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-binding-b-request.json",
+        "response" : "icd-11/cs-validate-nf-binding-b-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-duplicate-qualifier",
+        "description" : "Normal form: 1A00&XN8P1&XN8P1 written as entity ids - a qualifier given twice: the duplicate is deleted",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-duplicate-qualifier-request.json",
+        "response" : "icd-11/cs-validate-nf-duplicate-qualifier-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-duplicate-member",
+        "description" : "Normal form: CA40.00/MG51.00/MG51.00 written as entity ids - a cluster member given twice: the duplicate is deleted",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-duplicate-member-request.json",
+        "response" : "icd-11/cs-validate-nf-duplicate-member-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-not-duplicate",
+        "description" : "Normal form: NA00.2/PG50&XE266/PG50&XE3HC written as entity ids - the same member twice with different qualifiers is two members, not a duplicate: both are kept, ordered by their qualifiers",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-not-duplicate-request.json",
+        "response" : "icd-11/cs-validate-nf-not-duplicate-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-syntax-kept",
+        "description" : "Normal form: 1A00/XN8P1 written as entity ids - a value written as a cluster member: the normal form does not change / into &, so this is already normal",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-syntax-kept-request.json",
+        "response" : "icd-11/cs-validate-nf-syntax-kept-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-icf-dot",
+        "description" : "Normal form: d5409.qp3 written as entity ids - the ICF dot qualifier stays a dot in the normal form",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-icf-dot-request.json",
+        "response" : "icd-11/cs-validate-nf-icf-dot-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-axis-not-multiple",
+        "description" : "Normal form: NA00.2&XK8G&XK9J written as entity ids - two values on an axis that takes one (laterality on NA00.2): the normal form as usual, and a warning",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-axis-not-multiple-request.json",
+        "response" : "icd-11/cs-validate-nf-axis-not-multiple-response.json"
+      },
+      {
+        "name" : "cs-validate-nf-short-codes",
+        "description" : "Normal form: NA00.2&XJ9NV&XK8G/PG50&XE266&XE3HC - out of order and in short codes: normalized-code is the id form in normal order",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-nf-short-codes-request.json",
+        "response" : "icd-11/cs-validate-nf-short-codes-response.json"
+      },
+      {
         "name" : "cs-validate-uri",
-        "description" : "Validate a code given in entity-URI form",
+        "description" : "Validate a code given as a full entity URI: not a code in the MMS",
         "operation" : "cs-validate-code",
         "request" : "icd-11/cs-validate-uri-request.json",
         "response" : "icd-11/cs-validate-uri-response.json"
+      },
+      {
+        "name" : "cs-validate-id",
+        "description" : "Validate a code given as its entity id: the normal form, so no normalized-code, and its classificationCode is returned",
+        "operation" : "cs-validate-code",
+        "request" : "icd-11/cs-validate-id-request.json",
+        "response" : "icd-11/cs-validate-id-response.json"
       },
       {
         "name" : "expand-pcs",
@@ -8288,6 +8493,13 @@
         "operation" : "expand",
         "request" : "icd-11/expand-pcs-filter-request.json",
         "response" : "icd-11/expand-pcs-filter-response.json"
+      },
+      {
+        "name" : "expand-pcs-filter-code",
+        "description" : "A text filter matches the start of a short code as well as titles: XN8 finds XN8KD and XN8P1, which no title contains",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-filter-code-request.json",
+        "response" : "icd-11/expand-pcs-filter-code-response.json"
       },
       {
         "name" : "expand-pcs-fr",
@@ -8320,10 +8532,17 @@
       },
       {
         "name" : "expand-adhoc-enum-uri",
-        "description" : "Expand a client-supplied value set enumerating entity URIs",
+        "description" : "Expand a client-supplied value set enumerating full entity URIs: not codes in the MMS",
         "operation" : "expand",
         "request" : "icd-11/expand-adhoc-enum-uri-request.json",
         "response" : "icd-11/expand-adhoc-enum-uri-response.json"
+      },
+      {
+        "name" : "expand-adhoc-enum-id",
+        "description" : "Expand a client-supplied value set enumerating entity ids",
+        "operation" : "expand",
+        "request" : "icd-11/expand-adhoc-enum-id-request.json",
+        "response" : "icd-11/expand-adhoc-enum-id-response.json"
       },
       {
         "name" : "expand-adhoc-isa",
@@ -8334,10 +8553,18 @@
       },
       {
         "name" : "expand-adhoc-isa-uri",
-        "description" : "Expand the same is-a filter with the filter value as an entity URI - must be identical",
+        "description" : "Expand the same is-a filter with the filter value as a full entity URI: not a code in the MMS",
         "operation" : "expand",
+        "http-code" : "4xx",
         "request" : "icd-11/expand-adhoc-isa-uri-request.json",
         "response" : "icd-11/expand-adhoc-isa-uri-response.json"
+      },
+      {
+        "name" : "expand-adhoc-isa-id",
+        "description" : "Expand the same is-a filter with the filter value as an entity id - must be identical",
+        "operation" : "expand",
+        "request" : "icd-11/expand-adhoc-isa-id-request.json",
+        "response" : "icd-11/expand-adhoc-isa-id-response.json"
       },
       {
         "name" : "expand-adhoc-bad-code",
@@ -8348,10 +8575,18 @@
       },
       {
         "name" : "expand-pcs-uri-form",
-        "description" : "The WHO postcoordination scale as a client-supplied value set, filter values as entity URIs",
+        "description" : "The WHO postcoordination scale as a client-supplied value set, filter values as full entity URIs: not codes in the MMS",
         "operation" : "expand",
+        "http-code" : "4xx",
         "request" : "icd-11/expand-pcs-uri-form-request.json",
         "response" : "icd-11/expand-pcs-uri-form-response.json"
+      },
+      {
+        "name" : "expand-pcs-id-form",
+        "description" : "The WHO postcoordination scale as a client-supplied value set, filter values as entity ids",
+        "operation" : "expand",
+        "request" : "icd-11/expand-pcs-id-form-request.json",
+        "response" : "icd-11/expand-pcs-id-form-response.json"
       },
       {
         "name" : "expand-pcs-code-form",
@@ -8382,11 +8617,194 @@
         "response" : "icd-11/vs-validate-adhoc-response.json"
       },
       {
+        "name" : "vs-validate-adhoc-uri",
+        "description" : "Validate the full entity uri of 1A00 against a value set that enumerates the short code 1A00: not a code in the MMS",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-adhoc-uri-request.json",
+        "response" : "icd-11/vs-validate-adhoc-uri-response.json"
+      },
+      {
+        "name" : "vs-validate-adhoc-id",
+        "description" : "Validate the entity id of 1A00 against a value set that enumerates the short code 1A00: a member, given in its normal form, so no normalized-code, and its classificationCode is returned",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-adhoc-id-request.json",
+        "response" : "icd-11/vs-validate-adhoc-id-response.json"
+      },
+      {
         "name" : "vs-validate-adhoc-out",
         "description" : "A code that is not in a client-supplied value set",
         "operation" : "validate-code",
         "request" : "icd-11/vs-validate-adhoc-out-request.json",
         "response" : "icd-11/vs-validate-adhoc-out-response.json"
+      },
+      {
+        "name" : "vs-validate-coding-cc-good",
+        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension is right for the entity id: valid, and the coding is otherwise as cs-validate-id",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-coding-cc-good-request.json",
+        "response" : "icd-11/vs-validate-coding-cc-good-response.json"
+      },
+      {
+        "name" : "vs-validate-coding-cc-pc",
+        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension carries the short-code form of a postcoordinated expression given in id form: valid",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-coding-cc-pc-request.json",
+        "response" : "icd-11/vs-validate-coding-cc-pc-response.json"
+      },
+      {
+        "name" : "vs-validate-coding-cc-wrong",
+        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension has the wrong short code (1A01 is not the classification code of 257068234): an error",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-coding-cc-wrong-request.json",
+        "response" : "icd-11/vs-validate-coding-cc-wrong-response.json"
+      },
+      {
+        "name" : "vs-validate-coding-cc-no-short",
+        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension is on a grouper that has no short code (its code range is not one): an error",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-coding-cc-no-short-request.json",
+        "response" : "icd-11/vs-validate-coding-cc-no-short-response.json"
+      },
+      {
+        "name" : "vs-validate-coding-cc-short",
+        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension is on a coding whose code is already the short code - it is only used with an entity id: an error",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-coding-cc-short-request.json",
+        "response" : "icd-11/vs-validate-coding-cc-short-response.json"
+      },
+      {
+        "name" : "vs-validate-coding-cc-icf",
+        "description" : "The same Coding validated against a value set of all of MMS and ICF: the extension is on an ICF coding - it is only defined for the MMS: an error",
+        "operation" : "validate-code",
+        "request" : "icd-11/vs-validate-coding-cc-icf-request.json",
+        "response" : "icd-11/vs-validate-coding-cc-icf-response.json"
+      },
+      {
+        "name" : "expand-mms-total",
+        "description" : "The number of codes in MMS 2026-01 is 37,211, the count from walking the native ICD-API (include=descendant from the 28 roots)",
+        "operation" : "expand",
+        "request" : "icd-11/expand-mms-total-request.json",
+        "response" : "icd-11/expand-mms-total-response.json"
+      },
+      {
+        "name" : "expand-icf-total",
+        "description" : "The number of codes in ICF 2026-01",
+        "operation" : "expand",
+        "request" : "icd-11/expand-icf-total-request.json",
+        "response" : "icd-11/expand-icf-total-response.json"
+      },
+      {
+        "name" : "expand-foundation-total",
+        "description" : "The number of entities in the Foundation 2026-01",
+        "operation" : "expand",
+        "request" : "icd-11/expand-foundation-total-request.json",
+        "response" : "icd-11/expand-foundation-total-response.json"
+      },
+      {
+        "name" : "lookup-mms-chapter-x",
+        "description" : "A chapter root: chapter X (Extension Codes), with no parent and its 14 children in order",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-chapter-x-request.json",
+        "response" : "icd-11/lookup-mms-chapter-x-response.json"
+      },
+      {
+        "name" : "lookup-mms-window",
+        "description" : "A window (a grouper that sits beside the blocks): Sexually transmissible viral hepatitis",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-window-request.json",
+        "response" : "icd-11/lookup-mms-window-response.json"
+      },
+      {
+        "name" : "lookup-mms-large-parent",
+        "description" : "The parent with the most children (299): every child, in order, so the first and last are both checked",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-large-parent-request.json",
+        "response" : "icd-11/lookup-mms-large-parent-response.json"
+      },
+      {
+        "name" : "lookup-mms-deepest",
+        "description" : "One of the deepest concepts (depth 10, an extension code): XA3F65 Superior gastric lymph node",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-deepest-request.json",
+        "response" : "icd-11/lookup-mms-deepest-response.json"
+      },
+      {
+        "name" : "lookup-mms-residual-unspecified",
+        "description" : "An unspecified residual (1A03.Z): lookup-mms-residual covers the other kind",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-residual-unspecified-request.json",
+        "response" : "icd-11/lookup-mms-residual-unspecified-response.json"
+      },
+      {
+        "name" : "lookup-mms-pc-scales",
+        "description" : "The stem with the most postcoordination axes (2C31, eight): each axis by its schema uri, with its value set, whether it is required, and whether it takes several values",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-pc-scales-request.json",
+        "response" : "icd-11/lookup-mms-pc-scales-response.json"
+      },
+      {
+        "name" : "lookup-mms-pc-scales-required",
+        "description" : "A stem with a required postcoordination axis (1D01.0Y, hasCausingCondition): each axis with its value set, whether it is required, and whether it takes several values",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-pc-scales-required-request.json",
+        "response" : "icd-11/lookup-mms-pc-scales-required-response.json"
+      },
+      {
+        "name" : "lookup-mms-source",
+        "description" : "The link from an MMS entity back to the Foundation entity it came from",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-source-request.json",
+        "response" : "icd-11/lookup-mms-source-response.json"
+      },
+      {
+        "name" : "lookup-mms-es",
+        "description" : "Look up 1A00 in Spanish: the display and the linearization name",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-es-request.json",
+        "response" : "icd-11/lookup-mms-es-response.json"
+      },
+      {
+        "name" : "lookup-mms-text",
+        "description" : "A concept carrying seven kinds of text (6E62.1): every designation kind the import keeps",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-mms-text-request.json",
+        "response" : "icd-11/lookup-mms-text-response.json"
+      },
+      {
+        "name" : "lookup-foundation-multi-parent",
+        "description" : "A Foundation entity with nine parents (the Foundation is not a tree)",
+        "operation" : "lookup",
+        "request" : "icd-11/lookup-foundation-multi-parent-request.json",
+        "response" : "icd-11/lookup-foundation-multi-parent-response.json"
+      },
+      {
+        "name" : "lookup-mms-foundation-only",
+        "description" : "A Foundation entity that is in no linearization (Imagining) is not a code in MMS",
+        "operation" : "lookup",
+        "http-code" : "4xx",
+        "request" : "icd-11/lookup-mms-foundation-only-request.json",
+        "response" : "icd-11/lookup-mms-foundation-only-response.json"
+      },
+      {
+        "name" : "subsumes-chapter",
+        "description" : "Chapter 01 subsumes 1A00, several levels down",
+        "operation" : "subsumes",
+        "request" : "icd-11/subsumes-chapter-request.json",
+        "response" : "icd-11/subsumes-chapter-response.json"
+      },
+      {
+        "name" : "subsumes-subsumed-by",
+        "description" : "1A00 is subsumed by its block, Bacterial intestinal infections",
+        "operation" : "subsumes",
+        "request" : "icd-11/subsumes-subsumed-by-request.json",
+        "response" : "icd-11/subsumes-subsumed-by-response.json"
+      },
+      {
+        "name" : "subsumes-unrelated",
+        "description" : "1A00 and XN8P1 are in different chapters: not subsumed",
+        "operation" : "subsumes",
+        "request" : "icd-11/subsumes-unrelated-request.json",
+        "response" : "icd-11/subsumes-unrelated-response.json"
       }
     ]
   },{

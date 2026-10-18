@@ -1,0 +1,20 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "coding",
+      "valueCoding": {
+        "extension": [
+          {
+            "url": "http://id.who.int/icd/schema/extension/classificationCode",
+            "valueCode": "b28010"
+          }
+        ],
+        "system": "http://id.who.int/icd/release/11/icf",
+        "version": "2026-01",
+        "code": "299098423",
+        "display": "Pain in head and neck"
+      }
+    }
+  ]
+}

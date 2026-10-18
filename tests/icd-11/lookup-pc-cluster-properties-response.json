@@ -10,13 +10,13 @@
   },
   {
     "name" : "name",
-    "valueString" : "ICD-11 for Mortality and Morbidity Statistics"
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "code"
+      "valueCode" : "classificationCode"
     },
     {
       "name" : "value",
@@ -27,11 +27,11 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "id"
+      "valueCode" : "code"
     },
     {
       "name" : "value",
-      "valueCode" : "http://id.who.int/icd/release/11/mms/1008825613/other & http://id.who.int/icd/release/11/mms/271422288 & http://id.who.int/icd/release/11/mms/56999138 / http://id.who.int/icd/release/11/mms/355825185 & http://id.who.int/icd/release/11/mms/1710227827 & http://id.who.int/icd/release/11/mms/1457143575"
+      "valueCode" : "1008825613/other&271422288&56999138/355825185&1710227827&1457143575"
     }]
   },
   {
@@ -44,7 +44,18 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "XE5UF"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -52,7 +63,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/1710227827"
+        "valueCode" : "1710227827"
       }]
     },
     {
@@ -70,7 +81,55 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "PA71"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Unintentionally struck, kicked, or bumped by animal"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "355825185"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/associatedWith"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "XJ778"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -78,7 +137,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/56999138"
+        "valueCode" : "56999138"
       }]
     },
     {
@@ -96,7 +155,18 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "XK8G"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -104,7 +174,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/271422288"
+        "valueCode" : "271422288"
       }]
     },
     {
@@ -122,7 +192,18 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "XE4TZ"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -130,7 +211,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/1457143575"
+        "valueCode" : "1457143575"
       }]
     },
     {
@@ -148,6 +229,17 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "NC53.Y"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
         "valueCode" : "stemLabel"
       },
       {
@@ -156,19 +248,8 @@
       }]
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemUri"
-      },
-      {
-        "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/1008825613/other"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "NC53.Y"
+      "valueCode" : "1008825613/other"
     }]
   },
   {
@@ -176,6 +257,17 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "PA71"
+      }]
     },
     {
       "name" : "subproperty",
@@ -189,19 +281,8 @@
       }]
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemUri"
-      },
-      {
-        "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/355825185"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "PA71"
+      "valueCode" : "355825185"
     }]
   },
   {

@@ -1,51 +1,45 @@
 {
-  "resourceType": "Parameters",
-  "parameter": [
-    {
-      "name": "code",
-      "valueCode": "http://id.who.int/icd/entity/257068234"
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "http://id.who.int/icd/entity/257068234"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Cholera"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ICD11FOUNDATION|WHO Family of International Classifications Foundation$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
     },
     {
-      "name": "display",
-      "valueString": "Cholera"
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/257068234"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
     },
     {
-      "name": "name",
-      "valueString": "WHO Family of International Classifications Foundation"
-    },
-    {
-      "name": "property",
-      "part": [
-        {
-          "name": "code",
-          "valueCode": "id"
-        },
-        {
-          "name": "value",
-          "valueCode": "http://id.who.int/icd/entity/257068234"
-        }
-      ]
-    },
-    {
-      "name": "property",
-      "part": [
-        {
-          "name": "code",
-          "valueCode": "parent"
-        },
-        {
-          "name": "value",
-          "valueCode": "http://id.who.int/icd/entity/135352227"
-        }
-      ]
-    },
-    {
-      "name": "system",
-      "valueUri": "http://id.who.int/icd/entity"
-    },
-    {
-      "name": "version",
-      "valueString": "2026-01"
-    }
-  ]
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/135352227"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/entity"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
 }

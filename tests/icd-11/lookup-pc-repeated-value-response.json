@@ -10,17 +10,17 @@
   },
   {
     "name" : "name",
-    "valueString" : "ICD-11 for Mortality and Morbidity Statistics"
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "code"
+      "valueCode" : "classificationCode"
     },
     {
       "name" : "value",
-      "valueCode" : "PB20&XM4SL9&XM4SL9&XE729&XE266"
+      "valueCode" : "PB20&XM4SL9&XE729&XE266"
     }]
   },
   {
@@ -33,7 +33,18 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "XE729"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -41,7 +52,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/1428847289"
+        "valueCode" : "1428847289"
       }]
     },
     {
@@ -59,7 +70,18 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "XM4SL9"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -67,7 +89,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/273680488"
+        "valueCode" : "273680488"
       }]
     },
     {
@@ -85,33 +107,18 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "XM4SL9"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Oxycodone"
+        "valueCode" : "classificationCode"
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/273680488"
+        "valueCode" : "XE266"
       }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/objectOrSubstanceProducingInjury"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "postcoordinationValues"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "XE266"
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -119,7 +126,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/1670965842"
+        "valueCode" : "1670965842"
       }]
     },
     {

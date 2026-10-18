@@ -1,40 +1,19 @@
 {
-  "$optional-properties$" : ["id", "date", "publisher", "compose"],
-  "resourceType" : "ValueSet",
-  "url" : "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-isa-uri",
-  "version" : "2026-01",
-  "name" : "icd11.isa.uri",
-  "title" : "ICD-11 MMS: the same is-a filter, filter value as an entity URI",
-  "status" : "active",
-  "experimental" : false,
-  "date" : "2026-01-17",
-  "expansion" : {
-    "identifier": "$uuid$",
-    "timestamp": "$instant$",
-    "total" : 4,
-    "parameter" : [{
-      "name" : "used-codesystem",
-      "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "$optional$" : "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "FILTER_VALUE_UNKNOWN_CODE"
     }],
-    "contains" : [{
-      "system" : "http://id.who.int/icd/release/11/mms",
-      "code" : "XN7N1",
-      "display" : "Vibrio cholerae",
-      "contains" : [{
-        "system" : "http://id.who.int/icd/release/11/mms",
-        "code" : "XN62R",
-        "display" : "Vibrio cholerae O1, biovar eltor"
-      },
-      {
-        "system" : "http://id.who.int/icd/release/11/mms",
-        "code" : "XN8KD",
-        "display" : "Vibrio cholerae O139"
-      },
-      {
-        "system" : "http://id.who.int/icd/release/11/mms",
-        "code" : "XN8P1",
-        "display" : "Vibrio cholerae O1, biovar cholerae"
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "text" : "$external:1:http://id.who.int/icd/release/11/mms/824826401$",
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
       }]
-    }]
-  }
+    }
+  }]
 }

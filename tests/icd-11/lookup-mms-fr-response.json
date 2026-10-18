@@ -10,13 +10,13 @@
   },
   {
     "name" : "name",
-    "valueString" : "CIM-11 pour les statistiques de mortalité et de morbidité"
+    "valueString" : "$choice:ICD11MMS|CIM-11 pour les statistiques de mortalité et de morbidité$"
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "code"
+      "valueCode" : "classificationCode"
     },
     {
       "name" : "value",

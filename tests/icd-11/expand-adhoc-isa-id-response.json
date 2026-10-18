@@ -1,0 +1,60 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-isa-id",
+  "version" : "2026-01",
+  "name" : "icd11.isa.id",
+  "title" : "ICD-11 MMS: the same is-a filter, filter value as an entity id",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-01-17",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 4,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
+    }],
+    "contains" : [{
+      "system" : "http://id.who.int/icd/release/11/mms",
+      "code" : "824826401",
+      "display" : "Vibrio cholerae",
+      "contains" : [{
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "194483911",
+        "display" : "Vibrio cholerae O1, biovar cholerae",
+        "property" : [{
+          "code" : "classificationCode",
+          "valueCode" : "XN8P1"
+        }]
+      },
+      {
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "21927667",
+        "display" : "Vibrio cholerae O139",
+        "property" : [{
+          "code" : "classificationCode",
+          "valueCode" : "XN8KD"
+        }]
+      },
+      {
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "802386629",
+        "display" : "Vibrio cholerae O1, biovar eltor",
+        "property" : [{
+          "code" : "classificationCode",
+          "valueCode" : "XN62R"
+        }]
+      }],
+      "property" : [{
+        "code" : "classificationCode",
+        "valueCode" : "XN7N1"
+      }]
+    }],
+    "property" : [{
+      "code" : "classificationCode",
+      "uri" : "http://id.who.int/icd/schema/code"
+    }]
+  }
+}

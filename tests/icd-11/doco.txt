@@ -57,6 +57,9 @@ Currently failing, with the reason
      normalised: lookup-mms-uri asks by entity uri and gets the entity uri
      back. lookup-pc-uri-form now expects the same. The normalised short form
      is in the `code` *property*, which is what that property is for.
+     (Superseded in October 2026: the uri is no longer a code in MMS or ICF,
+     and both tests now expect an unknown-code error; see "Codes vs entity
+     ids".)
    - An expansion can assert neither `id` nor `publisher`. $expand builds a
      fresh resource and drops the id; it drops publisher too unless
      includeDefinition was asked for. (Whether publisher belongs to the
@@ -264,14 +267,17 @@ Currently failing, with the reason
 
 14. ICF postcoordination returns a property with no value.
     lookup-icf-pc
-    d5409.qp3 returns an `id` property whose `value` part has no value[x] at
+    d5409.qp3 returns an `id` property (now `code`) whose `value` part has no value[x] at
     all, which is not valid FHIR. The test asserts only that there is a value,
     since the right id form for an ICF postcoordinated expression is not
     settled. It asserted $token$ until 2026-09-02, which was wrong: $token$ is
     [0-9a-zA-Z_][0-9a-zA-Z_.\-]* and so excludes a uri, while the MMS tests
     assert the id of an expression is its parts in uri form joined by " & ".
     It now asserts $string$. ICF's dot is the same operator as MMS's `&`, so
-    the uri form spells it `&` - there is only the one uri form.
+    the code form spells it `&` - there is only the one code form. (Since
+    October 2026 the code form is entity ids with no spaces, and the dot is
+    kept as a dot - an ICF-only rule; see "Codes vs entity ids" and "The normal
+    form of an expression".)
 
 15. Errors do not say why.
     lookup-pc-invalid-axis, lookup-pc-other
@@ -329,13 +335,107 @@ and unknown value set.
 
 Open questions - deliberately not asserted
 ------------------------------------------
-* Codes vs entity URIs. The Geneva straw poll ran 7-1 for bare numeric entity
-  ids across the board (option 4) over the current hybrid (option 2, 3-5).
-  Nothing here asserts an outcome: lookup-mms-code and lookup-mms-uri assert
-  only that both forms address the same concept, and vs1.json / vs2.json carry
-  the same postcoordination scale value set in each form so the two can be
-  expanded side by side. lookup-foundation-bare pins the current behaviour so
-  that a change to it is visible.
+* Codes vs entity ids. DECIDED in October 2026 (the test-case review, then
+  the WHO meeting): in MMS and ICF the code is the bare entity id - 257068234,
+  or 1363559646/other for a residual - and the short code is its
+  classificationCode. The entity uri is always the code system url + "/" +
+  the id (http://id.who.int/icd/release/11/mms + "/" + 257068234), so the
+  prefix carries nothing and is not part of the code; nothing in these tests
+  reports the uri separately. The Foundation was not part of the decision and
+  still uses the entity uri as its code (lookup-foundation*); it will be
+  revisited.
+  Input: only the entity id and the short code are accepted. The full uri is
+  not a code in MMS or ICF and is rejected like any unknown code, in every
+  operation (lookup-mms-uri, lookup-pc-uri-form, cs-validate-uri,
+  vs-validate-adhoc-uri, expand-adhoc-enum-uri, expand-adhoc-isa-uri,
+  expand-pcs-uri-form); the -id tests are the same requests with entity ids.
+  $lookup: the `code` property (formerly `id`) is the entity id,
+  `classificationCode` (formerly `code`) the short form, absent when there is
+  none (lookup-mms-no-code). Both are type code. Every reference is an id too:
+  parent and child, `stem` (value = id, subproperty classificationCode) and
+  `postcoordinationValues` (subproperties `code` and `classificationCode`).
+  A postcoordinated expression's code is its parts as entity ids joined by
+  `&` and `/`, with no spaces - the syntax has none (257068234&194483911).
+  The `/` in a residual's id is part of the id, not a cluster separator:
+  344162786/other&1088044739/916407020 is the residual 1A03.Y with one value,
+  then a cluster member (lookup-pc-residual-id).
+  $validate-code: a short code is valid but not the normal form - it gets
+  normalized-code (the id) and an information CODE_NOT_IN_NORMAL_FORM issue;
+  an id gets neither, but gets a classificationCode output parameter (the
+  short form of whatever is in `code`). This applies to CodeSystem and
+  ValueSet validation alike, including a value set that enumerates the other
+  form (vs-validate-adhoc-id). Value sets: is-a filter values and enumerated
+  codes are ids or short codes (valueset-isa-id, valueset-enumerated-id, vs3),
+  and the postcoordination scale value sets the server builds filter on ids.
+  $expand: contains.code is the id, and every entry with a short code carries
+  it as the classificationCode property, asked for or not. A text filter also
+  matches the start of a short code (expand-pcs-filter-code).
+* The classificationCode extension. DECIDED October 2026 (provisional url
+  http://id.who.int/icd/schema/extension/classificationCode): a Coding whose
+  system is the MMS and whose code is an entity id (or the id form of an
+  expression) may carry the short code (or the short-code form of the
+  expression) as this extension's valueCode, so software can show the code
+  users know without a lookup. If present it is validated, and anything wrong
+  is an error and makes the coding invalid: a wrong value
+  (*-validate-coding-cc-wrong), the extension on a code with no short code
+  (-no-short), on a coding whose code is already the short code (-short), or
+  on a coding in any other system, ICF included (-icf). -good and -pc are the
+  correct uses. Each is tested through CodeSystem and ValueSet $validate-code
+  (the value set is valueset-icd11-all.json, all of MMS and ICF 2026-01).
+* Was the import complete? Checked against figures from the native ICD-API,
+  not from the database the server built (2026-10-18):
+  - totals: expand-mms-total (37,211, the count from walking the native API
+    from its 28 roots), expand-icf-total, expand-foundation-total. A total is
+    enough: per-chapter totals would only say where a loss was, not whether.
+  - one $lookup per kind of place, with its parent and children in full: a
+    chapter root (lookup-mms-chapter-x), a window (lookup-mms-window - most
+    windows have no children of their own; their members are Foundation
+    children placed elsewhere), the parent with the most children
+    (lookup-mms-large-parent, 299, so the first and last are both checked),
+    a deepest concept (lookup-mms-deepest), both residual kinds
+    (lookup-mms-residual, lookup-mms-residual-unspecified), the stem with the
+    most axes (lookup-mms-pc-scales), the Foundation link (lookup-mms-source),
+    a Foundation entity with nine parents (lookup-foundation-multi-parent),
+    and a Foundation entity in no linearization (lookup-mms-foundation-only).
+  - text: every imported language (lookup-mms-fr, lookup-mms-es) and every
+    designation kind (lookup-mms-text).
+  - the closure table built from that hierarchy: subsumes-chapter,
+    subsumes-subsumed-by, subsumes-unrelated.
+  Not checked, because $lookup does not expose them: exclusions and the
+  foundationChildElsewhere members of windows and blocks.
+* How an expression is read, and its normal form. DECIDED at the October 2026
+  WHO meeting. The first code is the root; every code after a `/` qualifies
+  the root (no nesting - nothing qualifies a qualifier); `&` (ICF also `.`)
+  qualifiers belong to the code they follow, the root or a `/` member. The
+  grouping matters; the order within a group, and of the `/` members, does
+  not. The normal form - which is the code - fixes an order anyway:
+  - the root first;
+  - each qualifier group in the order the qualified code defines its axes,
+    then by entity id within an axis, as strings (the ids are tails of the
+    entity uris);
+  - the `/` members the same way against the root's axes, a member on no
+    axis of the root after all those that are, each member carrying its own
+    qualifiers, normalised the same way;
+  - duplicates deleted: the same code twice in one group, or two identical
+    members. The same member with different qualifiers is not a duplicate;
+  - the syntax is kept: the normal form only reorders within groups, never
+    turns `/` into `&` or the reverse, and ICF's `.` stays `.`;
+  - which axis a value is bound to is decided in entity id order, so neither
+    the binding nor the normal form depends on the order written.
+  Several values on an axis that does not allow multiple values is still in
+  normal form, and $validate-code warns about it. Tested by the
+  cs-validate-nf-* tests, all but one written as entity ids so that
+  normalized-code appears only when the order or duplicates are wrong.
+* The axes a concept declares. DECIDED October 2026: $lookup returns one
+  postcoordinationScale property per axis, in WHO's order, its value the axis
+  schema uri (as in postcoordinationValues), with subproperties valueSet (the
+  canonical of the scale ValueSet), requiredPostcoordination and
+  allowMultipleValues (AllowAlways | NotAllowed | AllowedExceptFromSameBlock).
+  Subproperties because the axis repeats: nothing else ties a flag to its axis.
+  This is the WHO server's shape, with two type corrections: valueSet is
+  valueString, not valueUri, and allowMultipleValues is valueCode, not
+  valueString - property and subproperty value[x] do not include uri
+  (lookup-mms-pc-scales, lookup-mms-pc-scales-required).
 * "Other" postcoordination - whether a value outside the stem's declared scales
   should validate (lookup-pc-other). Left open in Geneva. The test currently
   asserts the error, but asserts that the error explains itself.

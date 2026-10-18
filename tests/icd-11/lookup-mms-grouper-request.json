@@ -15,11 +15,11 @@
     },
     {
       "name": "property",
-      "valueCode": "id"
+      "valueCode": "code"
     },
     {
       "name": "property",
-      "valueCode": "code"
+      "valueCode": "classificationCode"
     }
   ]
 }

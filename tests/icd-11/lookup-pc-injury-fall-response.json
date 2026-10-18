@@ -1,0 +1,296 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "NA00.2&XK8G&XJ9NV/PG50&XE3HC&XE266"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Superficial injury of ear [Left] [Contusion] / Fall or jump of undetermined intent on the same level or from less than 1 metre [Stairs, steps] [Home]"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "classificationCode"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "NA00.2&XK8G&XJ9NV/PG50&XE3HC&XE266"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "2110065613&271422288&2040998541/1847586521&1021954298&1670965842"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "PG50"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Fall or jump of undetermined intent on the same level or from less than 1 metre"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "1847586521"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/associatedWith"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "XK8G"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Left"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "271422288"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/laterality"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "XE3HC"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Stairs, steps"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "1021954298"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/objectOrSubstanceProducingInjury"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "XE266"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Home"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "1670965842"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/placeOfOccurrence"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "XJ9NV"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Contusion"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "2040998541"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/typeOfInjury"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "PG50"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemLabel"
+      },
+      {
+        "name" : "value",
+        "valueString" : "Fall or jump of undetermined intent on the same level or from less than 1 metre"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1847586521"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "NA00.2"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemLabel"
+      },
+      {
+        "name" : "value",
+        "valueString" : "Superficial injury of ear"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "2110065613"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

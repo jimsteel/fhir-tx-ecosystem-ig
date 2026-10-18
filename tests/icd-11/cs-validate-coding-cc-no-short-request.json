@@ -1,0 +1,20 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "coding",
+      "valueCoding": {
+        "extension": [
+          {
+            "url": "http://id.who.int/icd/schema/extension/classificationCode",
+            "valueCode": "1A00-1A0Z"
+          }
+        ],
+        "system": "http://id.who.int/icd/release/11/mms",
+        "version": "2026-01",
+        "code": "135352227",
+        "display": "Bacterial intestinal infections"
+      }
+    }
+  ]
+}

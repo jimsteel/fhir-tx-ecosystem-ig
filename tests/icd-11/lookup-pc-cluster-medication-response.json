@@ -10,13 +10,13 @@
   },
   {
     "name" : "name",
-    "valueString" : "ICD-11 for Mortality and Morbidity Statistics"
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "code"
+      "valueCode" : "classificationCode"
     },
     {
       "name" : "value",
@@ -27,11 +27,11 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "id"
+      "valueCode" : "code"
     },
     {
       "name" : "value",
-      "valueCode" : "http://id.who.int/icd/release/11/mms/426194513 & http://id.who.int/icd/release/11/mms/534456613 / http://id.who.int/icd/release/11/mms/799356470 & http://id.who.int/icd/release/11/mms/33615934"
+      "valueCode" : "426194513&534456613/799356470&33615934"
     }]
   },
   {
@@ -44,7 +44,55 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "PB28"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Unintentional exposure to or harmful effects of other or unspecified drug, medicament or biological substance"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "799356470"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/associatedWith"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "XM3973"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -52,7 +100,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/534456613"
+        "valueCode" : "534456613"
       }]
     },
     {
@@ -70,7 +118,18 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "XM7YD4"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -78,7 +137,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/33615934"
+        "valueCode" : "33615934"
       }]
     },
     {
@@ -91,6 +150,17 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "DA42.83"
+      }]
     },
     {
       "name" : "subproperty",
@@ -104,19 +174,8 @@
       }]
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemUri"
-      },
-      {
-        "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/426194513"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "DA42.83"
+      "valueCode" : "426194513"
     }]
   },
   {
@@ -124,6 +183,17 @@
     "part" : [{
       "name" : "code",
       "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "PB28"
+      }]
     },
     {
       "name" : "subproperty",
@@ -137,19 +207,8 @@
       }]
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemUri"
-      },
-      {
-        "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/799356470"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "PB28"
+      "valueCode" : "799356470"
     }]
   },
   {

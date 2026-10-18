@@ -350,5 +350,40 @@
   },
   "version/coding-vnn-vsbb-response-parameters.json" : {
     "1" : "A definition for the value Set 'http://hl7.org/fhir/test/ValueSet/simple-all|2.4.0' could not be found"
+  },
+  "icd-11/cs-validate-coding-cc-icf-response.json" : {
+    "1" : "The classificationCode extension is only defined for codings with the system http://id.who.int/icd/release/11/mms, not http://id.who.int/icd/release/11/icf",
+    "2" : "The classificationCode extension is only defined for codings with the system http://id.who.int/icd/release/11/mms, not http://id.who.int/icd/release/11/icf"
+  },
+  "icd-11/cs-validate-coding-cc-no-short-response.json" : {
+    "1" : "The classificationCode extension says '1A00-1A0Z', but '135352227' has no classification code",
+    "2" : "The classificationCode extension says '1A00-1A0Z', but '135352227' has no classification code"
+  },
+  "icd-11/cs-validate-coding-cc-short-response.json" : {
+    "1" : "The classificationCode extension is only used when the code is an entity id, and '1A00' is not one (the entity id is '257068234')",
+    "2" : "The classificationCode extension is only used when the code is an entity id, and '1A00' is not one (the entity id is '257068234')"
+  },
+  "icd-11/cs-validate-coding-cc-wrong-response.json" : {
+    "1" : "The classificationCode extension says '1A01', but the classification code of '257068234' is '1A00'",
+    "2" : "The classificationCode extension says '1A01', but the classification code of '257068234' is '1A00'"
+  },
+  "icd-11/vs-validate-coding-cc-icf-response.json" : {
+    "1" : "The classificationCode extension is only defined for codings with the system http://id.who.int/icd/release/11/mms, not http://id.who.int/icd/release/11/icf",
+    "2" : "The classificationCode extension is only defined for codings with the system http://id.who.int/icd/release/11/mms, not http://id.who.int/icd/release/11/icf"
+  },
+  "icd-11/vs-validate-coding-cc-no-short-response.json" : {
+    "1" : "The classificationCode extension says '1A00-1A0Z', but '135352227' has no classification code",
+    "2" : "The classificationCode extension says '1A00-1A0Z', but '135352227' has no classification code"
+  },
+  "icd-11/vs-validate-coding-cc-short-response.json" : {
+    "1" : "The classificationCode extension is only used when the code is an entity id, and '1A00' is not one (the entity id is '257068234')",
+    "2" : "The classificationCode extension is only used when the code is an entity id, and '1A00' is not one (the entity id is '257068234')"
+  },
+  "icd-11/vs-validate-coding-cc-wrong-response.json" : {
+    "1" : "The classificationCode extension says '1A01', but the classification code of '257068234' is '1A00'",
+    "2" : "The classificationCode extension says '1A01', but the classification code of '257068234' is '1A00'"
+  },
+  "icd-11/cs-validate-nf-axis-not-multiple-response.json" : {
+    "1" : "'2110065613' takes one value on its laterality axis, but has several: 271422288, 627678743"
   }
 }

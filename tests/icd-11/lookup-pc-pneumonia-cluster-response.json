@@ -1,0 +1,148 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "CA40.00/MG51.00/1B10.0"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Pneumonia due to Chlamydophila pneumoniae / Methicillin resistant Staphylococcus aureus / Respiratory tuberculosis, confirmed"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "classificationCode"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "CA40.00/MG51.00/1B10.0"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1258650683/1710270895/983550510"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordinationValues"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "MG51.00"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
+      },
+      {
+        "name" : "description",
+        "valueString" : "Methicillin resistant Staphylococcus aureus"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "1710270895"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/schema/associatedWith"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "CA40.00"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemLabel"
+      },
+      {
+        "name" : "value",
+        "valueString" : "Pneumonia due to Chlamydophila pneumoniae"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1258650683"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "stem"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "1B10.0"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "stemLabel"
+      },
+      {
+        "name" : "value",
+        "valueString" : "Respiratory tuberculosis, confirmed"
+      }]
+    },
+    {
+      "name" : "value",
+      "valueCode" : "983550510"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

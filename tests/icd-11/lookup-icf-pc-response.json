@@ -10,13 +10,13 @@
   },
   {
     "name" : "name",
-    "valueString" : "International Classification of Functioning, Disability and Health (ICF)"
+    "valueString" : "$choice:ICD11ICF|International Classification of Functioning, Disability and Health (ICF)$"
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "code"
+      "valueCode" : "classificationCode"
     },
     {
       "name" : "value",
@@ -27,11 +27,11 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "id"
+      "valueCode" : "code"
     },
     {
       "name" : "value",
-      "valueCode" : "http://id.who.int/icd/release/11/icf/1860600370/unspecified & http://id.who.int/icd/release/11/icf/992904195"
+      "valueCode" : "1860600370/unspecified.992904195"
     }]
   },
   {
@@ -44,7 +44,18 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
         "valueCode" : "qp3"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "code"
       },
       {
         "name" : "description",
@@ -52,7 +63,7 @@
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/icf/992904195"
+        "valueCode" : "992904195"
       }]
     },
     {
@@ -70,6 +81,17 @@
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
+        "valueCode" : "classificationCode"
+      },
+      {
+        "name" : "value",
+        "valueCode" : "d5409"
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
         "valueCode" : "stemLabel"
       },
       {
@@ -78,19 +100,8 @@
       }]
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemUri"
-      },
-      {
-        "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/icf/1860600370/unspecified"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "d5409"
+      "valueCode" : "1860600370/unspecified"
     }]
   },
   {

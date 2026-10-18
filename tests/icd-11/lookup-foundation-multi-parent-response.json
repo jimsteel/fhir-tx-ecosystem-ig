@@ -1,0 +1,133 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "http://id.who.int/icd/entity/383104340"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Injury or harm arising from surgical or medical care, not elsewhere classified"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ICD11FOUNDATION|WHO Family of International Classifications Foundation$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/383104340"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/1369041370"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/1510094736"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/1654881561"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/1915134721"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/1925333068"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/2031646451"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/435227771"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/566574133"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "parent"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "http://id.who.int/icd/entity/762797224"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/entity"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}
