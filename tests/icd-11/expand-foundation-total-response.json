@@ -1,0 +1,24 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-foundation-all",
+  "version" : "2026-01",
+  "name" : "icd11.foundation.all",
+  "title" : "ICD-11 Foundation: every entity",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-01-17",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 71565,
+    "parameter" : [{
+      "name" : "count",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://id.who.int/icd/entity|2026-01"
+    }]
+  }
+}

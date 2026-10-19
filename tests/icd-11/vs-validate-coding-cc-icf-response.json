@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "classificationCode",
+    "valueCode" : "b28010"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "299098423"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Pain in head and neck"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/icf"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

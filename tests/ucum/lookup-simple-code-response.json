@@ -1,11 +1,6 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "$optional$" : true,
-    "name" : "abstract",
-    "valueBoolean" : false
-  },
-  {
     "name" : "code",
     "valueCode" : "mg/dL"
   },
@@ -75,7 +70,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "UCUM"
+    "valueString" : "$choice:UCUM|Unified Code for Units of Measure (UCUM)$"
   },
   {
     "name" : "property",

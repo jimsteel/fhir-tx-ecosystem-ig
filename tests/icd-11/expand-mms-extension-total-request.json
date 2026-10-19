@@ -1,0 +1,13 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-mms-extension"
+    },
+    {
+      "name": "count",
+      "valueInteger": 0
+    }
+  ]
+}

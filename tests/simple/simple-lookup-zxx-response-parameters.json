@@ -1,0 +1,48 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "abstract",
+    "valueBoolean" : true
+  },
+  {
+    "$optional$" : true,
+    "name" : "code",
+    "valueCode" : "code2"
+  },
+  {
+    "name" : "definition",
+    "valueString" : "My second code, with children"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Display 2"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:SimpleTestCodeSystem|Simple Test Code System$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "notSelectable"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "$optional$" : true,
+    "name" : "system",
+    "valueUri" : "http://hl7.org/fhir/test/CodeSystem/simple"
+  },
+  {
+    "name" : "version",
+    "valueString" : "0.1.0"
+  },
+  {
+    "name" : "warning",
+    "valueString" : "$external:1:zxx$"
+  }]
+}

@@ -2,11 +2,6 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "$optional$" : true,
-    "name" : "abstract",
-    "valueBoolean" : false
-  },
-  {
-    "$optional$" : true,
     "name" : "code",
     "valueCode" : "45772705"
   },
@@ -37,7 +32,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "OMOP Concepts"
+    "valueString" : "$choice:OMOP|OMOP_Concepts|OMOP Unified Vocabularies$"
   },
   {
     "name" : "property",

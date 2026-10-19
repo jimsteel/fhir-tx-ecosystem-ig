@@ -10,13 +10,13 @@
   },
   {
     "name" : "name",
-    "valueString" : "ICD-11 for Mortality and Morbidity Statistics"
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "code"
+      "valueCode" : "classificationCode"
     },
     {
       "name" : "value",
@@ -27,63 +27,462 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "id"
+      "valueCode" : "code"
     },
     {
       "name" : "value",
-      "valueCode" : "http://id.who.int/icd/release/11/mms/426194513 & http://id.who.int/icd/release/11/mms/534456613 / http://id.who.int/icd/release/11/mms/799356470 & http://id.who.int/icd/release/11/mms/33615934"
+      "valueCode" : "426194513&534456613/799356470&33615934"
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "XM3973"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Agents primarily affecting the cardiovascular system"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/534456613"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/medication"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "associatedWith",
+          "display" : "Associated with"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowAlways"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "medication",
+              "display" : "Medication"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "value"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/release/11/mms",
+              "code" : "33615934",
+              "display" : "Drugs used in addictive disorders"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/799356470/postcoordinationScale/medication"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "AllowedExceptFromSameBlock"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "placeOfOccurrence",
+              "display" : "Place of occurrence"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/799356470/postcoordinationScale/placeOfOccurrence"
+          }]
+        }]
+      },
+      {
+        "name" : "subproperty",
+        "part" : [{
+          "name" : "code",
+          "valueCode" : "postcoordination"
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "allowMultipleValues"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+              "code" : "NotAllowed"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "axis"
+          },
+          {
+            "name" : "value",
+            "valueCoding" : {
+              "system" : "http://id.who.int/icd/schema",
+              "code" : "activityWhenInjured",
+              "display" : "Activity when injured"
+            }
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "required"
+          },
+          {
+            "name" : "value",
+            "valueBoolean" : false
+          }]
+        },
+        {
+          "name" : "subproperty",
+          "part" : [{
+            "name" : "code",
+            "valueCode" : "valueSet"
+          },
+          {
+            "name" : "value",
+            "valueString" : "http://id.who.int/icd/release/11/mms/799356470/postcoordinationScale/activityWhenInjured"
+          }]
+        }]
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "799356470",
+          "display" : "Unintentional exposure to or harmful effects of other or unspecified drug, medicament or biological substance"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/426194513/postcoordinationScale/associatedWith"
+      }]
     }]
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "postcoordinationValues"
+      "valueCode" : "postcoordination"
     },
     {
       "name" : "subproperty",
       "part" : [{
         "name" : "code",
-        "valueCode" : "XM7YD4"
-      },
-      {
-        "name" : "description",
-        "valueString" : "Drugs used in addictive disorders"
+        "valueCode" : "allowMultipleValues"
       },
       {
         "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/33615934"
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
       }]
     },
     {
-      "name" : "value",
-      "valueCode" : "http://id.who.int/icd/schema/medication"
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "hasManifestation",
+          "display" : "Has manifestation"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/426194513/postcoordinationScale/hasManifestation"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "AllowAlways"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "medication",
+          "display" : "Medication"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "value"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/release/11/mms",
+          "code" : "534456613",
+          "display" : "Agents primarily affecting the cardiovascular system"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/426194513/postcoordinationScale/medication"
+      }]
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "postcoordination"
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "allowMultipleValues"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema/allowMultipleValues",
+          "code" : "NotAllowed"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "axis"
+      },
+      {
+        "name" : "value",
+        "valueCoding" : {
+          "system" : "http://id.who.int/icd/schema",
+          "code" : "course",
+          "display" : "Course"
+        }
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "required"
+      },
+      {
+        "name" : "value",
+        "valueBoolean" : false
+      }]
+    },
+    {
+      "name" : "subproperty",
+      "part" : [{
+        "name" : "code",
+        "valueCode" : "valueSet"
+      },
+      {
+        "name" : "value",
+        "valueString" : "http://id.who.int/icd/release/11/mms/426194513/postcoordinationScale/course"
+      }]
     }]
   },
   {
@@ -93,63 +492,12 @@
       "valueCode" : "stem"
     },
     {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Drug-induced gastritis"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemUri"
-      },
-      {
-        "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/426194513"
-      }]
-    },
-    {
       "name" : "value",
-      "valueCode" : "DA42.83"
-    }]
-  },
-  {
-    "name" : "property",
-    "part" : [{
-      "name" : "code",
-      "valueCode" : "stem"
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemLabel"
-      },
-      {
-        "name" : "value",
-        "valueString" : "Unintentional exposure to or harmful effects of other or unspecified drug, medicament or biological substance"
-      }]
-    },
-    {
-      "name" : "subproperty",
-      "part" : [{
-        "name" : "code",
-        "valueCode" : "stemUri"
-      },
-      {
-        "name" : "value",
-        "valueUri" : "http://id.who.int/icd/release/11/mms/799356470"
-      }]
-    },
-    {
-      "name" : "value",
-      "valueCode" : "PB28"
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/release/11/mms",
+        "code" : "426194513",
+        "display" : "Drug-induced gastritis"
+      }
     }]
   },
   {

@@ -15,11 +15,15 @@
     },
     {
       "name": "property",
-      "valueCode": "id"
+      "valueCode": "code"
     },
     {
       "name": "property",
       "valueCode": "parent"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

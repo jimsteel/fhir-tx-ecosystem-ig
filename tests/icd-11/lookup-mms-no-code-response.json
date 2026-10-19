@@ -1,8 +1,12 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
+    "name" : "abstract",
+    "valueBoolean" : true
+  },
+  {
     "name" : "code",
-    "valueCode" : "http://id.who.int/icd/release/11/mms/135352227"
+    "valueCode" : "135352227"
   },
   {
     "name" : "display",
@@ -10,17 +14,17 @@
   },
   {
     "name" : "name",
-    "valueString" : "ICD-11 for Mortality and Morbidity Statistics"
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "id"
+      "valueCode" : "code"
     },
     {
       "name" : "value",
-      "valueCode" : "http://id.who.int/icd/release/11/mms/135352227"
+      "valueCode" : "135352227"
     }]
   },
   {

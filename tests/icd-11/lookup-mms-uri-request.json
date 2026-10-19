@@ -15,15 +15,19 @@
     },
     {
       "name": "property",
-      "valueCode": "id"
-    },
-    {
-      "name": "property",
       "valueCode": "code"
     },
     {
       "name": "property",
+      "valueCode": "classificationCode"
+    },
+    {
+      "name": "property",
       "valueCode": "parent"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

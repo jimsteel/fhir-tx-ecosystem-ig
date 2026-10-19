@@ -1,0 +1,54 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "classificationCode",
+    "valueCode" : "1A00&XN8P1"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "257068234&194483911&194483911"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Cholera [Vibrio cholerae O1, biovar cholerae] [Vibrio cholerae O1, biovar cholerae]"
+  },
+  {
+    "name" : "issues",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "CODE_NOT_IN_NORMAL_FORM"
+        }],
+        "severity" : "information",
+        "code" : "business-rule",
+        "details" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+            "code" : "code-rule"
+          }],
+          "text" : "The code '257068234&194483911&194483911' is valid, but it is not the normal form for the code system 'http://id.who.int/icd/release/11/mms|2026-01'; the normal form is '257068234&194483911'"
+        },
+        "expression" : ["code"]
+      }]
+    }
+  },
+  {
+    "name" : "normalized-code",
+    "valueCode" : "257068234&194483911"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

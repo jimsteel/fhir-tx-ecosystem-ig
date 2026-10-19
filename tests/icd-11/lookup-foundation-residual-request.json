@@ -12,6 +12,10 @@
     {
       "name": "code",
       "valueCode": "http://id.who.int/icd/entity/1363559646/other"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

@@ -10,13 +10,13 @@
   },
   {
     "name" : "name",
-    "valueString" : "International Classification of Functioning, Disability and Health (ICF)"
+    "valueString" : "$choice:ICD11ICF|International Classification of Functioning, Disability and Health (ICF)$"
   },
   {
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "code"
+      "valueCode" : "classificationCode"
     },
     {
       "name" : "value",
@@ -27,11 +27,11 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
-      "valueCode" : "id"
+      "valueCode" : "code"
     },
     {
       "name" : "value",
-      "valueCode" : "http://id.who.int/icd/release/11/icf/1363559646/other"
+      "valueCode" : "1363559646/other"
     }]
   },
   {

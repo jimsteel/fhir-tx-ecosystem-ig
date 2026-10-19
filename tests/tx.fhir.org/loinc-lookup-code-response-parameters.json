@@ -2,11 +2,6 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "$optional$" : true,
-    "name" : "abstract",
-    "valueBoolean" : false
-  },
-  {
-    "$optional$" : true,
     "name" : "code",
     "valueCode" : "2339-0"
   },
@@ -318,7 +313,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "LOINC"
+    "valueString" : "$choice:LOINC|Logical Observation Identifier Names and Codes (LOINC)$"
   },
   {
     "name" : "property",

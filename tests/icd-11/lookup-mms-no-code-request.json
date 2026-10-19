@@ -11,11 +11,7 @@
     },
     {
       "name": "code",
-      "valueCode": "http://id.who.int/icd/release/11/mms/135352227"
-    },
-    {
-      "name": "property",
-      "valueCode": "id"
+      "valueCode": "135352227"
     },
     {
       "name": "property",
@@ -23,7 +19,15 @@
     },
     {
       "name": "property",
+      "valueCode": "classificationCode"
+    },
+    {
+      "name": "property",
       "valueCode": "notSelectable"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

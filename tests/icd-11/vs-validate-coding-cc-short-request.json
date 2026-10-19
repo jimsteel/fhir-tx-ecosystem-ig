@@ -1,0 +1,24 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "url",
+      "valueUri": "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-mms-icf-all"
+    },
+    {
+      "name": "coding",
+      "valueCoding": {
+        "extension": [
+          {
+            "url": "http://id.who.int/icd/schema/extension/classificationCode",
+            "valueCode": "1A00"
+          }
+        ],
+        "system": "http://id.who.int/icd/release/11/mms",
+        "version": "2026-01",
+        "code": "1A00",
+        "display": "Cholera"
+      }
+    }
+  ]
+}

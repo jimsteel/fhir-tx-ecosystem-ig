@@ -8,6 +8,10 @@
     {
       "name": "code",
       "valueCode": "1A00"
+    },
+    {
+      "name": "post-coordination-metadata",
+      "valueBoolean": true
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "classificationCode",
+    "valueCode" : "1D01.0Y/1G40/1G41"
+  },
+  {
+    "name" : "code",
+    "valueCode" : "684930313/other/622600769/1683090852"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Other specified bacterial meningitis / Sepsis without septic shock / Sepsis with septic shock"
+  },
+  {
+    "name" : "result",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

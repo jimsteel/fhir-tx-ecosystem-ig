@@ -5,39 +5,37 @@
     "valueCode" : "http://id.who.int/icd/release/11/mms/257068234"
   },
   {
-    "name" : "display",
-    "valueString" : "Cholera"
-  },
-  {
     "name" : "issues",
     "resource" : {
+      "$optional-properties$" : ["location"],
       "resourceType" : "OperationOutcome",
       "issue" : [{
         "extension" : [{
           "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "CODE_NOT_IN_NORMAL_FORM"
-        }],
-        "severity" : "information",
-        "code" : "business-rule",
+          "valueString" : "Unknown_Code_in_Version"
+         }],
+        "severity" : "error",
+        "code" : "code-invalid",
         "details" : {
           "coding" : [{
             "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code" : "code-rule"
+            "code" : "invalid-code"
           }],
-          "text" : "The code 'http://id.who.int/icd/release/11/mms/257068234' is valid, but it is not the normal form for the code system 'http://id.who.int/icd/release/11/mms|2026-01'; the normal form is '1A00'"
+          "text" : "$external:1:http://id.who.int/icd/release/11/mms/257068234$"
         },
+        "location" : ["code"],
         "expression" : ["code"]
       }]
     }
   },
   {
-    "name" : "normalized-code",
-    "valueCode" : "1A00"
+    "name" : "message",
+    "valueString" : "$external:2:http://id.who.int/icd/release/11/mms/257068234$"
   },
   {
     "name" : "result",
-    "valueBoolean" : true
+    "valueBoolean" : false
   },
   {
     "name" : "system",

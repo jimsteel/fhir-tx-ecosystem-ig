@@ -1,0 +1,225 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "abstract",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "code",
+    "valueCode" : "979408586"
+  },
+  {
+    "name" : "display",
+    "valueString" : "Extension Codes"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1004338415"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1154280071"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1321407960"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1413523709"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1597357976"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1693181075"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1897222875"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "1948746454"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "411368752"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "614922797"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "69327534"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "71556738"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "815889539"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "child"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "870996432"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "classificationCode"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "X"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "classKind"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "chapter"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "979408586"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "notSelectable"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

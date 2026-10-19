@@ -1,11 +1,6 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "$optional$" : true,
-    "name" : "abstract",
-    "valueBoolean" : false
-  },
-  {
     "name" : "code",
     "valueCode" : "367430006:{405813007=(85562004:272741003=24028007)}"
   },
@@ -36,7 +31,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "SNOMED CT Test Edition"
+    "valueString" : "$choice:SNOMED_CT|SNOMED CT|SNOMED CT Test Edition$"
   },
   {
     "name" : "property",

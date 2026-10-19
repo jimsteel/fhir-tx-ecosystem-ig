@@ -9,27 +9,43 @@
   "experimental" : false,
   "date" : "2026-01-17",
   "expansion" : {
-    "identifier": "$uuid$",
-    "timestamp": "$instant$",
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
     "total" : 3,
     "parameter" : [{
       "name" : "used-codesystem",
       "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
     }],
+    "property" : [{
+      "code" : "classificationCode",
+      "uri" : "http://id.who.int/icd/schema/code"
+    }],
     "contains" : [{
       "system" : "http://id.who.int/icd/release/11/mms",
-      "code" : "1A00",
-      "display" : "Cholera"
+      "code" : "2080365623",
+      "display" : "Intestinal infections due to Shigella",
+      "property" : [{
+        "code" : "classificationCode",
+        "valueCode" : "1A02"
+      }]
     },
     {
       "system" : "http://id.who.int/icd/release/11/mms",
-      "code" : "1A01",
-      "display" : "Intestinal infection due to other Vibrio"
+      "code" : "257068234",
+      "display" : "Cholera",
+      "property" : [{
+        "code" : "classificationCode",
+        "valueCode" : "1A00"
+      }]
     },
     {
       "system" : "http://id.who.int/icd/release/11/mms",
-      "code" : "1A02",
-      "display" : "Intestinal infections due to Shigella"
+      "code" : "416025325",
+      "display" : "Intestinal infection due to other Vibrio",
+      "property" : [{
+        "code" : "classificationCode",
+        "valueCode" : "1A01"
+      }]
     }]
   }
 }

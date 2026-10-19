@@ -1,0 +1,20 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "coding",
+      "valueCoding": {
+        "extension": [
+          {
+            "url": "http://id.who.int/icd/schema/extension/classificationCode",
+            "valueCode": "1A00"
+          }
+        ],
+        "system": "http://id.who.int/icd/entity",
+        "version": "2026-01",
+        "code": "http://id.who.int/icd/entity/257068234",
+        "display": "Cholera"
+      }
+    }
+  ]
+}

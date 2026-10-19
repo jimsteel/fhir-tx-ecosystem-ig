@@ -1,0 +1,664 @@
+{
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "code",
+    "valueCode" : "880462195"
+  },
+  {
+    "name" : "definition",
+    "valueString" : "A syndrome characterised by the presence of prominent manic symptoms such as elevated, euphoric, irritable, or expansive mood states, rapid changes among different mood states (i.e., mood lability), or increased energy or activity that is judged to be a direct pathophysiological consequence of a health condition not classified under mental and behavioural disorders based on evidence from the history, physical examination, or laboratory findings."
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Secondary mood syndrome, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "longDefinition"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "A syndrome characterized by the presence of prominent manic symptoms such as elevated, euphoric, irritable, or expansive mood states, rapid changes among different mood states (i.e., mood lability), or increased energy or activity that is judged to be a direct pathophysiological consequence of a health condition not classified under mental and behavioural disorders based on evidence from the history, physical examination, or laboratory findings. The symptoms are not accounted for by delirium or by another mental and behavioural disorder, and are not a psychologically mediated response to a severe medical condition (e.g., depressive symptoms in response to a life-threatening diagnosis). This category should be used in addition to the diagnosis for the presumed underlying disorder or disease when the mood symptoms are sufficiently severe to warrant specific clinical attention."
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "fullySpecifiedName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "diagnosticCriteria"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "!markdown\n## Essential (Required) Features:\n\n- All diagnostic requirements for Secondary Mood Syndrome are met. \n- The presentation is characterized by prominent manic symptoms without prominent depressive symptoms.\n\n## Boundary with other disorders and normality:\n\n- ***Boundary with Mood Disorders:*** Determining whether mood symptoms are due to a medical condition as opposed to manifestations of a primary mental disorder is often difficult because the clinical presentations may be similar. Establishing the presence of a potentially explanatory medical condition that can cause mood symptoms and the temporal relationship between the medical condition and the mood symptoms is critical in diagnosing Secondary Mood Syndrome. If the clinical features are atypical for Mood Disorders (e.g., atypical age of onset or course or absence of family history), Secondary Mood Syndrome is more likely. \n- ***Boundary with mood symptoms that are precipitated by the stress of being diagnosed with a medical condition:*** Depending on the nature of the medical condition (e.g., a life-threatening type of cancer, a potentially fatal infection) or its onset (e.g., a heart attack, a stroke, a severe injury), mood symptoms can occur as a part of a psychological response to being diagnosed and/or having to cope with a severe medical condition¬. In the absence of evidence of a physiological link between the medical condition and the mood symptoms, the appropriate mental disorder (e.g., Adjustment Disorder, a Mood Disorder) rather than Secondary Mood Syndrome should be diagnosed. \n- ***Boundary with Delirium Due to Disease Classified Elsewhere:*** Mood symptoms can occur in the context of Delirium Due to Disease Classified Elsewhere. Delirium is characterized by disturbed attention (i.e., reduced ability to direct, focus, sustain, and shift attention) and awareness (i.e., reduced orientation to the environment) that develops over a short period of time and tends to fluctuate during the course of a day, accompanied by other cognitive impairment such as memory deficit, disorientation, or impairment in language, visuospatial ability, or perception. In contrast, mood symptoms in Secondary Mood Syndrome occur in the absence of disturbed attention or severe cognitive impairment. If mood symptoms are judged to be better explained by Delirium Due to Disease Classified Elsewhere, an additional diagnosis of Secondary Mood Syndrome is not warranted.\n- ***Boundary with Dementia:*** Mood symptoms can occur in the context of Dementia, which is characterized by a decline from a previous level of cognitive functioning with impairment in two or more cognitive domains (such as memory, executive functions, attention, language, social cognition and judgment, psychomotor speed, visuoperceptual or visuospatial abilities). In contrast, Secondary Mood Syndrome is not accompanied by marked cognitive impairment. The presence of mood symptoms in the context of Dementia can be recorded using the Behavioural or Psychological Disturbances in Dementia qualifier for Mood Symptoms in Dementia. If the mood symptoms are judged to be due to the same medical condition as is causing the dementia, an additional diagnosis of Secondary Mood Syndrome is not warranted.\n- ***Boundary with Secondary Catatonia Syndrome:*** Certain symptoms of Secondary Catatonia Syndrome are similar to those observed during Manic, Depressive, or Mixed Episodes (e.g., stupor or mutism in Secondary Catatonia is similar to psychomotor retardation in Depressive Episode; agitation or impulsivity in Secondary Catatonia Syndrome is similar to increased activity and impulsive reckless behaviour in Manic Episode). In Secondary Catatonia Syndrome, these symptoms occur in conjunction with other catatonic symptoms (e.g., abnormal psychomotor activity such as mannerisms, waxy flexibility or posturing), which are not characteristic of Secondary Mood Syndrome.  \n- ***Boundary with mood symptoms caused by substances or medications, including withdrawal effects:*** When establishing a diagnosis of Secondary Mood Syndrome, it is important to rule out the possibility that a medication or substance is causing the mood symptoms instead of or in addition to the etiological medical condition. This involves first considering whether any of the medications being used to treat the medical condition are known to cause depressive or manic symptoms (e.g., steroids or alpha-interferon) at the dose and duration at which it has been administered. Second, a temporal relationship between the medication use and the onset of the mood symptoms should be established (i.e., the mood symptoms began after administration of the medication and/or remitted once the medication was discontinued). The same reasoning applies to individuals with a medical condition and mood symptoms who are also using a psychoactive substance known to cause mood symptoms, either in the context of intoxication or withdrawal (e.g., euphoric mood due to Stimulant Intoxication, dysphoric mood due to Cocaine Withdrawal). In such cases, if the intensity or duration of the mood symptoms is substantially in excess of mood disturbances that are characteristic of the substance-specific Intoxication or Withdrawal syndrome, then Substance-Induced Mood Disorder is the appropriate diagnosis, applying the appropriate category corresponding to the substance involved. \n\n## Potentially Explanatory Medical Conditions (examples):\n\nBrain disorders and general medical conditions that have been shown to be capable of producing manic mood syndromes include:\n\n- Diseases of the Nervous System (e.g., Movement Disorders such as Huntington disease, multiple sclerosis, seizures, stroke)\n- Certain Infectious or Parasitic Diseases (e.g., neurosyphilis)\n- Diseases of the Immune System (e.g., systemic lupus erythematosus)\n- Endocrine, Nutritional or Metabolic Diseases (e.g., hyperadrenalism, hypocalcemia, hypomagneseamia, thyrotoxicosis, Wilson disease)\n- Injury, Poisoning or Certain Other Consequences of External Causes (e.g., brain injury, concussion, traumatic haemorrhage, injury of optic or acoustic nerve)\n- Neoplasms (e.g., neoplasms of brain or meninges)"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Secondary mood syndrome, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Organic manic disorder"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "mood syndrome due to disorders or diseases not classified under Mental and behavioural disorders, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "organic mood disorder"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "organic mood disorder of manic type"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "en"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "inclusion"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "mood syndrome due to disorders or diseases not classified under Mental and behavioural disorders, with manic symptoms"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Síndrome secundario afectivo, con síntomas maníacos"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "longDefinition"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "A syndrome characterized by the presence of prominent manic symptoms such as elevated, euphoric, irritable, or expansive mood states, rapid changes among different mood states (i.e., mood lability), or increased energy or activity that is judged to be a direct pathophysiological consequence of a health condition not classified under mental and behavioural disorders based on evidence from the history, physical examination, or laboratory findings. The symptoms are not accounted for by delirium or by another mental and behavioural disorder, and are not a psychologically mediated response to a severe medical condition (e.g., depressive symptoms in response to a life-threatening diagnosis). This category should be used in addition to the diagnosis for the presumed underlying disorder or disease when the mood symptoms are sufficiently severe to warrant specific clinical attention. [No translation available]"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "fullySpecifiedName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms [No translation available]"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Síndrome secundario afectivo, con síntomas maníacos"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trastorno maníaco orgánico"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "síntomas maníacos"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trastorno afectivo orgánico"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trastorno afectivo orgánico de tipo maníaco"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "síndrome afectivo debido a trastornos o enfermedades no clasificadas como trastornos mentales y del comportamiento, con síntomas maníacos"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Mood syndrome due to health condition not classified under mental and behavioural disorders, with manic symptoms [No translation available]"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "es"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "inclusion"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "síndrome afectivo debido a trastornos o enfermedades no clasificadas como trastornos mentales y del comportamiento, con síntomas maníacos"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/hl7TermMaintInfra",
+        "code" : "preferredForLanguage",
+        "display" : "Preferred For Language"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Trouble de l'humeur secondaire, avec symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "longDefinition"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "A syndrome characterized by the presence of prominent manic symptoms such as elevated, euphoric, irritable, or expansive mood states, rapid changes among different mood states (i.e., mood lability), or increased energy or activity that is judged to be a direct pathophysiological consequence of a health condition not classified under mental and behavioural disorders based on evidence from the history, physical examination, or laboratory findings. The symptoms are not accounted for by delirium or by another mental and behavioural disorder, and are not a psychologically mediated response to a severe medical condition (e.g., depressive symptoms in response to a life-threatening diagnosis). This category should be used in addition to the diagnosis for the presumed underlying disorder or disease when the mood symptoms are sufficiently severe to warrant specific clinical attention. [No translation available]"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "fullySpecifiedName"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Trouble de l'humeur dû à une affection non classée dans les troubles mentaux et du comportement, avec symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Trouble de l'humeur secondaire, avec symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Trouble maniaque organique"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trouble de l'humeur organique"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trouble de l'humeur organique de type maniaque"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trouble de l'humeur dû à des troubles ou à des maladies non classés dans la catégorie Troubles mentaux et du comportement avec symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "indexTerm"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "Trouble de l'humeur dû à une affection non classée dans les troubles mentaux et du comportement, avec symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "designation",
+    "part" : [{
+      "name" : "language",
+      "valueCode" : "fr"
+    },
+    {
+      "name" : "use",
+      "valueCoding" : {
+        "system" : "http://id.who.int/icd/schema",
+        "code" : "inclusion"
+      }
+    },
+    {
+      "name" : "value",
+      "valueString" : "trouble de l'humeur dû à des troubles ou à des maladies non classés dans la catégorie Troubles mentaux et du comportement avec symptômes maniaques"
+    }]
+  },
+  {
+    "name" : "display",
+    "valueString" : "Secondary mood syndrome, with manic symptoms"
+  },
+  {
+    "name" : "name",
+    "valueString" : "$choice:ICD11MMS|ICD-11 for Mortality and Morbidity Statistics$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "classificationCode"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "6E62.1"
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "code"
+    },
+    {
+      "name" : "value",
+      "valueCode" : "880462195"
+    }]
+  },
+  {
+    "name" : "system",
+    "valueUri" : "http://id.who.int/icd/release/11/mms"
+  },
+  {
+    "name" : "version",
+    "valueString" : "2026-01"
+  }]
+}

@@ -1,0 +1,33 @@
+{
+  "$optional-properties$" : ["id", "date", "publisher", "compose"],
+  "resourceType" : "ValueSet",
+  "url" : "http://hl7.org/fhir/uv/tx-ecosystem/ValueSet/icd11-enumerated-id",
+  "version" : "2026-01",
+  "name" : "icd11.enumerated.id",
+  "title" : "ICD-11 MMS: the same three concepts, addressed by entity id",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-01-17",
+  "expansion" : {
+    "identifier" : "$uuid$",
+    "timestamp" : "$instant$",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
+    }],
+    "property" : [{
+      "code" : "classificationCode",
+      "uri" : "http://id.who.int/icd/schema/code"
+    }],
+    "contains" : [{
+      "system" : "http://id.who.int/icd/release/11/mms",
+      "code" : "257068234",
+      "display" : "Cholera",
+      "property" : [{
+        "code" : "classificationCode",
+        "valueCode" : "1A00"
+      }]
+    }]
+  }
+}

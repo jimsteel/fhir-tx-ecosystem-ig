@@ -1,11 +1,6 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
-    "$optional$" : true,
-    "name" : "abstract",
-    "valueBoolean" : false
-  },
-  {
     "name" : "code",
     "valueCode" : "code1"
   },
@@ -51,7 +46,7 @@
   },
   {
     "name" : "name",
-    "valueString" : "ExtensionsTestCodeSystem"
+    "valueString" : "$choice:ExtensionsTestCodeSystem|Extensions Test Code System$"
   },
   {
     "name" : "property",
