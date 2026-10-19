@@ -1,25 +1,19 @@
 {
-  "resourceType": "OperationOutcome",
-  "issue": [
-    {
-      "extension": [
-        {
-          "$optional$": "!tx.fhir.org",
-          "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString": "Unknown_Code_in_Version"
-        }
-      ],
-      "severity": "error",
-      "code": "not-found",
-      "details": {
-        "text": "$external:1:257068234$",
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code": "invalid-code"
-          }
-        ]
-      }
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "$optional$": "!tx.fhir.org",
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Unknown_Code_in_Version"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "text" : "$external:1:257068234$"
     }
-  ]
+  }]
 }

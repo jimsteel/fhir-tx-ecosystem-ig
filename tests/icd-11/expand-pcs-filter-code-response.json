@@ -20,6 +20,10 @@
       "name" : "used-codesystem",
       "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
     }],
+    "property" : [{
+      "code" : "classificationCode",
+      "uri" : "http://id.who.int/icd/schema/code"
+    }],
     "contains" : [{
       "system" : "http://id.who.int/icd/release/11/mms",
       "code" : "194483911",
@@ -37,10 +41,6 @@
         "code" : "classificationCode",
         "valueCode" : "XN8KD"
       }]
-    }],
-    "property" : [{
-      "code" : "classificationCode",
-      "uri" : "http://id.who.int/icd/schema/code"
     }]
   }
 }

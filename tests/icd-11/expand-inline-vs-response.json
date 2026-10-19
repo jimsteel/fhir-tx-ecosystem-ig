@@ -16,6 +16,10 @@
       "name" : "used-codesystem",
       "valueUri" : "http://id.who.int/icd/release/11/mms|2026-01"
     }],
+    "property" : [{
+      "code" : "classificationCode",
+      "uri" : "http://id.who.int/icd/schema/code"
+    }],
     "contains" : [{
       "system" : "http://id.who.int/icd/release/11/mms",
       "code" : "257068234",
@@ -33,10 +37,6 @@
         "code" : "classificationCode",
         "valueCode" : "1A01"
       }]
-    }],
-    "property" : [{
-      "code" : "classificationCode",
-      "uri" : "http://id.who.int/icd/schema/code"
     }]
   }
 }

@@ -1,18 +1,14 @@
 {
-  "resourceType": "OperationOutcome",
-  "issue": [
-    {
-      "severity": "error",
-      "code": "not-found",
-      "details": {
-        "text": "$external:1:999999999$",
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
-            "code": "not-found"
-          }
-        ]
-      }
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "$external:1:999999999$"
     }
-  ]
+  }]
 }

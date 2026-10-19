@@ -20,8 +20,8 @@
     "id": "$id$",
     "identifier" : "$uuid$",
     "timestamp" : "$instant$",
-    "offset" : 50,
     "total" : 2000,
+    "offset" : 50,
     "parameter" : [{
       "name" : "count",
       "valueInteger" : 50

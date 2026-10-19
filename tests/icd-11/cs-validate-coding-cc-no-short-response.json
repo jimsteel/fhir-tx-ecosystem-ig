@@ -14,6 +14,11 @@
       "$optional-properties$" : ["location"],
       "resourceType" : "OperationOutcome",
       "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_CLASSIFICATION_CODE_NONE"
+        }],
         "severity" : "error",
         "code" : "invalid",
         "details" : {
@@ -24,12 +29,7 @@
           "text" : "$external:1:135352227$"
         },
         "location" : ["Coding.extension[0]"],
-        "expression" : ["Coding.extension[0]"],
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "ICD11_CLASSIFICATION_CODE_NONE"
-        }]
+        "expression" : ["Coding.extension[0]"]
       }]
     }
   },

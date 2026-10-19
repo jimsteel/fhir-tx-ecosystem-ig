@@ -1,6 +1,10 @@
 {
   "resourceType" : "Parameters",
   "parameter" : [{
+    "name" : "abstract",
+    "valueBoolean" : true
+  },
+  {
     "$optional$" : true,
     "name" : "code",
     "valueCode" : "code2"
@@ -16,6 +20,17 @@
   {
     "name" : "name",
     "valueString" : "$choice:SimpleTestCodeSystem|Simple Test Code System$"
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
+      "valueCode" : "notSelectable"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : true
+    }]
   },
   {
     "$optional$" : true,

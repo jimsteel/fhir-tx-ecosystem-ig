@@ -14,6 +14,11 @@
       "$optional-properties$" : ["location"],
       "resourceType" : "OperationOutcome",
       "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "ICD11_CLASSIFICATION_CODE_NOT_ID"
+        }],
         "severity" : "error",
         "code" : "invalid",
         "details" : {
@@ -24,14 +29,14 @@
           "text" : "$external:1:1A00$"
         },
         "location" : ["Coding.extension[0]"],
-        "expression" : ["Coding.extension[0]"],
+        "expression" : ["Coding.extension[0]"]
+      },
+      {
         "extension" : [{
           "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "ICD11_CLASSIFICATION_CODE_NOT_ID"
-        }]
-      },
-      {
+          "valueString" : "CODE_NOT_IN_NORMAL_FORM"
+        }],
         "severity" : "information",
         "code" : "business-rule",
         "details" : {
@@ -42,12 +47,7 @@
           "text" : "The code '1A00' is valid, but it is not the normal form for the code system 'http://id.who.int/icd/release/11/mms|2026-01'; the normal form is '257068234'"
         },
         "location" : ["Coding.code"],
-        "expression" : ["Coding.code"],
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "CODE_NOT_IN_NORMAL_FORM"
-        }]
+        "expression" : ["Coding.code"]
       }]
     }
   },

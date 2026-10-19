@@ -2,11 +2,6 @@
   "resourceType" : "Parameters",
   "parameter" : [{
     "$optional$" : true,
-    "name" : "abstract",
-    "valueBoolean" : false
-  },
-  {
-    "$optional$" : true,
     "name" : "code",
     "valueCode" : "LP111373-9"
   },

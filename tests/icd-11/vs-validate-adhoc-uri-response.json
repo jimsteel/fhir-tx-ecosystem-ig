@@ -10,6 +10,11 @@
       "$optional-properties$" : ["location"],
       "resourceType" : "OperationOutcome",
       "issue" : [{
+        "extension" : [{
+          "$optional$" : "!tx.fhir.org",
+          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+        }],
         "severity" : "error",
         "code" : "code-invalid",
         "details" : {
@@ -20,14 +25,14 @@
           "text" : "$external:1:http://id.who.int/icd/release/11/mms/257068234$"
         },
         "location" : ["code"],
-        "expression" : ["code"],
+        "expression" : ["code"]
+      },
+      {
         "extension" : [{
           "$optional$" : "!tx.fhir.org",
           "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
-        }]
-      },
-      {
+          "valueString" : "Unknown_Code_in_Version"
+        }],
         "severity" : "error",
         "code" : "code-invalid",
         "details" : {
@@ -38,12 +43,7 @@
           "text" : "$external:2:http://id.who.int/icd/release/11/mms/257068234$"
         },
         "location" : ["code"],
-        "expression" : ["code"],
-        "extension" : [{
-          "$optional$" : "!tx.fhir.org",
-          "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
-          "valueString" : "Unknown_Code_in_Version"
-        }]
+        "expression" : ["code"]
       }]
     }
   },

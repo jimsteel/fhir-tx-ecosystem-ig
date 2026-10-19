@@ -3331,6 +3331,17 @@
     "name" : "property",
     "part" : [{
       "name" : "code",
+      "valueCode" : "notSelectable"
+    },
+    {
+      "name" : "value",
+      "valueBoolean" : true
+    }]
+  },
+  {
+    "name" : "property",
+    "part" : [{
+      "name" : "code",
       "valueCode" : "parent"
     },
     {
